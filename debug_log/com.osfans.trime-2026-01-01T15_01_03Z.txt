@@ -1,0 +1,946 @@
+--------- Device Info
+OS Name: BP2A.250605.031.A3
+OS Version: 6.1.118-android14-11-gca0ef6d17716-ab13624819 (OS3.0.5.0.WNCCNXM)
+OS API Level: 36
+Device: houji
+Model (product): 23127PN0CC (houji)
+Manufacturer: Xiaomi
+Tags: release-keys
+Screen Size: 1200 x 2670
+Screen Density: 3.0
+Screen orientation: Portrait
+--------- Build Info
+Package Name: com.osfans.trime
+Builder: Release CI
+Version Code: 20251101
+Version Name: v3.3.7-0-gac13dd47-release
+Build Time: 2025-11-01T08:53:22Z
+Build Git Hash: ac13dd4790523c1a9778cfb70234fe485fd3c526
+--------- beginning of main
+01-01 22:59:49.404 I/rime.trime( 3582): loading table file: /storage/emulated/0/rime/build/luna_pinyin.table.bin
+01-01 22:59:49.405 I/rime.trime( 3582): loading prism file: /storage/emulated/0/rime/build/double_pinyin_flypy.prism.bin
+01-01 22:59:49.405 I/rime.trime( 3582): found double array image of size 1024.
+01-01 22:59:49.405 I/rime.trime( 3582): /storage/emulated/0/Android/data/com.osfans.trime/files/shared/luna_pinyin.dict.yaml[1 file(s)] (3716693703)
+01-01 22:59:49.405 I/rime.trime( 3582): /storage/emulated/0/rime/build/double_pinyin_flypy.schema.yaml (1773856550)
+01-01 22:59:49.405 I/rime.trime( 3582): loading reversedb: /storage/emulated/0/rime/build/luna_pinyin.reverse.bin
+01-01 22:59:49.406 I/rime.trime( 3582): dictionary 'luna_pinyin' is ready.
+01-01 22:59:49.416 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/build/double_pinyin_flypy.schema.yaml'.
+01-01 22:59:49.421 I/rime.trime( 3582): schema: stroke
+01-01 22:59:49.421 I/rime.trime( 3582): loading config file '/storage/emulated/0/Android/data/com.osfans.trime/files/shared/stroke.schema.yaml'.
+01-01 22:59:49.422 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/build/stroke.schema.yaml'.
+01-01 22:59:49.424 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/build/stroke.schema.yaml'.
+01-01 22:59:49.425 I/rime.trime( 3582): preparing dictionary 'stroke'.
+01-01 22:59:49.425 I/rime.trime( 3582): compiling dictionary for /storage/emulated/0/rime/build/stroke.schema.yaml
+01-01 22:59:49.479 I/rime.trime( 3582): loading table file: /storage/emulated/0/rime/build/stroke.table.bin
+01-01 22:59:49.480 I/rime.trime( 3582): loading prism file: /storage/emulated/0/rime/build/stroke.prism.bin
+01-01 22:59:49.480 I/rime.trime( 3582): found double array image of size 597248.
+01-01 22:59:49.480 I/rime.trime( 3582): /storage/emulated/0/Android/data/com.osfans.trime/files/shared/stroke.dict.yaml[1 file(s)] (4166878691)
+01-01 22:59:49.480 I/rime.trime( 3582): /storage/emulated/0/rime/build/stroke.schema.yaml (2973172743)
+01-01 22:59:49.480 I/rime.trime( 3582): loading reversedb: /storage/emulated/0/rime/build/stroke.reverse.bin
+01-01 22:59:49.481 I/rime.trime( 3582): dictionary 'stroke' is ready.
+01-01 22:59:49.481 I/rime.trime( 3582): schema: moqi_xh
+01-01 22:59:49.481 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/moqi_xh.schema.yaml'.
+01-01 22:59:49.483 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/build/moqi_xh.schema.yaml'.
+01-01 22:59:49.502 I/rime.trime( 3582): source file changed: /storage/emulated/0/rime/default.yaml
+01-01 22:59:49.502 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/moqi_xh.schema.yaml'.
+01-01 22:59:49.504 I/rime.trime( 3582): auto-patch moqi_xh.schema:/__patch: moqi_xh.custom:/patch?
+01-01 22:59:49.504 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/moqi.yaml'.
+01-01 22:59:49.506 I/rime.trime( 3582): auto-patch moqi:/__patch: moqi.custom:/patch?
+01-01 22:59:49.506 I/rime.trime( 3582): patching grammar
+01-01 22:59:49.506 I/rime.trime( 3582): resolved: Patch(<literal>)
+01-01 22:59:49.506 I/rime.trime( 3582): resolved: PendingChild(moqi:/octagram/disable)
+01-01 22:59:49.506 I/rime.trime( 3582): patching grammar
+01-01 22:59:49.506 I/rime.trime( 3582): patching translator/contextual_suggestions
+01-01 22:59:49.506 I/rime.trime( 3582): patching translator/max_homographs
+01-01 22:59:49.506 I/rime.trime( 3582): patching translator/max_homophones
+01-01 22:59:49.506 I/rime.trime( 3582): resolved: Patch(<literal>)
+01-01 22:59:49.506 I/rime.trime( 3582): resolved: PendingChild(moqi:/octagram/enable_for_sentence)
+01-01 22:59:49.506 I/rime.trime( 3582): resolved: PendingChild(moqi:/octagram)
+01-01 22:59:49.506 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/default.yaml'.
+01-01 22:59:49.507 I/rime.trime( 3582): auto-patch default:/__patch: default.custom:/patch?
+01-01 22:59:49.507 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/default.custom.yaml'.
+01-01 22:59:49.507 I/rime.trime( 3582): patching schema_list
+01-01 22:59:49.507 I/rime.trime( 3582): resolved: Patch(default.custom:patch <optional>)
+01-01 22:59:49.507 I/rime.trime( 3582): resolved: Include(default:/punctuator/full_shape)
+01-01 22:59:49.507 I/rime.trime( 3582): resolved: PendingChild(moqi:/punctuator/punctuator/full_shape)
+01-01 22:59:49.507 I/rime.trime( 3582): resolved: Include(default:/punctuator/half_shape)
+01-01 22:59:49.507 I/rime.trime( 3582): resolved: PendingChild(moqi:/punctuator/punctuator/half_shape)
+01-01 22:59:49.507 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/symbols_caps_v.yaml'.
+01-01 22:59:49.522 I/rime.trime( 3582): auto-patch symbols_caps_v:/__patch: symbols_caps_v.custom:/patch?
+01-01 22:59:49.522 I/rime.trime( 3582): optional resource not loaded: symbols_caps_v.custom
+01-01 22:59:49.522 I/rime.trime( 3582): resolved: Patch(symbols_caps_v.custom:patch <optional>)
+01-01 22:59:49.522 I/rime.trime( 3582): resolved: Include(symbols_caps_v:/symbols)
+01-01 22:59:49.522 I/rime.trime( 3582): resolved: PendingChild(moqi:/punctuator/punctuator/symbols)
+01-01 22:59:49.522 I/rime.trime( 3582): resolved: PendingChild(moqi:/punctuator/punctuator)
+01-01 22:59:49.522 I/rime.trime( 3582): resolved: PendingChild(moqi:/punctuator)
+01-01 22:59:49.523 I/rime.trime( 3582): optional resource not loaded: moqi.custom
+01-01 22:59:49.523 I/rime.trime( 3582): resolved: Patch(moqi.custom:patch <optional>)
+01-01 22:59:49.523 I/rime.trime( 3582): resolved: Include(moqi:/switches_engine)
+01-01 22:59:49.523 I/rime.trime( 3582): resolved: Include(moqi:/phrase)
+01-01 22:59:49.523 I/rime.trime( 3582): resolved: Include(moqi:/reverse)
+01-01 22:59:49.523 I/rime.trime( 3582): resolved: Include(moqi:/opencc_config)
+01-01 22:59:49.523 I/rime.trime( 3582): resolved: Include(moqi:/punctuator)
+01-01 22:59:49.523 I/rime.trime( 3582): resolved: Include(moqi:/guide)
+01-01 22:59:49.523 I/rime.trime( 3582): resolved: Include(moqi:/big_char_and_user_dict)
+01-01 22:59:49.523 I/rime.trime( 3582): resolved: Include(moqi:/octagram/enable_for_sentence)
+01-01 22:59:49.523 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/moqi_xh.custom.yaml'.
+01-01 22:59:49.524 I/rime.trime( 3582): patching engine/translators
+01-01 22:59:49.524 I/rime.trime( 3582): patching key_binder/bindings/+
+01-01 22:59:49.524 I/rime.trime( 3582): patching menu/page_size
+01-01 22:59:49.524 I/rime.trime( 3582): patching punctuator/punctuator/full_shape
+01-01 22:59:49.524 I/rime.trime( 3582): patching punctuator/punctuator/half_shape
+01-01 22:59:49.524 I/rime.trime( 3582): patching speller/algebra/+
+01-01 22:59:49.524 I/rime.trime( 3582): resolved: Patch(moqi_xh.custom:patch <optional>)
+01-01 22:59:49.524 I/rime.trime( 3582): interpreting key_binder/import_preset: default
+01-01 22:59:49.524 I/rime.trime( 3582): resource 'moqi.custom' not loaded.
+01-01 22:59:49.524 I/rime.trime( 3582): resource 'symbols_caps_v.custom' not loaded.
+01-01 22:59:49.524 I/rime.trime( 3582): saving config file '/storage/emulated/0/rime/build/moqi_xh.schema.yaml'.
+01-01 22:59:49.530 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/build/moqi_xh.schema.yaml'.
+01-01 22:59:49.547 I/rime.trime( 3582): preparing dictionary 'moqi.extended'.
+01-01 22:59:49.547 I/rime.trime( 3582): compiling dictionary for /storage/emulated/0/rime/build/moqi_xh.schema.yaml
+01-01 22:59:49.918 I/rime.trime( 3582): loading table file: /storage/emulated/0/rime/build/moqi.extended.table.bin
+01-01 22:59:49.921 I/rime.trime( 3582): loading prism file: /storage/emulated/0/rime/build/moqi.extended.prism.bin
+01-01 22:59:49.921 I/rime.trime( 3582): found double array image of size 247808.
+01-01 22:59:49.921 I/rime.trime( 3582): /storage/emulated/0/rime/moqi.extended.dict.yaml[8 file(s)] (1339274801)
+01-01 22:59:49.921 I/rime.trime( 3582): /storage/emulated/0/rime/build/moqi_xh.schema.yaml (2802999609)
+01-01 22:59:49.921 I/rime.trime( 3582): loading reversedb: /storage/emulated/0/rime/build/moqi.extended.reverse.bin
+01-01 22:59:49.922 I/rime.trime( 3582): dictionary 'moqi.extended' is ready.
+01-01 22:59:49.923 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/build/moqi_xh.schema.yaml'.
+01-01 22:59:49.943 I/rime.trime( 3582): schema: cangjie5
+01-01 22:59:49.943 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/cangjie5.schema.yaml'.
+01-01 22:59:49.944 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/build/cangjie5.schema.yaml'.
+01-01 22:59:49.957 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/build/cangjie5.schema.yaml'.
+01-01 22:59:49.967 I/rime.trime( 3582): preparing dictionary 'cangjie5'.
+01-01 22:59:49.967 I/rime.trime( 3582): compiling dictionary for /storage/emulated/0/rime/build/cangjie5.schema.yaml
+01-01 22:59:50.012 I/rime.trime( 3582): loading table file: /storage/emulated/0/rime/build/cangjie5.table.bin
+01-01 22:59:50.012 I/rime.trime( 3582): loading prism file: /storage/emulated/0/rime/build/cangjie5.prism.bin
+01-01 22:59:50.013 I/rime.trime( 3582): found double array image of size 650752.
+01-01 22:59:50.013 I/rime.trime( 3582): /storage/emulated/0/rime/cangjie5.dict.yaml[1 file(s)] (3376483977)
+01-01 22:59:50.013 I/rime.trime( 3582): /storage/emulated/0/rime/build/cangjie5.schema.yaml (1143560900)
+01-01 22:59:50.013 I/rime.trime( 3582): loading reversedb: /storage/emulated/0/rime/build/cangjie5.reverse.bin
+01-01 22:59:50.014 I/rime.trime( 3582): dictionary 'cangjie5' is ready.
+01-01 22:59:50.015 I/rime.trime( 3582): schema: reverse_moqima
+01-01 22:59:50.015 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/reverse_moqima.schema.yaml'.
+01-01 22:59:50.015 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/build/reverse_moqima.schema.yaml'.
+01-01 22:59:50.016 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/build/reverse_moqima.schema.yaml'.
+01-01 22:59:50.017 I/rime.trime( 3582): preparing dictionary 'reverse_moqima'.
+01-01 22:59:50.017 I/rime.trime( 3582): compiling dictionary for /storage/emulated/0/rime/build/reverse_moqima.schema.yaml
+01-01 22:59:50.028 I/rime.trime( 3582): loading table file: /storage/emulated/0/rime/build/reverse_moqima.table.bin
+01-01 22:59:50.029 I/rime.trime( 3582): loading prism file: /storage/emulated/0/rime/build/reverse_moqima.prism.bin
+01-01 22:59:50.029 I/rime.trime( 3582): found double array image of size 82176.
+01-01 22:59:50.029 I/rime.trime( 3582): /storage/emulated/0/rime/reverse_moqima.dict.yaml[1 file(s)] (2169948342)
+01-01 22:59:50.029 I/rime.trime( 3582): /storage/emulated/0/rime/build/reverse_moqima.schema.yaml (793049353)
+01-01 22:59:50.029 I/rime.trime( 3582): loading reversedb: /storage/emulated/0/rime/build/reverse_moqima.reverse.bin
+01-01 22:59:50.029 I/rime.trime( 3582): dictionary 'reverse_moqima' is ready.
+01-01 22:59:50.029 I/rime.trime( 3582): schema: radical_flypy
+01-01 22:59:50.029 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/radical_flypy.schema.yaml'.
+01-01 22:59:50.030 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/build/radical_flypy.schema.yaml'.
+01-01 22:59:50.031 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/build/radical_flypy.schema.yaml'.
+01-01 22:59:50.032 I/rime.trime( 3582): preparing dictionary 'radical_flypy'.
+01-01 22:59:50.032 I/rime.trime( 3582): compiling dictionary for /storage/emulated/0/rime/build/radical_flypy.schema.yaml
+01-01 22:59:50.037 I/rime.trime( 3582): loading table file: /storage/emulated/0/rime/build/radical_flypy.table.bin
+01-01 22:59:50.037 I/rime.trime( 3582): loading prism file: /storage/emulated/0/rime/build/radical_flypy.prism.bin
+01-01 22:59:50.037 I/rime.trime( 3582): found double array image of size 100864.
+01-01 22:59:50.037 I/rime.trime( 3582): /storage/emulated/0/rime/radical_flypy.dict.yaml[1 file(s)] (1052031476)
+01-01 22:59:50.037 I/rime.trime( 3582): /storage/emulated/0/rime/build/radical_flypy.schema.yaml (3659891282)
+01-01 22:59:50.037 I/rime.trime( 3582): loading reversedb: /storage/emulated/0/rime/build/radical_flypy.reverse.bin
+01-01 22:59:50.038 I/rime.trime( 3582): dictionary 'radical_flypy' is ready.
+01-01 22:59:50.038 I/rime.trime( 3582): schema: zrlf
+01-01 22:59:50.038 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/zrlf.schema.yaml'.
+01-01 22:59:50.038 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/build/zrlf.schema.yaml'.
+01-01 22:59:50.040 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/build/zrlf.schema.yaml'.
+01-01 22:59:50.041 I/rime.trime( 3582): preparing dictionary 'zrlf'.
+01-01 22:59:50.041 I/rime.trime( 3582): compiling dictionary for /storage/emulated/0/rime/build/zrlf.schema.yaml
+01-01 22:59:50.048 I/rime.trime( 3582): loading table file: /storage/emulated/0/rime/build/zrlf.table.bin
+01-01 22:59:50.048 I/rime.trime( 3582): loading prism file: /storage/emulated/0/rime/build/zrlf.prism.bin
+01-01 22:59:50.048 I/rime.trime( 3582): found double array image of size 58880.
+01-01 22:59:50.048 I/rime.trime( 3582): /storage/emulated/0/rime/zrlf.dict.yaml[1 file(s)] (88029044)
+01-01 22:59:50.048 I/rime.trime( 3582): /storage/emulated/0/rime/build/zrlf.schema.yaml (317745562)
+01-01 22:59:50.048 I/rime.trime( 3582): loading reversedb: /storage/emulated/0/rime/build/zrlf.reverse.bin
+01-01 22:59:50.049 I/rime.trime( 3582): dictionary 'zrlf' is ready.
+01-01 22:59:50.049 I/rime.trime( 3582): schema: emoji
+01-01 22:59:50.049 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/emoji.schema.yaml'.
+01-01 22:59:50.049 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/build/emoji.schema.yaml'.
+01-01 22:59:50.051 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/build/emoji.schema.yaml'.
+01-01 22:59:50.052 I/rime.trime( 3582): preparing dictionary 'emoji'.
+01-01 22:59:50.052 I/rime.trime( 3582): compiling dictionary for /storage/emulated/0/rime/build/emoji.schema.yaml
+01-01 22:59:50.053 I/rime.trime( 3582): loading table file: /storage/emulated/0/rime/build/emoji.table.bin
+01-01 22:59:50.054 I/rime.trime( 3582): loading prism file: /storage/emulated/0/rime/build/emoji.prism.bin
+01-01 22:59:50.054 I/rime.trime( 3582): found double array image of size 26880.
+01-01 22:59:50.054 I/rime.trime( 3582): /storage/emulated/0/rime/emoji.dict.yaml[1 file(s)] (789944404)
+01-01 22:59:50.054 I/rime.trime( 3582): /storage/emulated/0/rime/build/emoji.schema.yaml (1987758937)
+01-01 22:59:50.054 I/rime.trime( 3582): loading reversedb: /storage/emulated/0/rime/build/emoji.reverse.bin
+01-01 22:59:50.054 I/rime.trime( 3582): dictionary 'emoji' is ready.
+01-01 22:59:50.054 I/rime.trime( 3582): schema: easy_en
+01-01 22:59:50.054 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/easy_en.schema.yaml'.
+01-01 22:59:50.054 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/build/easy_en.schema.yaml'.
+01-01 22:59:50.056 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/build/easy_en.schema.yaml'.
+01-01 22:59:50.056 I/rime.trime( 3582): preparing dictionary 'easy_en'.
+01-01 22:59:50.056 I/rime.trime( 3582): compiling dictionary for /storage/emulated/0/rime/build/easy_en.schema.yaml
+01-01 22:59:50.156 I/rime.trime( 3582): loading table file: /storage/emulated/0/rime/build/easy_en.table.bin
+01-01 22:59:50.157 I/rime.trime( 3582): loading prism file: /storage/emulated/0/rime/build/easy_en.prism.bin
+01-01 22:59:50.158 I/rime.trime( 3582): found double array image of size 3499008.
+01-01 22:59:50.158 I/rime.trime( 3582): /storage/emulated/0/rime/easy_en.dict.yaml[1 file(s)] (1076952105)
+01-01 22:59:50.158 I/rime.trime( 3582): /storage/emulated/0/rime/build/easy_en.schema.yaml (3183695582)
+01-01 22:59:50.158 I/rime.trime( 3582): loading reversedb: /storage/emulated/0/rime/build/easy_en.reverse.bin
+01-01 22:59:50.159 I/rime.trime( 3582): dictionary 'easy_en' is ready.
+01-01 22:59:50.159 I/rime.trime( 3582): schema: jp_sela
+01-01 22:59:50.159 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/jp_sela.schema.yaml'.
+01-01 22:59:50.160 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/build/jp_sela.schema.yaml'.
+01-01 22:59:50.161 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/build/jp_sela.schema.yaml'.
+01-01 22:59:50.163 I/rime.trime( 3582): preparing dictionary 'jp_sela'.
+01-01 22:59:50.163 I/rime.trime( 3582): compiling dictionary for /storage/emulated/0/rime/build/jp_sela.schema.yaml
+01-01 22:59:50.208 I/rime.trime( 3582): loading table file: /storage/emulated/0/rime/build/jp_sela.table.bin
+01-01 22:59:50.209 I/rime.trime( 3582): loading prism file: /storage/emulated/0/rime/build/jp_sela.prism.bin
+01-01 22:59:50.209 I/rime.trime( 3582): found double array image of size 915200.
+01-01 22:59:50.210 I/rime.trime( 3582): /storage/emulated/0/rime/jp_sela.dict.yaml[1 file(s)] (4205473355)
+01-01 22:59:50.210 I/rime.trime( 3582): /storage/emulated/0/rime/build/jp_sela.schema.yaml (836796394)
+01-01 22:59:50.210 I/rime.trime( 3582): loading reversedb: /storage/emulated/0/rime/build/jp_sela.reverse.bin
+01-01 22:59:50.210 I/rime.trime( 3582): dictionary 'jp_sela' is ready.
+01-01 22:59:50.210 I/rime.trime( 3582): schema: moqi_big
+01-01 22:59:50.210 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/moqi_big.schema.yaml'.
+01-01 22:59:50.212 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/build/moqi_big.schema.yaml'.
+01-01 22:59:50.229 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/build/moqi_big.schema.yaml'.
+01-01 22:59:50.242 I/rime.trime( 3582): preparing dictionary 'moqi_big.extended'.
+01-01 22:59:50.242 I/rime.trime( 3582): compiling dictionary for /storage/emulated/0/rime/build/moqi_big.schema.yaml
+01-01 22:59:50.248 I/rime.trime( 3582): loading table file: /storage/emulated/0/rime/build/moqi_big.extended.table.bin
+01-01 22:59:50.248 I/rime.trime( 3582): loading prism file: /storage/emulated/0/rime/build/moqi_big.extended.prism.bin
+01-01 22:59:50.248 I/rime.trime( 3582): found double array image of size 277760.
+01-01 22:59:50.248 I/rime.trime( 3582): /storage/emulated/0/rime/moqi_big.extended.dict.yaml[3 file(s)] (1331370450)
+01-01 22:59:50.248 I/rime.trime( 3582): /storage/emulated/0/rime/build/moqi_big.schema.yaml (746289274)
+01-01 22:59:50.248 I/rime.trime( 3582): loading reversedb: /storage/emulated/0/rime/build/moqi_big.extended.reverse.bin
+01-01 22:59:50.249 I/rime.trime( 3582): dictionary 'moqi_big.extended' is ready.
+01-01 22:59:50.251 I/rime.trime( 3582): schema: luna_pinyin
+01-01 22:59:50.251 I/rime.trime( 3582): loading config file '/storage/emulated/0/Android/data/com.osfans.trime/files/shared/luna_pinyin.schema.yaml'.
+01-01 22:59:50.252 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/build/luna_pinyin.schema.yaml'.
+01-01 22:59:50.270 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/build/luna_pinyin.schema.yaml'.
+01-01 22:59:50.281 I/rime.trime( 3582): preparing dictionary 'luna_pinyin'.
+01-01 22:59:50.281 I/rime.trime( 3582): compiling dictionary for /storage/emulated/0/rime/build/luna_pinyin.schema.yaml
+01-01 22:59:50.325 I/rime.trime( 3582): loading table file: /storage/emulated/0/rime/build/luna_pinyin.table.bin
+01-01 22:59:50.326 I/rime.trime( 3582): loading prism file: /storage/emulated/0/rime/build/luna_pinyin.prism.bin
+01-01 22:59:50.326 I/rime.trime( 3582): found double array image of size 1792.
+01-01 22:59:50.327 I/rime.trime( 3582): /storage/emulated/0/Android/data/com.osfans.trime/files/shared/luna_pinyin.dict.yaml[1 file(s)] (3716693703)
+01-01 22:59:50.327 I/rime.trime( 3582): /storage/emulated/0/rime/build/luna_pinyin.schema.yaml (1262198194)
+01-01 22:59:50.327 I/rime.trime( 3582): loading reversedb: /storage/emulated/0/rime/build/luna_pinyin.reverse.bin
+01-01 22:59:50.327 I/rime.trime( 3582): dictionary 'luna_pinyin' is ready.
+01-01 22:59:50.328 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/build/luna_pinyin.schema.yaml'.
+01-01 22:59:50.341 I/rime.trime( 3582): schema: luna_quanpin
+01-01 22:59:50.342 I/rime.trime( 3582): loading config file '/storage/emulated/0/Android/data/com.osfans.trime/files/shared/luna_quanpin.schema.yaml'.
+01-01 22:59:50.342 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/build/luna_quanpin.schema.yaml'.
+01-01 22:59:50.351 I/rime.trime( 3582): source file changed: /storage/emulated/0/rime/default.yaml
+01-01 22:59:50.352 I/rime.trime( 3582): loading config file '/storage/emulated/0/Android/data/com.osfans.trime/files/shared/luna_quanpin.schema.yaml'.
+01-01 22:59:50.352 I/rime.trime( 3582): auto-patch luna_quanpin.schema:/__patch: luna_quanpin.custom:/patch?
+01-01 22:59:50.352 I/rime.trime( 3582): loading config file '/storage/emulated/0/Android/data/com.osfans.trime/files/shared/pinyin.yaml'.
+01-01 22:59:50.352 I/rime.trime( 3582): auto-patch pinyin:/__patch: pinyin.custom:/patch?
+01-01 22:59:50.353 I/rime.trime( 3582): optional resource not loaded: pinyin.custom
+01-01 22:59:50.353 I/rime.trime( 3582): resolved: Patch(pinyin.custom:patch <optional>)
+01-01 22:59:50.353 I/rime.trime( 3582): patching __append
+01-01 22:59:50.353 I/rime.trime( 3582): resolved: Patch(pinyin:/spelling_correction)
+01-01 22:59:50.353 I/rime.trime( 3582): resolved: PendingChild(luna_quanpin.schema:/speller/algebra)
+01-01 22:59:50.353 I/rime.trime( 3582): resolved: PendingChild(luna_quanpin.schema:/speller)
+01-01 22:59:50.353 I/rime.trime( 3582): loading config file '/storage/emulated/0/Android/data/com.osfans.trime/files/shared/luna_pinyin.schema.yaml'.
+01-01 22:59:50.353 I/rime.trime( 3582): patching __append
+01-01 22:59:50.353 I/rime.trime( 3582): resolved: Patch(pinyin:/abbreviation)
+01-01 22:59:50.353 I/rime.trime( 3582): patching __append
+01-01 22:59:50.353 I/rime.trime( 3582): resolved: Patch(pinyin:/spelling_correction)
+01-01 22:59:50.353 I/rime.trime( 3582): patching __append
+01-01 22:59:50.353 I/rime.trime( 3582): resolved: Patch(pinyin:/key_correction)
+01-01 22:59:50.353 I/rime.trime( 3582): resolved: PendingChild(luna_pinyin.schema:/speller/algebra)
+01-01 22:59:50.353 I/rime.trime( 3582): resolved: PendingChild(luna_pinyin.schema:/speller)
+01-01 22:59:50.353 W/rime.trime( 3582): nonexistent config file '/storage/emulated/0/rime/grammar.yaml'.
+01-01 22:59:50.353 I/rime.trime( 3582): auto-patch grammar:/__patch: grammar.custom:/patch?
+01-01 22:59:50.353 I/rime.trime( 3582): optional resource not loaded: grammar
+01-01 22:59:50.353 I/rime.trime( 3582): resolved: Patch(grammar:/hant <optional>)
+01-01 22:59:50.353 I/rime.trime( 3582): optional resource not loaded: luna_pinyin.custom
+01-01 22:59:50.353 I/rime.trime( 3582): resolved: Patch(luna_pinyin.custom:/patch <optional>)
+01-01 22:59:50.354 I/rime.trime( 3582): resolved: Include(luna_pinyin.schema:/)
+01-01 22:59:50.354 I/rime.trime( 3582): optional resource not loaded: luna_quanpin.custom
+01-01 22:59:50.354 I/rime.trime( 3582): resolved: Patch(luna_quanpin.custom:patch <optional>)
+01-01 22:59:50.354 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/default.yaml'.
+01-01 22:59:50.355 I/rime.trime( 3582): auto-patch default:/__patch: default.custom:/patch?
+01-01 22:59:50.355 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/default.custom.yaml'.
+01-01 22:59:50.355 I/rime.trime( 3582): patching schema_list
+01-01 22:59:50.355 I/rime.trime( 3582): resolved: Patch(default.custom:patch <optional>)
+01-01 22:59:50.355 I/rime.trime( 3582): interpreting key_binder/import_preset: default
+01-01 22:59:50.355 I/rime.trime( 3582): interpreting punctuator/import_preset: symbols
+01-01 22:59:50.356 I/rime.trime( 3582): loading config file '/storage/emulated/0/Android/data/com.osfans.trime/files/shared/symbols.yaml'.
+01-01 22:59:50.369 I/rime.trime( 3582): auto-patch symbols:/__patch: symbols.custom:/patch?
+01-01 22:59:50.369 I/rime.trime( 3582): optional resource not loaded: symbols.custom
+01-01 22:59:50.369 I/rime.trime( 3582): resolved: Patch(symbols.custom:patch <optional>)
+01-01 22:59:50.369 I/rime.trime( 3582): interpreting recognizer/import_preset: default
+01-01 22:59:50.369 I/rime.trime( 3582): resource 'grammar' not loaded.
+01-01 22:59:50.369 I/rime.trime( 3582): resource 'luna_pinyin.custom' not loaded.
+01-01 22:59:50.369 I/rime.trime( 3582): resource 'luna_quanpin.custom' not loaded.
+01-01 22:59:50.369 I/rime.trime( 3582): resource 'pinyin.custom' not loaded.
+01-01 22:59:50.369 I/rime.trime( 3582): resource 'symbols.custom' not loaded.
+01-01 22:59:50.369 I/rime.trime( 3582): saving config file '/storage/emulated/0/rime/build/luna_quanpin.schema.yaml'.
+01-01 22:59:50.374 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/build/luna_quanpin.schema.yaml'.
+01-01 22:59:50.386 I/rime.trime( 3582): preparing dictionary 'luna_pinyin'.
+01-01 22:59:50.386 I/rime.trime( 3582): compiling dictionary for /storage/emulated/0/rime/build/luna_quanpin.schema.yaml
+01-01 22:59:50.432 I/rime.trime( 3582): loading table file: /storage/emulated/0/rime/build/luna_pinyin.table.bin
+01-01 22:59:50.433 I/rime.trime( 3582): loading prism file: /storage/emulated/0/rime/build/luna_quanpin.prism.bin
+01-01 22:59:50.433 I/rime.trime( 3582): found double array image of size 1280.
+01-01 22:59:50.433 I/rime.trime( 3582): /storage/emulated/0/Android/data/com.osfans.trime/files/shared/luna_pinyin.dict.yaml[1 file(s)] (3716693703)
+01-01 22:59:50.433 I/rime.trime( 3582): /storage/emulated/0/rime/build/luna_quanpin.schema.yaml (3680975509)
+01-01 22:59:50.433 I/rime.trime( 3582): loading reversedb: /storage/emulated/0/rime/build/luna_pinyin.reverse.bin
+01-01 22:59:50.433 I/rime.trime( 3582): building prism...
+01-01 22:59:50.433 I/rime.trime( 3582): loading table file: /storage/emulated/0/rime/build/luna_pinyin.table.bin
+01-01 22:59:50.434 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/build/luna_quanpin.schema.yaml'.
+01-01 22:59:50.455 I/rime.trime( 3582): creating file '/storage/emulated/0/rime/build/luna_quanpin.prism.bin'.
+01-01 22:59:50.462 I/rime.trime( 3582): opening file for read/write access.
+01-01 22:59:50.463 I/rime.trime( 3582): saving prism file: /storage/emulated/0/rime/build/luna_quanpin.prism.bin
+01-01 22:59:50.463 I/rime.trime( 3582): shrinking file to fit data size. capacity: 27220
+01-01 22:59:50.463 I/rime.trime( 3582): resize file to: 16936
+01-01 22:59:50.463 I/rime.trime( 3582): dictionary 'luna_pinyin' is ready.
+01-01 22:59:50.465 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/build/luna_quanpin.schema.yaml'.
+01-01 22:59:50.480 I/rime.trime( 3582): finished updating schemas: 13 success, 0 failure.
+01-01 22:59:50.480 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/user.yaml'.
+01-01 22:59:50.480 I/rime.trime( 3582): write: var/last_build_time
+01-01 22:59:50.480 I/rime.trime( 3582): saving config file '/storage/emulated/0/rime/user.yaml'.
+01-01 22:59:50.481 I/rime.trime( 3582): clean up trash.
+01-01 22:59:50.483 I/rime.trime( 3582): 3 tasks ran: 3 success, 0 failure.
+01-01 22:59:55.778 I/HandWritingStubImpl( 3582): refreshLastKeyboardType: 1
+01-01 22:59:55.778 I/HandWritingStubImpl( 3582): getCurrentKeyboardType: 1
+01-01 22:59:55.779 D/InsetsController( 3582): hide(ime(), fromIme=false)
+01-01 22:59:55.779 I/ImeTracker( 3582): com.osfans.trime:bc4acdab: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+01-01 22:59:57.463 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.PrefLauncherAlias', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=109526006, downTime=109526006, phoneEventTime=22:59:57.459 } moveCount:0
+--------- beginning of system
+01-01 22:59:57.463 D/VRI[PrefLauncherAlias]( 3582): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-01 22:59:57.529 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.PrefLauncherAlias', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=109526073, downTime=109526006, phoneEventTime=22:59:57.526 } moveCount:0
+01-01 22:59:57.536 W/WindowOnBackDispatcher( 3582): OnBackInvokedCallback is not enabled for the application.
+01-01 22:59:57.536 W/WindowOnBackDispatcher( 3582): Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+01-01 22:59:57.546 D/ScrollerOptimizationManager( 3582): registerConfigChangedListener
+01-01 22:59:57.558 D/HWUI    ( 3582): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-01 22:59:57.559 W/HWUI    ( 3582): Image decoding logging dropped!
+01-01 22:59:57.559 D/HWUI    ( 3582): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-01 22:59:57.559 W/HWUI    ( 3582): Image decoding logging dropped!
+01-01 22:59:57.559 D/HWUI    ( 3582): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-01 22:59:57.559 W/HWUI    ( 3582): Image decoding logging dropped!
+01-01 22:59:57.560 D/HWUI    ( 3582): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-01 22:59:57.560 W/HWUI    ( 3582): Image decoding logging dropped!
+01-01 22:59:57.560 D/HWUI    ( 3582): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-01 22:59:57.560 W/HWUI    ( 3582): Image decoding logging dropped!
+01-01 22:59:57.560 D/HWUI    ( 3582): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-01 22:59:57.560 W/HWUI    ( 3582): Image decoding logging dropped!
+01-01 22:59:57.561 D/HWUI    ( 3582): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-01 22:59:57.561 W/HWUI    ( 3582): Image decoding logging dropped!
+01-01 22:59:57.561 D/HWUI    ( 3582): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-01 22:59:57.561 W/HWUI    ( 3582): Image decoding logging dropped!
+01-01 22:59:57.561 D/HWUI    ( 3582): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-01 22:59:57.561 W/HWUI    ( 3582): Image decoding logging dropped!
+01-01 22:59:57.561 D/HWUI    ( 3582): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-01 22:59:57.562 W/HWUI    ( 3582): Image decoding logging dropped!
+01-01 22:59:57.562 D/HWUI    ( 3582): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-01 22:59:57.562 W/HWUI    ( 3582): Image decoding logging dropped!
+01-01 22:59:57.562 D/HWUI    ( 3582): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-01 22:59:57.562 W/HWUI    ( 3582): Image decoding logging dropped!
+01-01 22:59:57.562 D/HWUI    ( 3582): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-01 22:59:57.562 W/HWUI    ( 3582): Image decoding logging dropped!
+01-01 22:59:57.562 D/HWUI    ( 3582): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-01 22:59:57.562 W/HWUI    ( 3582): Image decoding logging dropped!
+01-01 22:59:57.563 D/HWUI    ( 3582): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-01 22:59:57.563 W/HWUI    ( 3582): Image decoding logging dropped!
+01-01 22:59:57.563 D/HWUI    ( 3582): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-01 22:59:57.563 W/HWUI    ( 3582): Image decoding logging dropped!
+01-01 22:59:57.563 D/HWUI    ( 3582): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-01 22:59:57.563 W/HWUI    ( 3582): Image decoding logging dropped!
+01-01 22:59:57.563 D/HWUI    ( 3582): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-01 22:59:57.563 W/HWUI    ( 3582): Image decoding logging dropped!
+01-01 22:59:57.563 D/HWUI    ( 3582): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-01 22:59:57.564 W/HWUI    ( 3582): Image decoding logging dropped!
+01-01 22:59:57.564 D/HWUI    ( 3582): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-01 22:59:57.564 W/HWUI    ( 3582): Image decoding logging dropped!
+01-01 22:59:57.564 D/HWUI    ( 3582): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-01 22:59:57.564 W/HWUI    ( 3582): Image decoding logging dropped!
+01-01 22:59:57.564 D/HWUI    ( 3582): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-01 22:59:57.564 W/HWUI    ( 3582): Image decoding logging dropped!
+01-01 22:59:57.565 D/HWUI    ( 3582): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-01 22:59:57.565 W/HWUI    ( 3582): Image decoding logging dropped!
+01-01 22:59:57.565 D/HWUI    ( 3582): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-01 22:59:57.565 W/HWUI    ( 3582): Image decoding logging dropped!
+01-01 22:59:57.565 D/HWUI    ( 3582): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-01 22:59:57.565 W/HWUI    ( 3582): Image decoding logging dropped!
+01-01 22:59:57.565 D/HWUI    ( 3582): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-01 22:59:57.565 W/HWUI    ( 3582): Image decoding logging dropped!
+01-01 22:59:57.566 D/HWUI    ( 3582): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-01 22:59:57.566 W/HWUI    ( 3582): Image decoding logging dropped!
+01-01 22:59:58.259 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.PrefLauncherAlias', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=109526803, downTime=109526803, phoneEventTime=22:59:58.256 } moveCount:0
+01-01 22:59:58.259 D/VRI[PrefLauncherAlias]( 3582): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-01 22:59:58.328 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.PrefLauncherAlias', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=109526869, downTime=109526803, phoneEventTime=22:59:58.322 } moveCount:0
+01-01 22:59:58.478 I/AbsListViewStubImpl( 3582): com.osfans.trime, version: 3.3.7, Enable Prefetch: false
+01-01 22:59:58.480 D/DecorView( 3582): updateFreeformOutlineFromActivity, inFreeform=false,inFreeformWindowMode=false
+01-01 22:59:58.482 D/ScrollerOptimizationManager( 3582): registerConfigChangedListener
+01-01 22:59:58.483 D/ScrollerOptimizationManager( 3582): registerConfigChangedListener
+01-01 22:59:58.486 D/HWUI    ( 3582): TAG_DDRE, CanvasContext::setDdreActivities: 
+01-01 22:59:58.487 I/ViewRootImpl( 3582): com.osfans.trime/com.osfans.trime.PrefLauncherAlias use first frame acceleration
+01-01 22:59:58.491 I/Choreographer( 3582): first vsync insert message into MessageQueue Head
+01-01 22:59:58.492 I/ComputilityLevel( 3582): getComputilityLevel(): 6
+01-01 22:59:58.504 D/VRI[PrefLauncherAlias]( 3582): vri.reportNextDraw 0 Rect(30, 795 - 1170, 1961) android.view.ViewRootImpl.performTraversals:5606 android.view.ViewRootImpl.doTraversal:4159 android.view.ViewRootImpl$TraversalRunnable.run:12555 android.view.Choreographer$CallbackRecord.run:2040 android.view.Choreographer$CallbackRecord.run:2049 
+01-01 22:59:58.504 D/VRI[PrefLauncherAlias]( 3582): vri.Setup new sync=wmsSync-VRI[PrefLauncherAlias]#26
+01-01 22:59:58.508 D/VRI[PrefLauncherAlias]( 3582): vri.reportDrawFinished 0 0 Rect(30, 795 - 1170, 1961)
+01-01 22:59:58.509 D/HWUI    ( 3582): [HWUI] Flag vulkan_enhance_pipeline_cache enabled
+01-01 22:59:58.509 D/HWUI    ( 3582): [HWUI] EnhanceVkPipelineCache is disabled
+01-01 22:59:58.509 D/HWUI    ( 3582): [HWUI] Flag ddre enabled
+01-01 22:59:58.539 I/om.osfans.trime( 3582): This is sticky GC, maxfree is 33554432 minfree is 8388608
+01-01 22:59:59.076 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.PrefLauncherAlias', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=109527620, downTime=109527620, phoneEventTime=22:59:59.073 } moveCount:0
+01-01 22:59:59.076 D/VRI[PrefLauncherAlias]( 3582): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-01 22:59:59.185 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.PrefLauncherAlias', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=109527729, downTime=109527620, phoneEventTime=22:59:59.182 } moveCount:0
+01-01 22:59:59.187 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/build/tongwenfeng-custom.trime.yaml'.
+01-01 22:59:59.196 W/WindowOnBackDispatcher( 3582): sendCancelIfRunning: isInProgress=false callback=android.view.ViewRootImpl$$ExternalSyntheticLambda16@d0cbf88
+01-01 22:59:59.196 D/DecorViewImmersiveImpl( 3582): onDetachedFromWindow
+01-01 22:59:59.198 W/om.osfans.trime( 3582): Binder 0xb400006fd67bac80 destroyed after setInheritRt before being parceled.
+01-01 22:59:59.206 W/InputEventReceiver( 3582): Attempted to finish an input event but the input event receiver has already been disposed.
+01-01 22:59:59.232 I/HandWritingStubImpl( 3582): refreshLastKeyboardType: 1
+01-01 22:59:59.232 I/HandWritingStubImpl( 3582): getCurrentKeyboardType: 1
+01-01 22:59:59.235 D/InsetsController( 3582): hide(ime(), fromIme=false)
+01-01 22:59:59.235 I/ImeTracker( 3582): com.osfans.trime:43f808e4: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+01-01 22:59:59.969 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.PrefLauncherAlias', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=109528511, downTime=109528511, phoneEventTime=22:59:59.964 } moveCount:0
+01-01 22:59:59.970 D/VRI[PrefLauncherAlias]( 3582): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-01 23:00:00.041 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.PrefLauncherAlias', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=109528585, downTime=109528511, phoneEventTime=23:00:00.038 } moveCount:0
+01-01 23:00:00.156 I/AbsListViewStubImpl( 3582): com.osfans.trime, version: 3.3.7, Enable Prefetch: false
+01-01 23:00:00.158 D/DecorView( 3582): updateFreeformOutlineFromActivity, inFreeform=false,inFreeformWindowMode=false
+01-01 23:00:00.160 D/ScrollerOptimizationManager( 3582): registerConfigChangedListener
+01-01 23:00:00.161 D/ScrollerOptimizationManager( 3582): registerConfigChangedListener
+01-01 23:00:00.166 D/HWUI    ( 3582): TAG_DDRE, CanvasContext::setDdreActivities: 
+01-01 23:00:00.167 I/ViewRootImpl( 3582): com.osfans.trime/com.osfans.trime.PrefLauncherAlias use first frame acceleration
+01-01 23:00:00.174 I/Choreographer( 3582): first vsync insert message into MessageQueue Head
+01-01 23:00:00.175 I/ComputilityLevel( 3582): getComputilityLevel(): 6
+01-01 23:00:00.186 D/VRI[PrefLauncherAlias]( 3582): vri.reportNextDraw 0 Rect(30, 795 - 1170, 1961) android.view.ViewRootImpl.performTraversals:5606 android.view.ViewRootImpl.doTraversal:4159 android.view.ViewRootImpl$TraversalRunnable.run:12555 android.view.Choreographer$CallbackRecord.run:2040 android.view.Choreographer$CallbackRecord.run:2049 
+01-01 23:00:00.186 D/VRI[PrefLauncherAlias]( 3582): vri.Setup new sync=wmsSync-VRI[PrefLauncherAlias]#28
+01-01 23:00:00.190 D/VRI[PrefLauncherAlias]( 3582): vri.reportDrawFinished 0 0 Rect(30, 795 - 1170, 1961)
+01-01 23:00:00.192 D/HWUI    ( 3582): [HWUI] Flag vulkan_enhance_pipeline_cache enabled
+01-01 23:00:00.192 D/HWUI    ( 3582): [HWUI] EnhanceVkPipelineCache is disabled
+01-01 23:00:00.192 D/HWUI    ( 3582): [HWUI] Flag ddre enabled
+01-01 23:00:00.713 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.PrefLauncherAlias', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=109529255, downTime=109529255, phoneEventTime=23:00:00.708 } moveCount:0
+01-01 23:00:00.714 D/VRI[PrefLauncherAlias]( 3582): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-01 23:00:00.788 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.PrefLauncherAlias', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=109529330, downTime=109529255, phoneEventTime=23:00:00.783 } moveCount:0
+01-01 23:00:00.792 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/build/tongwenfeng.trime.yaml'.
+01-01 23:00:00.916 I/rime.trime( 3582): source file changed: /storage/emulated/0/rime/tongwenfeng.trime.yaml
+01-01 23:00:00.916 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/tongwenfeng.trime.yaml'.
+01-01 23:00:01.007 I/rime.trime( 3582): auto-patch tongwenfeng.trime:/__patch: tongwenfeng.trime.custom:/patch?
+01-01 23:00:01.007 I/rime.trime( 3582): optional resource not loaded: tongwenfeng.trime.custom
+01-01 23:00:01.007 I/rime.trime( 3582): resolved: Patch(tongwenfeng.trime.custom:patch <optional>)
+01-01 23:00:01.007 I/rime.trime( 3582): resource 'tongwenfeng.trime.custom' not loaded.
+01-01 23:00:01.007 I/rime.trime( 3582): saving config file '/storage/emulated/0/rime/build/tongwenfeng.trime.yaml'.
+01-01 23:00:01.084 I/om.osfans.trime( 3582): This is sticky GC, maxfree is 33554432 minfree is 8388608
+01-01 23:00:01.111 W/[main]  ( 3582): font /storage/emulated/0/rime/fonts/hanb.ttf not found
+01-01 23:00:01.112 W/[main]  ( 3582): font /storage/emulated/0/rime/fonts/latin.ttf not found
+01-01 23:00:01.112 D/WmSystemUiDebug( 3582): set navigation bar color,Alpha=0.0, RGB:0,0,0 caller:com.osfans.trime.ime.core.NavigationBarManager.evaluate:43 com.osfans.trime.ime.core.TrimeInputMethodService.replaceInputViews:11 com.osfans.trime.ui.main.settings.ThemePickerDialog$build$2$2$1.invokeSuspend:163 kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith:6 kotlinx.coroutines.internal.InlineList.resumeCancellableWith:129 kotlinx.coroutines.AbstractCoroutine.start:97 kotlinx.coroutines.JobKt.launch$default:30 com.osfans.trime.ui.main.settings.ThemePickerDialog$$ExternalSyntheticLambda0.onClick:184 com.android.internal.app.AlertController$AlertParams$3.onItemClick:1287 android.widget.AdapterView.performItemClick:330 
+01-01 23:00:01.113 W/[main]  ( 3582): font /storage/emulated/0/rime/fonts/latin.ttf not found
+01-01 23:00:01.152 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/build/default.yaml'.
+01-01 23:00:01.155 I/rime.trime( 3582): starting engine.
+01-01 23:00:01.155 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/user.yaml'.
+01-01 23:00:01.156 I/rime.trime( 3582): updated option: ascii_mode
+01-01 23:00:01.156 I/rime.trime( 3582): updated option: ascii_punct
+01-01 23:00:01.156 I/rime.trime( 3582): updated option: emoji
+01-01 23:00:01.156 I/rime.trime( 3582): updated option: full_shape
+01-01 23:00:01.156 I/rime.trime( 3582): updated option: mars
+01-01 23:00:01.156 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/build/moqi_xh.schema.yaml'.
+01-01 23:00:01.183 I/rime.trime( 3582): updated option: _auto_commit
+01-01 23:00:01.191 I/rime.trime( 3582): reading tsv file: /storage/emulated/0/rime/custom_phrase/custom_phrase_3_code.txt
+01-01 23:00:01.198 I/rime.trime( 3582): reading tsv file: /storage/emulated/0/rime/custom_phrase/custom_phrase_kf.txt
+01-01 23:00:01.201 I/rime.trime( 3582): reading tsv file: /storage/emulated/0/rime/custom_phrase/custom_phrase_mqzg.txt
+01-01 23:00:01.203 I/rime.trime( 3582): reading tsv file: /storage/emulated/0/rime/custom_phrase/custom_phrase_super_1jian.txt
+01-01 23:00:01.204 I/rime.trime( 3582): reading tsv file: /storage/emulated/0/rime/custom_phrase/custom_phrase_super_2jian.txt
+01-01 23:00:01.206 I/rime.trime( 3582): reading tsv file: /storage/emulated/0/rime/custom_phrase/custom_phrase_super_3jian.txt
+01-01 23:00:01.233 I/rime.trime( 3582): reading tsv file: /storage/emulated/0/rime/custom_phrase/custom_phrase_super_3jian_no_conflict.txt
+01-01 23:00:01.247 I/rime.trime( 3582): reading tsv file: /storage/emulated/0/rime/custom_phrase/custom_phrase_super_4jian_no_conflict.txt
+01-01 23:00:01.450 I/rime.trime( 3582): loading dictionary 'moqi_big.extended'.
+01-01 23:00:01.450 I/rime.trime( 3582): loading table file: /storage/emulated/0/rime/build/moqi_big.extended.table.bin
+01-01 23:00:01.451 I/rime.trime( 3582): loading prism file: /storage/emulated/0/rime/build/moqi_big.extended.prism.bin
+01-01 23:00:01.451 I/rime.trime( 3582): found double array image of size 277760.
+01-01 23:00:01.451 I/rime.trime( 3582): loading dictionary 'emoji'.
+01-01 23:00:01.451 I/rime.trime( 3582): loading table file: /storage/emulated/0/rime/build/emoji.table.bin
+01-01 23:00:01.452 I/rime.trime( 3582): loading prism file: /storage/emulated/0/rime/build/emoji.prism.bin
+01-01 23:00:01.452 I/rime.trime( 3582): found double array image of size 26880.
+01-01 23:00:01.527 I/rime.trime( 3582): loading dictionary 'easy_en'.
+01-01 23:00:01.527 I/rime.trime( 3582): loading table file: /storage/emulated/0/rime/build/easy_en.table.bin
+01-01 23:00:01.532 I/rime.trime( 3582): loading prism file: /storage/emulated/0/rime/build/easy_en.prism.bin
+01-01 23:00:01.532 I/rime.trime( 3582): found double array image of size 3499008.
+01-01 23:00:01.605 I/rime.trime( 3582): loading dictionary 'jp_sela'.
+01-01 23:00:01.605 I/rime.trime( 3582): loading table file: /storage/emulated/0/rime/build/jp_sela.table.bin
+01-01 23:00:01.609 I/rime.trime( 3582): loading prism file: /storage/emulated/0/rime/build/jp_sela.prism.bin
+01-01 23:00:01.610 I/rime.trime( 3582): found double array image of size 915200.
+01-01 23:00:01.685 I/rime.trime( 3582): loading dictionary 'reverse_moqima'.
+01-01 23:00:01.685 I/rime.trime( 3582): loading table file: /storage/emulated/0/rime/build/reverse_moqima.table.bin
+01-01 23:00:01.686 I/rime.trime( 3582): loading prism file: /storage/emulated/0/rime/build/reverse_moqima.prism.bin
+01-01 23:00:01.686 I/rime.trime( 3582): found double array image of size 82176.
+01-01 23:00:01.767 I/rime.trime( 3582): loading dictionary 'radical_flypy'.
+01-01 23:00:01.767 I/rime.trime( 3582): loading table file: /storage/emulated/0/rime/build/radical_flypy.table.bin
+01-01 23:00:01.767 I/rime.trime( 3582): loading prism file: /storage/emulated/0/rime/build/radical_flypy.prism.bin
+01-01 23:00:01.768 I/rime.trime( 3582): found double array image of size 100864.
+01-01 23:00:01.835 I/rime.trime( 3582): loading dictionary 'stroke'.
+01-01 23:00:01.835 I/rime.trime( 3582): loading table file: /storage/emulated/0/rime/build/stroke.table.bin
+01-01 23:00:01.836 I/rime.trime( 3582): loading prism file: /storage/emulated/0/rime/build/stroke.prism.bin
+01-01 23:00:01.837 I/rime.trime( 3582): found double array image of size 597248.
+01-01 23:00:01.922 I/rime.trime( 3582): loading dictionary 'zrlf'.
+01-01 23:00:01.922 I/rime.trime( 3582): loading table file: /storage/emulated/0/rime/build/zrlf.table.bin
+01-01 23:00:01.923 I/rime.trime( 3582): loading prism file: /storage/emulated/0/rime/build/zrlf.prism.bin
+01-01 23:00:01.924 I/rime.trime( 3582): found double array image of size 58880.
+01-01 23:00:02.002 I/rime.trime( 3582): loading dictionary 'cangjie5'.
+01-01 23:00:02.002 I/rime.trime( 3582): loading table file: /storage/emulated/0/rime/build/cangjie5.table.bin
+01-01 23:00:02.008 I/rime.trime( 3582): loading prism file: /storage/emulated/0/rime/build/cangjie5.prism.bin
+01-01 23:00:02.011 I/rime.trime( 3582): found double array image of size 650752.
+01-01 23:00:02.143 I/rime.trime( 3582): loading dictionary 'moqi.extended'.
+01-01 23:00:02.143 I/rime.trime( 3582): loading table file: /storage/emulated/0/rime/build/moqi.extended.table.bin
+01-01 23:00:02.157 I/rime.trime( 3582): loading prism file: /storage/emulated/0/rime/build/moqi.extended.prism.bin
+01-01 23:00:02.158 I/rime.trime( 3582): found double array image of size 247808.
+01-01 23:00:02.235 I/rime.trime( 3582): loading dictionary 'moqi.extended'.
+01-01 23:00:02.235 I/rime.trime( 3582): reading tsv file: /storage/emulated/0/rime/user.custom.dict.txt
+01-01 23:00:02.237 I/rime.trime( 3582): loading dictionary 'moqi.extended'.
+01-01 23:00:02.275 I/rime.trime( 3582): initializing opencc: /storage/emulated/0/rime/opencc/emoji.json
+01-01 23:00:02.307 I/rime.trime( 3582): initializing opencc: /storage/emulated/0/rime/opencc/moqi_chaifen.json
+01-01 23:00:02.472 I/rime.trime( 3582): initializing opencc: /storage/emulated/0/rime/opencc/moqi_chaifen_all.json
+01-01 23:00:02.626 I/rime.trime( 3582): initializing opencc: /storage/emulated/0/rime/opencc/chinese_english.json
+01-01 23:00:03.206 I/rime.trime( 3582): initializing opencc: /storage/emulated/0/Android/data/com.osfans.trime/files/shared/opencc/t2s.json
+01-01 23:00:03.209 I/rime.trime( 3582): initializing opencc: /storage/emulated/0/Android/data/com.osfans.trime/files/shared/opencc/s2t.json
+01-01 23:00:03.289 W/MIUIScout App( 3582): Enter APP_SCOUT_WARNING State
+01-01 23:00:03.289 W/MIUIScout App( 3582):  (Current message:null)
+01-01 23:00:03.289 D/AppScoutStateMachine( 3582): dump trace dirName = 2026-01-01-23-00-03-3582-APP_SCOUT_WARNING-com.osfans.trime
+01-01 23:00:03.296 W/MIUIScout App( 3582): Event:APP_SCOUT_WARNING Thread:main backtrace:
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at jdk.internal.misc.Unsafe.park(Native Method)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at kotlinx.coroutines.JobKt.runBlocking(Unknown Source:119)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at com.osfans.trime.daemon.RimeDaemon$establish$1.run(SourceFile:19)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at com.osfans.trime.ime.bar.ui.ToolButton.setupFromConfig(SourceFile:46)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at com.osfans.trime.ime.bar.ui.ToolButton.<init>(SourceFile:52)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at androidx.emoji2.text.MetadataRepo.<init>(SourceFile:37)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at com.osfans.trime.ime.bar.ui.AlwaysUi.<init>(SourceFile:51)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at com.osfans.trime.ime.bar.QuickBar$$ExternalSyntheticLambda2.invoke(SourceFile:135)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at kotlin.SynchronizedLazyImpl.getValue(SourceFile:18)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at com.osfans.trime.ime.bar.QuickBar.$r8$lambda$iEcrF6canSfAyUBPKoKnqxetBc0(SourceFile:97)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at com.osfans.trime.ime.bar.QuickBar$$ExternalSyntheticLambda2.invoke(SourceFile:8)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at kotlin.SynchronizedLazyImpl.getValue(SourceFile:18)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at com.osfans.trime.ime.bar.QuickBar.getView(SourceFile:3)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at com.osfans.trime.ime.core.InputView.<init>(SourceFile:374)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at com.osfans.trime.ime.core.TrimeInputMethodService.replaceInputView(SourceFile:7)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at com.osfans.trime.ime.core.TrimeInputMethodService.replaceInputViews(SourceFile:14)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at com.osfans.trime.ui.main.settings.ThemePickerDialog$build$2$2$1.invokeSuspend(SourceFile:163)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(SourceFile:6)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at kotlinx.coroutines.internal.InlineList.resumeCancellableWith(SourceFile:129)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at kotlinx.coroutines.AbstractCoroutine.start(SourceFile:97)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at kotlinx.coroutines.JobKt.launch$default(Unknown Source:30)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at com.osfans.trime.ui.main.settings.ThemePickerDialog$$ExternalSyntheticLambda0.onClick(SourceFile:184)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at com.android.internal.app.AlertController$AlertParams$3.onItemClick(AlertController.java:1287)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.widget.AdapterView.performItemClick(AdapterView.java:330)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.widget.AbsListView.performItemClick(AbsListView.java:1299)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.widget.AbsListView$PerformClick.run(AbsListView.java:3343)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.widget.AbsListView.onTouchUp(AbsListView.java:4324)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.widget.AbsListView.onTouchEvent(AbsListView.java:4080)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.view.View.performOnTouchCallback(View.java:17028)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.view.View.dispatchTouchEvent(View.java:16969)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3162)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2832)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3171)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2851)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3171)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2851)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3171)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2851)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3171)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2851)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3171)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2851)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at com.android.internal.policy.DecorView.superDispatchTouchEvent(DecorView.java:611)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at com.android.internal.policy.PhoneWindow.superDispatchTouchEvent(PhoneWindow.java:2041)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.app.Dialog.dispatchTouchEvent(Dialog.java:963)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at com.android.internal.policy.DecorView.dispatchTouchEvent(DecorView.java:569)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.view.View.dispatchPointerEvent(View.java:17332)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at com.xiaomi.mirror.MiuiMirrorImpl.isHandled(MiuiMirrorImpl.java:150)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.view.ViewRootImpl$ViewPostImeInputStage.processPointerEvent(ViewRootImpl.java:9879)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.view.ViewRootImpl$ViewPostImeInputStage.onProcess(ViewRootImpl.java:9618)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.view.ViewRootImpl$InputStage.deliver(ViewRootImpl.java:8949)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.view.ViewRootImpl$InputStage.onDeliverToNext(ViewRootImpl.java:9012)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.view.ViewRootImpl$InputStage.forward(ViewRootImpl.java:8978)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.view.ViewRootImpl$AsyncInputStage.forward(ViewRootImpl.java:9150)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.view.ViewRootImpl$InputStage.apply(ViewRootImpl.java:8986)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.view.ViewRootImpl$AsyncInputStage.apply(ViewRootImpl.java:9207)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.view.ViewRootImpl$InputStage.deliver(ViewRootImpl.java:8953)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.view.ViewRootImpl$InputStage.onDeliverToNext(ViewRootImpl.java:9012)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.view.ViewRootImpl$InputStage.forward(ViewRootImpl.java:8978)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.view.ViewRootImpl$InputStage.apply(ViewRootImpl.java:8986)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.view.ViewRootImpl$InputStage.deliver(ViewRootImpl.java:8953)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.view.ViewRootImpl.deliverInputEvent(ViewRootImpl.java:12424)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.view.ViewRootImpl.doProcessInputEvents(ViewRootImpl.java:12344)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.view.ViewRootImpl.enqueueInputEvent(ViewRootImpl.java:12279)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.view.ViewRootImpl.processRawInputEvent(ViewRootImpl.java:12857)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.view.ViewRootImpl$WindowInputEventReceiver.onInputEvent(ViewRootImpl.java:12596)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.view.InputEventReceiver.dispatchInputEvent(InputEventReceiver.java:342)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.os.MessageQueue.nativePollOnce(Native Method)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.os.MessageQueue.nextLegacy(MessageQueue.java:951)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.os.MessageQueue.next(MessageQueue.java:1094)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.os.Looper.loopOnce(Looper.java:212)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.os.Looper.loop(Looper.java:360)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at android.app.ActivityThread.main(ActivityThread.java:10054)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at java.lang.reflect.Method.invoke(Native Method)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:616)
+01-01 23:00:03.296 W/MIUIScout App( 3582):     at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1115)
+01-01 23:00:03.307 I/rime.trime( 3582): initializing opencc: /storage/emulated/0/rime/opencc/martian.json
+01-01 23:00:03.318 I/rime.trime( 3582): ConcreteEngine::InitializeOptions
+01-01 23:00:03.318 I/rime.trime( 3582): found switch option: ascii_mode, reset: -1
+01-01 23:00:03.318 I/rime.trime( 3582): found switch option: full_shape, reset: -1
+01-01 23:00:03.318 I/rime.trime( 3582): found switch option: traditionalization, reset: -1
+01-01 23:00:03.318 I/rime.trime( 3582): found switch option: emoji, reset: -1
+01-01 23:00:03.318 I/rime.trime( 3582): found switch option: chaifen, reset: -1
+01-01 23:00:03.318 I/rime.trime( 3582): found switch option: big_char_set, reset: -1
+01-01 23:00:03.318 I/rime.trime( 3582): found switch option: mars, reset: 0
+01-01 23:00:03.318 I/rime.trime( 3582): updated option: mars
+01-01 23:00:03.318 I/rime.trime( 3582): found switch option: ascii_punct, reset: -1
+01-01 23:00:03.319 W/[main]  ( 3582): font /storage/emulated/0/rime/fonts/iconfont.ttf not found
+01-01 23:00:03.320 D/ScrollerOptimizationManager( 3582): registerConfigChangedListener
+01-01 23:00:03.322 D/ScrollerOptimizationManager( 3582): registerConfigChangedListener
+01-01 23:00:03.323 D/ScrollerOptimizationManager( 3582): registerConfigChangedListener
+01-01 23:00:03.324 W/WindowOnBackDispatcher( 3582): sendCancelIfRunning: isInProgress=false callback=android.view.ViewRootImpl$$ExternalSyntheticLambda16@719b15c
+01-01 23:00:03.324 D/DecorViewImmersiveImpl( 3582): onDetachedFromWindow
+01-01 23:00:03.327 W/om.osfans.trime( 3582): Binder 0xb400006fd685e6c0 destroyed after setInheritRt before being parceled.
+01-01 23:00:03.333 W/InputEventReceiver( 3582): Attempted to finish an input event but the input event receiver has already been disposed.
+01-01 23:00:03.333 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.PrefLauncherAlias', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=109530211, downTime=109530211, phoneEventTime=23:00:01.664 } moveCount:0
+01-01 23:00:03.333 W/VRI[PrefLauncherAlias]( 3582): Dropping event due to root view being removed: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=176.90039, y[0]=296.4004, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x200002, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=109530211, downTime=109530211, deviceId=7, source=0x1002, displayId=0, eventId=700331472 }
+01-01 23:00:03.333 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.PrefLauncherAlias', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=109530261, downTime=109530211, phoneEventTime=23:00:01.714 } moveCount:0
+01-01 23:00:03.333 W/VRI[PrefLauncherAlias]( 3582): Dropping event due to root view being removed: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=176.90039, y[0]=296.4004, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x200002, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=109530261, downTime=109530211, deviceId=7, source=0x1002, displayId=0, eventId=614351931 }
+01-01 23:00:03.333 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.PrefLauncherAlias', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=109530729, downTime=109530729, phoneEventTime=23:00:02.182 } moveCount:0
+01-01 23:00:03.334 W/VRI[PrefLauncherAlias]( 3582): Dropping event due to root view being removed: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=347.0996, y[0]=284.7998, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x200002, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=109530729, downTime=109530729, deviceId=7, source=0x1002, displayId=0, eventId=481836396 }
+01-01 23:00:03.334 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.PrefLauncherAlias', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=109530821, downTime=109530729, phoneEventTime=23:00:02.274 } moveCount:0
+01-01 23:00:03.334 W/VRI[PrefLauncherAlias]( 3582): Dropping event due to root view being removed: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=347.0996, y[0]=284.7998, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x200002, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=109530821, downTime=109530729, deviceId=7, source=0x1002, displayId=0, eventId=192111105 }
+01-01 23:00:03.334 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.PrefLauncherAlias', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=109531264, downTime=109531264, phoneEventTime=23:00:02.717 } moveCount:0
+01-01 23:00:03.334 W/VRI[PrefLauncherAlias]( 3582): Dropping event due to root view being removed: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=340.5, y[0]=280.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x200002, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=109531264, downTime=109531264, deviceId=7, source=0x1002, displayId=0, eventId=93779270 }
+01-01 23:00:03.334 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.PrefLauncherAlias', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=109531347, downTime=109531264, phoneEventTime=23:00:02.800 } moveCount:0
+01-01 23:00:03.334 W/VRI[PrefLauncherAlias]( 3582): Dropping event due to root view being removed: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=340.5, y[0]=280.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x200002, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=109531347, downTime=109531264, deviceId=7, source=0x1002, displayId=0, eventId=721749164 }
+01-01 23:00:03.334 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.PrefLauncherAlias', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=109531448, downTime=109531448, phoneEventTime=23:00:02.901 } moveCount:0
+01-01 23:00:03.334 W/VRI[PrefLauncherAlias]( 3582): Dropping event due to root view being removed: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=351.5, y[0]=292.0996, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x200002, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=109531448, downTime=109531448, deviceId=7, source=0x1002, displayId=0, eventId=230339061 }
+01-01 23:00:03.335 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.PrefLauncherAlias', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=109531514, downTime=109531448, phoneEventTime=23:00:02.967 } moveCount:0
+01-01 23:00:03.335 W/VRI[PrefLauncherAlias]( 3582): Dropping event due to root view being removed: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=351.5, y[0]=292.0996, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x200002, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=109531514, downTime=109531448, deviceId=7, source=0x1002, displayId=0, eventId=502358518 }
+01-01 23:00:03.335 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.PrefLauncherAlias', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=109531842, downTime=109531842, phoneEventTime=23:00:03.295 } moveCount:0
+01-01 23:00:03.335 W/VRI[PrefLauncherAlias]( 3582): Dropping event due to root view being removed: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=343.7002, y[0]=282.4004, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x200002, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=109531842, downTime=109531842, deviceId=7, source=0x1002, displayId=0, eventId=585392083 }
+01-01 23:00:03.335 I/Choreographer( 3582): Skipped 305 frames!  The application may be doing too much work on its main thread.
+01-01 23:00:03.338 D/WmSystemUiDebug( 3582): set navigation bar color,Alpha=0.0, RGB:0,0,0 caller:com.osfans.trime.ime.core.NavigationBarManager.evaluate:43 com.osfans.trime.ime.core.TrimeInputMethodService.replaceInputViews:11 androidx.work.impl.Processor$$ExternalSyntheticLambda2.run:89 android.os.Handler.handleCallback:995 android.os.Handler.dispatchMessage:103 android.os.Looper.loopOnce:267 android.os.Looper.loop:360 android.app.ActivityThread.main:10054 java.lang.reflect.Method.invoke:-2 com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run:616 
+01-01 23:00:03.379 D/ScrollerOptimizationManager( 3582): registerConfigChangedListener
+01-01 23:00:03.380 D/ScrollerOptimizationManager( 3582): registerConfigChangedListener
+01-01 23:00:03.381 D/ScrollerOptimizationManager( 3582): registerConfigChangedListener
+01-01 23:00:03.386 I/HandWritingStubImpl( 3582): refreshLastKeyboardType: 1
+01-01 23:00:03.386 I/HandWritingStubImpl( 3582): getCurrentKeyboardType: 1
+01-01 23:00:03.388 D/InsetsController( 3582): hide(ime(), fromIme=false)
+01-01 23:00:03.389 I/ImeTracker( 3582): com.osfans.trime:ed3959c6: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+01-01 23:00:03.447 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.PrefLauncherAlias', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=109531992, downTime=109531992, phoneEventTime=23:00:03.445 } moveCount:0
+01-01 23:00:03.448 D/VRI[PrefLauncherAlias]( 3582): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-01 23:00:03.488 I/om.osfans.trime( 3582): Thread[6,tid=3596,WaitingInMainSignalCatcherLoop,Thread*=0xb400006f767ae380,peer=0x27c0328,"Signal Catcher"]: reacting to signal 3
+01-01 23:00:03.488 I/om.osfans.trime( 3582): 
+01-01 23:00:03.540 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.PrefLauncherAlias', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=109532084, downTime=109531992, phoneEventTime=23:00:03.537 } moveCount:0
+01-01 23:00:03.564 W/om.osfans.trime( 3582): sched_getscheduler(3764): No such process
+01-01 23:00:03.564 W/om.osfans.trime( 3582): sched_getparam(3764, &sp): No such process
+01-01 23:00:03.574 W/om.osfans.trime( 3582): sched_getscheduler(4736): No such process
+01-01 23:00:03.574 W/om.osfans.trime( 3582): sched_getparam(4736, &sp): No such process
+01-01 23:00:03.575 W/om.osfans.trime( 3582): sched_getscheduler(6480): No such process
+01-01 23:00:03.575 W/om.osfans.trime( 3582): sched_getparam(6480, &sp): No such process
+01-01 23:00:03.575 W/om.osfans.trime( 3582): sched_getscheduler(7119): No such process
+01-01 23:00:03.575 W/om.osfans.trime( 3582): sched_getparam(7119, &sp): No such process
+01-01 23:00:03.575 W/om.osfans.trime( 3582): sched_getscheduler(13439): No such process
+01-01 23:00:03.575 W/om.osfans.trime( 3582): sched_getparam(13439, &sp): No such process
+01-01 23:00:03.575 W/om.osfans.trime( 3582): sched_getscheduler(13838): No such process
+01-01 23:00:03.575 W/om.osfans.trime( 3582): sched_getparam(13838, &sp): No such process
+01-01 23:00:03.575 W/om.osfans.trime( 3582): sched_getscheduler(14272): No such process
+01-01 23:00:03.575 W/om.osfans.trime( 3582): sched_getparam(14272, &sp): No such process
+01-01 23:00:03.575 W/om.osfans.trime( 3582): sched_getscheduler(14444): No such process
+01-01 23:00:03.575 W/om.osfans.trime( 3582): sched_getparam(14444, &sp): No such process
+01-01 23:00:03.575 W/om.osfans.trime( 3582): sched_getscheduler(19123): No such process
+01-01 23:00:03.575 W/om.osfans.trime( 3582): sched_getparam(19123, &sp): No such process
+01-01 23:00:03.575 W/om.osfans.trime( 3582): sched_getscheduler(20440): No such process
+01-01 23:00:03.575 W/om.osfans.trime( 3582): sched_getparam(20440, &sp): No such process
+01-01 23:00:03.575 W/om.osfans.trime( 3582): sched_getscheduler(24355): No such process
+01-01 23:00:03.575 W/om.osfans.trime( 3582): sched_getparam(24355, &sp): No such process
+01-01 23:00:03.575 W/om.osfans.trime( 3582): sched_getscheduler(25345): No such process
+01-01 23:00:03.575 W/om.osfans.trime( 3582): sched_getparam(25345, &sp): No such process
+01-01 23:00:03.575 W/om.osfans.trime( 3582): sched_getscheduler(28015): No such process
+01-01 23:00:03.575 W/om.osfans.trime( 3582): sched_getparam(28015, &sp): No such process
+01-01 23:00:03.575 W/om.osfans.trime( 3582): sched_getscheduler(29513): No such process
+01-01 23:00:03.575 W/om.osfans.trime( 3582): sched_getparam(29513, &sp): No such process
+01-01 23:00:03.575 W/om.osfans.trime( 3582): sched_getscheduler(3712): No such process
+01-01 23:00:03.575 W/om.osfans.trime( 3582): sched_getparam(3712, &sp): No such process
+01-01 23:00:03.575 W/om.osfans.trime( 3582): sched_getscheduler(5544): No such process
+01-01 23:00:03.575 W/om.osfans.trime( 3582): sched_getparam(5544, &sp): No such process
+01-01 23:00:03.575 W/om.osfans.trime( 3582): sched_getscheduler(6069): No such process
+01-01 23:00:03.575 W/om.osfans.trime( 3582): sched_getparam(6069, &sp): No such process
+01-01 23:00:03.575 W/om.osfans.trime( 3582): sched_getscheduler(10228): No such process
+01-01 23:00:03.575 W/om.osfans.trime( 3582): sched_getparam(10228, &sp): No such process
+01-01 23:00:03.576 W/om.osfans.trime( 3582): sched_getscheduler(12300): No such process
+01-01 23:00:03.576 W/om.osfans.trime( 3582): sched_getparam(12300, &sp): No such process
+01-01 23:00:03.576 W/om.osfans.trime( 3582): sched_getscheduler(12856): No such process
+01-01 23:00:03.576 W/om.osfans.trime( 3582): sched_getparam(12856, &sp): No such process
+01-01 23:00:03.576 W/om.osfans.trime( 3582): sched_getscheduler(14826): No such process
+01-01 23:00:03.576 W/om.osfans.trime( 3582): sched_getparam(14826, &sp): No such process
+01-01 23:00:03.576 W/om.osfans.trime( 3582): sched_getscheduler(21413): No such process
+01-01 23:00:03.576 W/om.osfans.trime( 3582): sched_getparam(21413, &sp): No such process
+01-01 23:00:03.576 W/om.osfans.trime( 3582): sched_getscheduler(29533): No such process
+01-01 23:00:03.576 W/om.osfans.trime( 3582): sched_getparam(29533, &sp): No such process
+01-01 23:00:03.576 W/om.osfans.trime( 3582): sched_getscheduler(475): No such process
+01-01 23:00:03.576 W/om.osfans.trime( 3582): sched_getparam(475, &sp): No such process
+01-01 23:00:03.577 W/om.osfans.trime( 3582): sched_getscheduler(12407): No such process
+01-01 23:00:03.577 W/om.osfans.trime( 3582): sched_getparam(12407, &sp): No such process
+01-01 23:00:03.660 I/om.osfans.trime( 3582): Wrote stack traces to tombstoned
+01-01 23:00:04.712 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.PrefLauncherAlias', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=109533255, downTime=109533255, phoneEventTime=23:00:04.708 } moveCount:0
+01-01 23:00:04.713 D/VRI[PrefLauncherAlias]( 3582): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-01 23:00:04.779 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.PrefLauncherAlias', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=109533322, downTime=109533255, phoneEventTime=23:00:04.775 } moveCount:0
+01-01 23:00:05.792 W/MIUIScout App( 3582): Enter APP_SCOUT_SLOW state
+01-01 23:00:06.366 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.PrefLauncherAlias', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=109534907, downTime=109534907, phoneEventTime=23:00:06.360 } moveCount:0
+01-01 23:00:06.366 D/VRI[PrefLauncherAlias]( 3582): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-01 23:00:06.447 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.PrefLauncherAlias', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=109534990, downTime=109534907, phoneEventTime=23:00:06.443 } moveCount:0
+01-01 23:00:06.851 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.PrefLauncherAlias', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=109535393, downTime=109535393, phoneEventTime=23:00:06.846 } moveCount:0
+01-01 23:00:06.852 D/VRI[PrefLauncherAlias]( 3582): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-01 23:00:06.923 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.PrefLauncherAlias', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=109535467, downTime=109535393, phoneEventTime=23:00:06.920 } moveCount:0
+01-01 23:00:07.067 I/om.osfans.trime( 3582): This is sticky GC, maxfree is 33554432 minfree is 8388608
+01-01 23:00:07.070 I/AbsListViewStubImpl( 3582): com.osfans.trime, version: 3.3.7, Enable Prefetch: false
+01-01 23:00:07.071 D/DecorView( 3582): updateFreeformOutlineFromActivity, inFreeform=false,inFreeformWindowMode=false
+01-01 23:00:07.074 D/ScrollerOptimizationManager( 3582): registerConfigChangedListener
+01-01 23:00:07.075 D/ScrollerOptimizationManager( 3582): registerConfigChangedListener
+01-01 23:00:07.078 D/HWUI    ( 3582): TAG_DDRE, CanvasContext::setDdreActivities: 
+01-01 23:00:07.079 I/ViewRootImpl( 3582): com.osfans.trime/com.osfans.trime.PrefLauncherAlias use first frame acceleration
+01-01 23:00:07.086 I/Choreographer( 3582): first vsync insert message into MessageQueue Head
+01-01 23:00:07.087 I/ComputilityLevel( 3582): getComputilityLevel(): 6
+01-01 23:00:07.102 D/VRI[PrefLauncherAlias]( 3582): vri.reportNextDraw 0 Rect(30, 795 - 1170, 1961) android.view.ViewRootImpl.performTraversals:5606 android.view.ViewRootImpl.doTraversal:4159 android.view.ViewRootImpl$TraversalRunnable.run:12555 android.view.Choreographer$CallbackRecord.run:2040 android.view.Choreographer$CallbackRecord.run:2049 
+01-01 23:00:07.102 D/VRI[PrefLauncherAlias]( 3582): vri.Setup new sync=wmsSync-VRI[PrefLauncherAlias]#30
+01-01 23:00:07.109 D/VRI[PrefLauncherAlias]( 3582): vri.reportDrawFinished 0 0 Rect(30, 795 - 1170, 1961)
+01-01 23:00:07.111 D/HWUI    ( 3582): [HWUI] Flag vulkan_enhance_pipeline_cache enabled
+01-01 23:00:07.111 D/HWUI    ( 3582): [HWUI] EnhanceVkPipelineCache is disabled
+01-01 23:00:07.111 D/HWUI    ( 3582): [HWUI] Flag ddre enabled
+01-01 23:00:07.751 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.PrefLauncherAlias', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=109536294, downTime=109536294, phoneEventTime=23:00:07.747 } moveCount:0
+01-01 23:00:07.752 D/VRI[PrefLauncherAlias]( 3582): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-01 23:00:07.834 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.PrefLauncherAlias', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=109536377, downTime=109536294, phoneEventTime=23:00:07.830 } moveCount:0
+01-01 23:00:07.839 I/rime.trime( 3582): loading config file '/storage/emulated/0/rime/build/tongwenfeng-custom.trime.yaml'.
+01-01 23:00:07.856 D/WmSystemUiDebug( 3582): set navigation bar color,Alpha=0.0, RGB:0,0,0 caller:com.osfans.trime.ime.core.NavigationBarManager.evaluate:43 com.osfans.trime.ime.core.TrimeInputMethodService.replaceInputViews:11 com.osfans.trime.ui.main.settings.ThemePickerDialog$build$2$2$1.invokeSuspend:163 kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith:6 kotlinx.coroutines.internal.InlineList.resumeCancellableWith:129 kotlinx.coroutines.AbstractCoroutine.start:97 kotlinx.coroutines.JobKt.launch$default:30 com.osfans.trime.ui.main.settings.ThemePickerDialog$$ExternalSyntheticLambda0.onClick:184 com.android.internal.app.AlertController$AlertParams$3.onItemClick:1287 android.widget.AdapterView.performItemClick:330 
+01-01 23:00:07.862 D/ScrollerOptimizationManager( 3582): registerConfigChangedListener
+01-01 23:00:07.865 D/ScrollerOptimizationManager( 3582): registerConfigChangedListener
+01-01 23:00:07.867 D/ScrollerOptimizationManager( 3582): registerConfigChangedListener
+01-01 23:00:07.868 W/WindowOnBackDispatcher( 3582): sendCancelIfRunning: isInProgress=false callback=android.view.ViewRootImpl$$ExternalSyntheticLambda16@1ad6a0e
+01-01 23:00:07.868 D/DecorViewImmersiveImpl( 3582): onDetachedFromWindow
+01-01 23:00:07.871 W/om.osfans.trime( 3582): Binder 0xb400006fd68363a0 destroyed after setInheritRt before being parceled.
+01-01 23:00:07.879 W/InputEventReceiver( 3582): Attempted to finish an input event but the input event receiver has already been disposed.
+01-01 23:00:07.880 D/WmSystemUiDebug( 3582): set navigation bar color,Alpha=0.0, RGB:0,0,0 caller:com.osfans.trime.ime.core.NavigationBarManager.evaluate:43 com.osfans.trime.ime.core.TrimeInputMethodService.replaceInputViews:11 androidx.work.impl.Processor$$ExternalSyntheticLambda2.run:89 android.os.Handler.handleCallback:995 android.os.Handler.dispatchMessage:103 android.os.Looper.loopOnce:267 android.os.Looper.loop:360 android.app.ActivityThread.main:10054 java.lang.reflect.Method.invoke:-2 com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run:616 
+01-01 23:00:07.883 D/ScrollerOptimizationManager( 3582): registerConfigChangedListener
+01-01 23:00:07.885 D/ScrollerOptimizationManager( 3582): registerConfigChangedListener
+01-01 23:00:07.886 D/ScrollerOptimizationManager( 3582): registerConfigChangedListener
+01-01 23:00:07.898 I/HandWritingStubImpl( 3582): refreshLastKeyboardType: 1
+01-01 23:00:07.898 I/HandWritingStubImpl( 3582): getCurrentKeyboardType: 1
+01-01 23:00:07.900 D/InsetsController( 3582): hide(ime(), fromIme=false)
+01-01 23:00:07.900 I/ImeTracker( 3582): com.osfans.trime:d79fdcd7: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+01-01 23:00:09.047 I/ContentCatcher( 3582): SettingTrigger : unregister status observer com.osfans.trime.PrefLauncherAlias
+01-01 23:00:09.050 I/ContentCatcher( 3582): SettingTrigger : unregisterUIAgentListener com.osfans.trime.PrefLauncherAlias, uid:10375
+01-01 23:00:09.060 W/om.osfans.trime( 3582): Binder 0xb400006fd759efa0 destroyed after setInheritRt before being parceled.
+01-01 23:00:09.185 V/InputMethod( 3582): IMS.showSoftInput()
+01-01 23:00:09.185 D/InputMethodService( 3582): onShowInputRequested: show flags = 0
+01-01 23:00:09.187 I/InputMethodService( 3582): updateInputViewShown mShowInputRequested = true onEvaluateInputViewShown = truemIsInputViewShown = true mDecorViewVisible = true mInputView= com.osfans.trime.ime.core.InputView{ca4a118 V.E...... ......ID 0,0-1200,2536}
+01-01 23:00:09.197 I/rime.trime( 3582): updated option: soft_cursor
+01-01 23:00:09.199 I/rime.trime( 3582): updated option: _horizontal
+01-01 23:00:09.206 D/VRI[InputMethod]( 3582): vri.reportNextDraw 0 Rect(0, 134 - 1200, 2670) android.view.ViewRootImpl.performTraversals:5606 android.view.ViewRootImpl.doTraversal:4159 android.view.ViewRootImpl$TraversalRunnable.run:12555 android.view.Choreographer$CallbackRecord.run:2040 android.view.Choreographer$CallbackRecord.run:2049 
+01-01 23:00:09.206 D/VRI[InputMethod]( 3582): vri.Setup new sync=wmsSync-VRI[InputMethod]#32
+01-01 23:00:09.210 D/VRI[InputMethod]( 3582): vri.reportDrawFinished 0 0 Rect(0, 134 - 1200, 2670)
+01-01 23:00:09.234 I/om.osfans.trime( 3582): This is non sticky GC, maxfree is 33554432 minfree is 8388608
+01-01 23:00:11.947 D/AppScoutStateMachine( 3582): 3582-ScoutStateMachinecreated
+01-01 23:00:11.947 W/WindowOnBackDispatcher( 3582): OnBackInvokedCallback is not enabled for the application.
+01-01 23:00:11.947 W/WindowOnBackDispatcher( 3582): Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+01-01 23:00:11.948 D/Activity( 3582): Activity = ActivityInfo{686dcfa com.osfans.trime.PrefLauncherAlias}, Resume onConfigurationChanged = {1.1 460mcc1mnc [zh_CN] ldltr sw400dp w400dp h890dp 480dpi nrml long hdr widecg port uimode=14 night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1200, 2670) mAppBounds=Rect(0, 0 - 1200, 2670) mMaxBounds=Rect(0, 0 - 1200, 2670) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=standard mAlwaysOnTop=undefined mRotation=ROTATION_0 mInSplitScreen=false letterBoxed=false foScaled=false isSpecificEmbedded=false embeddingScale=1.0} s.2 fontWeightAdjustment=0/dc themeChanged=0 themeChangedFlags=0 display=0 extraData = Bundle[{}] screenType=0c}
+01-01 23:00:11.948 D/SecurityManager( 3582): checkAccessControl flag0
+01-01 23:00:11.952 I/ContentCatcher( 3582): SettingTrigger : register screen QA status observer com.osfans.trime.PrefLauncherAlias
+01-01 23:00:11.952 I/ContentCatcher( 3582): SettingTrigger : register global collect status observer com.osfans.trime.PrefLauncherAlias
+01-01 23:00:11.952 I/ContentCatcher( 3582): SettingTrigger : registerUIAgentListener com.osfans.trime.PrefLauncherAlias, uid:10375
+01-01 23:00:11.964 D/VRI[PrefLauncherAlias]( 3582): vri.reportNextDraw 0 Rect(0, 0 - 1200, 2670) android.view.ViewRootImpl.performTraversals:5606 android.view.ViewRootImpl.doTraversal:4159 android.view.ViewRootImpl$TraversalRunnable.run:12555 android.view.Choreographer$CallbackRecord.run:2040 android.view.Choreographer$CallbackRecord.run:2049 
+01-01 23:00:11.964 D/VRI[PrefLauncherAlias]( 3582): vri.Setup new sync=wmsSync-VRI[PrefLauncherAlias]#34
+01-01 23:00:11.967 D/VRI[PrefLauncherAlias]( 3582): vri.reportDrawFinished 0 0 Rect(0, 0 - 1200, 2670)
+01-01 23:00:11.969 D/VRI[PrefLauncherAlias]( 3582): vri.reportNextDraw 0 Rect(0, 0 - 1200, 2670) android.view.ViewRootImpl.handleResized:3278 android.view.ViewRootImpl.-$$Nest$mhandleResized:0 android.view.ViewRootImpl$W.resized:13762 android.app.servertransaction.WindowStateResizeItem.execute:93 android.app.servertransaction.WindowStateTransactionItem.execute:62 
+01-01 23:00:11.975 D/VRI[PrefLauncherAlias]( 3582): vri.Setup new sync=wmsSync-VRI[PrefLauncherAlias]#36
+01-01 23:00:11.977 D/VRI[PrefLauncherAlias]( 3582): vri.reportDrawFinished 0 0 Rect(0, 0 - 1200, 2670)
+01-01 23:00:11.997 I/HandWritingStubImpl( 3582): refreshLastKeyboardType: 1
+01-01 23:00:11.997 I/HandWritingStubImpl( 3582): getCurrentKeyboardType: 1
+01-01 23:00:12.003 D/InsetsController( 3582): hide(ime(), fromIme=false)
+01-01 23:00:12.003 I/ImeTracker( 3582): com.osfans.trime:375a7c94: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+01-01 23:00:12.004 I/rime.trime( 3582): updated option: soft_cursor
+01-01 23:00:12.004 I/rime.trime( 3582): updated option: _horizontal
+01-01 23:00:12.017 V/InputMethodService( 3582): CALL: hideWindow
+01-01 23:00:12.018 I/ImeTracker( 3582): system_server:a87e6b2c: onHidden
+01-01 23:00:12.018 E/SpannableStringBuilder( 3582): SPAN_EXCLUSIVE_EXCLUSIVE spans cannot have a zero length
+01-01 23:00:12.018 E/SpannableStringBuilder( 3582): SPAN_EXCLUSIVE_EXCLUSIVE spans cannot have a zero length
+01-01 23:00:12.018 V/InputMethodService( 3582): CALL: hideWindow
+01-01 23:00:12.018 I/ImeTracker( 3582): system_server:544ee56b: onHidden
+01-01 23:00:12.019 D/VRI[InputMethod]( 3582): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-01 23:00:12.022 W/WindowOnBackDispatcher( 3582): sendCancelIfRunning: isInProgress=false callback=ImeCallback=ImeOnBackInvokedCallback@80067978 Callback=android.window.ImeOnBackInvokedDispatcher$ImeOnBackInvokedCallbackWrapper@2d9bc13
+01-01 23:00:12.023 I/rime.trime( 3582): updated option: soft_cursor
+01-01 23:00:12.023 I/rime.trime( 3582): updated option: _horizontal
+01-01 23:00:12.024 E/SpannableStringBuilder( 3582): SPAN_EXCLUSIVE_EXCLUSIVE spans cannot have a zero length
+01-01 23:00:12.024 E/SpannableStringBuilder( 3582): SPAN_EXCLUSIVE_EXCLUSIVE spans cannot have a zero length
+01-01 23:00:12.042 I/ImeTracker( 3582): system_server:91ad0f96: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+01-01 23:00:12.078 W/RenderInspector( 3582): DequeueBuffer time out on com.osfans.trime/com.osfans.trime.PrefLauncherAlias, count=1, avg=11 ms, max=11 ms.
+01-01 23:00:12.287 D/MIUIInput( 3582): com.osfans.trime/com.osfans.trime.PrefLauncherAlias onBackInvokedCallback invoked: android.window.WindowOnBackInvokedDispatcher$OnBackInvokedCallbackWrapper$$ExternalSyntheticLambda3@453a849
+01-01 23:00:12.287 I/MIUIInput( 3582): [KeyEvent] ViewRootImpl windowName 'sendBackKeyEvent-com.osfans.trime/com.osfans.trime.PrefLauncherAlias', KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x48, repeatCount=0, eventTime=109540834000000, downTime=109540834000000, deviceId=-1, source=0x101, displayId=-1 }, phoneEventTime=23:00:12.287
+01-01 23:00:12.287 I/MIUIInput( 3582): [KeyEvent] ViewRootImpl windowName 'sendBackKeyEvent-com.osfans.trime/com.osfans.trime.PrefLauncherAlias', KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x48, repeatCount=0, eventTime=109540834000000, downTime=109540834000000, deviceId=-1, source=0x101, displayId=-1 }, phoneEventTime=23:00:12.287
+01-01 23:00:12.288 I/MIUIInput( 3582): back key event finish by ViewPostImeInputStage, handled: true
+01-01 23:00:12.289 D/ScrollerOptimizationManager( 3582): registerConfigChangedListener
+01-01 23:00:12.291 W/MIUIInput( 3582): Back key is intercepted by the app
+01-01 23:00:12.291 I/MIUIInput( 3582): back key event finish by ViewPostImeInputStage, handled: true
+01-01 23:00:12.533 W/om.osfans.trime( 3582): Binder 0xb400006fd75411c0 destroyed after setInheritRt before being parceled.
+01-01 23:00:13.384 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.PrefLauncherAlias', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=109541924, downTime=109541924, phoneEventTime=23:00:13.377 } moveCount:0
+01-01 23:00:13.384 D/VRI[PrefLauncherAlias]( 3582): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-01 23:00:13.447 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.PrefLauncherAlias', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=109541989, downTime=109541924, phoneEventTime=23:00:13.442 } moveCount:0
+01-01 23:00:13.460 W/WindowOnBackDispatcher( 3582): OnBackInvokedCallback is not enabled for the application.
+01-01 23:00:13.460 W/WindowOnBackDispatcher( 3582): Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+01-01 23:00:13.469 D/ScrollerOptimizationManager( 3582): registerConfigChangedListener
+01-01 23:00:14.457 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.PrefLauncherAlias', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=109543000, downTime=109543000, phoneEventTime=23:00:14.453 } moveCount:0
+01-01 23:00:14.458 D/VRI[PrefLauncherAlias]( 3582): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-01 23:00:14.515 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.PrefLauncherAlias', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=109543058, downTime=109543000, phoneEventTime=23:00:14.511 } moveCount:0
+01-01 23:00:14.540 I/ContentCatcher( 3582): SettingTrigger : unregister status observer com.osfans.trime.PrefLauncherAlias
+01-01 23:00:14.541 I/ContentCatcher( 3582): SettingTrigger : unregisterUIAgentListener com.osfans.trime.PrefLauncherAlias, uid:10375
+01-01 23:00:14.549 I/ActivityThread( 3582): HardwareRenderer preload  done
+01-01 23:00:14.550 I/om.osfans.trime( 3582): AssetManager2(0xb40000709680b298) locale list changing from [] to [zh-CN]
+01-01 23:00:14.554 D/DecorView( 3582): updateFreeformOutlineFromActivity, inFreeform=false,inFreeformWindowMode=false
+01-01 23:00:14.554 D/ViewContentFactory( 3582): initViewContentFetcherClass
+01-01 23:00:14.554 I/ContentCatcher( 3582): ViewContentFetcher : ViewContentFetcher
+01-01 23:00:14.554 D/ViewContentFactory( 3582): createInterceptor took 0ms
+01-01 23:00:14.554 D/WmSystemUiDebug( 3582): set navigation bar color,Alpha=0.0, RGB:0,0,0 caller:androidx.activity.EdgeToEdgeApi29.setUp:14 androidx.activity.EdgeToEdge.enable$default:129 com.osfans.trime.ui.main.LogActivity.onCreate:4 android.app.Activity.performCreate:9380 android.app.Activity.performCreate:9323 android.app.Instrumentation.callActivityOnCreate:1537 android.app.ActivityThread.performLaunchActivity:4685 android.app.ActivityThread.handleLaunchActivity:4932 android.app.servertransaction.LaunchActivityItem.execute:222 android.app.servertransaction.TransactionExecutor.executeNonLifecycleItem:136 
+01-01 23:00:14.554 E/ContentCatcherManager( 3582): failed to get ContentCatcherService.
+01-01 23:00:14.554 E/ContentCatcherManager( 3582): failed to get ContentCatcherService.
+01-01 23:00:14.555 D/ScrollerOptimizationManager( 3582): registerConfigChangedListener
+01-01 23:00:14.555 D/ScrollerOptimizationManager( 3582): registerConfigChangedListener
+01-01 23:00:14.558 D/Activity( 3582): Activity = ActivityInfo{159556f com.osfans.trime.ui.main.LogActivity}, Resume onConfigurationChanged = {1.1 460mcc1mnc [zh_CN] ldltr sw400dp w400dp h890dp 480dpi nrml long hdr widecg port uimode=14 night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1200, 2670) mAppBounds=Rect(0, 0 - 1200, 2670) mMaxBounds=Rect(0, 0 - 1200, 2670) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=standard mAlwaysOnTop=undefined mRotation=ROTATION_0 mInSplitScreen=false letterBoxed=false foScaled=false isSpecificEmbedded=false embeddingScale=1.0} s.2 fontWeightAdjustment=0/dc themeChanged=0 themeChangedFlags=0 display=0 extraData = Bundle[{}] screenType=0c}
+01-01 23:00:14.559 D/SecurityManager( 3582): checkAccessControl flag0
+01-01 23:00:14.565 I/ContentCatcher( 3582): SettingTrigger : register screen QA status observer com.osfans.trime.ui.main.LogActivity
+01-01 23:00:14.571 D/HWUI    ( 3582): TAG_DDRE, CanvasContext::setDdreActivities: 
+01-01 23:00:14.572 I/ViewRootImpl( 3582): com.osfans.trime/com.osfans.trime.ui.main.LogActivity use first frame acceleration
+01-01 23:00:14.577 I/Choreographer( 3582): first vsync insert message into MessageQueue Head
+01-01 23:00:14.578 I/ComputilityLevel( 3582): getComputilityLevel(): 6
+01-01 23:00:14.582 I/ContentCatcher( 3582): SettingTrigger : register global collect status observer com.osfans.trime.ui.main.LogActivity
+01-01 23:00:14.584 I/ContentCatcher( 3582): SettingTrigger : registerUIAgentListener com.osfans.trime.ui.main.LogActivity, uid:10375
+01-01 23:00:14.585 D/VRI[LogActivity]( 3582): vri.reportNextDraw 0 Rect(0, 0 - 1200, 2670) android.view.ViewRootImpl.performTraversals:5606 android.view.ViewRootImpl.doTraversal:4159 android.view.ViewRootImpl$TraversalRunnable.run:12555 android.view.Choreographer$CallbackRecord.run:2040 android.view.Choreographer$CallbackRecord.run:2049 
+01-01 23:00:14.585 D/VRI[LogActivity]( 3582): vri.Setup new sync=wmsSync-VRI[LogActivity]#38
+01-01 23:00:14.588 D/VRI[LogActivity]( 3582): vri.reportDrawFinished 0 0 Rect(0, 0 - 1200, 2670)
+01-01 23:00:14.589 D/HWUI    ( 3582): [HWUI] Flag vulkan_enhance_pipeline_cache enabled
+01-01 23:00:14.589 D/HWUI    ( 3582): [HWUI] EnhanceVkPipelineCache is disabled
+01-01 23:00:14.589 D/HWUI    ( 3582): [HWUI] Flag ddre enabled
+01-01 23:00:14.605 I/HandWritingStubImpl( 3582): refreshLastKeyboardType: 1
+01-01 23:00:14.605 I/HandWritingStubImpl( 3582): getCurrentKeyboardType: 1
+01-01 23:00:14.607 D/InsetsController( 3582): hide(ime(), fromIme=false)
+01-01 23:00:14.607 I/ImeTracker( 3582): com.osfans.trime:2f2da40c: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+01-01 23:00:15.118 D/VRI[PrefLauncherAlias]( 3582): visibilityChanged oldVisibility=true newVisibility=false
+01-01 23:00:15.127 D/HWUI    ( 3582): endAllActiveAnimators on 0xb400007046eecd80 (RippleDrawable) with handle 0xb400006fb6889710
+01-01 23:00:15.129 W/om.osfans.trime( 3582): Binder 0xb400006fd6885540 destroyed after setInheritRt before being parceled.
+01-01 23:00:17.086 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=109545628, downTime=109545628, phoneEventTime=23:00:17.081 } moveCount:0
+01-01 23:00:17.087 D/VRI[LogActivity]( 3582): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-01 23:00:17.150 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=109545694, downTime=109545628, phoneEventTime=23:00:17.147 } moveCount:5
+01-01 23:00:17.151 D/SplineOverScroller( 3582): mFlingDuration: 2740,mFlingDistance: 8396.744140625,mVelocity: 18103
+01-01 23:00:17.452 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=109545996, downTime=109545996, phoneEventTime=23:00:17.449 } moveCount:0
+01-01 23:00:17.452 D/VRI[LogActivity]( 3582): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-01 23:00:17.544 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=109546088, downTime=109545996, phoneEventTime=23:00:17.541 } moveCount:5
+01-01 23:00:17.544 D/OverScroller( 3582): originVelocityY = 18428, wheelVelocity = 17101, temp = 7443.645801659383
+01-01 23:00:17.544 D/SplineOverScroller( 3582): mFlingDuration: 2713,mFlingDistance: 7930.697265625,mVelocity: 17101
+01-01 23:00:17.863 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=109546407, downTime=109546407, phoneEventTime=23:00:17.861 } moveCount:0
+01-01 23:00:17.863 D/VRI[LogActivity]( 3582): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-01 23:00:17.936 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=109546482, downTime=109546407, phoneEventTime=23:00:17.935 } moveCount:5
+01-01 23:00:17.937 D/OverScroller( 3582): originVelocityY = 20186, wheelVelocity = 14798, temp = 6128.614296462695
+01-01 23:00:17.937 D/SplineOverScroller( 3582): mFlingDuration: 2646,mFlingDistance: 6859.53466796875,mVelocity: 14798
+01-01 23:00:18.314 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=109546859, downTime=109546859, phoneEventTime=23:00:18.312 } moveCount:0
+01-01 23:00:18.314 D/VRI[LogActivity]( 3582): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-01 23:00:18.373 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=109546918, downTime=109546859, phoneEventTime=23:00:18.371 } moveCount:5
+01-01 23:00:18.373 D/OverScroller( 3582): originVelocityY = 18881, wheelVelocity = 10480, temp = 3816.465713147639
+01-01 23:00:18.373 D/SplineOverScroller( 3582): mFlingDuration: 2486,mFlingDistance: 4851.16259765625,mVelocity: 10480
+01-01 23:00:18.650 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=109547194, downTime=109547194, phoneEventTime=23:00:18.647 } moveCount:0
+01-01 23:00:18.650 D/VRI[LogActivity]( 3582): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-01 23:00:18.958 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=109547504, downTime=109547194, phoneEventTime=23:00:18.957 } moveCount:23
+01-01 23:00:19.211 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=109547755, downTime=109547755, phoneEventTime=23:00:19.208 } moveCount:0
+01-01 23:00:19.211 D/VRI[LogActivity]( 3582): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-01 23:00:19.344 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=109547889, downTime=109547755, phoneEventTime=23:00:19.342 } moveCount:12
+01-01 23:00:19.354 I/HandWritingStubImpl( 3582): refreshLastKeyboardType: 1
+01-01 23:00:19.354 I/HandWritingStubImpl( 3582): getCurrentKeyboardType: 1
+01-01 23:00:19.497 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=109548041, downTime=109548041, phoneEventTime=23:00:19.494 } moveCount:0
+01-01 23:00:19.497 D/VRI[LogActivity]( 3582): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-01 23:00:19.721 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=109548266, downTime=109548041, phoneEventTime=23:00:19.719 } moveCount:21
+01-01 23:00:19.966 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=109548510, downTime=109548510, phoneEventTime=23:00:19.963 } moveCount:0
+01-01 23:00:19.966 D/VRI[LogActivity]( 3582): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-01 23:00:20.058 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=109548603, downTime=109548510, phoneEventTime=23:00:20.056 } moveCount:6
+01-01 23:00:20.058 D/SplineOverScroller( 3582): mFlingDuration: 2613,mFlingDistance: 6387.44140625,mVelocity: 13783
+01-01 23:00:20.367 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=109548912, downTime=109548912, phoneEventTime=23:00:20.365 } moveCount:0
+01-01 23:00:20.368 D/VRI[LogActivity]( 3582): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-01 23:00:20.408 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=109548953, downTime=109548912, phoneEventTime=23:00:20.406 } moveCount:4
+01-01 23:00:20.408 D/SplineOverScroller( 3582): mFlingDuration: 2736,mFlingDistance: 8329.7666015625,mVelocity: 17959
+01-01 23:00:20.685 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=109549230, downTime=109549230, phoneEventTime=23:00:20.683 } moveCount:0
+01-01 23:00:20.685 D/VRI[LogActivity]( 3582): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-01 23:00:20.761 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=109549306, downTime=109549230, phoneEventTime=23:00:20.759 } moveCount:6
+01-01 23:00:20.761 D/OverScroller( 3582): originVelocityY = 9812, wheelVelocity = 18144, temp = 8054.124958660964
+01-01 23:00:20.761 D/SplineOverScroller( 3582): mFlingDuration: 2741,mFlingDistance: 8415.8134765625,mVelocity: 18144
+01-01 23:00:21.029 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=109549574, downTime=109549574, phoneEventTime=23:00:21.027 } moveCount:0
+01-01 23:00:21.029 D/VRI[LogActivity]( 3582): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-01 23:00:21.070 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=109549615, downTime=109549574, phoneEventTime=23:00:21.068 } moveCount:4
+01-01 23:00:21.070 D/OverScroller( 3582): originVelocityY = 17358, wheelVelocity = 18509, temp = 8269.749070237123
+01-01 23:00:21.070 D/SplineOverScroller( 3582): mFlingDuration: 2750,mFlingDistance: 8585.5810546875,mVelocity: 18509
+01-01 23:00:21.373 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=109549917, downTime=109549917, phoneEventTime=23:00:21.370 } moveCount:0
+01-01 23:00:21.373 D/VRI[LogActivity]( 3582): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-01 23:00:21.640 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=109550185, downTime=109549917, phoneEventTime=23:00:21.638 } moveCount:30
+01-01 23:00:21.640 D/SplineOverScroller( 3582): mFlingDuration: 2395,mFlingDistance: 3989.767333984375,mVelocity: -8628
+01-01 23:00:21.943 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=109550487, downTime=109550487, phoneEventTime=23:00:21.940 } moveCount:0
+01-01 23:00:21.944 D/VRI[LogActivity]( 3582): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-01 23:00:22.269 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=109550813, downTime=109550487, phoneEventTime=23:00:22.266 } moveCount:35
+01-01 23:00:22.582 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=109551124, downTime=109551124, phoneEventTime=23:00:22.577 } moveCount:0
+01-01 23:00:22.582 D/VRI[LogActivity]( 3582): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-01 23:00:22.638 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=109551182, downTime=109551124, phoneEventTime=23:00:22.635 } moveCount:5
+01-01 23:00:22.638 D/SplineOverScroller( 3582): mFlingDuration: 2371,mFlingDistance: 3789.302001953125,mVelocity: -8197
+01-01 23:00:22.797 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=109551342, downTime=109551342, phoneEventTime=23:00:22.795 } moveCount:0
+01-01 23:00:22.797 D/VRI[LogActivity]( 3582): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-01 23:00:23.099 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=109551643, downTime=109551342, phoneEventTime=23:00:23.096 } moveCount:32
+01-01 23:00:24.136 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=109552675, downTime=109552675, phoneEventTime=23:00:24.128 } moveCount:0
+01-01 23:00:24.136 D/VRI[LogActivity]( 3582): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-01 23:00:24.189 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=109552733, downTime=109552675, phoneEventTime=23:00:24.186 } moveCount:0
+01-01 23:00:24.211 I/ContentCatcher( 3582): SettingTrigger : unregister status observer com.osfans.trime.ui.main.LogActivity
+01-01 23:00:24.212 I/ContentCatcher( 3582): SettingTrigger : unregisterUIAgentListener com.osfans.trime.ui.main.LogActivity, uid:10375
+01-01 23:00:24.808 D/VRI[LogActivity]( 3582): visibilityChanged oldVisibility=true newVisibility=false
+01-01 23:00:24.818 D/HWUI    ( 3582): endAllActiveAnimators on 0xb40000704705dcb0 (RippleDrawable) with handle 0xb400006fb67c3d40
+01-01 23:00:24.824 W/om.osfans.trime( 3582): Binder 0xb400006fd687c0c0 destroyed after setInheritRt before being parceled.
+01-01 23:00:24.942 I/om.osfans.trime( 3582): This is non sticky GC, maxfree is 33554432 minfree is 8388608
+01-01 23:00:26.125 D/AppScoutStateMachine( 3582): 3582-ScoutStateMachinecreated
+01-01 23:00:26.127 E/ActivityThread( 3582):  fail in deliverResultsIfNeeded java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.String android.os.Bundle.getString(java.lang.String)' on a null object reference
+01-01 23:00:26.127 D/Activity( 3582): Activity = ActivityInfo{159556f com.osfans.trime.ui.main.LogActivity}, Resume onConfigurationChanged = {1.1 460mcc1mnc [zh_CN] ldltr sw400dp w400dp h890dp 480dpi nrml long hdr widecg port uimode=14 night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1200, 2670) mAppBounds=Rect(0, 0 - 1200, 2670) mMaxBounds=Rect(0, 0 - 1200, 2670) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=standard mAlwaysOnTop=undefined mRotation=ROTATION_0 mInSplitScreen=false letterBoxed=false foScaled=false isSpecificEmbedded=false embeddingScale=1.0} s.2 fontWeightAdjustment=0/dc themeChanged=0 themeChangedFlags=0 display=0 extraData = Bundle[{}] screenType=0c}
+01-01 23:00:26.129 I/ContentCatcher( 3582): SettingTrigger : register screen QA status observer com.osfans.trime.ui.main.LogActivity
+01-01 23:00:26.130 D/SecurityManager( 3582): checkAccessControl flag0
+01-01 23:00:26.133 I/ContentCatcher( 3582): SettingTrigger : register global collect status observer com.osfans.trime.ui.main.LogActivity
+01-01 23:00:26.134 I/ContentCatcher( 3582): SettingTrigger : registerUIAgentListener com.osfans.trime.ui.main.LogActivity, uid:10375
+01-01 23:00:26.141 D/VRI[LogActivity]( 3582): vri.reportNextDraw 0 Rect(0, 0 - 1200, 2670) android.view.ViewRootImpl.performTraversals:5606 android.view.ViewRootImpl.doTraversal:4159 android.view.ViewRootImpl$TraversalRunnable.run:12555 android.view.Choreographer$CallbackRecord.run:2040 android.view.Choreographer$CallbackRecord.run:2049 
+01-01 23:00:26.141 D/VRI[LogActivity]( 3582): vri.Setup new sync=wmsSync-VRI[LogActivity]#40
+01-01 23:00:26.149 D/VRI[LogActivity]( 3582): vri.reportDrawFinished 0 0 Rect(0, 0 - 1200, 2670)
+01-01 23:00:26.177 I/HandWritingStubImpl( 3582): refreshLastKeyboardType: 1
+01-01 23:00:26.177 I/HandWritingStubImpl( 3582): getCurrentKeyboardType: 1
+01-01 23:00:26.180 D/InsetsController( 3582): hide(ime(), fromIme=false)
+01-01 23:00:26.180 I/ImeTracker( 3582): com.osfans.trime:dc49c5ba: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+01-01 23:00:40.205 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=109568742, downTime=109568742, phoneEventTime=23:00:40.195 } moveCount:0
+01-01 23:00:40.205 D/VRI[LogActivity]( 3582): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-01 23:00:40.239 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=109568783, downTime=109568742, phoneEventTime=23:00:40.236 } moveCount:0
+01-01 23:00:40.258 I/ContentCatcher( 3582): SettingTrigger : unregister status observer com.osfans.trime.ui.main.LogActivity
+01-01 23:00:40.259 I/ContentCatcher( 3582): SettingTrigger : unregisterUIAgentListener com.osfans.trime.ui.main.LogActivity, uid:10375
+01-01 23:00:40.861 W/om.osfans.trime( 3582): Binder 0xb400006fd680ad80 destroyed after setInheritRt before being parceled.
+01-01 23:00:40.861 D/HWUI    ( 3582): endAllActiveAnimators on 0xb40000704705dcb0 (RippleDrawable) with handle 0xb400006fb68729d0
+01-01 23:00:48.503 D/AppScoutStateMachine( 3582): 3582-ScoutStateMachinecreated
+01-01 23:00:48.505 E/ActivityThread( 3582):  fail in deliverResultsIfNeeded java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.String android.os.Bundle.getString(java.lang.String)' on a null object reference
+01-01 23:00:48.506 D/Activity( 3582): Activity = ActivityInfo{159556f com.osfans.trime.ui.main.LogActivity}, Resume onConfigurationChanged = {1.1 460mcc1mnc [zh_CN] ldltr sw400dp w400dp h890dp 480dpi nrml long hdr widecg port uimode=14 night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1200, 2670) mAppBounds=Rect(0, 0 - 1200, 2670) mMaxBounds=Rect(0, 0 - 1200, 2670) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=standard mAlwaysOnTop=undefined mRotation=ROTATION_0 mInSplitScreen=false letterBoxed=false foScaled=false isSpecificEmbedded=false embeddingScale=1.0} s.2 fontWeightAdjustment=0/dc themeChanged=0 themeChangedFlags=0 display=0 extraData = Bundle[{}] screenType=0c}
+01-01 23:00:48.507 I/ContentCatcher( 3582): SettingTrigger : register screen QA status observer com.osfans.trime.ui.main.LogActivity
+01-01 23:00:48.508 I/ContentCatcher( 3582): SettingTrigger : register global collect status observer com.osfans.trime.ui.main.LogActivity
+01-01 23:00:48.508 I/ContentCatcher( 3582): SettingTrigger : registerUIAgentListener com.osfans.trime.ui.main.LogActivity, uid:10375
+01-01 23:00:48.520 D/SecurityManager( 3582): checkAccessControl flag0
+01-01 23:00:48.533 D/VRI[LogActivity]( 3582): vri.reportNextDraw 0 Rect(0, 0 - 1200, 2670) android.view.ViewRootImpl.performTraversals:5606 android.view.ViewRootImpl.doTraversal:4159 android.view.ViewRootImpl$TraversalRunnable.run:12555 android.view.Choreographer$CallbackRecord.run:2040 android.view.Choreographer$CallbackRecord.run:2049 
+01-01 23:00:48.533 D/VRI[LogActivity]( 3582): vri.Setup new sync=wmsSync-VRI[LogActivity]#42
+01-01 23:00:48.543 D/VRI[LogActivity]( 3582): vri.reportDrawFinished 0 0 Rect(0, 0 - 1200, 2670)
+01-01 23:00:48.563 I/HandWritingStubImpl( 3582): refreshLastKeyboardType: 1
+01-01 23:00:48.563 I/HandWritingStubImpl( 3582): getCurrentKeyboardType: 1
+01-01 23:00:48.573 D/InsetsController( 3582): hide(ime(), fromIme=false)
+01-01 23:00:48.574 I/ImeTracker( 3582): com.osfans.trime:97c0f786: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+01-01 23:01:03.155 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=109591698, downTime=109591698, phoneEventTime=23:01:03.151 } moveCount:0
+01-01 23:01:03.156 D/VRI[LogActivity]( 3582): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-01 23:01:03.216 I/MIUIInput( 3582): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=109591756, downTime=109591698, phoneEventTime=23:01:03.209 } moveCount:0
+01-01 23:01:03.237 I/ContentCatcher( 3582): SettingTrigger : unregister status observer com.osfans.trime.ui.main.LogActivity
+01-01 23:01:03.238 I/ContentCatcher( 3582): SettingTrigger : unregisterUIAgentListener com.osfans.trime.ui.main.LogActivity, uid:10375
+01-01 23:01:03.856 W/om.osfans.trime( 3582): Binder 0xb400006fd68243a0 destroyed after setInheritRt before being parceled.
+01-01 23:01:03.856 D/HWUI    ( 3582): endAllActiveAnimators on 0xb40000704705dcb0 (RippleDrawable) with handle 0xb400006fb6835b00
+01-01 23:01:03.977 I/om.osfans.trime( 3582): This is non sticky GC, maxfree is 33554432 minfree is 8388608
+01-01 23:01:50.911 D/AppScoutStateMachine( 3582): 3582-ScoutStateMachinecreated
+01-01 23:01:50.912 E/ActivityThread( 3582):  fail in deliverResultsIfNeeded java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.String android.os.Bundle.getString(java.lang.String)' on a null object reference
+01-01 23:01:50.912 D/Activity( 3582): Activity = ActivityInfo{159556f com.osfans.trime.ui.main.LogActivity}, Resume onConfigurationChanged = {1.1 460mcc1mnc [zh_CN] ldltr sw400dp w400dp h890dp 480dpi nrml long hdr widecg port uimode=14 night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1200, 2670) mAppBounds=Rect(0, 0 - 1200, 2670) mMaxBounds=Rect(0, 0 - 1200, 2670) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=standard mAlwaysOnTop=undefined mRotation=ROTATION_0 mInSplitScreen=false letterBoxed=false foScaled=false isSpecificEmbedded=false embeddingScale=1.0} s.2 fontWeightAdjustment=0/dc themeChanged=0 themeChangedFlags=0 display=0 extraData = Bundle[{}] screenType=0c}
+01-01 23:01:50.912 D/SecurityManager( 3582): checkAccessControl flag0
+01-01 23:01:50.913 I/ContentCatcher( 3582): SettingTrigger : register screen QA status observer com.osfans.trime.ui.main.LogActivity
+01-01 23:01:50.913 I/ContentCatcher( 3582): SettingTrigger : register global collect status observer com.osfans.trime.ui.main.LogActivity
+01-01 23:01:50.914 I/ContentCatcher( 3582): SettingTrigger : registerUIAgentListener com.osfans.trime.ui.main.LogActivity, uid:10375
+01-01 23:01:50.940 D/VRI[LogActivity]( 3582): vri.reportNextDraw 0 Rect(0, 0 - 1200, 2670) android.view.ViewRootImpl.performTraversals:5606 android.view.ViewRootImpl.doTraversal:4159 android.view.ViewRootImpl$TraversalRunnable.run:12555 android.view.Choreographer$CallbackRecord.run:2040 android.view.Choreographer$CallbackRecord.run:2049 
+01-01 23:01:50.940 D/VRI[LogActivity]( 3582): vri.Setup new sync=wmsSync-VRI[LogActivity]#44
+01-01 23:01:50.945 D/VRI[LogActivity]( 3582): vri.reportDrawFinished 0 0 Rect(0, 0 - 1200, 2670)
