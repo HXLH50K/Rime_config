@@ -1,7 +1,7 @@
 # 手心式18键输入法主题配置
 # 基于tongwenfeng主题格式，专为18键模糊输入设计
 
-name: "手心18键 v13"
+name: "手心18键 v17"
 author: "Custom"
 config_version: 3.0
 
@@ -79,25 +79,27 @@ style:
   vertical_correction: "-5"
   vertical_gap: 6
 
-# 键盘预设 - 只用 long_click（功能+显示在右上角）
+# 键盘预设 - 使用 select 手动切换键盘
 preset_keyboards:
-  # 手心式键盘 - 7-6-7-7 布局
+  # 手心式18键（中文模式）
   shouxin_18key:
     ascii_mode: 0
     author: "Custom"
     name: "手心式18键"
     width: 14.28
     height: 52
-    keys: [{click: key_Q, long_click: "#"}, {click: key_WE, long_click: "1", swipe_right: e}, {click: key_RT, long_click: "2", swipe_right: t}, {click: key_Y, long_click: "3"}, {click: key_U, long_click: "/"}, {click: key_IO, long_click: "-", swipe_right: o}, {click: key_P, long_click: "_"}, {click: key_A, long_click: "!", width: 16.66}, {click: key_SD, long_click: "4", swipe_right: d, width: 16.66}, {click: key_FG, long_click: "5", swipe_right: g, width: 16.66}, {click: key_H, long_click: "6", width: 16.66}, {click: key_JK, long_click: "~", swipe_right: k, width: 16.66}, {click: key_L, long_click: "?", width: 16.66}, {click: key_fenci}, {click: key_Z, long_click: "@"}, {click: key_XC, long_click: "7", swipe_right: c}, {click: key_V, long_click: "8"}, {click: key_BN, long_click: "9", swipe_right: n}, {click: key_M, long_click: "0"}, {click: key_backspace}, {click: Keyboard_symbol}, {click: Keyboard_number}, {click: key_comma, long_click: ","}, {click: key_space, width: 28.56}, {click: key_period, long_click: "."}, {click: key_mode}, {click: key_return}]
+    lock: false
+    keys: [{click: key_Q, long_click: "#"}, {click: key_WE, long_click: "1", swipe_right: e}, {click: key_RT, long_click: "2", swipe_right: t}, {click: key_Y, long_click: "3"}, {click: key_U, long_click: "/"}, {click: key_IO, long_click: "-", swipe_right: o}, {click: key_P, long_click: "_"}, {click: key_A, long_click: "!", width: 16.66}, {click: key_SD, long_click: "4", swipe_right: d, width: 16.66}, {click: key_FG, long_click: "5", swipe_right: g, width: 16.66}, {click: key_H, long_click: "6", width: 16.66}, {click: key_JK, long_click: "~", swipe_right: k, width: 16.66}, {click: key_L, long_click: "?", width: 16.66}, {click: key_fenci}, {click: key_Z, long_click: "@"}, {click: key_XC, long_click: "7", swipe_right: c}, {click: key_V, long_click: "8"}, {click: key_BN, long_click: "9", swipe_right: n}, {click: key_M, long_click: "0"}, {click: key_backspace}, {click: Keyboard_symbol}, {click: Keyboard_number}, {click: key_comma, long_click: ","}, {click: space, label: "中文", long_click: Keyboard_eng, width: 42.84}, {click: key_period, long_click: "."}, {click: key_return}]
 
-  # 26键全键盘
+  # 26键全键盘（英文模式）
   default:
-    ascii_mode: 0
+    ascii_mode: 1
     author: "Trime"
     name: "全键盘"
     width: 10
     height: 50
-    keys: [{click: q}, {click: w}, {click: e}, {click: r}, {click: t}, {click: y}, {click: u}, {click: i}, {click: o}, {click: p}, {width: 5}, {click: a}, {click: s}, {click: d}, {click: f}, {click: g}, {click: h}, {click: j}, {click: k}, {click: l}, {width: 5}, {click: Shift_L, width: 15}, {click: z}, {click: x}, {click: c}, {click: v}, {click: b}, {click: n}, {click: m}, {click: BackSpace, width: 15}, {click: Keyboard_number, label: "123", width: 15}, {click: ",", label: ","}, {click: space, width: 40}, {click: ".", label: "."}, {click: Return, width: 15}, {click: Keyboard_shouxin_18key, label: "18键", width: 15}]
+    lock: false
+    keys: [{click: q}, {click: w}, {click: e}, {click: r}, {click: t}, {click: y}, {click: u}, {click: i}, {click: o}, {click: p}, {width: 5}, {click: a}, {click: s}, {click: d}, {click: f}, {click: g}, {click: h}, {click: j}, {click: k}, {click: l}, {width: 5}, {click: Shift_L, width: 15}, {click: z}, {click: x}, {click: c}, {click: v}, {click: b}, {click: n}, {click: m}, {click: BackSpace, width: 15}, {click: Keyboard_number, label: "123", width: 15}, {click: ",", label: ","}, {click: space, label: "西文", long_click: Keyboard_ch, width: 40}, {click: ".", label: "."}, {click: Return, width: 15}]
 
   # 数字键盘
   number:
@@ -143,6 +145,16 @@ preset_keyboards:
 
 # 键盘切换预设键和自定义按键
 preset_keys:
+  # ========== 中英文切换键 ==========
+  Keyboard_eng:
+    label: "英文"
+    select: default
+    send: Eisu_toggle
+  Keyboard_ch:
+    label: "中文"
+    select: shouxin_18key
+    send: Eisu_toggle
+
   # ========== 键盘切换键 ==========
   Keyboard_shouxin_18key:
     label: "18键"
@@ -231,15 +243,17 @@ preset_keys:
   key_comma:
     label: "，"
     send: ","
-  key_space:
-    label: "空格"
+  key_space_cn:
+    label: "中文"
     send: space
+    long_click: Mode_switch
+  key_space_en:
+    label: "西文"
+    send: space
+    long_click: Mode_switch
   key_period:
     label: "。"
     send: "."
-  key_mode:
-    label: "中英"
-    send: Mode_switch
   key_return:
     label: "回车"
     send: Return
