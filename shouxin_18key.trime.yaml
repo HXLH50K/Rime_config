@@ -2,7 +2,7 @@
 # 基于tongwenfeng主题格式，专为18键模糊输入设计
 # 使用 YAML 锚点实现键盘继承，减少重复代码
 
-name: "手心18键 v46"
+name: "手心18键 v48"
 author: "Custom"
 config_version: 3.0
 
@@ -223,7 +223,7 @@ preset_keyboards:
     name: "编辑键盘"
     width: 20
     height: 52
-    lock: true
+    lock: false
     keys:
       # Row 1: [空13.33][↑13.33][空13.33] | 开头 | 粘贴 | 退格
       - {width: 13.33}
