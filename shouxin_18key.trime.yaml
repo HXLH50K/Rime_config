@@ -1,7 +1,7 @@
 # 手心式18键输入法主题配置
 # 基于tongwenfeng主题格式，专为18键模糊输入设计
 
-name: "手心18键 v17"
+name: "手心18键 v19"
 author: "Custom"
 config_version: 3.0
 
@@ -58,8 +58,8 @@ style:
   keyboard_height: 220
   keyboard_height_land: 180
   keyboards:
-    - shouxin_18key
     - default
+    - qwerty26
     - number
     - symbol
   label_font: label.ttf
@@ -81,8 +81,8 @@ style:
 
 # 键盘预设 - 使用 select 手动切换键盘
 preset_keyboards:
-  # 手心式18键（中文模式）
-  shouxin_18key:
+  # 手心式18键（中文模式）- 命名为 default 以确保作为默认键盘
+  default:
     ascii_mode: 0
     author: "Custom"
     name: "手心式18键"
@@ -92,7 +92,7 @@ preset_keyboards:
     keys: [{click: key_Q, long_click: "#"}, {click: key_WE, long_click: "1", swipe_right: e}, {click: key_RT, long_click: "2", swipe_right: t}, {click: key_Y, long_click: "3"}, {click: key_U, long_click: "/"}, {click: key_IO, long_click: "-", swipe_right: o}, {click: key_P, long_click: "_"}, {click: key_A, long_click: "!", width: 16.66}, {click: key_SD, long_click: "4", swipe_right: d, width: 16.66}, {click: key_FG, long_click: "5", swipe_right: g, width: 16.66}, {click: key_H, long_click: "6", width: 16.66}, {click: key_JK, long_click: "~", swipe_right: k, width: 16.66}, {click: key_L, long_click: "?", width: 16.66}, {click: key_fenci}, {click: key_Z, long_click: "@"}, {click: key_XC, long_click: "7", swipe_right: c}, {click: key_V, long_click: "8"}, {click: key_BN, long_click: "9", swipe_right: n}, {click: key_M, long_click: "0"}, {click: key_backspace}, {click: Keyboard_symbol}, {click: Keyboard_number}, {click: key_comma, long_click: ","}, {click: space, label: "中文", long_click: Keyboard_eng, width: 42.84}, {click: key_period, long_click: "."}, {click: key_return}]
 
   # 26键全键盘（英文模式）
-  default:
+  qwerty26:
     ascii_mode: 1
     author: "Trime"
     name: "全键盘"
@@ -108,7 +108,7 @@ preset_keyboards:
     name: "数字"
     width: 25
     height: 52
-    keys: [{click: "1"}, {click: "2"}, {click: "3"}, {click: BackSpace}, {click: "4"}, {click: "5"}, {click: "6"}, {click: "0"}, {click: "7"}, {click: "8"}, {click: "9"}, {click: Return}, {click: Keyboard_shouxin_18key, label: "返回", width: 50}, {click: space, label: "空格", width: 50}]
+    keys: [{click: "1"}, {click: "2"}, {click: "3"}, {click: BackSpace}, {click: "4"}, {click: "5"}, {click: "6"}, {click: "0"}, {click: "7"}, {click: "8"}, {click: "9"}, {click: Return}, {click: Keyboard_default, label: "返回", width: 50}, {click: space, label: "空格", width: 50}]
 
   # 简单符号键盘
   symbol:
@@ -139,7 +139,7 @@ preset_keyboards:
       - {click: "|"}
       - {click: "\\"}
       - {click: BackSpace}
-      - {click: Keyboard_shouxin_18key, label: "返回", width: 28.56}
+      - {click: Keyboard_default, label: "返回", width: 28.56}
       - {click: space, label: "空格", width: 42.84}
       - {click: Return, label: "回车", width: 28.56}
 
@@ -148,26 +148,26 @@ preset_keys:
   # ========== 中英文切换键 ==========
   Keyboard_eng:
     label: "英文"
-    select: default
+    select: qwerty26
     send: Eisu_toggle
   Keyboard_ch:
     label: "中文"
-    select: shouxin_18key
+    select: default
     send: Eisu_toggle
 
   # ========== 键盘切换键 ==========
-  Keyboard_shouxin_18key:
+  Keyboard_default:
     label: "18键"
     send: Eisu_toggle
-    select: shouxin_18key
+    select: default
   Keyboard_number:
     label: "123"
     send: Eisu_toggle
     select: number
-  Keyboard_default:
+  Keyboard_qwerty26:
     label: "全键"
     send: Eisu_toggle
-    select: default
+    select: qwerty26
   Keyboard_symbol:
     label: "符"
     send: Eisu_toggle

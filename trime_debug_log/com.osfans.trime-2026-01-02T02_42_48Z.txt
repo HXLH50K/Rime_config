@@ -1,0 +1,672 @@
+--------- Device Info
+OS Name: BP2A.250605.031.A3
+OS Version: 6.1.118-android14-11-gca0ef6d17716-ab13624819 (OS3.0.5.0.WNCCNXM)
+OS API Level: 36
+Device: houji
+Model (product): 23127PN0CC (houji)
+Manufacturer: Xiaomi
+Tags: release-keys
+Screen Size: 1200 x 2670
+Screen Density: 3.0
+Screen orientation: Portrait
+--------- Build Info
+Package Name: com.osfans.trime
+Builder: Release CI
+Version Code: 20251101
+Version Name: v3.3.7-0-gac13dd47-release
+Build Time: 2025-11-01T08:53:22Z
+Build Git Hash: ac13dd4790523c1a9778cfb70234fe485fd3c526
+--------- beginning of system
+01-02 09:30:13.923 I/VRI[InputMethod](18433): DisplayState - old: 2, new: 1
+01-02 09:30:14.235 I/VRI[InputMethod](18433): DisplayState - old: 1, new: 3
+01-02 09:30:19.217 I/VRI[InputMethod](18433): DisplayState - old: 3, new: 4
+01-02 09:30:24.229 I/VRI[InputMethod](18433): DisplayState - old: 4, new: 3
+01-02 09:30:26.079 I/VRI[InputMethod](18433): DisplayState - old: 3, new: 1
+01-02 09:31:51.424 I/VRI[InputMethod](18433): DisplayState - old: 1, new: 2
+01-02 09:40:32.058 I/VRI[InputMethod](18433): DisplayState - old: 2, new: 1
+01-02 09:40:32.412 I/VRI[InputMethod](18433): DisplayState - old: 1, new: 3
+01-02 09:40:37.398 I/VRI[InputMethod](18433): DisplayState - old: 3, new: 4
+01-02 09:40:42.429 I/VRI[InputMethod](18433): DisplayState - old: 4, new: 3
+01-02 09:40:44.274 I/VRI[InputMethod](18433): DisplayState - old: 3, new: 1
+01-02 09:44:03.861 I/VRI[InputMethod](18433): DisplayState - old: 1, new: 2
+01-02 09:47:14.581 I/VRI[InputMethod](18433): DisplayState - old: 2, new: 1
+01-02 09:47:14.907 I/VRI[InputMethod](18433): DisplayState - old: 1, new: 3
+01-02 09:47:19.875 I/VRI[InputMethod](18433): DisplayState - old: 3, new: 4
+01-02 09:47:25.039 I/VRI[InputMethod](18433): DisplayState - old: 4, new: 3
+01-02 09:47:26.880 I/VRI[InputMethod](18433): DisplayState - old: 3, new: 1
+01-02 09:51:25.615 I/VRI[InputMethod](18433): DisplayState - old: 1, new: 2
+01-02 10:21:06.622 I/VRI[InputMethod](18433): DisplayState - old: 2, new: 1
+01-02 10:21:07.049 I/VRI[InputMethod](18433): DisplayState - old: 1, new: 3
+01-02 10:21:07.253 I/VRI[InputMethod](18433): DisplayState - old: 3, new: 1
+01-02 10:25:51.321 I/VRI[InputMethod](18433): DisplayState - old: 1, new: 2
+01-02 10:33:54.302 I/VRI[InputMethod](18433): DisplayState - old: 2, new: 1
+01-02 10:33:54.787 I/VRI[InputMethod](18433): DisplayState - old: 1, new: 2
+01-02 10:33:59.338 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:34:00.897 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:34:02.529 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:34:04.183 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:34:04.819 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:34:05.288 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:34:05.697 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:34:06.068 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:34:06.479 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:34:06.814 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:34:07.568 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:34:07.777 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:34:08.204 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:34:08.506 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:34:09.039 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:34:17.657 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:34:19.098 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+--------- beginning of main
+01-02 10:38:22.992 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124082208, downTime=124082208, phoneEventTime=10:38:22.980 } moveCount:0
+01-02 10:38:22.993 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:38:23.070 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124082291, downTime=124082208, phoneEventTime=10:38:23.064 } moveCount:0
+01-02 10:38:23.073 D/ScrollerOptimizationManager(18433): registerConfigChangedListener
+01-02 10:38:23.097 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:38:23.520 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124082742, downTime=124082742, phoneEventTime=10:38:23.514 } moveCount:0
+01-02 10:38:23.521 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:38:23.560 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124082783, downTime=124082742, phoneEventTime=10:38:23.556 } moveCount:0
+01-02 10:38:23.608 I/ActivityThread(18433): HardwareRenderer preload  done
+01-02 10:38:23.638 I/om.osfans.trime(18433): AssetManager2(0xb400007096820a58) locale list changing from [] to [zh-CN]
+01-02 10:38:23.639 I/om.osfans.trime(18433): AssetManager2(0xb4000070968248d8) locale list changing from [] to [zh-CN]
+01-02 10:38:23.643 D/DecorView(18433): updateFreeformOutlineFromActivity, inFreeform=false,inFreeformWindowMode=false
+01-02 10:38:23.643 D/WmSystemUiDebug(18433): set navigation bar color,Alpha=0.0, RGB:0,0,0 caller:androidx.activity.EdgeToEdgeApi29.setUp:14 androidx.activity.EdgeToEdge.enable$default:129 com.osfans.trime.ui.main.PrefMainActivity.onCreate:43 android.app.Activity.performCreate:9380 android.app.Activity.performCreate:9323 android.app.Instrumentation.callActivityOnCreate:1537 android.app.ActivityThread.performLaunchActivity:4685 android.app.ActivityThread.handleLaunchActivity:4932 android.app.servertransaction.LaunchActivityItem.execute:222 android.app.servertransaction.TransactionExecutor.executeNonLifecycleItem:136 
+01-02 10:38:23.645 D/AppScoutStateMachine(18433): 18433-ScoutStateMachinecreated
+01-02 10:38:23.654 D/ViewContentFactory(18433): initViewContentFetcherClass
+01-02 10:38:23.654 I/ContentCatcher(18433): ViewContentFetcher : ViewContentFetcher
+01-02 10:38:23.654 D/ViewContentFactory(18433): createInterceptor took 0ms
+01-02 10:38:23.655 E/ContentCatcherManager(18433): failed to get ContentCatcherService.
+01-02 10:38:23.655 E/ContentCatcherManager(18433): failed to get ContentCatcherService.
+01-02 10:38:23.668 I/[main]  (18433): List of active IMEs: [InputMethodInfo{com.osfans.trime/.ime.core.TrimeInputMethodService, settings: com.osfans.trime.ui.main.PrefMainActivity, languageSettings: null}, InputMethodInfo{com.sohu.inputmethod.sogou.xiaomi/.SogouIME, settings: com.sohu.inputmethod.sogou.SogouIMESettingsLauncher, languageSettings: null}]
+01-02 10:38:23.668 I/[main]  (18433): Selected IME: com.osfans.trime.ime.core.TrimeInputMethodService
+01-02 10:38:23.669 D/ScrollerOptimizationManager(18433): registerConfigChangedListener
+01-02 10:38:23.670 D/Activity(18433): Activity = ActivityInfo{a0fdc56 com.osfans.trime.ui.main.PrefMainActivity}, Resume onConfigurationChanged = {1.1 460mcc1mnc [zh_CN] ldltr sw400dp w400dp h890dp 480dpi nrml long hdr widecg port uimode=14 finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1200, 2670) mAppBounds=Rect(0, 0 - 1200, 2670) mMaxBounds=Rect(0, 0 - 1200, 2670) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=standard mAlwaysOnTop=undefined mRotation=ROTATION_0 mInSplitScreen=false letterBoxed=false foScaled=false isSpecificEmbedded=false embeddingScale=1.0} s.2 fontWeightAdjustment=0/dc themeChanged=0 themeChangedFlags=0 display=0 extraData = Bundle[{}] screenType=0c}
+01-02 10:38:23.671 D/SecurityManager(18433): checkAccessControl flag0
+01-02 10:38:23.674 D/HWUI    (18433): TAG_DDRE, CanvasContext::setDdreActivities: 
+01-02 10:38:23.674 I/ViewRootImpl(18433): com.osfans.trime/com.osfans.trime.ui.main.PrefMainActivity use first frame acceleration
+01-02 10:38:23.678 I/ComputilityLevel(18433): getComputilityLevel(): 6
+01-02 10:38:23.679 I/ContentCatcher(18433): SettingTrigger : register screen QA status observer com.osfans.trime.ui.main.PrefMainActivity
+01-02 10:38:23.680 I/ContentCatcher(18433): SettingTrigger : register global collect status observer com.osfans.trime.ui.main.PrefMainActivity
+01-02 10:38:23.680 I/ContentCatcher(18433): SettingTrigger : registerUIAgentListener com.osfans.trime.ui.main.PrefMainActivity, uid:10375
+01-02 10:38:23.692 D/VRI[PrefMainActivity](18433): vri.reportNextDraw 0 Rect(0, 0 - 1200, 2670) android.view.ViewRootImpl.performTraversals:5606 android.view.ViewRootImpl.doTraversal:4159 android.view.ViewRootImpl$TraversalRunnable.run:12555 android.view.Choreographer$CallbackRecord.run:2040 android.view.Choreographer$CallbackRecord.run:2049 
+01-02 10:38:23.693 D/VRI[PrefMainActivity](18433): vri.Setup new sync=wmsSync-VRI[PrefMainActivity]#94
+01-02 10:38:23.719 D/VRI[PrefMainActivity](18433): vri.reportDrawFinished 0 0 Rect(0, 0 - 1200, 2670)
+01-02 10:38:23.720 I/Choreographer(18433): first vsync insert message into MessageQueue Head
+01-02 10:38:23.721 V/InputMethodService(18433): CALL: hideWindow
+01-02 10:38:23.728 I/ImeTracker(18433): system_server:d2ed7044: onHidden
+01-02 10:38:23.729 D/HWUI    (18433): [HWUI] Flag vulkan_enhance_pipeline_cache enabled
+01-02 10:38:23.729 D/HWUI    (18433): [HWUI] EnhanceVkPipelineCache is disabled
+01-02 10:38:23.729 D/HWUI    (18433): [HWUI] Flag ddre enabled
+01-02 10:38:23.730 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:38:23.758 I/HandWritingStubImpl(18433): refreshLastKeyboardType: 1
+01-02 10:38:23.759 I/HandWritingStubImpl(18433): getCurrentKeyboardType: 1
+01-02 10:38:23.761 D/InsetsController(18433): hide(ime(), fromIme=false)
+01-02 10:38:23.761 I/ImeTracker(18433): com.osfans.trime:dc9226f4: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+01-02 10:38:23.776 I/ImeTracker(18433): system_server:5e10f16a: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+01-02 10:38:23.886 W/RenderInspector(18433): DequeueBuffer time out on com.osfans.trime/com.osfans.trime.ui.main.PrefMainActivity, count=1, avg=17 ms, max=17 ms.
+01-02 10:38:24.242 W/om.osfans.trime(18433): Binder 0xb400006fd7592820 destroyed after setInheritRt before being parceled.
+01-02 10:38:25.500 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.PrefMainActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124084720, downTime=124084720, phoneEventTime=10:38:25.492 } moveCount:0
+01-02 10:38:25.500 D/VRI[PrefMainActivity](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:38:25.553 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.PrefMainActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124084778, downTime=124084720, phoneEventTime=10:38:25.551 } moveCount:0
+01-02 10:38:25.561 W/WindowOnBackDispatcher(18433): OnBackInvokedCallback is not enabled for the application.
+01-02 10:38:25.561 W/WindowOnBackDispatcher(18433): Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+01-02 10:38:25.567 D/ScrollerOptimizationManager(18433): registerConfigChangedListener
+01-02 10:38:25.589 D/HWUI    (18433): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-02 10:38:25.590 W/HWUI    (18433): Image decoding logging dropped!
+01-02 10:38:25.590 D/HWUI    (18433): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-02 10:38:25.591 W/HWUI    (18433): Image decoding logging dropped!
+01-02 10:38:25.591 D/HWUI    (18433): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-02 10:38:25.591 W/HWUI    (18433): Image decoding logging dropped!
+01-02 10:38:25.591 D/HWUI    (18433): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-02 10:38:25.591 W/HWUI    (18433): Image decoding logging dropped!
+01-02 10:38:25.592 D/HWUI    (18433): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-02 10:38:25.592 W/HWUI    (18433): Image decoding logging dropped!
+01-02 10:38:25.592 D/HWUI    (18433): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-02 10:38:25.592 W/HWUI    (18433): Image decoding logging dropped!
+01-02 10:38:25.593 D/HWUI    (18433): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-02 10:38:25.593 W/HWUI    (18433): Image decoding logging dropped!
+01-02 10:38:25.593 D/HWUI    (18433): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-02 10:38:25.593 W/HWUI    (18433): Image decoding logging dropped!
+01-02 10:38:25.593 D/HWUI    (18433): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-02 10:38:25.593 W/HWUI    (18433): Image decoding logging dropped!
+01-02 10:38:25.594 D/HWUI    (18433): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-02 10:38:25.594 W/HWUI    (18433): Image decoding logging dropped!
+01-02 10:38:25.594 D/HWUI    (18433): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-02 10:38:25.594 W/HWUI    (18433): Image decoding logging dropped!
+01-02 10:38:25.594 D/HWUI    (18433): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-02 10:38:25.595 W/HWUI    (18433): Image decoding logging dropped!
+01-02 10:38:25.595 D/HWUI    (18433): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-02 10:38:25.595 W/HWUI    (18433): Image decoding logging dropped!
+01-02 10:38:25.595 D/HWUI    (18433): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-02 10:38:25.595 W/HWUI    (18433): Image decoding logging dropped!
+01-02 10:38:25.596 D/HWUI    (18433): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-02 10:38:25.596 W/HWUI    (18433): Image decoding logging dropped!
+01-02 10:38:25.596 D/HWUI    (18433): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-02 10:38:25.596 W/HWUI    (18433): Image decoding logging dropped!
+01-02 10:38:25.596 D/HWUI    (18433): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-02 10:38:25.597 W/HWUI    (18433): Image decoding logging dropped!
+01-02 10:38:25.597 D/HWUI    (18433): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-02 10:38:25.597 W/HWUI    (18433): Image decoding logging dropped!
+01-02 10:38:25.597 D/HWUI    (18433): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-02 10:38:25.597 W/HWUI    (18433): Image decoding logging dropped!
+01-02 10:38:25.597 D/HWUI    (18433): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-02 10:38:25.598 W/HWUI    (18433): Image decoding logging dropped!
+01-02 10:38:25.598 D/HWUI    (18433): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-02 10:38:25.598 W/HWUI    (18433): Image decoding logging dropped!
+01-02 10:38:25.598 D/HWUI    (18433): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-02 10:38:25.598 W/HWUI    (18433): Image decoding logging dropped!
+01-02 10:38:25.598 D/HWUI    (18433): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-02 10:38:25.599 W/HWUI    (18433): Image decoding logging dropped!
+01-02 10:38:25.599 D/HWUI    (18433): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-02 10:38:25.599 W/HWUI    (18433): Image decoding logging dropped!
+01-02 10:38:25.599 D/HWUI    (18433): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-02 10:38:25.599 W/HWUI    (18433): Image decoding logging dropped!
+01-02 10:38:25.599 D/HWUI    (18433): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-02 10:38:25.600 W/HWUI    (18433): Image decoding logging dropped!
+01-02 10:38:25.600 D/HWUI    (18433): ImageDecoder_nDecodeBitmap: width = 81, height = 81, encodedFormat = 4
+01-02 10:38:25.600 W/HWUI    (18433): Image decoding logging dropped!
+01-02 10:38:26.382 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.PrefMainActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124085605, downTime=124085605, phoneEventTime=10:38:26.377 } moveCount:0
+01-02 10:38:26.383 D/VRI[PrefMainActivity](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:38:26.440 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.PrefMainActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124085663, downTime=124085605, phoneEventTime=10:38:26.435 } moveCount:0
+01-02 10:38:26.654 I/AbsListViewStubImpl(18433): com.osfans.trime, version: 3.3.7, Enable Prefetch: false
+01-02 10:38:26.655 D/DecorView(18433): updateFreeformOutlineFromActivity, inFreeform=false,inFreeformWindowMode=false
+01-02 10:38:26.666 D/ScrollerOptimizationManager(18433): registerConfigChangedListener
+01-02 10:38:26.667 D/ScrollerOptimizationManager(18433): registerConfigChangedListener
+01-02 10:38:26.671 D/HWUI    (18433): TAG_DDRE, CanvasContext::setDdreActivities: 
+01-02 10:38:26.671 I/ViewRootImpl(18433): com.osfans.trime/com.osfans.trime.ui.main.PrefMainActivity use first frame acceleration
+01-02 10:38:26.677 I/ComputilityLevel(18433): getComputilityLevel(): 6
+01-02 10:38:26.702 D/VRI[PrefMainActivity](18433): vri.reportNextDraw 0 Rect(30, 723 - 1170, 2033) android.view.ViewRootImpl.performTraversals:5606 android.view.ViewRootImpl.doTraversal:4159 android.view.ViewRootImpl$TraversalRunnable.run:12555 android.view.Choreographer$CallbackRecord.run:2040 android.view.Choreographer$CallbackRecord.run:2049 
+01-02 10:38:26.702 D/VRI[PrefMainActivity](18433): vri.Setup new sync=wmsSync-VRI[PrefMainActivity]#96
+01-02 10:38:26.708 I/om.osfans.trime(18433): This is sticky GC, maxfree is 33554432 minfree is 8388608
+01-02 10:38:26.708 W/om.osfans.trime(18433): Reducing the number of considered missed Gc histogram windows from 772 to 100
+01-02 10:38:26.711 D/VRI[PrefMainActivity](18433): vri.reportDrawFinished 0 0 Rect(30, 723 - 1170, 2033)
+01-02 10:38:26.711 I/Choreographer(18433): first vsync insert message into MessageQueue Head
+01-02 10:38:26.714 D/HWUI    (18433): [HWUI] Flag vulkan_enhance_pipeline_cache enabled
+01-02 10:38:26.714 D/HWUI    (18433): [HWUI] EnhanceVkPipelineCache is disabled
+01-02 10:38:26.714 D/HWUI    (18433): [HWUI] Flag ddre enabled
+01-02 10:38:28.107 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.PrefMainActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124087331, downTime=124087331, phoneEventTime=10:38:28.103 } moveCount:0
+01-02 10:38:28.107 D/VRI[PrefMainActivity](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:38:28.186 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.PrefMainActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124087406, downTime=124087331, phoneEventTime=10:38:28.178 } moveCount:0
+01-02 10:38:28.192 W/rime.trime(18433): nonexistent config file '/storage/emulated/0/rime/build/shouxin_18key.trime.yaml'.
+01-02 10:38:28.192 I/rime.trime(18433): missing build info
+01-02 10:38:28.193 I/rime.trime(18433): loading config file '/storage/emulated/0/rime/shouxin_18key.trime.yaml'.
+01-02 10:38:28.201 I/rime.trime(18433): auto-patch shouxin_18key.trime:/__patch: shouxin_18key.trime.custom:/patch?
+01-02 10:38:28.202 I/rime.trime(18433): optional resource not loaded: shouxin_18key.trime.custom
+01-02 10:38:28.202 I/rime.trime(18433): resolved: Patch(shouxin_18key.trime.custom:patch <optional>)
+01-02 10:38:28.203 I/rime.trime(18433): resource 'shouxin_18key.trime.custom' not loaded.
+01-02 10:38:28.203 I/rime.trime(18433): saving config file '/storage/emulated/0/rime/build/shouxin_18key.trime.yaml'.
+01-02 10:38:28.242 W/[main]  (18433): font /storage/emulated/0/rime/fonts/hanb.ttf not found
+01-02 10:38:28.243 W/[main]  (18433): font /storage/emulated/0/rime/fonts/latin.ttf not found
+01-02 10:38:28.250 D/WmSystemUiDebug(18433): set navigation bar color,Alpha=0.0, RGB:0,0,0 caller:com.osfans.trime.ime.core.NavigationBarManager.evaluate:43 com.osfans.trime.ime.core.TrimeInputMethodService.replaceInputViews:11 com.osfans.trime.ui.main.settings.ThemePickerDialog$build$2$2$1.invokeSuspend:163 kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith:6 kotlinx.coroutines.internal.InlineList.resumeCancellableWith:129 kotlinx.coroutines.AbstractCoroutine.start:97 kotlinx.coroutines.JobKt.launch$default:30 com.osfans.trime.ui.main.settings.ThemePickerDialog$$ExternalSyntheticLambda0.onClick:184 com.android.internal.app.AlertController$AlertParams$3.onItemClick:1287 android.widget.AdapterView.performItemClick:330 
+01-02 10:38:28.253 W/[main]  (18433): font /storage/emulated/0/rime/fonts/latin.ttf not found
+01-02 10:38:28.298 D/ScrollerOptimizationManager(18433): registerConfigChangedListener
+01-02 10:38:28.305 D/ScrollerOptimizationManager(18433): registerConfigChangedListener
+01-02 10:38:28.307 D/ScrollerOptimizationManager(18433): registerConfigChangedListener
+01-02 10:38:28.307 W/WindowOnBackDispatcher(18433): sendCancelIfRunning: isInProgress=false callback=android.view.ViewRootImpl$$ExternalSyntheticLambda16@56166b2
+01-02 10:38:28.308 D/DecorViewImmersiveImpl(18433): onDetachedFromWindow
+01-02 10:38:28.310 W/om.osfans.trime(18433): Binder 0xb400006fd7532a60 destroyed after setInheritRt before being parceled.
+01-02 10:38:28.316 W/InputEventReceiver(18433): Attempted to finish an input event but the input event receiver has already been disposed.
+01-02 10:38:28.332 I/HandWritingStubImpl(18433): refreshLastKeyboardType: 1
+01-02 10:38:28.332 I/HandWritingStubImpl(18433): getCurrentKeyboardType: 1
+01-02 10:38:28.339 D/InsetsController(18433): hide(ime(), fromIme=false)
+01-02 10:38:28.339 I/ImeTracker(18433): com.osfans.trime:c82bdc45: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+01-02 10:38:29.100 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.PrefMainActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124088324, downTime=124088324, phoneEventTime=10:38:29.096 } moveCount:0
+01-02 10:38:29.101 D/VRI[PrefMainActivity](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:38:29.166 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.PrefMainActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124088390, downTime=124088324, phoneEventTime=10:38:29.163 } moveCount:0
+01-02 10:38:29.273 I/AbsListViewStubImpl(18433): com.osfans.trime, version: 3.3.7, Enable Prefetch: false
+01-02 10:38:29.274 D/DecorView(18433): updateFreeformOutlineFromActivity, inFreeform=false,inFreeformWindowMode=false
+01-02 10:38:29.275 D/ScrollerOptimizationManager(18433): registerConfigChangedListener
+01-02 10:38:29.276 D/ScrollerOptimizationManager(18433): registerConfigChangedListener
+01-02 10:38:29.279 D/HWUI    (18433): TAG_DDRE, CanvasContext::setDdreActivities: 
+01-02 10:38:29.279 I/ViewRootImpl(18433): com.osfans.trime/com.osfans.trime.ui.main.PrefMainActivity use first frame acceleration
+01-02 10:38:29.284 I/Choreographer(18433): first vsync insert message into MessageQueue Head
+01-02 10:38:29.285 I/ComputilityLevel(18433): getComputilityLevel(): 6
+01-02 10:38:29.295 D/VRI[PrefMainActivity](18433): vri.reportNextDraw 0 Rect(30, 723 - 1170, 2033) android.view.ViewRootImpl.performTraversals:5606 android.view.ViewRootImpl.doTraversal:4159 android.view.ViewRootImpl$TraversalRunnable.run:12555 android.view.Choreographer$CallbackRecord.run:2040 android.view.Choreographer$CallbackRecord.run:2049 
+01-02 10:38:29.295 D/VRI[PrefMainActivity](18433): vri.Setup new sync=wmsSync-VRI[PrefMainActivity]#98
+01-02 10:38:29.299 D/VRI[PrefMainActivity](18433): vri.reportDrawFinished 0 0 Rect(30, 723 - 1170, 2033)
+01-02 10:38:29.300 D/HWUI    (18433): [HWUI] Flag vulkan_enhance_pipeline_cache enabled
+01-02 10:38:29.300 D/HWUI    (18433): [HWUI] EnhanceVkPipelineCache is disabled
+01-02 10:38:29.300 D/HWUI    (18433): [HWUI] Flag ddre enabled
+01-02 10:38:29.422 I/om.osfans.trime(18433): This is non sticky GC, maxfree is 33554432 minfree is 8388608
+01-02 10:38:29.422 I/om.osfans.trime(18433): Background concurrent copying GC freed 107MB AllocSpace bytes, 36(3816KB) LOS objects, 68% free, 43MB/139MB, paused 34us,43us total 163.128ms
+01-02 10:38:30.009 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.PrefMainActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124089233, downTime=124089233, phoneEventTime=10:38:30.005 } moveCount:0
+01-02 10:38:30.010 D/VRI[PrefMainActivity](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:38:30.093 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.PrefMainActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124089317, downTime=124089233, phoneEventTime=10:38:30.090 } moveCount:0
+01-02 10:38:30.093 W/WindowOnBackDispatcher(18433): sendCancelIfRunning: isInProgress=false callback=android.view.ViewRootImpl$$ExternalSyntheticLambda16@53a4b81
+01-02 10:38:30.094 D/DecorViewImmersiveImpl(18433): onDetachedFromWindow
+01-02 10:38:30.098 W/om.osfans.trime(18433): Binder 0xb400006fd683f700 destroyed after setInheritRt before being parceled.
+01-02 10:38:30.107 W/InputEventReceiver(18433): Attempted to finish an input event but the input event receiver has already been disposed.
+01-02 10:38:30.128 I/HandWritingStubImpl(18433): refreshLastKeyboardType: 1
+01-02 10:38:30.128 I/HandWritingStubImpl(18433): getCurrentKeyboardType: 1
+01-02 10:38:30.131 D/InsetsController(18433): hide(ime(), fromIme=false)
+01-02 10:38:30.131 I/ImeTracker(18433): com.osfans.trime:3275fcfa: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+01-02 10:38:32.286 I/ContentCatcher(18433): SettingTrigger : unregister status observer com.osfans.trime.ui.main.PrefMainActivity
+01-02 10:38:32.289 I/ContentCatcher(18433): SettingTrigger : unregisterUIAgentListener com.osfans.trime.ui.main.PrefMainActivity, uid:10375
+01-02 10:38:32.296 W/om.osfans.trime(18433): Binder 0xb400006fd74d5be0 destroyed after setInheritRt before being parceled.
+01-02 10:38:32.491 V/InputMethod(18433): IMS.showSoftInput()
+01-02 10:38:32.492 D/InputMethodService(18433): onShowInputRequested: show flags = 0
+01-02 10:38:32.494 I/InputMethodService(18433): updateInputViewShown mShowInputRequested = true onEvaluateInputViewShown = truemIsInputViewShown = true mDecorViewVisible = true mInputView= com.osfans.trime.ime.core.InputView{1a7dd97 V.E...... ......ID 0,0-1200,2536}
+01-02 10:38:32.495 I/rime.trime(18433): updated option: soft_cursor
+01-02 10:38:32.496 I/rime.trime(18433): updated option: _horizontal
+01-02 10:38:32.503 V/InputMethodService(18433): CALL: hideWindow
+01-02 10:38:32.511 I/ImeTracker(18433): system_server:55d53958: onHidden
+01-02 10:38:32.511 V/InputMethod(18433): IMS.showSoftInput()
+01-02 10:38:32.511 D/InputMethodService(18433): onShowInputRequested: show flags = 1
+01-02 10:38:32.511 I/InputMethodService(18433): updateInputViewShown mShowInputRequested = true onEvaluateInputViewShown = truemIsInputViewShown = true mDecorViewVisible = true mInputView= com.osfans.trime.ime.core.InputView{1a7dd97 V.E...... ......ID 0,0-1200,2536}
+01-02 10:38:32.516 D/VRI[InputMethod](18433): vri.reportNextDraw 0 Rect(0, 134 - 1200, 2670) android.view.ViewRootImpl.performTraversals:5606 android.view.ViewRootImpl.doTraversal:4159 android.view.ViewRootImpl$TraversalRunnable.run:12555 android.view.Choreographer$CallbackRecord.run:2040 android.view.Choreographer$CallbackRecord.run:2049 
+01-02 10:38:32.516 D/VRI[InputMethod](18433): vri.Setup new sync=wmsSync-VRI[InputMethod]#0
+01-02 10:38:32.517 W/[main]  (18433): font /storage/emulated/0/rime/fonts/latin.ttf not found
+01-02 10:38:32.520 W/[main]  (18433): font /storage/emulated/0/rime/fonts/symbol.ttf not found
+01-02 10:38:32.535 D/VRI[InputMethod](18433): vri.reportDrawFinished 0 0 Rect(0, 134 - 1200, 2670)
+01-02 10:38:32.563 I/rime.trime(18433): updated option: soft_cursor
+01-02 10:38:32.563 I/rime.trime(18433): updated option: _horizontal
+01-02 10:38:33.429 V/InputMethod(18433): IMS.showSoftInput()
+01-02 10:38:33.429 D/InputMethodService(18433): onShowInputRequested: show flags = 1
+01-02 10:38:33.429 I/InputMethodService(18433): updateInputViewShown mShowInputRequested = true onEvaluateInputViewShown = truemIsInputViewShown = true mDecorViewVisible = true mInputView= com.osfans.trime.ime.core.InputView{1a7dd97 V.E...... ........ 0,0-1200,2536}
+01-02 10:38:33.429 I/rime.trime(18433): updated option: soft_cursor
+01-02 10:38:33.430 I/rime.trime(18433): updated option: _horizontal
+01-02 10:38:34.096 V/InputMethod(18433): IMS.showSoftInput()
+01-02 10:38:34.096 D/InputMethodService(18433): onShowInputRequested: show flags = 1
+01-02 10:38:34.096 I/InputMethodService(18433): updateInputViewShown mShowInputRequested = true onEvaluateInputViewShown = truemIsInputViewShown = true mDecorViewVisible = true mInputView= com.osfans.trime.ime.core.InputView{1a7dd97 V.E...... ........ 0,0-1200,2536}
+01-02 10:38:34.096 I/rime.trime(18433): updated option: soft_cursor
+01-02 10:38:34.097 I/rime.trime(18433): updated option: _horizontal
+01-02 10:38:34.616 I/rime.trime(18433): updated option: soft_cursor
+01-02 10:38:34.617 V/InputMethod(18433): IMS.showSoftInput()
+01-02 10:38:34.617 D/InputMethodService(18433): onShowInputRequested: show flags = 1
+01-02 10:38:34.617 I/rime.trime(18433): updated option: _horizontal
+01-02 10:38:34.617 I/InputMethodService(18433): updateInputViewShown mShowInputRequested = true onEvaluateInputViewShown = truemIsInputViewShown = true mDecorViewVisible = true mInputView= com.osfans.trime.ime.core.InputView{1a7dd97 V.E...... ........ 0,0-1200,2536}
+01-02 10:38:38.134 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124097356, downTime=124097356, phoneEventTime=10:38:38.128 } moveCount:0
+01-02 10:38:38.134 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:38:38.146 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124097372, downTime=124097356, phoneEventTime=10:38:38.144 } moveCount:0
+01-02 10:38:38.720 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124097943, downTime=124097943, phoneEventTime=10:38:38.715 } moveCount:0
+01-02 10:38:38.720 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:38:38.770 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124097992, downTime=124097943, phoneEventTime=10:38:38.764 } moveCount:0
+01-02 10:38:38.821 I/rime.trime(18433): updated option: ascii_mode
+01-02 10:38:40.112 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124099334, downTime=124099334, phoneEventTime=10:38:40.106 } moveCount:0
+01-02 10:38:40.112 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:38:40.185 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124099409, downTime=124099334, phoneEventTime=10:38:40.182 } moveCount:0
+01-02 10:38:40.213 I/rime.trime(18433): updated option: ascii_mode
+01-02 10:38:42.257 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124101430, downTime=124101430, phoneEventTime=10:38:42.202 } moveCount:0
+01-02 10:38:42.258 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:38:42.261 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124101479, downTime=124101430, phoneEventTime=10:38:42.251 } moveCount:0
+01-02 10:38:42.262 D/ScrollerOptimizationManager(18433): registerConfigChangedListener
+01-02 10:38:42.275 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:38:43.321 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124102486, downTime=124102486, phoneEventTime=10:38:43.258 } moveCount:0
+01-02 10:38:43.321 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:38:43.322 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124102544, downTime=124102486, phoneEventTime=10:38:43.316 } moveCount:0
+01-02 10:38:43.341 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:38:44.991 V/InputMethodService(18433): CALL: hideWindow
+01-02 10:38:44.994 I/ImeTracker(18433): system_server:b19a8498: onHidden
+01-02 10:38:44.994 I/rime.trime(18433): updated option: soft_cursor
+01-02 10:38:44.995 I/rime.trime(18433): updated option: _horizontal
+01-02 10:38:45.000 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:38:45.517 W/om.osfans.trime(18433): Binder 0xb400006fd687d440 destroyed after setInheritRt before being parceled.
+01-02 10:38:45.557 V/InputMethod(18433): IMS.showSoftInput()
+01-02 10:38:45.558 D/InputMethodService(18433): onShowInputRequested: show flags = 0
+01-02 10:38:45.559 I/InputMethodService(18433): updateInputViewShown mShowInputRequested = true onEvaluateInputViewShown = truemIsInputViewShown = true mDecorViewVisible = true mInputView= com.osfans.trime.ime.core.InputView{1a7dd97 V.E...... .......D 0,0-1200,2536}
+01-02 10:38:45.569 I/rime.trime(18433): updated option: soft_cursor
+01-02 10:38:45.570 I/rime.trime(18433): updated option: _horizontal
+01-02 10:38:45.578 D/VRI[InputMethod](18433): vri.reportNextDraw 0 Rect(0, 134 - 1200, 2670) android.view.ViewRootImpl.performTraversals:5606 android.view.ViewRootImpl.doTraversal:4159 android.view.ViewRootImpl$TraversalRunnable.run:12555 android.view.Choreographer$CallbackRecord.run:2040 android.view.Choreographer$CallbackRecord.run:2049 
+01-02 10:38:45.578 D/VRI[InputMethod](18433): vri.Setup new sync=wmsSync-VRI[InputMethod]#2
+01-02 10:38:45.595 D/VRI[InputMethod](18433): vri.reportDrawFinished 0 0 Rect(0, 134 - 1200, 2670)
+01-02 10:38:50.867 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124110090, downTime=124110090, phoneEventTime=10:38:50.863 } moveCount:0
+01-02 10:38:50.868 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:38:50.933 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124110157, downTime=124110090, phoneEventTime=10:38:50.929 } moveCount:0
+01-02 10:38:50.981 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124110207, downTime=124110207, phoneEventTime=10:38:50.979 } moveCount:0
+01-02 10:38:50.981 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:38:51.066 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124110291, downTime=124110207, phoneEventTime=10:38:51.063 } moveCount:0
+01-02 10:38:51.510 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124110733, downTime=124110733, phoneEventTime=10:38:51.505 } moveCount:0
+01-02 10:38:51.510 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:38:51.583 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124110808, downTime=124110733, phoneEventTime=10:38:51.580 } moveCount:0
+01-02 10:38:51.609 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124110834, downTime=124110834, phoneEventTime=10:38:51.606 } moveCount:0
+01-02 10:38:51.610 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:38:51.712 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124110935, downTime=124110834, phoneEventTime=10:38:51.708 } moveCount:0
+01-02 10:38:52.781 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124112004, downTime=124112004, phoneEventTime=10:38:52.776 } moveCount:0
+01-02 10:38:52.781 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:38:52.855 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124112079, downTime=124112004, phoneEventTime=10:38:52.851 } moveCount:0
+01-02 10:38:52.931 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124112154, downTime=124112154, phoneEventTime=10:38:52.926 } moveCount:0
+01-02 10:38:52.931 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:38:52.998 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124112222, downTime=124112154, phoneEventTime=10:38:52.994 } moveCount:0
+01-02 10:38:53.075 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124112296, downTime=124112296, phoneEventTime=10:38:53.069 } moveCount:0
+01-02 10:38:53.075 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:38:53.157 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124112380, downTime=124112296, phoneEventTime=10:38:53.153 } moveCount:0
+01-02 10:38:53.461 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124112683, downTime=124112683, phoneEventTime=10:38:53.455 } moveCount:0
+01-02 10:38:53.462 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:38:53.525 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124112749, downTime=124112683, phoneEventTime=10:38:53.521 } moveCount:0
+01-02 10:38:53.816 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124113042, downTime=124113042, phoneEventTime=10:38:53.815 } moveCount:0
+01-02 10:38:53.816 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:38:54.219 I/rime.trime(18433): updated option: ascii_mode
+01-02 10:38:54.547 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124113771, downTime=124113042, phoneEventTime=10:38:54.543 } moveCount:9
+01-02 10:38:55.281 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124114504, downTime=124114504, phoneEventTime=10:38:55.276 } moveCount:0
+01-02 10:38:55.282 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:38:55.684 I/rime.trime(18433): updated option: ascii_mode
+01-02 10:38:56.027 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124115250, downTime=124114504, phoneEventTime=10:38:56.022 } moveCount:0
+01-02 10:41:51.175 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124290313, downTime=124290313, phoneEventTime=10:41:51.085 } moveCount:0
+01-02 10:41:51.175 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:41:51.177 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124290396, downTime=124290313, phoneEventTime=10:41:51.168 } moveCount:0
+01-02 10:41:51.179 D/ScrollerOptimizationManager(18433): registerConfigChangedListener
+01-02 10:41:51.187 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:41:51.554 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124290773, downTime=124290773, phoneEventTime=10:41:51.545 } moveCount:0
+01-02 10:41:51.555 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:41:51.626 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124290849, downTime=124290773, phoneEventTime=10:41:51.622 } moveCount:0
+01-02 10:41:51.668 D/AppScoutStateMachine(18433): 18433-ScoutStateMachinecreated
+01-02 10:41:51.668 W/WindowOnBackDispatcher(18433): OnBackInvokedCallback is not enabled for the application.
+01-02 10:41:51.668 W/WindowOnBackDispatcher(18433): Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+01-02 10:41:51.669 D/Activity(18433): Activity = ActivityInfo{a0fdc56 com.osfans.trime.ui.main.PrefMainActivity}, Resume onConfigurationChanged = {1.1 460mcc1mnc [zh_CN] ldltr sw400dp w400dp h890dp 480dpi nrml long hdr widecg port uimode=14 finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1200, 2670) mAppBounds=Rect(0, 0 - 1200, 2670) mMaxBounds=Rect(0, 0 - 1200, 2670) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=standard mAlwaysOnTop=undefined mRotation=ROTATION_0 mInSplitScreen=false letterBoxed=false foScaled=false isSpecificEmbedded=false embeddingScale=1.0} s.2 fontWeightAdjustment=0/dc themeChanged=0 themeChangedFlags=0 display=0 extraData = Bundle[{}] screenType=0c}
+01-02 10:41:51.669 D/SecurityManager(18433): checkAccessControl flag0
+01-02 10:41:51.669 I/ContentCatcher(18433): SettingTrigger : register screen QA status observer com.osfans.trime.ui.main.PrefMainActivity
+01-02 10:41:51.671 I/ContentCatcher(18433): SettingTrigger : register global collect status observer com.osfans.trime.ui.main.PrefMainActivity
+01-02 10:41:51.671 I/ContentCatcher(18433): SettingTrigger : registerUIAgentListener com.osfans.trime.ui.main.PrefMainActivity, uid:10375
+01-02 10:41:51.704 D/VRI[PrefMainActivity](18433): vri.reportNextDraw 0 Rect(0, 0 - 1200, 2670) android.view.ViewRootImpl.performTraversals:5606 android.view.ViewRootImpl.doTraversal:4159 android.view.ViewRootImpl$TraversalRunnable.run:12555 android.view.Choreographer$CallbackRecord.run:2040 android.view.Choreographer$CallbackRecord.run:2049 
+01-02 10:41:51.704 D/VRI[PrefMainActivity](18433): vri.Setup new sync=wmsSync-VRI[PrefMainActivity]#4
+01-02 10:41:51.706 D/VRI[PrefMainActivity](18433): vri.reportDrawFinished 0 0 Rect(0, 0 - 1200, 2670)
+01-02 10:41:51.749 I/HandWritingStubImpl(18433): refreshLastKeyboardType: 1
+01-02 10:41:51.749 I/HandWritingStubImpl(18433): getCurrentKeyboardType: 1
+01-02 10:41:51.752 D/InsetsController(18433): hide(ime(), fromIme=false)
+01-02 10:41:51.752 I/ImeTracker(18433): com.osfans.trime:3943e746: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+01-02 10:41:51.764 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:41:51.789 E/SpannableStringBuilder(18433): SPAN_EXCLUSIVE_EXCLUSIVE spans cannot have a zero length
+01-02 10:41:51.789 E/SpannableStringBuilder(18433): SPAN_EXCLUSIVE_EXCLUSIVE spans cannot have a zero length
+01-02 10:41:51.789 V/InputMethodService(18433): CALL: hideWindow
+01-02 10:41:51.790 I/ImeTracker(18433): system_server:dfc8e4fb: onHidden
+01-02 10:41:51.790 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:41:51.793 W/WindowOnBackDispatcher(18433): sendCancelIfRunning: isInProgress=false callback=ImeCallback=ImeOnBackInvokedCallback@219372474 Callback=android.window.ImeOnBackInvokedDispatcher$ImeOnBackInvokedCallbackWrapper@2c26474
+01-02 10:41:51.793 I/rime.trime(18433): updated option: soft_cursor
+01-02 10:41:51.794 I/ImeTracker(18433): system_server:d97459b0: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+01-02 10:41:51.794 I/rime.trime(18433): updated option: _horizontal
+01-02 10:41:51.796 E/SpannableStringBuilder(18433): SPAN_EXCLUSIVE_EXCLUSIVE spans cannot have a zero length
+01-02 10:41:51.796 E/SpannableStringBuilder(18433): SPAN_EXCLUSIVE_EXCLUSIVE spans cannot have a zero length
+01-02 10:41:52.308 W/om.osfans.trime(18433): Binder 0xb400006fd680bfe0 destroyed after setInheritRt before being parceled.
+01-02 10:41:54.049 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.PrefMainActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124293272, downTime=124293272, phoneEventTime=10:41:54.044 } moveCount:0
+01-02 10:41:54.049 D/VRI[PrefMainActivity](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:41:54.113 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.PrefMainActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124293338, downTime=124293272, phoneEventTime=10:41:54.111 } moveCount:0
+01-02 10:41:54.215 I/AbsListViewStubImpl(18433): com.osfans.trime, version: 3.3.7, Enable Prefetch: false
+01-02 10:41:54.216 D/DecorView(18433): updateFreeformOutlineFromActivity, inFreeform=false,inFreeformWindowMode=false
+01-02 10:41:54.218 D/ScrollerOptimizationManager(18433): registerConfigChangedListener
+01-02 10:41:54.219 D/ScrollerOptimizationManager(18433): registerConfigChangedListener
+01-02 10:41:54.223 D/HWUI    (18433): TAG_DDRE, CanvasContext::setDdreActivities: 
+01-02 10:41:54.224 I/ViewRootImpl(18433): com.osfans.trime/com.osfans.trime.ui.main.PrefMainActivity use first frame acceleration
+01-02 10:41:54.230 I/Choreographer(18433): first vsync insert message into MessageQueue Head
+01-02 10:41:54.230 I/ComputilityLevel(18433): getComputilityLevel(): 6
+01-02 10:41:54.242 D/VRI[PrefMainActivity](18433): vri.reportNextDraw 0 Rect(30, 723 - 1170, 2033) android.view.ViewRootImpl.performTraversals:5606 android.view.ViewRootImpl.doTraversal:4159 android.view.ViewRootImpl$TraversalRunnable.run:12555 android.view.Choreographer$CallbackRecord.run:2040 android.view.Choreographer$CallbackRecord.run:2049 
+01-02 10:41:54.242 D/VRI[PrefMainActivity](18433): vri.Setup new sync=wmsSync-VRI[PrefMainActivity]#6
+01-02 10:41:54.247 D/VRI[PrefMainActivity](18433): vri.reportDrawFinished 0 0 Rect(30, 723 - 1170, 2033)
+01-02 10:41:54.248 D/HWUI    (18433): [HWUI] Flag vulkan_enhance_pipeline_cache enabled
+01-02 10:41:54.248 D/HWUI    (18433): [HWUI] EnhanceVkPipelineCache is disabled
+01-02 10:41:54.248 D/HWUI    (18433): [HWUI] Flag ddre enabled
+01-02 10:41:55.112 I/om.osfans.trime(18433): This is sticky GC, maxfree is 33554432 minfree is 8388608
+01-02 10:41:55.667 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.PrefMainActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124294889, downTime=124294889, phoneEventTime=10:41:55.662 } moveCount:0
+01-02 10:41:55.667 D/VRI[PrefMainActivity](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:41:55.723 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.PrefMainActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124294947, downTime=124294889, phoneEventTime=10:41:55.720 } moveCount:0
+01-02 10:41:55.729 W/rime.trime(18433): nonexistent config file '/storage/emulated/0/rime/build/shouxin_18key.trime.yaml'.
+01-02 10:41:55.729 I/rime.trime(18433): missing build info
+01-02 10:41:55.730 I/rime.trime(18433): loading config file '/storage/emulated/0/rime/shouxin_18key.trime.yaml'.
+01-02 10:41:55.739 I/rime.trime(18433): auto-patch shouxin_18key.trime:/__patch: shouxin_18key.trime.custom:/patch?
+01-02 10:41:55.740 I/rime.trime(18433): optional resource not loaded: shouxin_18key.trime.custom
+01-02 10:41:55.740 I/rime.trime(18433): resolved: Patch(shouxin_18key.trime.custom:patch <optional>)
+01-02 10:41:55.741 I/rime.trime(18433): resource 'shouxin_18key.trime.custom' not loaded.
+01-02 10:41:55.741 I/rime.trime(18433): saving config file '/storage/emulated/0/rime/build/shouxin_18key.trime.yaml'.
+01-02 10:41:55.762 W/[main]  (18433): font /storage/emulated/0/rime/fonts/hanb.ttf not found
+01-02 10:41:55.763 W/[main]  (18433): font /storage/emulated/0/rime/fonts/latin.ttf not found
+01-02 10:41:55.764 D/WmSystemUiDebug(18433): set navigation bar color,Alpha=0.0, RGB:0,0,0 caller:com.osfans.trime.ime.core.NavigationBarManager.evaluate:43 com.osfans.trime.ime.core.TrimeInputMethodService.replaceInputViews:11 com.osfans.trime.ui.main.settings.ThemePickerDialog$build$2$2$1.invokeSuspend:163 kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith:6 kotlinx.coroutines.internal.InlineList.resumeCancellableWith:129 kotlinx.coroutines.AbstractCoroutine.start:97 kotlinx.coroutines.JobKt.launch$default:30 com.osfans.trime.ui.main.settings.ThemePickerDialog$$ExternalSyntheticLambda0.onClick:184 com.android.internal.app.AlertController$AlertParams$3.onItemClick:1287 android.widget.AdapterView.performItemClick:330 
+01-02 10:41:55.766 W/[main]  (18433): font /storage/emulated/0/rime/fonts/latin.ttf not found
+01-02 10:41:55.771 D/ScrollerOptimizationManager(18433): registerConfigChangedListener
+01-02 10:41:55.773 D/ScrollerOptimizationManager(18433): registerConfigChangedListener
+01-02 10:41:55.776 D/ScrollerOptimizationManager(18433): registerConfigChangedListener
+01-02 10:41:55.776 W/WindowOnBackDispatcher(18433): sendCancelIfRunning: isInProgress=false callback=android.view.ViewRootImpl$$ExternalSyntheticLambda16@af1fbc5
+01-02 10:41:55.777 D/DecorViewImmersiveImpl(18433): onDetachedFromWindow
+01-02 10:41:55.781 W/om.osfans.trime(18433): Binder 0xb400006fd7532b80 destroyed after setInheritRt before being parceled.
+01-02 10:41:55.790 W/InputEventReceiver(18433): Attempted to finish an input event but the input event receiver has already been disposed.
+01-02 10:41:55.791 I/rime.trime(18433): updated option: ascii_mode
+01-02 10:41:55.808 I/HandWritingStubImpl(18433): refreshLastKeyboardType: 1
+01-02 10:41:55.808 I/HandWritingStubImpl(18433): getCurrentKeyboardType: 1
+01-02 10:41:55.811 D/InsetsController(18433): hide(ime(), fromIme=false)
+01-02 10:41:55.811 I/ImeTracker(18433): com.osfans.trime:e2888c05: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+01-02 10:41:56.759 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.PrefMainActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124295979, downTime=124295979, phoneEventTime=10:41:56.751 } moveCount:0
+01-02 10:41:56.759 D/VRI[PrefMainActivity](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:41:56.823 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.PrefMainActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124296045, downTime=124295979, phoneEventTime=10:41:56.817 } moveCount:0
+01-02 10:41:56.924 I/AbsListViewStubImpl(18433): com.osfans.trime, version: 3.3.7, Enable Prefetch: false
+01-02 10:41:56.925 D/DecorView(18433): updateFreeformOutlineFromActivity, inFreeform=false,inFreeformWindowMode=false
+01-02 10:41:56.926 D/ScrollerOptimizationManager(18433): registerConfigChangedListener
+01-02 10:41:56.927 D/ScrollerOptimizationManager(18433): registerConfigChangedListener
+01-02 10:41:56.932 D/HWUI    (18433): TAG_DDRE, CanvasContext::setDdreActivities: 
+01-02 10:41:56.933 I/ViewRootImpl(18433): com.osfans.trime/com.osfans.trime.ui.main.PrefMainActivity use first frame acceleration
+01-02 10:41:56.939 I/Choreographer(18433): first vsync insert message into MessageQueue Head
+01-02 10:41:56.939 I/ComputilityLevel(18433): getComputilityLevel(): 6
+01-02 10:41:56.950 D/VRI[PrefMainActivity](18433): vri.reportNextDraw 0 Rect(30, 723 - 1170, 2033) android.view.ViewRootImpl.performTraversals:5606 android.view.ViewRootImpl.doTraversal:4159 android.view.ViewRootImpl$TraversalRunnable.run:12555 android.view.Choreographer$CallbackRecord.run:2040 android.view.Choreographer$CallbackRecord.run:2049 
+01-02 10:41:56.950 D/VRI[PrefMainActivity](18433): vri.Setup new sync=wmsSync-VRI[PrefMainActivity]#8
+01-02 10:41:56.956 D/VRI[PrefMainActivity](18433): vri.reportDrawFinished 0 0 Rect(30, 723 - 1170, 2033)
+01-02 10:41:56.958 D/HWUI    (18433): [HWUI] Flag vulkan_enhance_pipeline_cache enabled
+01-02 10:41:56.958 D/HWUI    (18433): [HWUI] EnhanceVkPipelineCache is disabled
+01-02 10:41:56.958 D/HWUI    (18433): [HWUI] Flag ddre enabled
+01-02 10:41:58.779 I/ContentCatcher(18433): SettingTrigger : unregister status observer com.osfans.trime.ui.main.PrefMainActivity
+01-02 10:41:58.780 I/ContentCatcher(18433): SettingTrigger : unregisterUIAgentListener com.osfans.trime.ui.main.PrefMainActivity, uid:10375
+01-02 10:41:58.793 W/om.osfans.trime(18433): Binder 0xb400006fd682d160 destroyed after setInheritRt before being parceled.
+01-02 10:41:58.828 D/VRI[PrefMainActivity](18433): visibilityChanged oldVisibility=true newVisibility=false
+01-02 10:41:58.844 W/om.osfans.trime(18433): Binder 0xb400006fd67ec300 destroyed after setInheritRt before being parceled.
+01-02 10:41:58.977 V/InputMethod(18433): IMS.showSoftInput()
+01-02 10:41:58.977 D/InputMethodService(18433): onShowInputRequested: show flags = 0
+01-02 10:41:58.977 I/InputMethodService(18433): updateInputViewShown mShowInputRequested = true onEvaluateInputViewShown = truemIsInputViewShown = true mDecorViewVisible = true mInputView= com.osfans.trime.ime.core.InputView{d9fbc37 V.E...... ......ID 0,0-1200,2536}
+01-02 10:41:58.986 I/rime.trime(18433): updated option: soft_cursor
+01-02 10:41:58.989 I/rime.trime(18433): updated option: _horizontal
+01-02 10:41:58.989 I/om.osfans.trime(18433): This is non sticky GC, maxfree is 33554432 minfree is 8388608
+01-02 10:41:58.993 D/VRI[InputMethod](18433): vri.reportNextDraw 0 Rect(0, 134 - 1200, 2670) android.view.ViewRootImpl.performTraversals:5606 android.view.ViewRootImpl.doTraversal:4159 android.view.ViewRootImpl$TraversalRunnable.run:12555 android.view.Choreographer$CallbackRecord.run:2040 android.view.Choreographer$CallbackRecord.run:2049 
+01-02 10:41:58.993 D/VRI[InputMethod](18433): vri.Setup new sync=wmsSync-VRI[InputMethod]#10
+01-02 10:41:58.999 D/VRI[InputMethod](18433): vri.reportDrawFinished 0 0 Rect(0, 134 - 1200, 2670)
+01-02 10:41:59.640 V/InputMethod(18433): IMS.showSoftInput()
+01-02 10:41:59.640 I/rime.trime(18433): updated option: soft_cursor
+01-02 10:41:59.641 D/InputMethodService(18433): onShowInputRequested: show flags = 1
+01-02 10:41:59.641 I/rime.trime(18433): updated option: _horizontal
+01-02 10:41:59.641 I/InputMethodService(18433): updateInputViewShown mShowInputRequested = true onEvaluateInputViewShown = truemIsInputViewShown = true mDecorViewVisible = true mInputView= com.osfans.trime.ime.core.InputView{d9fbc37 V.E...... ......I. 0,0-1200,2536}
+01-02 10:42:00.930 V/InputMethod(18433): IMS.showSoftInput()
+01-02 10:42:00.930 I/rime.trime(18433): updated option: soft_cursor
+01-02 10:42:00.930 D/InputMethodService(18433): onShowInputRequested: show flags = 1
+01-02 10:42:00.930 I/InputMethodService(18433): updateInputViewShown mShowInputRequested = true onEvaluateInputViewShown = truemIsInputViewShown = true mDecorViewVisible = true mInputView= com.osfans.trime.ime.core.InputView{d9fbc37 V.E...... ......I. 0,0-1200,2536}
+01-02 10:42:00.930 I/rime.trime(18433): updated option: _horizontal
+01-02 10:42:10.657 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124309872, downTime=124309872, phoneEventTime=10:42:10.644 } moveCount:0
+01-02 10:42:10.658 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:42:10.944 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124310169, downTime=124309872, phoneEventTime=10:42:10.942 } moveCount:9
+01-02 10:42:11.213 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124310437, downTime=124310437, phoneEventTime=10:42:11.210 } moveCount:0
+01-02 10:42:11.213 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:42:11.422 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124310646, downTime=124310437, phoneEventTime=10:42:11.418 } moveCount:3
+01-02 10:42:24.195 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124323417, downTime=124323417, phoneEventTime=10:42:24.190 } moveCount:0
+01-02 10:42:24.196 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:42:24.260 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124323483, downTime=124323417, phoneEventTime=10:42:24.255 } moveCount:0
+01-02 10:42:24.261 D/ScrollerOptimizationManager(18433): registerConfigChangedListener
+01-02 10:42:24.270 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:42:24.705 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124323870, downTime=124323870, phoneEventTime=10:42:24.642 } moveCount:0
+01-02 10:42:24.706 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:42:24.708 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'InputMethod', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124323928, downTime=124323870, phoneEventTime=10:42:24.700 } moveCount:0
+01-02 10:42:24.740 D/VRI[PrefMainActivity](18433): visibilityChanged oldVisibility=false newVisibility=true
+01-02 10:42:24.746 D/AppScoutStateMachine(18433): 18433-ScoutStateMachinecreated
+01-02 10:42:24.772 D/VRI[PrefMainActivity](18433): vri.reportNextDraw 0 Rect(30, 330 - 1170, 1640) android.view.ViewRootImpl.performTraversals:5606 android.view.ViewRootImpl.doTraversal:4159 android.view.ViewRootImpl$TraversalRunnable.run:12555 android.view.Choreographer$CallbackRecord.run:2040 android.view.Choreographer$CallbackRecord.run:2049 
+01-02 10:42:24.772 D/VRI[PrefMainActivity](18433): vri.Setup new sync=wmsSync-VRI[PrefMainActivity]#12
+01-02 10:42:24.774 D/VRI[PrefMainActivity](18433): vri.reportDrawFinished 0 0 Rect(30, 330 - 1170, 1640)
+01-02 10:42:24.775 W/WindowOnBackDispatcher(18433): OnBackInvokedCallback is not enabled for the application.
+01-02 10:42:24.775 W/WindowOnBackDispatcher(18433): Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+01-02 10:42:24.775 D/Activity(18433): Activity = ActivityInfo{a0fdc56 com.osfans.trime.ui.main.PrefMainActivity}, Resume onConfigurationChanged = {1.1 460mcc1mnc [zh_CN] ldltr sw400dp w400dp h890dp 480dpi nrml long hdr widecg port uimode=14 finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1200, 2670) mAppBounds=Rect(0, 0 - 1200, 2670) mMaxBounds=Rect(0, 0 - 1200, 2670) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=standard mAlwaysOnTop=undefined mRotation=ROTATION_0 mInSplitScreen=false letterBoxed=false foScaled=false isSpecificEmbedded=false embeddingScale=1.0} s.2 fontWeightAdjustment=0/dc themeChanged=0 themeChangedFlags=0 display=0 extraData = Bundle[{}] screenType=0c}
+01-02 10:42:24.777 I/ContentCatcher(18433): SettingTrigger : register screen QA status observer com.osfans.trime.ui.main.PrefMainActivity
+01-02 10:42:24.777 D/SecurityManager(18433): checkAccessControl flag0
+01-02 10:42:24.778 I/ContentCatcher(18433): SettingTrigger : register global collect status observer com.osfans.trime.ui.main.PrefMainActivity
+01-02 10:42:24.786 I/ContentCatcher(18433): SettingTrigger : registerUIAgentListener com.osfans.trime.ui.main.PrefMainActivity, uid:10375
+01-02 10:42:24.792 D/VRI[PrefMainActivity](18433): vri.reportNextDraw 0 Rect(0, 0 - 1200, 2670) android.view.ViewRootImpl.performTraversals:5606 android.view.ViewRootImpl.doTraversal:4159 android.view.ViewRootImpl$TraversalRunnable.run:12555 android.view.Choreographer$CallbackRecord.run:2040 android.view.Choreographer$CallbackRecord.run:2049 
+01-02 10:42:24.792 D/VRI[PrefMainActivity](18433): vri.Setup new sync=wmsSync-VRI[PrefMainActivity]#14
+01-02 10:42:24.798 D/VRI[PrefMainActivity](18433): vri.reportDrawFinished 0 0 Rect(0, 0 - 1200, 2670)
+01-02 10:42:25.631 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.PrefMainActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124324856, downTime=124324856, phoneEventTime=10:42:25.628 } moveCount:0
+01-02 10:42:25.631 D/VRI[PrefMainActivity](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:42:25.686 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.PrefMainActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124324912, downTime=124324856, phoneEventTime=10:42:25.685 } moveCount:0
+01-02 10:42:25.686 W/WindowOnBackDispatcher(18433): sendCancelIfRunning: isInProgress=false callback=android.view.ViewRootImpl$$ExternalSyntheticLambda16@1d41b2b
+01-02 10:42:25.687 D/DecorViewImmersiveImpl(18433): onDetachedFromWindow
+01-02 10:42:25.689 W/om.osfans.trime(18433): Binder 0xb400006fd67cbe40 destroyed after setInheritRt before being parceled.
+01-02 10:42:25.694 W/InputEventReceiver(18433): Attempted to finish an input event but the input event receiver has already been disposed.
+01-02 10:42:25.704 I/HandWritingStubImpl(18433): refreshLastKeyboardType: 1
+01-02 10:42:25.704 I/HandWritingStubImpl(18433): getCurrentKeyboardType: 1
+01-02 10:42:25.705 D/InsetsController(18433): hide(ime(), fromIme=false)
+01-02 10:42:25.705 I/ImeTracker(18433): com.osfans.trime:b037af6f: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+01-02 10:42:25.708 E/SpannableStringBuilder(18433): SPAN_EXCLUSIVE_EXCLUSIVE spans cannot have a zero length
+01-02 10:42:25.708 E/SpannableStringBuilder(18433): SPAN_EXCLUSIVE_EXCLUSIVE spans cannot have a zero length
+01-02 10:42:25.711 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:42:25.714 I/rime.trime(18433): updated option: soft_cursor
+01-02 10:42:25.715 V/InputMethodService(18433): CALL: hideWindow
+01-02 10:42:25.715 I/ImeTracker(18433): system_server:b67dd83e: onHidden
+01-02 10:42:25.715 I/rime.trime(18433): updated option: _horizontal
+01-02 10:42:25.716 E/SpannableStringBuilder(18433): SPAN_EXCLUSIVE_EXCLUSIVE spans cannot have a zero length
+01-02 10:42:25.716 E/SpannableStringBuilder(18433): SPAN_EXCLUSIVE_EXCLUSIVE spans cannot have a zero length
+01-02 10:42:25.718 D/VRI[InputMethod](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:42:25.720 W/WindowOnBackDispatcher(18433): sendCancelIfRunning: isInProgress=false callback=ImeCallback=ImeOnBackInvokedCallback@219372474 Callback=android.window.ImeOnBackInvokedDispatcher$ImeOnBackInvokedCallbackWrapper@f982b44
+01-02 10:42:25.729 I/ImeTracker(18433): system_server:efda0c91: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+01-02 10:42:26.224 W/om.osfans.trime(18433): Binder 0xb400006fd67c63e0 destroyed after setInheritRt before being parceled.
+01-02 10:42:26.417 D/MIUIInput(18433): com.osfans.trime/com.osfans.trime.ui.main.PrefMainActivity onBackInvokedCallback invoked: android.window.WindowOnBackInvokedDispatcher$OnBackInvokedCallbackWrapper$$ExternalSyntheticLambda3@d94aef3
+01-02 10:42:26.418 I/MIUIInput(18433): [KeyEvent] ViewRootImpl windowName 'sendBackKeyEvent-com.osfans.trime/com.osfans.trime.ui.main.PrefMainActivity', KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x48, repeatCount=0, eventTime=124325645000000, downTime=124325645000000, deviceId=-1, source=0x101, displayId=-1 }, phoneEventTime=10:42:26.417
+01-02 10:42:26.418 I/MIUIInput(18433): [KeyEvent] ViewRootImpl windowName 'sendBackKeyEvent-com.osfans.trime/com.osfans.trime.ui.main.PrefMainActivity', KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x48, repeatCount=0, eventTime=124325646000000, downTime=124325646000000, deviceId=-1, source=0x101, displayId=-1 }, phoneEventTime=10:42:26.418
+01-02 10:42:26.419 I/MIUIInput(18433): back key event finish by ViewPostImeInputStage, handled: true
+01-02 10:42:26.421 D/ScrollerOptimizationManager(18433): registerConfigChangedListener
+01-02 10:42:26.423 W/MIUIInput(18433): Back key is intercepted by the app
+01-02 10:42:26.423 I/MIUIInput(18433): back key event finish by ViewPostImeInputStage, handled: true
+01-02 10:42:27.225 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.PrefMainActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124326448, downTime=124326448, phoneEventTime=10:42:27.221 } moveCount:0
+01-02 10:42:27.226 D/VRI[PrefMainActivity](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:42:27.283 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.PrefMainActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124326506, downTime=124326448, phoneEventTime=10:42:27.279 } moveCount:0
+01-02 10:42:27.291 W/WindowOnBackDispatcher(18433): OnBackInvokedCallback is not enabled for the application.
+01-02 10:42:27.291 W/WindowOnBackDispatcher(18433): Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+01-02 10:42:27.301 D/ScrollerOptimizationManager(18433): registerConfigChangedListener
+01-02 10:42:28.265 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.PrefMainActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124327488, downTime=124327488, phoneEventTime=10:42:28.261 } moveCount:0
+01-02 10:42:28.265 D/VRI[PrefMainActivity](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:42:28.322 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.PrefMainActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124327545, downTime=124327488, phoneEventTime=10:42:28.317 } moveCount:0
+01-02 10:42:28.352 I/ContentCatcher(18433): SettingTrigger : unregister status observer com.osfans.trime.ui.main.PrefMainActivity
+01-02 10:42:28.353 I/ContentCatcher(18433): SettingTrigger : unregisterUIAgentListener com.osfans.trime.ui.main.PrefMainActivity, uid:10375
+01-02 10:42:28.363 I/ActivityThread(18433): HardwareRenderer preload  done
+01-02 10:42:28.363 I/om.osfans.trime(18433): AssetManager2(0xb4000070967aff38) locale list changing from [] to [zh-CN]
+01-02 10:42:28.365 D/ViewContentFactory(18433): initViewContentFetcherClass
+01-02 10:42:28.365 I/ContentCatcher(18433): ViewContentFetcher : ViewContentFetcher
+01-02 10:42:28.365 D/ViewContentFactory(18433): createInterceptor took 0ms
+01-02 10:42:28.365 E/ContentCatcherManager(18433): failed to get ContentCatcherService.
+01-02 10:42:28.365 D/DecorView(18433): updateFreeformOutlineFromActivity, inFreeform=false,inFreeformWindowMode=false
+01-02 10:42:28.365 E/ContentCatcherManager(18433): failed to get ContentCatcherService.
+01-02 10:42:28.365 D/WmSystemUiDebug(18433): set navigation bar color,Alpha=0.0, RGB:0,0,0 caller:androidx.activity.EdgeToEdgeApi29.setUp:14 androidx.activity.EdgeToEdge.enable$default:129 com.osfans.trime.ui.main.LogActivity.onCreate:4 android.app.Activity.performCreate:9380 android.app.Activity.performCreate:9323 android.app.Instrumentation.callActivityOnCreate:1537 android.app.ActivityThread.performLaunchActivity:4685 android.app.ActivityThread.handleLaunchActivity:4932 android.app.servertransaction.LaunchActivityItem.execute:222 android.app.servertransaction.TransactionExecutor.executeNonLifecycleItem:136 
+01-02 10:42:28.366 D/ScrollerOptimizationManager(18433): registerConfigChangedListener
+01-02 10:42:28.366 D/ScrollerOptimizationManager(18433): registerConfigChangedListener
+01-02 10:42:28.367 D/Activity(18433): Activity = ActivityInfo{d02aab0 com.osfans.trime.ui.main.LogActivity}, Resume onConfigurationChanged = {1.1 460mcc1mnc [zh_CN] ldltr sw400dp w400dp h890dp 480dpi nrml long hdr widecg port uimode=14 finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1200, 2670) mAppBounds=Rect(0, 0 - 1200, 2670) mMaxBounds=Rect(0, 0 - 1200, 2670) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=standard mAlwaysOnTop=undefined mRotation=ROTATION_0 mInSplitScreen=false letterBoxed=false foScaled=false isSpecificEmbedded=false embeddingScale=1.0} s.2 fontWeightAdjustment=0/dc themeChanged=0 themeChangedFlags=0 display=0 extraData = Bundle[{}] screenType=0c}
+01-02 10:42:28.368 D/SecurityManager(18433): checkAccessControl flag0
+01-02 10:42:28.369 I/ContentCatcher(18433): SettingTrigger : register screen QA status observer com.osfans.trime.ui.main.LogActivity
+01-02 10:42:28.369 D/HWUI    (18433): TAG_DDRE, CanvasContext::setDdreActivities: 
+01-02 10:42:28.369 I/ContentCatcher(18433): SettingTrigger : register global collect status observer com.osfans.trime.ui.main.LogActivity
+01-02 10:42:28.369 I/ViewRootImpl(18433): com.osfans.trime/com.osfans.trime.ui.main.LogActivity use first frame acceleration
+01-02 10:42:28.369 I/ContentCatcher(18433): SettingTrigger : registerUIAgentListener com.osfans.trime.ui.main.LogActivity, uid:10375
+01-02 10:42:28.372 I/Choreographer(18433): first vsync insert message into MessageQueue Head
+01-02 10:42:28.373 I/ComputilityLevel(18433): getComputilityLevel(): 6
+01-02 10:42:28.390 D/VRI[LogActivity](18433): vri.reportNextDraw 0 Rect(0, 0 - 1200, 2670) android.view.ViewRootImpl.performTraversals:5606 android.view.ViewRootImpl.doTraversal:4159 android.view.ViewRootImpl$TraversalRunnable.run:12555 android.view.Choreographer$CallbackRecord.run:2040 android.view.Choreographer$CallbackRecord.run:2049 
+01-02 10:42:28.390 D/VRI[LogActivity](18433): vri.Setup new sync=wmsSync-VRI[LogActivity]#16
+01-02 10:42:28.393 D/VRI[LogActivity](18433): vri.reportDrawFinished 0 0 Rect(0, 0 - 1200, 2670)
+01-02 10:42:28.394 D/HWUI    (18433): [HWUI] Flag vulkan_enhance_pipeline_cache enabled
+01-02 10:42:28.394 D/HWUI    (18433): [HWUI] EnhanceVkPipelineCache is disabled
+01-02 10:42:28.394 D/HWUI    (18433): [HWUI] Flag ddre enabled
+01-02 10:42:28.420 I/HandWritingStubImpl(18433): refreshLastKeyboardType: 1
+01-02 10:42:28.420 I/HandWritingStubImpl(18433): getCurrentKeyboardType: 1
+01-02 10:42:28.422 D/InsetsController(18433): hide(ime(), fromIme=false)
+01-02 10:42:28.422 I/ImeTracker(18433): com.osfans.trime:d086350: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+01-02 10:42:28.927 D/VRI[PrefMainActivity](18433): visibilityChanged oldVisibility=true newVisibility=false
+01-02 10:42:28.935 W/om.osfans.trime(18433): Binder 0xb400006fd6898140 destroyed after setInheritRt before being parceled.
+01-02 10:42:28.935 D/HWUI    (18433): endAllActiveAnimators on 0xb4000070470d47c0 (RippleDrawable) with handle 0xb400006fb67e69c0
+01-02 10:42:29.316 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124328541, downTime=124328541, phoneEventTime=10:42:29.313 } moveCount:0
+01-02 10:42:29.317 D/VRI[LogActivity](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:42:29.406 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124328631, downTime=124328541, phoneEventTime=10:42:29.403 } moveCount:10
+01-02 10:42:29.407 D/SplineOverScroller(18433): mFlingDuration: 2809,mFlingDistance: 9744.185546875,mVelocity: 21000
+01-02 10:42:29.642 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124328866, downTime=124328866, phoneEventTime=10:42:29.638 } moveCount:0
+01-02 10:42:29.642 D/VRI[LogActivity](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:42:29.724 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124328950, downTime=124328866, phoneEventTime=10:42:29.723 } moveCount:9
+01-02 10:42:29.724 D/OverScroller(18433): originVelocityY = 21129, wheelVelocity = 25466, temp = 12554.194215410726
+01-02 10:42:29.944 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124329168, downTime=124329168, phoneEventTime=10:42:29.940 } moveCount:0
+01-02 10:42:29.945 D/VRI[LogActivity](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:42:30.059 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124329285, downTime=124329168, phoneEventTime=10:42:30.057 } moveCount:13
+01-02 10:42:30.059 D/OverScroller(18433): originVelocityY = 7604, wheelVelocity = 26205, temp = 13025.93248386379
+01-02 10:42:30.285 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124329511, downTime=124329511, phoneEventTime=10:42:30.284 } moveCount:0
+01-02 10:42:30.285 D/VRI[LogActivity](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:42:30.360 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124329586, downTime=124329511, phoneEventTime=10:42:30.359 } moveCount:8
+01-02 10:42:30.360 D/OverScroller(18433): originVelocityY = 22478, wheelVelocity = 25836, temp = 12789.789370697905
+01-02 10:42:30.647 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124329872, downTime=124329872, phoneEventTime=10:42:30.644 } moveCount:0
+01-02 10:42:30.647 D/VRI[LogActivity](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:42:30.712 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124329938, downTime=124329872, phoneEventTime=10:42:30.710 } moveCount:7
+01-02 10:42:30.712 D/OverScroller(18433): originVelocityY = 24000, wheelVelocity = 21807, temp = 10262.942218352491
+01-02 10:42:31.385 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124330609, downTime=124330609, phoneEventTime=10:42:31.381 } moveCount:0
+01-02 10:42:31.385 D/VRI[LogActivity](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:42:31.442 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124330668, downTime=124330609, phoneEventTime=10:42:31.441 } moveCount:6
+01-02 10:42:32.204 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124331427, downTime=124331427, phoneEventTime=10:42:32.199 } moveCount:0
+01-02 10:42:32.204 D/VRI[LogActivity](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:42:32.285 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124331510, downTime=124331427, phoneEventTime=10:42:32.283 } moveCount:9
+01-02 10:42:32.717 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124331937, downTime=124331937, phoneEventTime=10:42:32.709 } moveCount:0
+01-02 10:42:32.717 D/VRI[LogActivity](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:42:32.778 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124332003, downTime=124331937, phoneEventTime=10:42:32.775 } moveCount:7
+01-02 10:42:33.534 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124332759, downTime=124332759, phoneEventTime=10:42:33.531 } moveCount:0
+01-02 10:42:33.535 D/VRI[LogActivity](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:42:33.601 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124332825, downTime=124332759, phoneEventTime=10:42:33.597 } moveCount:6
+01-02 10:42:33.795 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124333019, downTime=124333019, phoneEventTime=10:42:33.791 } moveCount:0
+01-02 10:42:33.795 D/VRI[LogActivity](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:42:33.894 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124333118, downTime=124333019, phoneEventTime=10:42:33.890 } moveCount:10
+01-02 10:42:33.905 I/HandWritingStubImpl(18433): refreshLastKeyboardType: 1
+01-02 10:42:33.905 I/HandWritingStubImpl(18433): getCurrentKeyboardType: 1
+01-02 10:42:34.329 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124333553, downTime=124333553, phoneEventTime=10:42:34.325 } moveCount:0
+01-02 10:42:34.329 D/VRI[LogActivity](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:42:34.804 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124334030, downTime=124333553, phoneEventTime=10:42:34.802 } moveCount:52
+01-02 10:42:35.017 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124334240, downTime=124334240, phoneEventTime=10:42:35.012 } moveCount:0
+01-02 10:42:35.017 D/VRI[LogActivity](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:42:35.366 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124334591, downTime=124334240, phoneEventTime=10:42:35.364 } moveCount:38
+01-02 10:42:35.965 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124335188, downTime=124335188, phoneEventTime=10:42:35.960 } moveCount:0
+01-02 10:42:35.965 D/VRI[LogActivity](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:42:36.087 I/MiInputConsumer(18433): optimized resample latency: 1599945 ns
+01-02 10:42:36.339 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124335564, downTime=124335188, phoneEventTime=10:42:36.336 } moveCount:40
+01-02 10:42:36.549 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124335774, downTime=124335774, phoneEventTime=10:42:36.546 } moveCount:0
+01-02 10:42:36.550 D/VRI[LogActivity](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:42:36.942 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124336168, downTime=124335774, phoneEventTime=10:42:36.940 } moveCount:43
+01-02 10:42:37.943 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124337163, downTime=124337163, phoneEventTime=10:42:37.935 } moveCount:0
+01-02 10:42:37.943 D/VRI[LogActivity](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:42:38.824 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124338050, downTime=124337163, phoneEventTime=10:42:38.823 } moveCount:81
+01-02 10:42:39.019 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124338242, downTime=124338242, phoneEventTime=10:42:39.015 } moveCount:0
+01-02 10:42:39.019 D/VRI[LogActivity](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:42:39.159 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124338384, downTime=124338242, phoneEventTime=10:42:39.156 } moveCount:15
+01-02 10:42:39.277 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124338502, downTime=124338502, phoneEventTime=10:42:39.274 } moveCount:0
+01-02 10:42:39.277 D/VRI[LogActivity](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:42:39.695 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124338921, downTime=124338502, phoneEventTime=10:42:39.694 } moveCount:41
+01-02 10:42:39.695 D/SplineOverScroller(18433): mFlingDuration: 1397,mFlingDistance: 446.5115966796875,mVelocity: -1010
+01-02 10:42:41.250 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124340472, downTime=124340472, phoneEventTime=10:42:41.244 } moveCount:0
+01-02 10:42:41.250 D/VRI[LogActivity](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:42:41.413 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124340639, downTime=124340472, phoneEventTime=10:42:41.411 } moveCount:16
+01-02 10:42:41.604 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124340825, downTime=124340825, phoneEventTime=10:42:41.598 } moveCount:0
+01-02 10:42:41.605 D/VRI[LogActivity](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:42:41.899 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124341125, downTime=124340825, phoneEventTime=10:42:41.897 } moveCount:28
+01-02 10:42:42.307 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124341528, downTime=124341528, phoneEventTime=10:42:42.300 } moveCount:0
+01-02 10:42:42.307 D/VRI[LogActivity](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:42:43.399 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124342624, downTime=124341528, phoneEventTime=10:42:43.396 } moveCount:123
+01-02 10:42:43.771 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124342994, downTime=124342994, phoneEventTime=10:42:43.767 } moveCount:0
+01-02 10:42:43.771 D/VRI[LogActivity](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:42:44.287 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124343513, downTime=124342994, phoneEventTime=10:42:44.286 } moveCount:55
+01-02 10:42:44.577 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124343798, downTime=124343798, phoneEventTime=10:42:44.571 } moveCount:0
+01-02 10:42:44.578 D/VRI[LogActivity](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:42:44.933 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124344158, downTime=124343798, phoneEventTime=10:42:44.930 } moveCount:33
+01-02 10:42:45.177 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124344401, downTime=124344401, phoneEventTime=10:42:45.174 } moveCount:0
+01-02 10:42:45.178 D/VRI[LogActivity](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:42:45.560 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124344786, downTime=124344401, phoneEventTime=10:42:45.558 } moveCount:41
+01-02 10:42:45.840 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124345063, downTime=124345063, phoneEventTime=10:42:45.835 } moveCount:0
+01-02 10:42:45.840 D/VRI[LogActivity](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:42:46.165 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124345389, downTime=124345063, phoneEventTime=10:42:46.161 } moveCount:32
+01-02 10:42:47.391 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124346614, downTime=124346614, phoneEventTime=10:42:47.387 } moveCount:0
+01-02 10:42:47.391 D/VRI[LogActivity](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:42:47.715 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124346940, downTime=124346614, phoneEventTime=10:42:47.713 } moveCount:34
+01-02 10:42:47.794 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124347016, downTime=124347016, phoneEventTime=10:42:47.789 } moveCount:0
+01-02 10:42:47.794 D/VRI[LogActivity](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:42:48.151 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124347376, downTime=124347016, phoneEventTime=10:42:48.149 } moveCount:34
+01-02 10:42:48.655 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=124347877, downTime=124347877, phoneEventTime=10:42:48.649 } moveCount:0
+01-02 10:42:48.655 D/VRI[LogActivity](18433): getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+01-02 10:42:48.694 I/MIUIInput(18433): [MotionEvent] ViewRootImpl windowName 'com.osfans.trime/com.osfans.trime.ui.main.LogActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=124347919, downTime=124347877, phoneEventTime=10:42:48.691 } moveCount:0
+01-02 10:42:48.728 I/ContentCatcher(18433): SettingTrigger : unregister status observer com.osfans.trime.ui.main.LogActivity
+01-02 10:42:48.729 I/ContentCatcher(18433): SettingTrigger : unregisterUIAgentListener com.osfans.trime.ui.main.LogActivity, uid:10375
+01-02 10:42:49.257 D/VRI[LogActivity](18433): visibilityChanged oldVisibility=true newVisibility=false
+01-02 10:42:49.264 D/HWUI    (18433): endAllActiveAnimators on 0xb400007047137760 (RippleDrawable) with handle 0xb400006fb69280b0
+01-02 10:42:49.268 W/om.osfans.trime(18433): Binder 0xb400006fd6882d20 destroyed after setInheritRt before being parceled.
+01-02 10:42:49.380 I/om.osfans.trime(18433): This is non sticky GC, maxfree is 33554432 minfree is 8388608
+01-02 10:42:50.579 D/AppScoutStateMachine(18433): 18433-ScoutStateMachinecreated
+01-02 10:42:50.580 E/ActivityThread(18433):  fail in deliverResultsIfNeeded java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.String android.os.Bundle.getString(java.lang.String)' on a null object reference
+01-02 10:42:50.581 D/Activity(18433): Activity = ActivityInfo{d02aab0 com.osfans.trime.ui.main.LogActivity}, Resume onConfigurationChanged = {1.1 460mcc1mnc [zh_CN] ldltr sw400dp w400dp h890dp 480dpi nrml long hdr widecg port uimode=14 finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1200, 2670) mAppBounds=Rect(0, 0 - 1200, 2670) mMaxBounds=Rect(0, 0 - 1200, 2670) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=standard mAlwaysOnTop=undefined mRotation=ROTATION_0 mInSplitScreen=false letterBoxed=false foScaled=false isSpecificEmbedded=false embeddingScale=1.0} s.2 fontWeightAdjustment=0/dc themeChanged=0 themeChangedFlags=0 display=0 extraData = Bundle[{}] screenType=0c}
+01-02 10:42:50.582 D/SecurityManager(18433): checkAccessControl flag0
+01-02 10:42:50.582 I/ContentCatcher(18433): SettingTrigger : register screen QA status observer com.osfans.trime.ui.main.LogActivity
+01-02 10:42:50.583 I/ContentCatcher(18433): SettingTrigger : register global collect status observer com.osfans.trime.ui.main.LogActivity
