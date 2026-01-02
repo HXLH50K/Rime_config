@@ -1,6 +1,6 @@
 # Trime 自定义配置
-# 简化版 - 键盘定义在 tongwenfeng-custom.trime.yaml 中
+# 简化版 - 键盘定义在 shouxin_18key.trime.yaml 中
 
 patch:
   # 不需要在这里定义键盘，使用独立主题文件
-  # tongwenfeng-custom.trime.yaml 已包含完整的键盘定义
+  # shouxin_18key.trime.yaml 已包含完整的键盘定义
