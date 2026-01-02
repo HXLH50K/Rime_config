@@ -28,18 +28,18 @@ patch:
     - table_translator@custom_phrase_super_3jian_no_conflict
     - table_translator@custom_phrase_super_4jian_no_conflict
     - table_translator@big_char_set
-    - table_translator@emojis
-    - table_translator@easy_en_simp
-    - table_translator@jp_sela
-    - reverse_lookup_translator
-    - table_translator@reverse_moqima
-    - table_translator@radical_flypy
-    - table_translator@reverse_stroke
-    - table_translator@reverse_zrlf
-    - table_translator@reverse_cj
+    # - table_translator@emojis           # 禁用 ae Emoji
+    - table_translator@easy_en_simp       # 保留 aw 英语
+    - table_translator@jp_sela            # 保留 aj 日语
+    # - reverse_lookup_translator         # 禁用反查
+    # - table_translator@reverse_moqima   # 禁用 amq 墨奇反查
+    # - table_translator@radical_flypy    # 禁用 az 部件组字
+    # - table_translator@reverse_stroke   # 禁用 ab 笔画反查
+    # - table_translator@reverse_zrlf     # 禁用 alf 自然两分
+    # - table_translator@reverse_cj       # 禁用 arj 仓颉
     - script_translator
     - script_translator@user_dict_set
-    - script_translator@add_user_dict
+    # - script_translator@add_user_dict   # 禁用 ac 自造词
 
   # ========== 18键模糊输入规则 ==========
   # 键盘布局：
@@ -101,3 +101,24 @@ patch:
     - derive/b$/n/
     - derive/^n/b/
     - derive/n$/b/
+
+  # ========== 禁用除 aj(日语) aw(英语) 外的特殊前缀 ==========
+  # 只保留 aj 和 aw 的 recognizer patterns，移除其他
+  "recognizer/patterns/reverse_moqima":  # 禁用 amq 墨奇反查
+  "recognizer/patterns/radical_flypy":   # 禁用 az 部件组字
+  "recognizer/patterns/reverse_stroke":  # 禁用 ab 笔画反查
+  "recognizer/patterns/reverse_cj":      # 禁用 arj 仓颉反查
+  "recognizer/patterns/reverse_zrlf":    # 禁用 alf 自然两分
+  "recognizer/patterns/add_user_dict":   # 禁用 ac 自造词
+  "recognizer/patterns/emojis":          # 禁用 ae Emoji
+
+  # 移除相关的 segmentors
+  "engine/segmentors":
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    # 保留 aj 和 aw 相关
+    - affix_segmentor@easy_en_simp
+    - affix_segmentor@jp_sela
+    - fallback_segmentor
