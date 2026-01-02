@@ -223,6 +223,11 @@ _key_back_base: &key_back_base
 
 # ==================== 预设按键 ====================
 preset_keys:
+  # ========== 系统功能键 ==========
+  Hide:
+    label: "隐藏"
+    send: BACK
+
   # ========== 中英文切换键 ==========
   Keyboard_eng:
     label: "中"
