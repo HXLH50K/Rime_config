@@ -396,6 +396,19 @@ preset_keys:
     send: function
     command: liquid_keyboard
     option: "-1"
+  # 液态键盘固定栏专用按键（带标签）
+  space1:
+    functional: false
+    label: "空格"
+    repeatable: false
+    send: space
+  Return1:
+    label: "回车"
+    send: Return
+  BackSpace1:
+    label: "退格"
+    send: BackSpace
+    repeatable: true
 
 # 液态键盘配置
 liquid_keyboard:
@@ -411,9 +424,9 @@ liquid_keyboard:
     position: right
     keys:
       - liquid_keyboard_exit
-      - space
-      - BackSpace
-      - Return
+      - space1
+      - BackSpace1
+      - Return1
   keyboards: [剪贴, 表情]
   剪贴:
     name: 剪贴
