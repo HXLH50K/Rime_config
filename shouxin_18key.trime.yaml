@@ -2,7 +2,7 @@
 # 基于tongwenfeng主题格式，专为18键模糊输入设计
 # 使用 YAML 锚点实现键盘继承，减少重复代码
 
-name: "手心18键 v63"
+name: "手心18键 v64"
 author: "Custom"
 config_version: 3.0
 
@@ -396,7 +396,7 @@ preset_keys:
     label: "␣"
     send: space
   key_return:
-    label: "↵"
+    label: "⏎"
     send: Return
 
   # ========== 英文键盘专用功能键 ==========
@@ -409,7 +409,7 @@ preset_keys:
     send: BackSpace
     repeatable: true
   key_return_en:
-    label: "↵"
+    label: "⏎"
     send: Return
 
   # ========== 液态键盘按键 ==========
@@ -424,22 +424,22 @@ preset_keys:
     command: liquid_keyboard
     option: "剪贴"
   liquid_keyboard_exit:
-    label: "返回"
+    label: " ↩ "
     send: function
     command: liquid_keyboard
     option: "-1"
-  # 液态键盘固定栏专用按键（带标签）
+  # 液态键盘固定栏专用按键（与edit_keyboard对齐，使用半角空格填充）
   space1:
     functional: false
-    label: "空格"
+    label: " ␣ "
     repeatable: false
     send: space
   Return1:
-    label: "回车"
+    label: " ⏎ "
     send: Return
   BackSpace1:
     functional: false
-    label: "退格"
+    label: " ⌫ "
     send: BackSpace
     repeatable: true
 
@@ -524,10 +524,11 @@ liquid_keyboard:
   fixed_key_bar:
     position: right
     keys:
-      - liquid_keyboard_exit
-      - space1
+      # 与 edit_keyboard 第6列对齐：退格、回车、空格、返回
       - BackSpace1
       - Return1
+      - space1
+      - liquid_keyboard_exit
   keyboards: [剪贴, 表情, 中文标点, 英文标点, 数学符号, 序号, 特殊符号, 箭头, 货币单位, 日文假名]
   剪贴:
     name: 剪贴
