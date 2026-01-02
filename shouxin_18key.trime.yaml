@@ -2,7 +2,7 @@
 # 基于tongwenfeng主题格式，专为18键模糊输入设计
 # 使用 YAML 锚点实现键盘继承，减少重复代码
 
-name: "手心18键 v37"
+name: "手心18键 v38"
 author: "Custom"
 config_version: 3.0
 
@@ -314,6 +314,7 @@ preset_keys:
   key_backspace:
     label: "⌫"
     send: BackSpace
+    repeatable: true
 
   # ========== 第四行：功能键 ==========
   key_comma:
@@ -339,6 +340,7 @@ preset_keys:
   key_backspace_en:
     label: "⌫"
     send: BackSpace
+    repeatable: true
   key_return_en:
     label: "↵"
     send: Return
