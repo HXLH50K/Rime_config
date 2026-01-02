@@ -2,7 +2,7 @@
 # 基于tongwenfeng主题格式，专为18键模糊输入设计
 # 使用 YAML 锚点实现键盘继承，减少重复代码
 
-name: "手心18键 v55"
+name: "手心18键 v60"
 author: "Custom"
 config_version: 3.0
 
@@ -63,10 +63,6 @@ style:
     - qwerty26
     - number_cn
     - number_en
-    - symbol_cn
-    - symbol_en
-    - symbol_num_cn
-    - symbol_num_en
     - edit_keyboard
   label_font: label.ttf
   label_text_size: 18
@@ -92,36 +88,6 @@ _number_base: &number_base
   name: "数字"
   width: 20
   height: 52
-
-# 符号键盘基类
-_symbol_base: &symbol_base
-  author: "Custom"
-  name: "符号"
-  width: 14.28
-  height: 52
-
-# 符号键盘按键布局（前20个符号键）
-_symbol_keys_prefix: &symbol_keys_prefix
-  - {click: "!"}
-  - {click: "@"}
-  - {click: "#"}
-  - {click: "$"}
-  - {click: "%"}
-  - {click: "^"}
-  - {click: "&"}
-  - {click: "*"}
-  - {click: "("}
-  - {click: ")"}
-  - {click: "-"}
-  - {click: "="}
-  - {click: "+"}
-  - {click: "_"}
-  - {click: "["}
-  - {click: "]"}
-  - {click: "{"}
-  - {click: "}"}
-  - {click: "|"}
-  - {click: "\\"}
 
 # ==================== 键盘预设 ====================
 preset_keyboards:
@@ -227,29 +193,6 @@ preset_keyboards:
     ascii_mode: 1
     keys: [{click: "+", label: "+"}, {click: "1", label: "1"}, {click: "2", label: "2"}, {click: "3", label: "3"}, {click: key_backspace}, {click: "-", label: "-"}, {click: "4", label: "4"}, {click: "5", label: "5"}, {click: "6", label: "6"}, {click: ".", label: "."}, {click: "@", label: "@"}, {click: "7", label: "7"}, {click: "8", label: "8"}, {click: "9", label: "9"}, {click: ":", label: ":"}, {click: key_symbol_num_en}, {click: key_back_to_en}, {click: "0", label: "0"}, {click: key_space_num}, {click: key_return}]
 
-  # ========== 符号键盘（从中文进入）- 继承 symbol_base ==========
-  symbol_cn:
-    <<: *symbol_base
-    ascii_mode: 0
-    keys: [{click: "!"}, {click: "@"}, {click: "#"}, {click: "$"}, {click: "%"}, {click: "^"}, {click: "&"}, {click: "*"}, {click: "("}, {click: ")"}, {click: "-"}, {click: "="}, {click: "+"}, {click: "_"}, {click: "["}, {click: "]"}, {click: "{"}, {click: "}"}, {click: "|"}, {click: "\\"}, {click: key_backspace}, {click: key_back_to_cn}, {click: key_space_num}, {click: key_return}]
-
-  # ========== 符号键盘（从英文进入）- 继承 symbol_base ==========
-  symbol_en:
-    <<: *symbol_base
-    ascii_mode: 1
-    keys: [{click: "!"}, {click: "@"}, {click: "#"}, {click: "$"}, {click: "%"}, {click: "^"}, {click: "&"}, {click: "*"}, {click: "("}, {click: ")"}, {click: "-"}, {click: "="}, {click: "+"}, {click: "_"}, {click: "["}, {click: "]"}, {click: "{"}, {click: "}"}, {click: "|"}, {click: "\\"}, {click: key_backspace}, {click: key_back_to_en}, {click: key_space_num}, {click: key_return}]
-
-  # ========== 符号键盘（从中文数字键盘进入）- 继承 symbol_base ==========
-  symbol_num_cn:
-    <<: *symbol_base
-    ascii_mode: 0
-    keys: [{click: "!"}, {click: "@"}, {click: "#"}, {click: "$"}, {click: "%"}, {click: "^"}, {click: "&"}, {click: "*"}, {click: "("}, {click: ")"}, {click: "-"}, {click: "="}, {click: "+"}, {click: "_"}, {click: "["}, {click: "]"}, {click: "{"}, {click: "}"}, {click: "|"}, {click: "\\"}, {click: key_backspace}, {click: key_back_to_num_cn}, {click: key_space_num}, {click: key_return}]
-
-  # ========== 符号键盘（从英文数字键盘进入）- 继承 symbol_base ==========
-  symbol_num_en:
-    <<: *symbol_base
-    ascii_mode: 1
-    keys: [{click: "!"}, {click: "@"}, {click: "#"}, {click: "$"}, {click: "%"}, {click: "^"}, {click: "&"}, {click: "*"}, {click: "("}, {click: ")"}, {click: "-"}, {click: "="}, {click: "+"}, {click: "_"}, {click: "["}, {click: "]"}, {click: "{"}, {click: "}"}, {click: "|"}, {click: "\\"}, {click: key_backspace}, {click: key_back_to_num_en}, {click: key_space_num}, {click: key_return}]
 
   # ========== 编辑键盘（光标控制） ==========
   # 布局：4行4列
@@ -293,11 +236,6 @@ preset_keyboards:
       - {click: key_back_to_cn}
 
 # ==================== 预设按键基类 ====================
-# 符号键基类
-_key_symbol_base: &key_symbol_base
-  label: "#+="
-  send: Eisu_toggle
-
 # 返回键基类
 _key_back_base: &key_back_base
   label: "↩"
@@ -342,19 +280,27 @@ preset_keys:
     send: Eisu_toggle
     select: edit_keyboard
 
-  # ========== 符号键（继承 key_symbol_base） ==========
+  # ========== 符号键（触发液态符号键盘） ==========
   key_symbol_cn:
-    <<: *key_symbol_base
-    select: symbol_cn
+    label: "#+="
+    send: function
+    command: liquid_keyboard
+    option: "中文标点"
   key_symbol_en:
-    <<: *key_symbol_base
-    select: symbol_en
+    label: "#+="
+    send: function
+    command: liquid_keyboard
+    option: "英文标点"
   key_symbol_num_cn:
-    <<: *key_symbol_base
-    select: symbol_num_cn
+    label: "#+="
+    send: function
+    command: liquid_keyboard
+    option: "中文标点"
   key_symbol_num_en:
-    <<: *key_symbol_base
-    select: symbol_num_en
+    label: "#+="
+    send: function
+    command: liquid_keyboard
+    option: "英文标点"
 
   # ========== 返回键（继承 key_back_base） ==========
   key_back_to_cn:
@@ -363,12 +309,6 @@ preset_keys:
   key_back_to_en:
     <<: *key_back_base
     select: qwerty26
-  key_back_to_num_cn:
-    <<: *key_back_base
-    select: number_cn
-  key_back_to_num_en:
-    <<: *key_back_base
-    select: number_en
 
   # ========== 第一行：字母键 ==========
   key_Q:
@@ -600,7 +540,7 @@ liquid_keyboard:
       - space1
       - BackSpace1
       - Return1
-  keyboards: [剪贴, 表情]
+  keyboards: [剪贴, 表情, 中文标点, 英文标点, 数学符号, 序号, 特殊符号, 箭头, 货币单位, 日文假名]
   剪贴:
     name: 剪贴
     type: CLIPBOARD
@@ -608,6 +548,98 @@ liquid_keyboard:
     name: 表情
     type: SINGLE
     keys: "🙂😂🤣😆🙃😅🥺😎👀🙈🙉🙊☹😑😄🤐😨😱🌚🌝🤔❤💔🌹💣👌👍😣😥😮🙄😏😕😯😪😫😴😌🤑😉😋😍😘😚😛😜😝😒😓😔😲😷🤒😇🤓🤗🤕🙁😖😞😟😤😢😭😦😧😨😩😬😰😳😵😡😠☝✌🖕👎🙏🤘👏💪💋☘🍀🌸☕🍵🍺🍻🍦🍬🍚🍜🍲🍖🎂💤⭐✨🔥💯🎉🎊👋🙌"
+  # ========== 符号键盘子类 ==========
+  # 中文标点：常用标点 + 成对符号（直接输入一对）
+  中文标点:
+    name: 中文标点
+    type: SINGLE
+    keys:
+      - "，"
+      - "。"
+      - "？"
+      - "！"
+      - "："
+      - "、"
+      - "；"
+      - "……"
+      - "——"
+      - "～"
+      - "·"
+      - "‥"
+      # 成对符号（输入一对，需手动移动光标）
+      - "“”"
+      - "‘’"
+      - "【】"
+      - "《》"
+      - "（）"
+      - "「」"
+      - "『』"
+      - "〈〉"
+      - "〔〕"
+      - "〖〗"
+      # 单个引号（分开输入）
+      - "“"
+      - "”"
+      - "'"
+      - "'"
+  # 英文标点：常用标点 + 成对符号
+  英文标点:
+    name: 英文标点
+    type: SINGLE
+    keys:
+      - ","
+      - "."
+      - "?"
+      - "!"
+      - ":"
+      - ";"
+      - "/"
+      - "\\"
+      - "|"
+      - "*"
+      - "-"
+      - "+"
+      - "="
+      - "^"
+      - "$"
+      - "`"
+      - "~"
+      - "@"
+      - "#"
+      - "%"
+      - "&"
+      - "_"
+      # 成对符号
+      - "''"
+      - '""'
+      - "()"
+      - "[]"
+      - "{}"
+      - "<>"
+  数学符号:
+    name: 数学符号
+    type: SINGLE
+    keys: "+-×÷=≠<>≤≥±∞%‰°√∑∏∫∂∆∇∝≡≈≌∥∩∪∈∋∀∃∧∨¬⊂⊃⊆⊇⊕⊗⊥∟∠△▽○●□■◇◆"
+  序号:
+    name: 序号
+    type: SINGLE
+    keys: "①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㈠㈡㈢㈣㈤㈥㈦㈧㈨㈩ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅪⅫⅰⅱⅲⅳⅴⅵⅶⅷⅸⅹ⒈⒉⒊⒋⒌⒍⒎⒏⒐⒑"
+  特殊符号:
+    name: 特殊符号
+    type: SINGLE
+    keys: "■□▣▤▥▦▧▨▩▲△▴▵▶▷▸▹►▻▼▽▾▿◀◁◂◃◄◅◆◇◈○◌◎●◐◑★☆☉☼♀♂♠♡♢♣♤♥♦♧♩♪♫♬♭♮♯✓✔✕✖✗✘✡✢✣✤✥"
+  箭头:
+    name: 箭头
+    type: SINGLE
+    keys: "←↑→↓↔↕↖↗↘↙↚↛↜↝↞↟↠↡↢↣↤↥↦↧↨↩↪↫↬↭↮↯↰↱↲↳↴↵↶↷↸↹↺↻⇄⇅⇆⇇⇈⇉⇊⇋⇌⇍⇎⇏⇐⇑⇒⇓⇔⇕⇖⇗⇘⇙⇚⇛⇠⇡⇢⇣"
+  货币单位:
+    name: 货币单位
+    type: SINGLE
+    keys: "¥$€£¢₹₽₿℃℉°㎡㎥㎏㎎㎜㎝㎞㏄㏎㏑㏒㏕№℡㊀㊁㊂㊃㊄㊅㊆㊇㊈㊉"
+  日文假名:
+    name: 日文假名
+    type: SINGLE
+    keys: "あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをんアイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン"
 
 # 候选区工具栏配置
 tool_bar:
