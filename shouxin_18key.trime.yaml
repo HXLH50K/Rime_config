@@ -67,6 +67,7 @@ style:
     - symbol_en
     - symbol_num_cn
     - symbol_num_en
+    - edit_keyboard
   label_font: label.ttf
   label_text_size: 18
   latin_font: latin.ttf
@@ -210,6 +211,33 @@ preset_keyboards:
     ascii_mode: 1
     keys: [{click: "!"}, {click: "@"}, {click: "#"}, {click: "$"}, {click: "%"}, {click: "^"}, {click: "&"}, {click: "*"}, {click: "("}, {click: ")"}, {click: "-"}, {click: "="}, {click: "+"}, {click: "_"}, {click: "["}, {click: "]"}, {click: "{"}, {click: "}"}, {click: "|"}, {click: "\\"}, {click: key_backspace}, {click: key_back_to_num_en}, {click: key_space_num}, {click: key_return}]
 
+  # ========== 编辑键盘（光标控制） ==========
+  edit_keyboard:
+    ascii_mode: 1
+    author: "Custom"
+    name: "编辑键盘"
+    width: 20
+    height: 45
+    keys:
+      - {click: select_all}
+      - {click: Left}
+      - {click: Up}
+      - {click: Right}
+      - {click: key_space_num}
+      - {click: cut}
+      - {click: Home}
+      - {click: Down}
+      - {click: End}
+      - {click: key_backspace}
+      - {click: copy}
+      - {click: undo}
+      - {click: Tab}
+      - {click: redo}
+      - {click: key_return}
+      - {click: paste}
+      - {click: key_back_to_cn, width: 40}
+      - {click: Keyboard_number_cn, width: 40}
+
 # ==================== 预设按键基类 ====================
 # 符号键基类
 _key_symbol_base: &key_symbol_base
@@ -255,6 +283,10 @@ preset_keys:
     label: "123"
     send: Eisu_toggle
     select: number_en
+  Keyboard_edit:
+    label: "编辑"
+    send: Eisu_toggle
+    select: edit_keyboard
 
   # ========== 符号键（继承 key_symbol_base） ==========
   key_symbol_cn:
@@ -410,6 +442,62 @@ preset_keys:
     send: BackSpace
     repeatable: true
 
+  # ========== 编辑键盘按键 ==========
+  Left:
+    functional: false
+    label: "←"
+    repeatable: true
+    send: Left
+  Right:
+    functional: false
+    label: "→"
+    repeatable: true
+    send: Right
+  Up:
+    functional: false
+    label: "↑"
+    send: Up
+  Down:
+    functional: false
+    label: "↓"
+    send: Down
+  Home:
+    functional: false
+    label: "行首"
+    send: Home
+  End:
+    functional: false
+    label: "行尾"
+    send: End
+  Tab:
+    functional: false
+    label: "Tab"
+    send: Tab
+  select_all:
+    functional: false
+    label: "全选"
+    send: "Control+a"
+  copy:
+    functional: false
+    label: "复制"
+    send: "Control+c"
+  paste:
+    functional: false
+    label: "粘贴"
+    send: "Control+v"
+  cut:
+    functional: false
+    label: "剪切"
+    send: "Control+x"
+  undo:
+    functional: false
+    label: "撤销"
+    send: "Control+z"
+  redo:
+    functional: false
+    label: "重做"
+    send: "Control+Shift+z"
+
 # 液态键盘配置
 liquid_keyboard:
   author: "Custom"
@@ -444,6 +532,7 @@ tool_bar:
     - {action: Hide, foreground: {style: "ic@keyboard_close"}}
     - {action: liquid_keyboard_emoji, foreground: {style: "ic@emoticon"}}
     - {action: liquid_keyboard_clipboard, foreground: {style: "ic@clipboard"}}
+    - {action: Keyboard_edit, foreground: {style: "ic@cursor_text"}}
     - {action: F4, foreground: {style: "ic@settings"}}
   emoji_button:
     action: liquid_keyboard_emoji

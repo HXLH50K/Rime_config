@@ -2,8 +2,8 @@ TODO:
 修复toolbar上按钮功能(从右到左):
 DONE 1. 收起键盘: 不能收起键盘, 会输入"Hide"
 DONE 2. 表情按钮: 进入表情子键盘后, 右侧有"返回" "回车" "空格" "退格"四个按钮, 后三者分别仅显示一个竖条, 均可以点击
-3. 剪贴板按钮: 点进子键盘后没有任何内容, 仅有右侧四个按钮与#2相同(右侧按钮显示问题已跟随#2修复)
-4. 没有edit_button按钮, 在tongwenfeng中对应的是- {action: Keyboard_numberb, foreground: {style: "ic@cursor_text"}}
+DONE 3. 剪贴板按钮: 点进子键盘后没有任何内容, 仅有右侧四个按钮与#2相同(右侧按钮显示问题已跟随#2修复)
+DONE 4. 没有edit_button按钮, 在tongwenfeng中对应的是- {action: Keyboard_numberb, foreground: {style: "ic@cursor_text"}}
 
 
 
