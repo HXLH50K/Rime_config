@@ -6,6 +6,5 @@ customization:
   rime_version: 1.13.1
 patch:
   schema_list:
-    - {schema: double_pinyin_flypy}
-    - {schema: moqi_xh}
+    - {schema: moqi_xh-weasel}
     
