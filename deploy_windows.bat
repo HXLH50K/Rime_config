@@ -14,8 +14,8 @@ copy /Y moqi_xh-weasel.custom.yaml "%RIME_DIR%\"
 @REM REM 复制 moqi.yaml 共享配置
 @REM copy /Y moqi.yaml "%RIME_DIR%\"
 
-@REM REM 复制 default.custom.yaml 方案列表
-@REM copy /Y default.custom.yaml "%RIME_DIR%\"
+REM 复制 default.custom.yaml 方案列表
+copy /Y default.custom.yaml "%RIME_DIR%\"
 
 @REM REM 复制词典文件
 @REM copy /Y moqi.extended.dict.yaml "%RIME_DIR%\"

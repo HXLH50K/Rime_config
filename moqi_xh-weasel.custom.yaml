@@ -1,14 +1,18 @@
 patch:
   "menu/page_size": 9
+  # 禁用 Ctrl+` 快捷键，让其穿透到其他软件
+  "switcher/hotkeys":
+    - F4
+  
   
   # 中文状态下默认使用英文标点
   "switches/@last/reset": 1
   "switches/@last":
     name: ascii_punct
-    reset: 1
+    reset: 1 
     states: [ 。，, ．， ]
   
-  # Shift 切换中英文时不改变标点状态
+  # Shift 切换中英文时不改变标点状态 
   "ascii_composer/good_old_caps_lock": true
   "ascii_composer/switch_key":
     Shift_L: inline_ascii

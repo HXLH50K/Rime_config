@@ -7,4 +7,8 @@ customization:
 patch:
   schema_list:
     - {schema: moqi_xh-weasel}
+  
+  # 禁用 Ctrl+` 快捷键，只保留 F4 用于方案切换
+  "switcher/hotkeys":
+    - F4
     
