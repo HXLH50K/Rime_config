@@ -1,7 +1,7 @@
 # 手心式18键输入法主题配置
 # 基于tongwenfeng主题格式，专为18键模糊输入设计
 
-name: "手心18键 v26"
+name: "手心18键 v27"
 author: "Custom"
 config_version: 3.0
 
@@ -89,7 +89,7 @@ preset_keyboards:
     width: 14.28
     height: 52
     lock: false
-    keys: [{click: key_Q, long_click: "#"}, {click: key_WE, long_click: "1", swipe_right: e}, {click: key_RT, long_click: "2", swipe_right: t}, {click: key_Y, long_click: "3"}, {click: key_U, long_click: "/"}, {click: key_IO, long_click: "-", swipe_right: o}, {click: key_P, long_click: "_"}, {click: key_A, long_click: "!", width: 16.66}, {click: key_SD, long_click: "4", swipe_right: d, width: 16.66}, {click: key_FG, long_click: "5", swipe_right: g, width: 16.66}, {click: key_H, long_click: "6", width: 16.66}, {click: key_JK, long_click: "~", swipe_right: k, width: 16.66}, {click: key_L, long_click: "?", width: 16.66}, {click: key_fenci}, {click: key_Z, long_click: "@"}, {click: key_XC, long_click: "7", swipe_right: c}, {click: key_V, long_click: "8"}, {click: key_BN, long_click: "9", swipe_right: n}, {click: key_M, long_click: "0"}, {click: key_backspace}, {click: Keyboard_symbol}, {click: Keyboard_number}, {click: key_comma, long_click: ","}, {click: key_space_cn, long_click: Keyboard_eng, width: 42.84}, {click: key_period, long_click: "."}, {click: key_return}]
+    keys: [{click: key_Q, long_click: "#"}, {click: key_WE, long_click: "1", swipe_right: e}, {click: key_RT, long_click: "2", swipe_right: t}, {click: key_Y, long_click: "3"}, {click: key_U, long_click: "/"}, {click: key_IO, long_click: "-", swipe_right: o}, {click: key_P, long_click: "_"}, {click: key_A, long_click: "!", width: 16.66}, {click: key_SD, long_click: "4", swipe_right: d, width: 16.66}, {click: key_FG, long_click: "5", swipe_right: g, width: 16.66}, {click: key_H, long_click: "6", width: 16.66}, {click: key_JK, long_click: "~", swipe_right: k, width: 16.66}, {click: key_L, long_click: "?", width: 16.66}, {click: key_fenci}, {click: key_Z, long_click: "@"}, {click: key_XC, long_click: "7", swipe_right: c}, {click: key_V, long_click: "8"}, {click: key_BN, long_click: "9", swipe_right: n}, {click: key_M, long_click: "0"}, {click: key_backspace}, {click: Keyboard_symbol, width: 12}, {click: Keyboard_number, width: 12}, {click: key_comma, long_click: ",", width: 12}, {click: key_space_cn, long_click: Keyboard_eng, width: 40}, {click: key_period, long_click: ".", width: 12}, {click: key_return, width: 12}]
 
   # 26键全键盘（英文模式）
   qwerty26:
