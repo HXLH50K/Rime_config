@@ -1,7 +1,7 @@
 # 手心式18键输入法主题配置
 # 基于tongwenfeng主题格式，专为18键模糊输入设计
 
-name: "手心18键 v31"
+name: "手心18键 v32"
 author: "Custom"
 config_version: 3.0
 
@@ -62,7 +62,10 @@ style:
     - qwerty26
     - number_cn
     - number_en
-    - symbol
+    - symbol_cn
+    - symbol_en
+    - symbol_num_cn
+    - symbol_num_en
   label_font: label.ttf
   label_text_size: 18
   latin_font: latin.ttf
@@ -90,7 +93,7 @@ preset_keyboards:
     width: 14.28
     height: 52
     lock: false
-    keys: [{click: key_Q, long_click: "#"}, {click: key_WE, long_click: "1", swipe_right: e}, {click: key_RT, long_click: "2", swipe_right: t}, {click: key_Y, long_click: "3"}, {click: key_U, long_click: "/"}, {click: key_IO, long_click: "-", swipe_right: o}, {click: key_P, long_click: "_"}, {click: key_A, long_click: "!", width: 16.66}, {click: key_SD, long_click: "4", swipe_right: d, width: 16.66}, {click: key_FG, long_click: "5", swipe_right: g, width: 16.66}, {click: key_H, long_click: "6", width: 16.66}, {click: key_JK, long_click: "~", swipe_right: k, width: 16.66}, {click: key_L, long_click: "?", width: 16.66}, {click: key_fenci}, {click: key_Z, long_click: "@"}, {click: key_XC, long_click: "7", swipe_right: c}, {click: key_V, long_click: "8"}, {click: key_BN, long_click: "9", swipe_right: n}, {click: key_M, long_click: "0"}, {click: key_backspace}, {click: Keyboard_symbol, width: 12}, {click: Keyboard_number_cn, width: 12}, {click: key_comma, long_click: ",", width: 12}, {click: key_space_cn, long_click: Keyboard_eng, width: 40}, {click: key_period, long_click: ".", width: 12}, {click: key_return, width: 12}]
+    keys: [{click: key_Q, long_click: "#"}, {click: key_WE, long_click: "1", swipe_right: e}, {click: key_RT, long_click: "2", swipe_right: t}, {click: key_Y, long_click: "3"}, {click: key_U, long_click: "/"}, {click: key_IO, long_click: "-", swipe_right: o}, {click: key_P, long_click: "_"}, {click: key_A, long_click: "!", width: 16.66}, {click: key_SD, long_click: "4", swipe_right: d, width: 16.66}, {click: key_FG, long_click: "5", swipe_right: g, width: 16.66}, {click: key_H, long_click: "6", width: 16.66}, {click: key_JK, long_click: "~", swipe_right: k, width: 16.66}, {click: key_L, long_click: "?", width: 16.66}, {click: key_fenci}, {click: key_Z, long_click: "@"}, {click: key_XC, long_click: "7", swipe_right: c}, {click: key_V, long_click: "8"}, {click: key_BN, long_click: "9", swipe_right: n}, {click: key_M, long_click: "0"}, {click: key_backspace}, {click: key_symbol_cn, width: 12}, {click: Keyboard_number_cn, width: 12}, {click: key_comma, long_click: ",", width: 12}, {click: key_space_cn, long_click: Keyboard_eng, width: 40}, {click: key_period, long_click: ".", width: 12}, {click: key_return, width: 12}]
 
   # 26键全键盘（英文模式）
   qwerty26:
@@ -100,7 +103,7 @@ preset_keyboards:
     width: 10
     height: 50
     lock: false
-    keys: [{click: q}, {click: w}, {click: e}, {click: r}, {click: t}, {click: y}, {click: u}, {click: i}, {click: o}, {click: p}, {width: 5}, {click: a}, {click: s}, {click: d}, {click: f}, {click: g}, {click: h}, {click: j}, {click: k}, {click: l}, {width: 5}, {click: Shift_L, width: 15}, {click: z}, {click: x}, {click: c}, {click: v}, {click: b}, {click: n}, {click: m}, {click: key_backspace_en, width: 15}, {click: Keyboard_number_en, label: "123", width: 15}, {click: ",", label: ","}, {click: key_space_en, long_click: Keyboard_ch, width: 40}, {click: ".", label: "."}, {click: key_return_en, width: 15}]
+    keys: [{click: q}, {click: w}, {click: e}, {click: r}, {click: t}, {click: y}, {click: u}, {click: i}, {click: o}, {click: p}, {width: 5}, {click: a}, {click: s}, {click: d}, {click: f}, {click: g}, {click: h}, {click: j}, {click: k}, {click: l}, {width: 5}, {click: Shift_L, width: 15}, {click: z}, {click: x}, {click: c}, {click: v}, {click: b}, {click: n}, {click: m}, {click: key_backspace_en, width: 15}, {click: key_symbol_en, width: 12}, {click: Keyboard_number_en, width: 12}, {click: ",", label: ",", width: 10}, {click: key_space_en, long_click: Keyboard_ch, width: 42}, {click: ".", label: ".", width: 10}, {click: key_return_en, width: 14}]
 
   # 数字键盘（中文版 - 返回中文键盘）
   number_cn:
@@ -109,7 +112,7 @@ preset_keyboards:
     name: "数字"
     width: 20
     height: 52
-    keys: [{click: "+", label: "+"}, {click: "1", label: "1"}, {click: "2", label: "2"}, {click: "3", label: "3"}, {click: key_backspace}, {click: "-", label: "-"}, {click: "4", label: "4"}, {click: "5", label: "5"}, {click: "6", label: "6"}, {click: ".", label: "."}, {click: "@", label: "@"}, {click: "7", label: "7"}, {click: "8", label: "8"}, {click: "9", label: "9"}, {click: ":", label: ":"}, {click: Keyboard_symbol}, {click: key_back_to_cn}, {click: "0", label: "0"}, {click: key_space_num}, {click: key_return}]
+    keys: [{click: "+", label: "+"}, {click: "1", label: "1"}, {click: "2", label: "2"}, {click: "3", label: "3"}, {click: key_backspace}, {click: "-", label: "-"}, {click: "4", label: "4"}, {click: "5", label: "5"}, {click: "6", label: "6"}, {click: ".", label: "."}, {click: "@", label: "@"}, {click: "7", label: "7"}, {click: "8", label: "8"}, {click: "9", label: "9"}, {click: ":", label: ":"}, {click: key_symbol_num_cn}, {click: key_back_to_cn}, {click: "0", label: "0"}, {click: key_space_num}, {click: key_return}]
 
   # 数字键盘（英文版 - 返回英文键盘）
   number_en:
@@ -118,40 +121,43 @@ preset_keyboards:
     name: "数字"
     width: 20
     height: 52
-    keys: [{click: "+", label: "+"}, {click: "1", label: "1"}, {click: "2", label: "2"}, {click: "3", label: "3"}, {click: key_backspace}, {click: "-", label: "-"}, {click: "4", label: "4"}, {click: "5", label: "5"}, {click: "6", label: "6"}, {click: ".", label: "."}, {click: "@", label: "@"}, {click: "7", label: "7"}, {click: "8", label: "8"}, {click: "9", label: "9"}, {click: ":", label: ":"}, {click: Keyboard_symbol}, {click: key_back_to_en}, {click: "0", label: "0"}, {click: key_space_num}, {click: key_return}]
+    keys: [{click: "+", label: "+"}, {click: "1", label: "1"}, {click: "2", label: "2"}, {click: "3", label: "3"}, {click: key_backspace}, {click: "-", label: "-"}, {click: "4", label: "4"}, {click: "5", label: "5"}, {click: "6", label: "6"}, {click: ".", label: "."}, {click: "@", label: "@"}, {click: "7", label: "7"}, {click: "8", label: "8"}, {click: "9", label: "9"}, {click: ":", label: ":"}, {click: key_symbol_num_en}, {click: key_back_to_en}, {click: "0", label: "0"}, {click: key_space_num}, {click: key_return}]
 
-  # 简单符号键盘
-  symbol:
+  # 符号键盘（从中文键盘进入）
+  symbol_cn:
+    ascii_mode: 0
+    author: "Custom"
+    name: "符号"
+    width: 14.28
+    height: 52
+    keys: [{click: "!"}, {click: "@"}, {click: "#"}, {click: "$"}, {click: "%"}, {click: "^"}, {click: "&"}, {click: "*"}, {click: "("}, {click: ")"}, {click: "-"}, {click: "="}, {click: "+"}, {click: "_"}, {click: "["}, {click: "]"}, {click: "{"}, {click: "}"}, {click: "|"}, {click: "\\"}, {click: key_backspace}, {click: key_back_to_cn}, {click: key_space_num}, {click: key_return}]
+
+  # 符号键盘（从英文键盘进入）
+  symbol_en:
     ascii_mode: 1
     author: "Custom"
     name: "符号"
     width: 14.28
     height: 52
-    keys:
-      - {click: "!"}
-      - {click: "@"}
-      - {click: "#"}
-      - {click: "$"}
-      - {click: "%"}
-      - {click: "^"}
-      - {click: "&"}
-      - {click: "*"}
-      - {click: "("}
-      - {click: ")"}
-      - {click: "-"}
-      - {click: "="}
-      - {click: "+"}
-      - {click: "_"}
-      - {click: "["}
-      - {click: "]"}
-      - {click: "{"}
-      - {click: "}"}
-      - {click: "|"}
-      - {click: "\\"}
-      - {click: BackSpace}
-      - {click: Keyboard_default, label: "返回", width: 28.56}
-      - {click: space, label: "空格", width: 42.84}
-      - {click: Return, label: "回车", width: 28.56}
+    keys: [{click: "!"}, {click: "@"}, {click: "#"}, {click: "$"}, {click: "%"}, {click: "^"}, {click: "&"}, {click: "*"}, {click: "("}, {click: ")"}, {click: "-"}, {click: "="}, {click: "+"}, {click: "_"}, {click: "["}, {click: "]"}, {click: "{"}, {click: "}"}, {click: "|"}, {click: "\\"}, {click: key_backspace}, {click: key_back_to_en}, {click: key_space_num}, {click: key_return}]
+
+  # 符号键盘（从中文数字键盘进入）
+  symbol_num_cn:
+    ascii_mode: 0
+    author: "Custom"
+    name: "符号"
+    width: 14.28
+    height: 52
+    keys: [{click: "!"}, {click: "@"}, {click: "#"}, {click: "$"}, {click: "%"}, {click: "^"}, {click: "&"}, {click: "*"}, {click: "("}, {click: ")"}, {click: "-"}, {click: "="}, {click: "+"}, {click: "_"}, {click: "["}, {click: "]"}, {click: "{"}, {click: "}"}, {click: "|"}, {click: "\\"}, {click: key_backspace}, {click: key_back_to_num_cn}, {click: key_space_num}, {click: key_return}]
+
+  # 符号键盘（从英文数字键盘进入）
+  symbol_num_en:
+    ascii_mode: 1
+    author: "Custom"
+    name: "符号"
+    width: 14.28
+    height: 52
+    keys: [{click: "!"}, {click: "@"}, {click: "#"}, {click: "$"}, {click: "%"}, {click: "^"}, {click: "&"}, {click: "*"}, {click: "("}, {click: ")"}, {click: "-"}, {click: "="}, {click: "+"}, {click: "_"}, {click: "["}, {click: "]"}, {click: "{"}, {click: "}"}, {click: "|"}, {click: "\\"}, {click: key_backspace}, {click: key_back_to_num_en}, {click: key_space_num}, {click: key_return}]
 
 # 键盘切换预设键和自定义按键
 preset_keys:
@@ -183,12 +189,25 @@ preset_keys:
     label: "全键"
     send: Eisu_toggle
     select: qwerty26
-  Keyboard_symbol:
-    label: "符"
+  # ========== 符号键盘切换键（显示#+=） ==========
+  key_symbol_cn:
+    label: "#+="
     send: Eisu_toggle
-    select: symbol
+    select: symbol_cn
+  key_symbol_en:
+    label: "#+="
+    send: Eisu_toggle
+    select: symbol_en
+  key_symbol_num_cn:
+    label: "#+="
+    send: Eisu_toggle
+    select: symbol_num_cn
+  key_symbol_num_en:
+    label: "#+="
+    send: Eisu_toggle
+    select: symbol_num_en
   
-  # ========== 数字键盘返回键 ==========
+  # ========== 返回键 ==========
   key_back_to_cn:
     label: "↩"
     send: Eisu_toggle
@@ -197,6 +216,14 @@ preset_keys:
     label: "↩"
     send: Eisu_toggle
     select: qwerty26
+  key_back_to_num_cn:
+    label: "↩"
+    send: Eisu_toggle
+    select: number_cn
+  key_back_to_num_en:
+    label: "↩"
+    send: Eisu_toggle
+    select: number_en
     
   # ========== 第一行：字母键 ==========
   key_Q:
