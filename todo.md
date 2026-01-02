@@ -1,7 +1,8 @@
-Done (v54):
-✅ 修改英文键盘shift键显示为 ⇧
-   - 在preset_keys中定义key_shift_en: {label: "⇧", send: Shift_L, shift_lock: ascii_long}
-   - 键盘布局中使用 {click: key_shift_en}
+Done (v55):
+✅ 实现中文键盘的"分词键"
+   - 键盘布局使用 composing 属性：`{click: key_fenci, composing: "'"}`
+   - preset_keys 中定义默认发送为 Eisu_toggle（无操作）
+   - 效果：无候选时按分词键不输入任何东西，有候选时发送 `'` 分词
 --------
 暂时不做:
 
@@ -34,4 +35,4 @@ Done (v54):
 目前进入次级键盘后不能自动判断上级, 返回只能返回default, 现在的方案是分别定义不同的sub keyboard, 例如number_cn number_en, 里面只有返回键指向的键盘不同
 当前代码冗余, 需要修复
 
-3. ✅ 修改中文键盘的分词键输入为`'`(从Shift_L改为`'`) (失败, 应该)
+

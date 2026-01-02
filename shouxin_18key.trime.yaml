@@ -2,7 +2,7 @@
 # 基于tongwenfeng主题格式，专为18键模糊输入设计
 # 使用 YAML 锚点实现键盘继承，减少重复代码
 
-name: "手心18键 v54"
+name: "手心18键 v55"
 author: "Custom"
 config_version: 3.0
 
@@ -150,7 +150,7 @@ preset_keyboards:
       - {click: key_JK, long_click: "~", swipe_left: j, swipe_right: k, width: 16.66}
       - {click: key_L, long_click: "?", width: 16.66}
       # 第3行：字母键+退格
-      - {click: key_fenci}
+      - {click: key_fenci, composing: "'"}
       - {click: key_Z, long_click: "@"}
       - {click: key_XC, long_click: "7", swipe_left: x, swipe_right: c}
       - {click: key_V, long_click: "8"}
@@ -416,7 +416,7 @@ preset_keys:
   # ========== 第三行 ==========
   key_fenci:
     label: "词'"
-    send: "'"
+    send: Eisu_toggle
   key_Z:
     label: "Z"
     send: z
