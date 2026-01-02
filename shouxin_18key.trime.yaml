@@ -2,7 +2,7 @@
 # 基于tongwenfeng主题格式，专为18键模糊输入设计
 # 使用 YAML 锚点实现键盘继承，减少重复代码
 
-name: "手心18键 v38"
+name: "手心18键 v43"
 author: "Custom"
 config_version: 3.0
 
@@ -132,7 +132,37 @@ preset_keyboards:
     width: 14.28
     height: 52
     lock: false
-    keys: [{click: key_Q, long_click: "#"}, {click: key_WE, long_click: "1", swipe_right: e}, {click: key_RT, long_click: "2", swipe_right: t}, {click: key_Y, long_click: "3"}, {click: key_U, long_click: "/"}, {click: key_IO, long_click: "-", swipe_right: o}, {click: key_P, long_click: "_"}, {click: key_A, long_click: "!", width: 16.66}, {click: key_SD, long_click: "4", swipe_right: d, width: 16.66}, {click: key_FG, long_click: "5", swipe_right: g, width: 16.66}, {click: key_H, long_click: "6", width: 16.66}, {click: key_JK, long_click: "~", swipe_right: k, width: 16.66}, {click: key_L, long_click: "?", width: 16.66}, {click: key_fenci}, {click: key_Z, long_click: "@"}, {click: key_XC, long_click: "7", swipe_right: c}, {click: key_V, long_click: "8"}, {click: key_BN, long_click: "9", swipe_right: n}, {click: key_M, long_click: "0"}, {click: key_backspace}, {click: key_symbol_cn, width: 12}, {click: Keyboard_number_cn, width: 12}, {click: key_comma, long_click: ",", width: 12}, {click: key_space_cn, long_click: Keyboard_eng, width: 40}, {click: key_period, long_click: ".", width: 12}, {click: key_return, width: 12}]
+    keys:
+      # 第1行：字母键
+      - {click: key_Q, long_click: "#"}
+      - {click: key_WE, long_click: "1", swipe_right: e}
+      - {click: key_RT, long_click: "2", swipe_right: t}
+      - {click: key_Y, long_click: "3"}
+      - {click: key_U, long_click: "/"}
+      - {click: key_IO, long_click: "-", swipe_right: o}
+      - {click: key_P, long_click: "_"}
+      # 第2行：字母键
+      - {click: key_A, long_click: "!", width: 16.66}
+      - {click: key_SD, long_click: "4", swipe_right: d, width: 16.66}
+      - {click: key_FG, long_click: "5", swipe_right: g, width: 16.66}
+      - {click: key_H, long_click: "6", width: 16.66}
+      - {click: key_JK, long_click: "~", swipe_right: k, width: 16.66}
+      - {click: key_L, long_click: "?", width: 16.66}
+      # 第3行：字母键+退格
+      - {click: key_fenci}
+      - {click: key_Z, long_click: "@"}
+      - {click: key_XC, long_click: "7", swipe_right: c}
+      - {click: key_V, long_click: "8"}
+      - {click: key_BN, long_click: "9", swipe_right: n}
+      - {click: key_M, long_click: "0"}
+      - {click: key_backspace}
+      # 第4行：功能键
+      - {click: key_symbol_cn, width: 12}
+      - {click: Keyboard_number_cn, width: 12}
+      - {click: key_comma, long_click: ",", width: 12}
+      - {click: key_space_cn, long_click: Keyboard_eng, width: 40}
+      - {click: key_period, long_click: ".", width: 12}
+      - {click: key_return, width: 12}
 
   # ========== 英文26键 ==========
   qwerty26:
@@ -344,6 +374,68 @@ preset_keys:
   key_return_en:
     label: "↵"
     send: Return
+
+  # ========== 液态键盘按键 ==========
+  liquid_keyboard_emoji:
+    label: "😀"
+    send: function
+    command: liquid_keyboard
+    option: "表情"
+  liquid_keyboard_clipboard:
+    label: "📋"
+    send: function
+    command: liquid_keyboard
+    option: "剪贴"
+  liquid_keyboard_exit:
+    label: "返回"
+    send: function
+    command: liquid_keyboard
+    option: "-1"
+
+# 液态键盘配置
+liquid_keyboard:
+  author: "Custom"
+  row: 7
+  row_land: 5
+  key_height: 40
+  key_height_land: 40
+  single_width: 60
+  vertical_gap: 0
+  margin_x: 3
+  fixed_key_bar:
+    position: right
+    keys:
+      - liquid_keyboard_exit
+      - space
+      - BackSpace
+      - Return
+  keyboards: [剪贴, 表情]
+  剪贴:
+    name: 剪贴
+    type: CLIPBOARD
+  表情:
+    name: 表情
+    type: SINGLE
+    keys: "🙂😂🤣😆🙃😅🥺😎👀🙈🙉🙊☹😑😄🤐😨😱🌚🌝🤔❤💔🌹💣👌👍😣😥😮🙄😏😕😯😪😫😴😌🤑😉😋😍😘😚😛😜😝😒😓😔😲😷🤒😇🤓🤗🤕🙁😖😞😟😤😢😭😦😧😨😩😬😰😳😵😡😠☝✌🖕👎🙏🤘👏💪💋☘🍀🌸☕🍵🍺🍻🍦🍬🍚🍜🍲🍖🎂💤⭐✨🔥💯🎉🎊👋🙌"
+
+# 候选区工具栏配置
+tool_bar:
+  button_font: iconfont.ttf
+  button_spacing: 5
+  buttons:
+    - {action: Hide, foreground: {style: "ic@keyboard_close"}}
+    - {action: liquid_keyboard_emoji, foreground: {style: "ic@emoticon"}}
+    - {action: liquid_keyboard_clipboard, foreground: {style: "ic@clipboard"}}
+    - {action: F4, foreground: {style: "ic@settings"}}
+  emoji_button:
+    action: liquid_keyboard_emoji
+    foreground: {style: "ic@emoticon"}
+  clipboard_button:
+    action: liquid_keyboard_clipboard
+    foreground: {style: "ic@clipboard"}
+  hide_button:
+    action: Hide
+    foreground: {style: "ic@keyboard_close"}
 
 # 候选窗口配置
 window:
