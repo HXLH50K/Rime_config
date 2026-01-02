@@ -2,7 +2,7 @@
 # 基于tongwenfeng主题格式，专为18键模糊输入设计
 # 使用 YAML 锚点实现键盘继承，减少重复代码
 
-name: "手心18键 v60"
+name: "手心18键 v63"
 author: "Custom"
 config_version: 3.0
 
@@ -185,21 +185,15 @@ preset_keyboards:
   number_cn:
     <<: *number_base
     ascii_mode: 0
-    keys: [{click: "+", label: "+"}, {click: "1", label: "1"}, {click: "2", label: "2"}, {click: "3", label: "3"}, {click: key_backspace}, {click: "-", label: "-"}, {click: "4", label: "4"}, {click: "5", label: "5"}, {click: "6", label: "6"}, {click: ".", label: "."}, {click: "@", label: "@"}, {click: "7", label: "7"}, {click: "8", label: "8"}, {click: "9", label: "9"}, {click: ":", label: ":"}, {click: key_symbol_num_cn}, {click: key_back_to_cn}, {click: "0", label: "0"}, {click: key_space_num}, {click: key_return}]
+    keys: [{click: "+", label: "+"}, {click: "1", label: "1"}, {click: "2", label: "2"}, {click: "3", label: "3"}, {click: key_backspace}, {click: "-", label: "-"}, {click: "4", label: "4"}, {click: "5", label: "5"}, {click: "6", label: "6"}, {click: ".", label: "."}, {click: "@", label: "@"}, {click: "7", label: "7"}, {click: "8", label: "8"}, {click: "9", label: "9"}, {click: ":", label: ":"}, {click: key_symbol_cn}, {click: key_back_to_cn}, {click: "0", label: "0"}, {click: key_space_num}, {click: key_return}]
 
   # ========== 数字键盘（从英文进入）- 继承 number_base ==========
   number_en:
     <<: *number_base
     ascii_mode: 1
-    keys: [{click: "+", label: "+"}, {click: "1", label: "1"}, {click: "2", label: "2"}, {click: "3", label: "3"}, {click: key_backspace}, {click: "-", label: "-"}, {click: "4", label: "4"}, {click: "5", label: "5"}, {click: "6", label: "6"}, {click: ".", label: "."}, {click: "@", label: "@"}, {click: "7", label: "7"}, {click: "8", label: "8"}, {click: "9", label: "9"}, {click: ":", label: ":"}, {click: key_symbol_num_en}, {click: key_back_to_en}, {click: "0", label: "0"}, {click: key_space_num}, {click: key_return}]
-
+    keys: [{click: "+", label: "+"}, {click: "1", label: "1"}, {click: "2", label: "2"}, {click: "3", label: "3"}, {click: key_backspace}, {click: "-", label: "-"}, {click: "4", label: "4"}, {click: "5", label: "5"}, {click: "6", label: "6"}, {click: ".", label: "."}, {click: "@", label: "@"}, {click: "7", label: "7"}, {click: "8", label: "8"}, {click: "9", label: "9"}, {click: ":", label: ":"}, {click: key_symbol_en}, {click: key_back_to_en}, {click: "0", label: "0"}, {click: key_space_num}, {click: key_return}]
 
   # ========== 编辑键盘（光标控制） ==========
-  # 布局：4行4列
-  # 第1列(40%): 方向键+选择键，居中排列
-  # 第2列(20%): 开头、句首、句尾、结尾
-  # 第3列(20%): 粘贴、复制、剪切、全选
-  # 第4列(20%): 退格、剪贴板、空格、返回
   edit_keyboard:
     ascii_mode: 0
     author: "Custom"
@@ -275,28 +269,21 @@ preset_keys:
     label: "123"
     send: Eisu_toggle
     select: number_en
+  # 编辑键盘按钮
   Keyboard_edit:
     label: "编辑"
     send: Eisu_toggle
     select: edit_keyboard
 
   # ========== 符号键（触发液态符号键盘） ==========
+  # 中文键盘/数字键盘(中文)共用
   key_symbol_cn:
     label: "#+="
     send: function
     command: liquid_keyboard
     option: "中文标点"
+  # 英文键盘/数字键盘(英文)共用
   key_symbol_en:
-    label: "#+="
-    send: function
-    command: liquid_keyboard
-    option: "英文标点"
-  key_symbol_num_cn:
-    label: "#+="
-    send: function
-    command: liquid_keyboard
-    option: "中文标点"
-  key_symbol_num_en:
     label: "#+="
     send: function
     command: liquid_keyboard
@@ -451,6 +438,7 @@ preset_keys:
     label: "回车"
     send: Return
   BackSpace1:
+    functional: false
     label: "退格"
     send: BackSpace
     repeatable: true
