@@ -2,7 +2,7 @@
 # 基于tongwenfeng主题格式，专为18键模糊输入设计
 # 使用 YAML 锚点实现键盘继承，减少重复代码
 
-name: "手心18键 v43"
+name: "手心18键 v46"
 author: "Custom"
 config_version: 3.0
 
@@ -212,31 +212,45 @@ preset_keyboards:
     keys: [{click: "!"}, {click: "@"}, {click: "#"}, {click: "$"}, {click: "%"}, {click: "^"}, {click: "&"}, {click: "*"}, {click: "("}, {click: ")"}, {click: "-"}, {click: "="}, {click: "+"}, {click: "_"}, {click: "["}, {click: "]"}, {click: "{"}, {click: "}"}, {click: "|"}, {click: "\\"}, {click: key_backspace}, {click: key_back_to_num_en}, {click: key_space_num}, {click: key_return}]
 
   # ========== 编辑键盘（光标控制） ==========
+  # 布局：4行4列
+  # 第1列(40%): 方向键+选择键，居中排列
+  # 第2列(20%): 开头、句首、句尾、结尾
+  # 第3列(20%): 粘贴、复制、剪切、全选
+  # 第4列(20%): 退格、剪贴板、空格、返回
   edit_keyboard:
-    ascii_mode: 1
+    ascii_mode: 0
     author: "Custom"
     name: "编辑键盘"
     width: 20
-    height: 45
+    height: 52
+    lock: true
     keys:
-      - {click: select_all}
-      - {click: Left}
-      - {click: Up}
-      - {click: Right}
-      - {click: key_space_num}
-      - {click: cut}
-      - {click: Home}
-      - {click: Down}
-      - {click: End}
-      - {click: key_backspace}
-      - {click: copy}
-      - {click: undo}
-      - {click: Tab}
-      - {click: redo}
-      - {click: key_return}
+      # Row 1: [空13.33][↑13.33][空13.33] | 开头 | 粘贴 | 退格
+      - {width: 13.33}
+      - {click: Up, width: 13.33}
+      - {width: 13.33}
+      - {click: doc_start}
       - {click: paste}
-      - {click: key_back_to_cn, width: 40}
-      - {click: Keyboard_number_cn, width: 40}
+      - {click: key_backspace}
+      # Row 2: [←13.33][选择13.33][→13.33] | 句首 | 复制 | 剪贴板
+      - {click: Left, width: 13.33}
+      - {click: select_mode, width: 13.33}
+      - {click: Right, width: 13.33}
+      - {click: Home}
+      - {click: copy}
+      - {click: liquid_keyboard_clipboard}
+      # Row 3: [空13.33][↓13.33][空13.33] | 句尾 | 剪切 | 空格
+      - {width: 13.33}
+      - {click: Down, width: 13.33}
+      - {width: 13.33}
+      - {click: End}
+      - {click: cut}
+      - {click: key_space_num}
+      # Row 4: [空40%] | 结尾 | 全选 | 返回
+      - {width: 40}
+      - {click: doc_end}
+      - {click: select_all}
+      - {click: key_back_to_cn}
 
 # ==================== 预设按键基类 ====================
 # 符号键基类
@@ -501,6 +515,18 @@ preset_keys:
     functional: false
     label: "重做"
     send: "Control+Shift+z"
+  doc_start:
+    functional: false
+    label: "开头"
+    send: "Control+Home"
+  doc_end:
+    functional: false
+    label: "结尾"
+    send: "Control+End"
+  select_mode:
+    functional: false
+    label: "选择"
+    send: Shift_L
 
 # 液态键盘配置
 liquid_keyboard:
