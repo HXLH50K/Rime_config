@@ -1,12 +1,7 @@
-DONE (v51):
-1. ✅ 修改中英文键盘布局, 当前在空格键左右分别有逗号句号两个按键. 现在做如下修改
-a. ✅ 中文键盘下,空格右侧按键点击输入`，` 长按输入`。` → key_punct_cn (long_click在键盘布局中定义)
-b. ✅ 英文键盘下,空格右侧按键点击输入`,` 长按输入`.` → key_punct_en (long_click在键盘布局中定义)
-c. ✅ 两个键盘空格左侧按钮统一修改为[切换输入法键] → key_switch_cn/key_switch_en
-   - 点击: LANGUAGE_SWITCH (切换系统输入法)
-   - 长按: F4 (方案选单) - 在键盘布局中定义
-   - 左滑: LANGUAGE_SWITCH - 在键盘布局中定义
-   - 右滑: PROG_RED (切换皮肤) - 在键盘布局中定义
+Done (v54):
+✅ 修改英文键盘shift键显示为 ⇧
+   - 在preset_keys中定义key_shift_en: {label: "⇧", send: Shift_L, shift_lock: ascii_long}
+   - 键盘布局中使用 {click: key_shift_en}
 --------
 暂时不做:
 
@@ -38,3 +33,5 @@ c. ✅ 两个键盘空格左侧按钮统一修改为[切换输入法键] → key
 ### 3. 智能返回上级键盘
 目前进入次级键盘后不能自动判断上级, 返回只能返回default, 现在的方案是分别定义不同的sub keyboard, 例如number_cn number_en, 里面只有返回键指向的键盘不同
 当前代码冗余, 需要修复
+
+3. ✅ 修改中文键盘的分词键输入为`'`(从Shift_L改为`'`) (失败, 应该)
