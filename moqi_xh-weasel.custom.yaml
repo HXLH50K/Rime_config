@@ -1,5 +1,23 @@
 patch:
   "menu/page_size": 9
+  
+  # 中文状态下默认使用英文标点
+  "switches/@last/reset": 1
+  "switches/@last":
+    name: ascii_punct
+    reset: 1
+    states: [ 。，, ．， ]
+  
+  # Shift 切换中英文时不改变标点状态
+  "ascii_composer/good_old_caps_lock": true
+  "ascii_composer/switch_key":
+    Shift_L: inline_ascii
+    Shift_R: inline_ascii
+    Control_L: noop
+    Control_R: noop
+    Caps_Lock: clear
+    Eisu_toggle: clear
+  
   "punctuator/punctuator/full_shape":
     "\\": "、"
   "punctuator/punctuator/half_shape":
