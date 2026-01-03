@@ -70,7 +70,7 @@ patch:
     # - lua_filter@*stick              # 禁用简码回显
     - lua_filter@*is_in_user_dict
     - reverse_lookup_filter@reverse_lookup
-    - simplifier@emoji
+    # - simplifier@emoji               # 禁用 emoji（会替换原词，如"时间"→钟表）
     - simplifier@chaifen
     - simplifier@chaifen_all
     - simplifier@chinese_english
