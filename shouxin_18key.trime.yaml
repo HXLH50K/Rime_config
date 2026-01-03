@@ -12,26 +12,669 @@ fallback_colors:
 
 # 配色方案
 preset_color_schemes:
+  android:
+    author: "Patricivs <ipatrickmac@me.com>"
+    back_color: 0xff1c7399
+    border_color: 0xff1c7399
+    candidate_text_color: 0xffffffff
+    comment_text_color: 0xffffffff
+    hilited_back_color: 0xff1c7399
+    hilited_candidate_back_color: 0xffa8c450
+    hilited_candidate_text_color: 0xffffffff
+    hilited_comment_text_color: 0xffffffff
+    hilited_text_color: 0xffa8c450
+    label_color: 0xff3588c1
+    name: "安卓／Android"
+    text_color: 0xffffffff
+  aqua:
+    author: "佛振 <chen.sst@gmail.com>"
+    back_color: 0xffeeeeec
+    border_color: 0xffe0e0e0
+    hilited_back_color: 0xffd4d4d4
+    hilited_candidate_back_color: 0xff0a3afa
+    hilited_candidate_text_color: 0xffffffff
+    hilited_text_color: 0xff000000
+    name: "碧水／Aqua"
+    text_color: 0xff000000
+  azure:
+    author: "佛振 <chen.sst@gmail.com>"
+    back_color: 0xff014e8b
+    border_color: 0xff014e8b
+    candidate_text_color: 0xffeef8ff
+    comment_text_color: 0xff6496c6
+    hilited_back_color: 0xff014e8b
+    hilited_candidate_back_color: 0xff015ea9
+    hilited_candidate_text_color: 0xfffffe7f
+    hilited_text_color: 0xffeef8ff
+    name: "青天／Azure"
+    text_color: 0xffcae8ff
+  brasil:
+    author: "Patricivs <ipatrickmac@me.com>"
+    back_color: 0xff119355
+    border_color: 0xff119355
+    candidate_text_color: 0xffffffff
+    comment_text_color: 0xffffffff
+    hilited_back_color: 0xff17367d
+    hilited_candidate_back_color: 0xfff7c716
+    hilited_candidate_text_color: 0xffffffff
+    hilited_comment_text_color: 0xffffffff
+    hilited_text_color: 0xffffffff
+    label_color: 0xffffffff
+    name: "笆悉／Brasil"
+    text_color: 0xffffffff
+  brisk:
+    author: "skoj <skoj@qq.com>"
+    back_color: 0xffffffff
+    border_color: 0xff333333
+    candidate_text_color: 0xff575757
+    hilited_back_color: 0xffffffff
+    hilited_candidate_back_color: 0xffffffff
+    hilited_candidate_text_color: 0xffdc3822
+    hilited_text_color: 0xffdc3822
+    name: "輕盈／Brisk"
+    text_color: 0xffdc3822
+  cool_breeze:
+    author: "skoj <skoj@qq.com>"
+    back_color: 0xffFBFBFF
+    border_color: 0xffAAAAFF
+    candidate_text_color: 0xff009100
+    hilited_back_color: 0xffFBFBFF
+    hilited_candidate_back_color: 0xffACD6FF
+    hilited_candidate_text_color: 0xff3A006F
+    hilited_text_color: 0xffCE0000
+    name: "清風／Cool Breeze"
+    text_color: 0xffFF0000
+  dark_temple:
+    author: "佛振 <chen.sst@gmail.com>, based on ir_black"
+    back_color: 0xff222222
+    border_color: 0xff222222
+    candidate_text_color: 0xffe6e3d8
+    comment_text_color: 0xffff6c60
+    hilited_back_color: 0xff222222
+    hilited_candidate_back_color: 0xff333333
+    hilited_candidate_text_color: 0xffdaf692
+    hilited_text_color: 0xff9acfff
+    name: "暗堂／Dark Temple"
+    text_color: 0xffdaf692
   default:
-    name: "标准配色"
     author: "风花絮"
     back_color: 0xffffffff
-    keyboard_back_color: 0xffe1e3e7
-    key_back_color: 0xffffffff
-    key_text_color: 0xff000000
-    key_symbol_color: 0xff838383
+    baoe: 0xffffffff
+    bbs: 0xffacb2c2
+    benter: 0xff3266a0
+    bgn: 0xffacb2c2
+    bh1: 0xffffffff
+    bh2: 0xffffffff
+    bh3: 0xffffffff
+    bh4: 0xffffffff
+    bkg: 0xffffffff
+    candidate_separator_color: 0xffffffff
+    candidate_text_color: 0xff000000
+    comment_text_color: 0xffe1e3e7
+    dark_scheme: steam
+    hilited_back_color: 0xffffffff
+    hilited_candidate_back_color: 0xffffffff
+    hilited_candidate_text_color: 0xff3266a0
+    hilited_comment_text_color: 0xff000000
     hilited_key_back_color: 0xff3266a0
-    hilited_key_text_color: 0xffffffff
+    hilited_key_symbol_color: 0xffffffff
+    hilited_key_text_color: 0xff000000
+    hilited_off_key_back_color: 0xffffffff
+    hilited_off_key_text_color: 0xff000000
+    hilited_text_color: 0xff000000
+    key_back_color: 0xffffffff
+    key_symbol_color: 0xff838383
+    key_text_color: 0xff000000
+    keyboard_back_color: 0xffe1e3e7
+    label_color: 0xff3266a0
+    name: "标准配色！"
     off_key_back_color: 0xffacb2c2
     off_key_text_color: 0xff838383
-    candidate_text_color: 0xff000000
-    hilited_candidate_text_color: 0xff3266a0
-    hilited_candidate_back_color: 0xffffffff
-    comment_text_color: 0xff838383
-    text_color: 0xff3266a0
-    label_color: 0xff3266a0
     preview_back_color: 0xffacb2c2
     preview_text_color: 0xff3266a0
+    taoe: 0xff3266a0
+    tbs: 0xffffffff
+    tenter: 0xffffffff
+    text_back_color: 0xffffffff
+    text_color: 0xff3266a0
+    tgn: 0xffffffff
+    th1: 0xff000000
+    th2: 0xff000000
+    th3: 0xff000000
+    th4: 0xff000000
+    tkg: 0xff000000
+  doraemon:
+    author: "Patricivs <ipatrickmac@me.com>"
+    back_color: 0xffffffff
+    border_color: 0xff009fe8
+    candidate_text_color: 0xff009fe8
+    comment_text_color: 0xff009fe8
+    hilited_back_color: 0xffe50012
+    hilited_candidate_back_color: 0xff009fe8
+    hilited_candidate_text_color: 0xffffffff
+    hilited_comment_text_color: 0xffffffff
+    hilited_text_color: 0xffffffff
+    label_color: 0xff009fe8
+    name: "銅鑼衛門／Doraemon"
+    text_color: 0xffe50012
+  dota_2:
+    author: "Patricivs <ipatrickmac@me.com>"
+    back_color: 0xff100f12
+    border_color: 0xff100f12
+    candidate_text_color: 0xff8f755c
+    comment_text_color: 0xff8f755c
+    hilited_back_color: 0xff100f12
+    hilited_candidate_back_color: 0xffdd4118
+    hilited_candidate_text_color: 0xffffffff
+    hilited_comment_text_color: 0xffffffff
+    hilited_text_color: 0xffdd4118
+    label_color: 0xff8f755c
+    name: "DOTA 2"
+    text_color: 0xffffffff
+  espagna:
+    author: "Patricivs <ipatrickmac@me.com>"
+    back_color: 0xffc30d23
+    border_color: 0xffc30d23
+    candidate_text_color: 0xffffffff
+    comment_text_color: 0xffffffff
+    hilited_back_color: 0xfff7b52c
+    hilited_candidate_back_color: 0xfff7b52c
+    hilited_candidate_text_color: 0xffffffff
+    hilited_comment_text_color: 0xffffffff
+    hilited_text_color: 0xffffffff
+    label_color: 0xffffffff
+    name: "埃斯巴尼亞／España"
+    text_color: 0xffffffff
+  feng01:
+    author: "风花絮"
+    back_color: 0xffF8EDD1
+    border_color: 0xffF8EDD1
+    candidate_text_color: 0xffA48464
+    comment_text_color: 0xffFFFFFF
+    hilited_back_color: 0xffF4E6C2
+    hilited_candidate_back_color: 0xffF4E6C2
+    hilited_candidate_text_color: 0xffBA6D65
+    hilited_text_color: 0xff969696
+    name: "奈々"
+    off_key_text_color: 0xffBA6D65
+    text_color: 0xffA48464
+  feng02:
+    author: "风花絮"
+    back_color: 0xFF537F92
+    border_color: 0xFF537F92
+    candidate_text_color: 0xffFAFAFF
+    comment_text_color: 0xffFFFFFF
+    hilited_back_color: 0xff537F92
+    hilited_candidate_back_color: 0xff969696
+    hilited_candidate_text_color: 0xffFFFAFA
+    hilited_text_color: 0xff969696
+    name: "独立日"
+    text_color: 0xffFFFAFA
+  feng03:
+    author: "风花絮"
+    back_color: 0xff599852
+    border_color: 0xff599852
+    candidate_text_color: 0xffffffff
+    comment_text_color: 0xff969696
+    hilited_back_color: 0xff599852
+    hilited_candidate_back_color: 0xff599852
+    hilited_candidate_text_color: 0xfff5a54b
+    hilited_text_color: 0xffffffff
+    key_back_color: 0xffffffff
+    key_text_color: 0xff599852
+    name: "一叶清荷"
+    off_key_text_color: 0xfff5a54b
+    text_color: 0xff6aa052
+  feng04:
+    author: "风花絮"
+    back_color: 0xff7896AA
+    border_color: 0xff7896AA
+    candidate_text_color: 0xffFFFFFF
+    comment_text_color: 0xff969696
+    hilited_back_color: 0xff5289A7
+    hilited_candidate_back_color: 0xff7896AA
+    hilited_candidate_text_color: 0xffFFFF80
+    hilited_text_color: 0xff969696
+    key_back_color: 0xff5289A7
+    name: "往事回忆"
+    text_color: 0xffFFFFFF
+  feng05:
+    author: "风花絮"
+    back_color: 0xff000000
+    border_color: 0xff000000
+    candidate_text_color: 0xffFFFFFF
+    comment_text_color: 0xffFFFFFF
+    hilited_back_color: 0xff000000
+    hilited_candidate_back_color: 0xff000000
+    hilited_candidate_text_color: 0xffFEF94D
+    hilited_text_color: 0xffFFFFFF
+    key_back_color: 0xffFEF94D
+    key_symbol_color: 0xff000000
+    key_text_color: 0xff000000
+    name: "黄黑"
+    text_color: 0xff000000
+  feng06:
+    author: "风花絮"
+    back_color: 0xff789c80
+    border_color: 0xff789c80
+    candidate_text_color: 0xffFFFFBC
+    comment_text_color: 0xffFFFFBC
+    hilited_back_color: 0xff789c80
+    hilited_candidate_back_color: 0xff789c80
+    hilited_candidate_text_color: 0xffFE8F23
+    hilited_text_color: 0xffFFFFFF
+    key_back_color: 0xff367272
+    name: "花香流转"
+    text_color: 0xffFFFFFF
+  feng07:
+    author: "风花絮"
+    back_color: 0xffdaa14a
+    border_color: 0xffdaa14a
+    candidate_text_color: 0xffF5E1B4
+    comment_text_color: 0xff828282
+    hilited_back_color: 0xffdaa14a
+    hilited_candidate_back_color: 0xffdaa14a
+    hilited_candidate_text_color: 0xff2E1707
+    hilited_text_color: 0xffFFFFFF
+    key_back_color: 0xff2E1707
+    name: "巴黎遗梦"
+    off_key_text_color: 0xffD89C46
+    text_color: 0xffFFFFFF
+  flypy:
+    author: "Pal.lxk <Pal.lxk@gmail.com>"
+    back_color: 0xffffffff
+    border_color: 0xffc6c6c6
+    candidate_text_color: 0xff0080ff
+    comment_text_color: 0xff0080ff
+    hilited_back_color: 0xffffffff
+    hilited_candidate_back_color: 0xffffffff
+    hilited_candidate_text_color: 0xffb00000
+    hilited_comment_text_color: 0xffb00000
+    hilited_text_color: 0xff0080ff
+    label_color: 0xff0080ff
+    name: "小鶴飛揚／flypy"
+    text_color: 0xff000000
+  gholabok:
+    author: "Patricivs <ipatrickmac@me.com>"
+    back_color: 0xffe83929
+    border_color: 0xffe83929
+    candidate_text_color: 0xffffffff
+    comment_text_color: 0xffffffff
+    hilited_back_color: 0xff007b43
+    hilited_candidate_back_color: 0xffed6d3d
+    hilited_candidate_text_color: 0xffffffff
+    hilited_comment_text_color: 0xffffffff
+    hilited_text_color: 0xffffffff
+    label_color: 0xffffffff
+    name: "胡蘿菔／Gholabok"
+    text_color: 0xffffffff
+  google:
+    author: "skoj <skoj@qq.com>"
+    back_color: 0xffFFFFFF
+    border_color: 0xffE2E2E2
+    candidate_text_color: 0xff000000
+    hilited_back_color: 0xffFFFFFF
+    hilited_candidate_back_color: 0xff3975CE
+    hilited_candidate_text_color: 0xffFFFFFF
+    hilited_text_color: 0xff000000
+    name: "谷歌／Google"
+    text_color: 0xff666666
+  google_plus:
+    author: "Patricivs <ipatrickmac@me.com>"
+    back_color: 0xffffffff
+    border_color: 0xffdd4b39
+    candidate_text_color: 0xffdd4b39
+    comment_text_color: 0xffc8c9ca
+    hilited_back_color: 0xffffffff
+    hilited_candidate_back_color: 0xffdd4b39
+    hilited_candidate_text_color: 0xffffffff
+    hilited_comment_text_color: 0xffffffff
+    hilited_text_color: 0xffdd4b39
+    label_color: 0xffc8c9ca
+    name: "Google+"
+    text_color: 0xffc8c9ca
+  hong:
+    author: "风花絮"
+    back_color: 0xff353638
+    border_color: 0xff353638
+    candidate_text_color: 0xffffffff
+    hilited_back_color: 0x00141617
+    hilited_candidate_back_color: 0x30594231
+    hilited_candidate_text_color: 0xffffffff
+    hilited_text_color: 0xffc9cfd1
+    key_back_color: 0xff141617
+    label_color: 0xffffffff
+    name: "黑橙／hong"
+    off_key_text_color: 0xffd7d7d7
+    text_color: 0xffcd8c52
+  ink:
+    author: "佛振 <chen.sst@gmail.com>"
+    back_color: 0xffffffff
+    border_color: 0xff000000
+    hilited_back_color: 0xffdddddd
+    hilited_candidate_back_color: 0xff000000
+    hilited_candidate_text_color: 0xffffffff
+    hilited_text_color: 0xff000000
+    name: "墨池／Ink"
+    text_color: 0xff000000
+  kuma_shuzboz:
+    author: "Patricivs <ipatrickmac@me.com>"
+    back_color: 0xfff8b62d
+    border_color: 0xfff8b62d
+    candidate_text_color: 0xffffffff
+    comment_text_color: 0xffffffff
+    hilited_back_color: 0xffffffff
+    hilited_candidate_back_color: 0xff000000
+    hilited_candidate_text_color: 0xffffffff
+    hilited_comment_text_color: 0xffffffff
+    hilited_text_color: 0xfff8b62d
+    label_color: 0xffffffff
+    name: "熊出沒／Kuma Shuzboz"
+    text_color: 0xff000000
+  kuon:
+    author: "Patricivs <ipatrickmac@me.com>"
+    back_color: 0xff3eb370
+    border_color: 0xff3eb370
+    candidate_text_color: 0xffffffff
+    comment_text_color: 0xffffffff
+    hilited_back_color: 0xffffffff
+    hilited_candidate_back_color: 0xffffffff
+    hilited_candidate_text_color: 0xff3eb370
+    hilited_comment_text_color: 0xff3eb370
+    hilited_text_color: 0xff3eb370
+    label_color: 0xffffffff
+    name: "琨／Kuon"
+    text_color: 0xffffffff
+  lost_temple:
+    author: "佛振 <chen.sst@gmail.com>, based on ir_black"
+    back_color: 0xff444444
+    border_color: 0xff444444
+    hilited_back_color: 0xff222222
+    hilited_candidate_back_color: 0xffcae682
+    hilited_candidate_text_color: 0xff000000
+    hilited_text_color: 0xffcae682
+    name: "孤寺／Lost Temple"
+    text_color: 0xfff6f3e8
+  luna:
+    author: "佛振 <chen.sst@gmail.com>"
+    back_color: 0xffffffff
+    border_color: 0xffcccccc
+    hilited_back_color: 0xffffff7f
+    hilited_candidate_back_color: 0xff000000
+    hilited_candidate_text_color: 0xffffffff
+    hilited_text_color: 0xff000000
+    name: "明月／Luna"
+    text_color: 0xff000000
+  macau:
+    author: "Patricivs <ipatrickmac@me.com>"
+    back_color: 0xff00a381
+    border_color: 0xff00a381
+    candidate_text_color: 0xffffffff
+    comment_text_color: 0xffffffff
+    hilited_back_color: 0xffffd900
+    hilited_candidate_back_color: 0xffffffff
+    hilited_candidate_text_color: 0xffffd900
+    hilited_comment_text_color: 0xffffd900
+    hilited_text_color: 0xffffffff
+    label_color: 0xffffffff
+    name: "澳門／Macau"
+    text_color: 0xffffd900
+  modern_warfare:
+    author: P1461
+    back_color: 0xff0d1b0a
+    border_color: 0xff83ad4b
+    candidate_text_color: 0xffdcfeab
+    comment_text_color: 0xfffbfdfc
+    hilited_back_color: 0xff060e03
+    hilited_candidate_back_color: 0xff636f67
+    hilited_candidate_text_color: 0xffdcfeab
+    hilited_text_color: 0xfffcfdfb
+    name: "現代戰爭／Modern Warfare"
+    text_color: 0xff70bc14
+  nba:
+    author: "Patricivs <ipatrickmac@me.com>"
+    back_color: 0xff006ab7
+    border_color: 0xff006ab7
+    candidate_text_color: 0xffffffff
+    comment_text_color: 0xffffffff
+    hilited_back_color: 0xffffffff
+    hilited_candidate_back_color: 0xffd71e54
+    hilited_candidate_text_color: 0xffffffff
+    hilited_comment_text_color: 0xffffffff
+    hilited_text_color: 0xffd71e54
+    label_color: 0xffffffff
+    name: NBA
+    text_color: 0xffffffff
+  ps4:
+    author: "Patricivs <ipatrickmac@me.com>"
+    back_color: 0xff000000
+    border_color: 0xff000000
+    candidate_text_color: 0xffffffff
+    comment_text_color: 0xffffffff
+    hilited_back_color: 0xff595757
+    hilited_candidate_back_color: 0xff009fe8
+    hilited_candidate_text_color: 0xffffffff
+    hilited_comment_text_color: 0xffffffff
+    hilited_text_color: 0xffffffff
+    label_color: 0xffffffff
+    name: "遊驛四／PS4"
+    text_color: 0xffffffff
+  skype:
+    author: "Patricivs <ipatrickmac@me.com>"
+    back_color: 0xff00adef
+    border_color: 0xff00adef
+    candidate_text_color: 0xffffffff
+    comment_text_color: 0xffffffff
+    hilited_back_color: 0xffffffff
+    hilited_candidate_back_color: 0xffffffff
+    hilited_candidate_text_color: 0xff00adef
+    hilited_comment_text_color: 0xff00adef
+    hilited_text_color: 0xff00adef
+    label_color: 0xffffffff
+    name: "斯蓋普／Skype"
+    text_color: 0xffffffff
+  smurfs:
+    author: "skoj <skoj@qq.com>"
+    back_color: 0xff1778bf
+    border_color: 0xffe0edf5
+    candidate_text_color: 0xfff6f6f6
+    comment_text_color: 0xfff6f6f6
+    hilited_back_color: 0xff1778bf
+    hilited_candidate_back_color: 0xff6dbcdb
+    hilited_candidate_text_color: 0xfff6f6f6
+    hilited_comment_text_color: 0xfff6f6f6
+    hilited_text_color: 0xff6dbcdb
+    label_color: 0xff1778bf
+    name: "藍精靈／Smurfs"
+    text_color: 0xffffffff
+  so_young:
+    author: "五磅兔 <zcunlin@foxmail.com>"
+    back_color: 0xfffdf6e3
+    border_color: 0xffeee8d5
+    candidate_text_color: 0xff657b83
+    comment_text_color: 0xff268bd2
+    hilited_back_color: 0xffeee8d5
+    hilited_candidate_back_color: 0xff2aa198
+    hilited_candidate_text_color: 0xffeee8d5
+    hilited_comment_text_color: 0xffeee8d5
+    hilited_text_color: 0xff839496
+    label_color: 0xff93a1a1
+    name: "致青春／So Young"
+    text_color: 0xffd33682
+  solarized_rock:
+    author: "Aben <tntaben@gmail.com>, based on Ethan Schoonover's Solarized color scheme"
+    back_color: 0xff002b36
+    border_color: 0xff002b36
+    candidate_text_color: 0xff839496
+    hilited_candidate_back_color: 0xffd33682
+    hilited_candidate_text_color: 0xffffffff
+    hilited_text_color: 0xff2aa198
+    name: "曬經石／Solarized Rock"
+    text_color: 0xff859900
+  starcraft:
+    author: "Contralisk <contralisk@gmail.com>, original artwork by Blizzard Entertainment"
+    back_color: 0xff000000
+    border_color: 0xffa01010
+    candidate_text_color: 0xff55bb30
+    hilited_back_color: 0xff000000
+    hilited_candidate_back_color: 0xff000000
+    hilited_candidate_text_color: 0xffa8ff60
+    hilited_text_color: 0xff96cbfe
+    name: "星際我爭霸／StarCraft"
+    text_color: 0xff88aacc
+  starcraft_ii:
+    author: "Patricivs <ipatrickmac@me.com>"
+    back_color: 0xff0a1929
+    border_color: 0xff464b53
+    candidate_text_color: 0xffffffff
+    comment_text_color: 0xffffffff
+    hilited_back_color: 0xff0a1017
+    hilited_candidate_back_color: 0xff1eadef
+    hilited_candidate_text_color: 0xffffffff
+    hilited_comment_text_color: 0xffffffff
+    hilited_text_color: 0xffffffff
+    label_color: 0xffffffff
+    name: "星際爭霸Ⅱ／StarCraft Ⅱ"
+    text_color: 0xffffffff
+  steam:
+    author: "Patricivs <ipatrickmac@me.com>"
+    back_color: 0xff171614
+    border_color: 0xff383635
+    candidate_text_color: 0xffffffff
+    comment_text_color: 0xffa9a7a7
+    hilited_back_color: 0xff171614
+    hilited_candidate_back_color: 0xff314259
+    hilited_candidate_text_color: 0xffffffff
+    hilited_comment_text_color: 0xffa9a7a7
+    hilited_text_color: 0xffd1cfc9
+    label_color: 0xffffffff
+    light_scheme: default
+    name: Steam
+    text_color: 0xff528ccd
+  tantsing:
+    author: Mijiag
+    back_color: 0xffe3e3e3
+    border_color: 0xff000000
+    candidate_text_color: 0xff000000
+    comment_text_color: 0xff474747
+    hilited_back_color: 0xff91071a
+    hilited_candidate_back_color: 0xff730b6f
+    hilited_candidate_text_color: 0xffe3e3e3
+    hilited_text_color: 0xffe3e3e3
+    name: "丹青"
+    text_color: 0xff000000
+  tintin:
+    author: "Patricivs <ipatrickmac@me.com>"
+    back_color: 0xff0095d9
+    border_color: 0xff0095d9
+    candidate_text_color: 0xffffffff
+    comment_text_color: 0xffffffff
+    hilited_back_color: 0xff0095d9
+    hilited_candidate_back_color: 0xfff16421
+    hilited_candidate_text_color: 0xffffffff
+    hilited_comment_text_color: 0xffffffff
+    hilited_text_color: 0xff91d8f7
+    label_color: 0xffffffff
+    name: "丁丁／ Tintin"
+    text_color: 0xffffffff
+  wii:
+    author: "Patricivs <ipatrickmac@me.com>"
+    back_color: 0xffefefef
+    border_color: 0xffefefef
+    candidate_text_color: 0xff595757
+    comment_text_color: 0xffc8c9ca
+    hilited_back_color: 0xffefefef
+    hilited_candidate_back_color: 0xff33ccff
+    hilited_candidate_text_color: 0xffffffff
+    hilited_comment_text_color: 0xffffffff
+    hilited_text_color: 0xff33ccff
+    label_color: 0xffc8c9ca
+    name: Wii
+    text_color: 0xff595757
+  xbox_silver:
+    author: "Patricivs <ipatrickmac@me.com>"
+    back_color: 0xffeeeeef
+    border_color: 0xffeeeeef
+    candidate_text_color: 0xff8dc21f
+    comment_text_color: 0xff8dc21f
+    hilited_back_color: 0xffb5f05b
+    hilited_candidate_back_color: 0xff288c44
+    hilited_candidate_text_color: 0xffffffff
+    hilited_comment_text_color: 0xffffffff
+    hilited_text_color: 0xffffffff
+    label_color: 0xffb5f05b
+    name: "銀色叉盒／Xbox Silver"
+    text_color: 0xff8dc21f
+  youtube:
+    author: "Patricivs <ipatrickmac@me.com>"
+    back_color: 0xffdedede
+    border_color: 0xffdedede
+    candidate_text_color: 0xff000000
+    comment_text_color: 0xff000000
+    hilited_back_color: 0xffffffff
+    hilited_candidate_back_color: 0xffc30d23
+    hilited_candidate_text_color: 0xffffffff
+    hilited_comment_text_color: 0xffffffff
+    hilited_text_color: 0xffc30d23
+    label_color: 0xff000000
+    name: YouTube
+    text_color: 0xff000000
+  yushe:
+    author: osfans
+    back_color: 0xffe4e7e9
+    border_color: 0xffc1c7ca
+    candidate_separator_color: 0xffc1c7ca
+    candidate_text_color: 0xff5a676e
+    comment_text_color: 0xff7b868c
+    hilited_back_color: 0xccd3d7da
+    hilited_candidate_back_color: 0xffd3d7da
+    hilited_candidate_text_color: 0xff000000
+    hilited_comment_text_color: 0xff000000
+    hilited_key_back_color: 0xffd3d7da
+    hilited_key_symbol_color: 0xff000000
+    hilited_key_text_color: 0xff000000
+    hilited_off_key_back_color: 0xffd3d7da
+    hilited_off_key_text_color: 0xff000000
+    hilited_on_key_back_color: 0xffd3d7da
+    hilited_on_key_text_color: 0xff000000
+    hilited_text_color: 0xff23948e
+    key_back_color: 0xffeceff1
+    key_border_color: 0xffeceff1
+    key_symbol_color: 0xff5f6b73
+    key_text_color: 0xff37474f
+    keyboard_back_color: 0xffffffff
+    label_color: 0xff000000
+    name: "預設／default"
+    off_key_back_color: 0xffd3d7da
+    off_key_text_color: 0xff000000
+    on_key_back_color: 0xff23948e
+    on_key_text_color: 0xff37474f
+    preview_back_color: 0x55bfbfbf
+    preview_text_color: 0xff23948e
+    shadow_color: 0xff000000
+    text_back_color: 0xcce4e7e9
+    text_color: 0xff5a676e
+  yygc:
+    author: "小辛"
+    back_color: 0xffffffff
+    border_color: 0xffffffff
+    candidate_text_color: 0xff7f7f7f
+    comment_text_color: 0xff7f7f7f
+    hilited_back_color: 0xffffffff
+    hilited_candidate_back_color: 0xffffffff
+    hilited_candidate_text_color: 0xff7f7f7f
+    hilited_comment_text_color: 0xff7f7f7f
+    hilited_key_text_color: 0xff7f7f7f
+    hilited_off_key_back_color: 0xffffffff
+    hilited_off_key_text_color: 0xff7f7f7f
+    hilited_on_key_back_color: 0xffffffff
+    hilited_on_key_text_color: 0xff7f7f7f
+    hilited_text_color: 0xff7f7f7f
+    key_text_color: 0xff7f7f7f
+    label_color: 0xff7f7f7f
+    name: "一葉孤城"
+    off_key_text_color: 0xff7f7f7f
+    text_color: 0xff7f7f7f
 
 # 样式配置
 style:
