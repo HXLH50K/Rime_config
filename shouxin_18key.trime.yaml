@@ -4,7 +4,7 @@
 
 name: "手心18键"
 author: "Custom"
-config_version: 0.0.67
+config_version: 0.0.68
 
 # 颜色定义
 fallback_colors:
@@ -743,28 +743,31 @@ preset_keyboards:
     lock: true
     keys:
       # 第1行：字母键 (长按与上滑统一) - 4单+3双=100%
+      # 滑动发送大写字母作为精确输入标记
       - {click: key_Q, long_click: "#", swipe_up: "#", width: 12.3}
-      - {click: key_WE, long_click: "1", swipe_up: "1", swipe_left: w, swipe_right: e, width: 16.9}
-      - {click: key_RT, long_click: "2", swipe_up: "2", swipe_left: r, swipe_right: t, width: 16.9}
+      - {click: key_WE, long_click: "1", swipe_up: "1", swipe_left: W, swipe_right: E, width: 16.9}
+      - {click: key_RT, long_click: "2", swipe_up: "2", swipe_left: R, swipe_right: T, width: 16.9}
       - {click: key_Y, long_click: "3", swipe_up: "3", width: 12.3}
       - {click: key_U, long_click: "/", swipe_up: "/", width: 12.3}
-      - {click: key_IO, long_click: "-", swipe_up: "-", swipe_left: i, swipe_right: o, width: 16.9}
+      - {click: key_IO, long_click: "-", swipe_up: "-", swipe_left: I, swipe_right: O, width: 16.9}
       - {click: key_P, long_click: "_", swipe_up: "_", width: 12.3}
       # 第2行：字母键 (长按与上滑统一) - 左右各留空6.1%
+      # 滑动发送大写字母作为精确输入标记
       - {width: 6.1}
       - {click: key_A, long_click: "!", swipe_up: "!", width: 12.3}
-      - {click: key_SD, long_click: "4", swipe_up: "4", swipe_left: s, swipe_right: d, width: 16.9}
-      - {click: key_FG, long_click: "5", swipe_up: "5", swipe_left: f, swipe_right: g, width: 16.9}
+      - {click: key_SD, long_click: "4", swipe_up: "4", swipe_left: S, swipe_right: D, width: 16.9}
+      - {click: key_FG, long_click: "5", swipe_up: "5", swipe_left: F, swipe_right: G, width: 16.9}
       - {click: key_H, long_click: "6", swipe_up: "6", width: 12.3}
-      - {click: key_JK, long_click: "~", swipe_up: "~", swipe_left: j, swipe_right: k, width: 16.9}
+      - {click: key_JK, long_click: "~", swipe_up: "~", swipe_left: J, swipe_right: K, width: 16.9}
       - {click: key_L, long_click: "?", swipe_up: "?", width: 12.3}
       - {width: 6.1}
       # 第3行：字母键+退格 (长按与上滑统一)
+      # 滑动发送大写字母作为精确输入标记
       - {click: key_fenci, composing: "'", width: 14.6}
       - {click: key_Z, long_click: "@", swipe_up: "@", width: 12.3}
-      - {click: key_XC, long_click: "7", swipe_up: "7", swipe_left: x, swipe_right: c, width: 16.9}
+      - {click: key_XC, long_click: "7", swipe_up: "7", swipe_left: X, swipe_right: C, width: 16.9}
       - {click: key_V, long_click: "8", swipe_up: "8", width: 12.3}
-      - {click: key_BN, long_click: "9", swipe_up: "9", swipe_left: b, swipe_right: n, width: 16.9}
+      - {click: key_BN, long_click: "9", swipe_up: "9", swipe_left: B, swipe_right: N, width: 16.9}
       - {click: key_M, long_click: "0", swipe_up: "0", width: 12.3}
       - {click: key_backspace, width: 14.6}
       # 第4行：功能键

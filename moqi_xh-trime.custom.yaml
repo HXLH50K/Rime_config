@@ -1,5 +1,26 @@
 patch:
   "menu/page_size": 9
+  
+  # ========== 精确输入处理（18键滑动精确输入） ==========
+  # 键盘滑动发送大写字母，Processor 拦截并记录位置，Filter 过滤模糊候选
+  # 参考：lua/sbxlm/upper_case.lua 的 API 使用方式
+  
+  # processor 需要放在最前面，拦截大写字母输入
+  "engine/processors":
+    - lua_processor@*precise_input_processor  # 精确输入处理器（必须在最前）
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  
+  # filter 用于过滤模糊候选（放在其他 filter 之后）
+  "engine/filters/+":
+    - lua_filter@*precise_input_filter  # 精确输入过滤器
+  
   "punctuator/punctuator/full_shape":
     "\\": "、"
   "punctuator/punctuator/half_shape":
