@@ -2,9 +2,9 @@
 # 基于tongwenfeng主题格式，专为18键模糊输入设计
 # 使用 YAML 锚点实现键盘继承，减少重复代码
 
-name: "手心18键 v67"
+name: "手心18键"
 author: "Custom"
-config_version: 3.0
+config_version: 0.0.67
 
 # 颜色定义
 fallback_colors:
@@ -1010,11 +1010,11 @@ preset_keys:
   # 切换输入法键（中文键盘用）
   # 点击: 切换系统输入法 (long_click/swipe 在键盘布局中定义)
   key_switch_cn:
-    label: "🌐"
+    label: "⌘"
     send: LANGUAGE_SWITCH
   # 切换输入法键（英文键盘用）
   key_switch_en:
-    label: "🌐"
+    label: "⌘"
     send: LANGUAGE_SWITCH
   key_space_cn:
     label: "␣"
