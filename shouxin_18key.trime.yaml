@@ -2,7 +2,7 @@
 # 基于tongwenfeng主题格式，专为18键模糊输入设计
 # 使用 YAML 锚点实现键盘继承，减少重复代码
 
-name: "手心18键 v64"
+name: "手心18键 v65"
 author: "Custom"
 config_version: 3.0
 
@@ -61,8 +61,7 @@ style:
   keyboards:
     - default
     - qwerty26
-    - number_cn
-    - number_en
+    - number
     - edit_keyboard
   label_font: label.ttf
   label_text_size: 18
@@ -98,7 +97,7 @@ preset_keyboards:
     name: "手心式18键"
     width: 14.28
     height: 52
-    lock: false
+    lock: true
     keys:
       # 第1行：字母键
       - {click: key_Q, long_click: "#"}
@@ -125,7 +124,7 @@ preset_keyboards:
       - {click: key_backspace}
       # 第4行：功能键
       - {click: key_symbol_cn, width: 12}
-      - {click: Keyboard_number_cn, width: 12}
+      - {click: Keyboard_number, width: 12}
       - {click: key_switch_cn, long_click: F4, swipe_left: LANGUAGE_SWITCH, swipe_right: PROG_RED, width: 12}
       - {click: key_space_cn, long_click: Keyboard_eng, swipe_left: Left, swipe_right: Right, width: 40}
       - {click: key_punct_cn, long_click: "。", width: 12}
@@ -138,7 +137,7 @@ preset_keyboards:
     name: "全键盘"
     width: 10
     height: 50
-    lock: false
+    lock: true
     keys:
       # 第1行：q-p，长按1-0
       - {click: q, long_click: "1"}
@@ -175,23 +174,17 @@ preset_keyboards:
       - {click: key_backspace_en, width: 15}
       # 第4行：功能键
       - {click: key_symbol_en, width: 12}
-      - {click: Keyboard_number_en, width: 12}
+      - {click: Keyboard_number, width: 12}
       - {click: key_switch_en, long_click: F4, swipe_left: LANGUAGE_SWITCH, swipe_right: PROG_RED, width: 10}
       - {click: key_space_en, long_click: Keyboard_ch, swipe_left: Left, swipe_right: Right, width: 42}
       - {click: key_punct_en, long_click: ".", width: 10}
       - {click: key_return_en, width: 14}
 
-  # ========== 数字键盘（从中文进入）- 继承 number_base ==========
-  number_cn:
+  # ========== 数字键盘（统一，使用 Keyboard_last_lock 返回） ==========
+  number:
     <<: *number_base
-    ascii_mode: 0
-    keys: [{click: "+", label: "+"}, {click: "1", label: "1"}, {click: "2", label: "2"}, {click: "3", label: "3"}, {click: key_backspace}, {click: "-", label: "-"}, {click: "4", label: "4"}, {click: "5", label: "5"}, {click: "6", label: "6"}, {click: ".", label: "."}, {click: "@", label: "@"}, {click: "7", label: "7"}, {click: "8", label: "8"}, {click: "9", label: "9"}, {click: ":", label: ":"}, {click: key_symbol_cn}, {click: key_back_to_cn}, {click: "0", label: "0"}, {click: key_space_num}, {click: key_return}]
-
-  # ========== 数字键盘（从英文进入）- 继承 number_base ==========
-  number_en:
-    <<: *number_base
-    ascii_mode: 1
-    keys: [{click: "+", label: "+"}, {click: "1", label: "1"}, {click: "2", label: "2"}, {click: "3", label: "3"}, {click: key_backspace}, {click: "-", label: "-"}, {click: "4", label: "4"}, {click: "5", label: "5"}, {click: "6", label: "6"}, {click: ".", label: "."}, {click: "@", label: "@"}, {click: "7", label: "7"}, {click: "8", label: "8"}, {click: "9", label: "9"}, {click: ":", label: ":"}, {click: key_symbol_en}, {click: key_back_to_en}, {click: "0", label: "0"}, {click: key_space_num}, {click: key_return}]
+    lock: false
+    keys: [{click: "+", label: "+"}, {click: "1", label: "1"}, {click: "2", label: "2"}, {click: "3", label: "3"}, {click: key_backspace}, {click: "-", label: "-"}, {click: "4", label: "4"}, {click: "5", label: "5"}, {click: "6", label: "6"}, {click: ".", label: "."}, {click: "@", label: "@"}, {click: "7", label: "7"}, {click: "8", label: "8"}, {click: "9", label: "9"}, {click: ":", label: ":"}, {click: key_symbol_cn}, {click: Keyboard_last_lock}, {click: "0", label: "0"}, {click: key_space_num}, {click: key_return}]
 
   # ========== 编辑键盘（光标控制） ==========
   edit_keyboard:
@@ -227,7 +220,7 @@ preset_keyboards:
       - {width: 40}
       - {click: doc_end}
       - {click: select_all}
-      - {click: key_back_to_cn}
+      - {click: Keyboard_last_lock}
 
 # ==================== 预设按键基类 ====================
 # 返回键基类
@@ -261,14 +254,15 @@ preset_keys:
     label: "全键"
     send: Eisu_toggle
     select: qwerty26
-  Keyboard_number_cn:
+  Keyboard_number:
     label: "123"
     send: Eisu_toggle
-    select: number_cn
-  Keyboard_number_en:
-    label: "123"
+    select: number
+  # 智能返回键：返回上一个 lock=true 的键盘
+  Keyboard_last_lock:
+    label: "↩"
     send: Eisu_toggle
-    select: number_en
+    select: .last_lock
   # 编辑键盘按钮
   Keyboard_edit:
     label: "编辑"
@@ -289,13 +283,8 @@ preset_keys:
     command: liquid_keyboard
     option: "英文标点"
 
-  # ========== 返回键（继承 key_back_base） ==========
-  key_back_to_cn:
-    <<: *key_back_base
-    select: default
-  key_back_to_en:
-    <<: *key_back_base
-    select: qwerty26
+  # ========== 返回键（已改用 Keyboard_last_lock） ==========
+  # 保留 key_back_base 锚点定义，但不再使用 key_back_to_cn/key_back_to_en
 
   # ========== 第一行：字母键 ==========
   key_Q:
