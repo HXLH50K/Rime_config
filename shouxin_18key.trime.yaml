@@ -2,7 +2,7 @@
 # 基于tongwenfeng主题格式，专为18键模糊输入设计
 # 使用 YAML 锚点实现键盘继承，减少重复代码
 
-name: "手心18键 v65"
+name: "手心18键 v66"
 author: "Custom"
 config_version: 3.0
 
@@ -99,28 +99,28 @@ preset_keyboards:
     height: 52
     lock: true
     keys:
-      # 第1行：字母键
-      - {click: key_Q, long_click: "#"}
-      - {click: key_WE, long_click: "1", swipe_left: w, swipe_right: e}
-      - {click: key_RT, long_click: "2", swipe_left: r, swipe_right: t}
-      - {click: key_Y, long_click: "3"}
-      - {click: key_U, long_click: "/"}
-      - {click: key_IO, long_click: "-", swipe_left: i, swipe_right: o}
-      - {click: key_P, long_click: "_"}
-      # 第2行：字母键
-      - {click: key_A, long_click: "!", width: 16.66}
-      - {click: key_SD, long_click: "4", swipe_left: s, swipe_right: d, width: 16.66}
-      - {click: key_FG, long_click: "5", swipe_left: f, swipe_right: g, width: 16.66}
-      - {click: key_H, long_click: "6", width: 16.66}
-      - {click: key_JK, long_click: "~", swipe_left: j, swipe_right: k, width: 16.66}
-      - {click: key_L, long_click: "?", width: 16.66}
-      # 第3行：字母键+退格
+      # 第1行：字母键 (长按与上滑统一)
+      - {click: key_Q, long_click: "1", swipe_up: "1"}
+      - {click: key_WE, long_click: "2", swipe_up: "2", swipe_left: w, swipe_right: e}
+      - {click: key_RT, long_click: "3", swipe_up: "3", swipe_left: r, swipe_right: t}
+      - {click: key_Y, long_click: "4", swipe_up: "4"}
+      - {click: key_U, long_click: "5", swipe_up: "5"}
+      - {click: key_IO, long_click: "6", swipe_up: "6", swipe_left: i, swipe_right: o}
+      - {click: key_P, long_click: "7", swipe_up: "7"}
+      # 第2行：字母键 (长按与上滑统一)
+      - {click: key_A, long_click: "8", swipe_up: "8", width: 16.66}
+      - {click: key_SD, long_click: "9", swipe_up: "9", swipe_left: s, swipe_right: d, width: 16.66}
+      - {click: key_FG, long_click: "0", swipe_up: "0", swipe_left: f, swipe_right: g, width: 16.66}
+      - {click: key_H, long_click: "-", swipe_up: "-", width: 16.66}
+      - {click: key_JK, long_click: "/", swipe_up: "/", swipe_left: j, swipe_right: k, width: 16.66}
+      - {click: key_L, long_click: "?", swipe_up: "?", width: 16.66}
+      # 第3行：字母键+退格 (长按与上滑统一)
       - {click: key_fenci, composing: "'"}
-      - {click: key_Z, long_click: "@"}
-      - {click: key_XC, long_click: "7", swipe_left: x, swipe_right: c}
-      - {click: key_V, long_click: "8"}
-      - {click: key_BN, long_click: "9", swipe_left: b, swipe_right: n}
-      - {click: key_M, long_click: "0"}
+      - {click: key_Z, long_click: "@", swipe_up: "@"}
+      - {click: key_XC, long_click: "#", swipe_up: "#", swipe_left: x, swipe_right: c}
+      - {click: key_V, long_click: "!", swipe_up: "!"}
+      - {click: key_BN, long_click: "~", swipe_up: "~", swipe_left: b, swipe_right: n}
+      - {click: key_M, long_click: "_", swipe_up: "_"}
       - {click: key_backspace}
       # 第4行：功能键
       - {click: key_symbol_cn, width: 12}
@@ -139,38 +139,38 @@ preset_keyboards:
     height: 50
     lock: true
     keys:
-      # 第1行：q-p，长按1-0
-      - {click: q, long_click: "1"}
-      - {click: w, long_click: "2"}
-      - {click: e, long_click: "3"}
-      - {click: r, long_click: "4"}
-      - {click: t, long_click: "5"}
-      - {click: y, long_click: "6"}
-      - {click: u, long_click: "7"}
-      - {click: i, long_click: "8"}
-      - {click: o, long_click: "9"}
-      - {click: p, long_click: "0"}
-      # 第2行：a-l，长按符号
+      # 第1行：q-p，长按与上滑统一为数字，下滑大写字母
+      - {click: q, long_click: "1", swipe_up: "1", swipe_down: Q}
+      - {click: w, long_click: "2", swipe_up: "2", swipe_down: W}
+      - {click: e, long_click: "3", swipe_up: "3", swipe_down: E}
+      - {click: r, long_click: "4", swipe_up: "4", swipe_down: R}
+      - {click: t, long_click: "5", swipe_up: "5", swipe_down: T}
+      - {click: y, long_click: "6", swipe_up: "6", swipe_down: Y}
+      - {click: u, long_click: "7", swipe_up: "7", swipe_down: U}
+      - {click: i, long_click: "8", swipe_up: "8", swipe_down: I}
+      - {click: o, long_click: "9", swipe_up: "9", swipe_down: O}
+      - {click: p, long_click: "0", swipe_up: "0", swipe_down: P}
+      # 第2行：a-l，长按与上滑统一为符号，下滑大写字母
       - {width: 5}
-      - {click: a, long_click: "~"}
-      - {click: s, long_click: "!"}
-      - {click: d, long_click: "@"}
-      - {click: f, long_click: "#"}
-      - {click: g, long_click: "%"}
-      - {click: h, long_click: "&"}
-      - {click: j, long_click: "*"}
-      - {click: k, long_click: "("}
-      - {click: l, long_click: ")"}
+      - {click: a, long_click: "-", swipe_up: "-", swipe_down: A}
+      - {click: s, long_click: "/", swipe_up: "/", swipe_down: S}
+      - {click: d, long_click: "?", swipe_up: "?", swipe_down: D}
+      - {click: f, long_click: "@", swipe_up: "@", swipe_down: F}
+      - {click: g, long_click: "#", swipe_up: "#", swipe_down: G}
+      - {click: h, long_click: "!", swipe_up: "!", swipe_down: H}
+      - {click: j, long_click: "~", swipe_up: "~", swipe_down: J}
+      - {click: k, long_click: "_", swipe_up: "_", swipe_down: K}
+      - {click: l, long_click: "%", swipe_up: "%", swipe_down: L}
       - {width: 5}
-      # 第3行：Shift + z-m + 退格，长按符号
+      # 第3行：Shift + z-m + 退格，长按与上滑统一为符号，下滑大写字母
       - {click: key_shift_en, width: 15}
-      - {click: z, long_click: "'"}
-      - {click: x, long_click: "/"}
-      - {click: c, long_click: "-"}
-      - {click: v, long_click: "="}
-      - {click: b, long_click: ":"}
-      - {click: n, long_click: ";"}
-      - {click: m, long_click: "?"}
+      - {click: z, long_click: "&", swipe_up: "&", swipe_down: Z}
+      - {click: x, long_click: "*", swipe_up: "*", swipe_down: X}
+      - {click: c, long_click: "(", swipe_up: "(", swipe_down: C}
+      - {click: v, long_click: ")", swipe_up: ")", swipe_down: V}
+      - {click: b, long_click: "'", swipe_up: "'", swipe_down: B}
+      - {click: n, long_click: "=", swipe_up: "=", swipe_down: N}
+      - {click: m, long_click: ":", swipe_up: ":", swipe_down: M}
       - {click: key_backspace_en, width: 15}
       # 第4行：功能键
       - {click: key_symbol_en, width: 12}
