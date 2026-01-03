@@ -1,7 +1,7 @@
 -- precise_input_filter.lua
--- 精确输入过滤器 v4：修复混合输入问题
+-- 精确输入过滤器 v5：支持从配置文件读取模糊对
 --
--- 使用场景：18键模糊输入时，滑动精确输入的字符应该排除模糊候选
+-- 使用场景：18键/14键等共键布局的模糊输入，滑动精确输入时排除模糊候选
 -- 
 -- 问题场景：
 --   用户在 WE 键上：点击(w) + 滑动(E) = 输入 "we"
@@ -14,10 +14,14 @@
 --   对于每个精确输入位置，候选在该位置的字母必须与用户输入完全匹配
 --   对于模糊输入位置，候选可以是该位置的字母或其模糊对
 --
+-- 配置方式：
+--   在 custom.yaml 中配置 precise_input/fuzzy_pairs 列表
+--   如果没有配置，则使用默认的18键布局
+--
 -- 参考：lua/cold_word_drop/processor.lua 的 ReverseLookup 用法
 
--- 18键共键映射：模糊对关系
-local fuzzy_pairs = {
+-- 默认的18键共键映射（如果配置文件中没有指定）
+local default_fuzzy_pairs = {
     w = "e", e = "w",  -- WE 共键
     r = "t", t = "r",  -- RT 共键
     i = "o", o = "i",  -- IO 共键
@@ -27,6 +31,32 @@ local fuzzy_pairs = {
     x = "c", c = "x",  -- XC 共键
     b = "n", n = "b",  -- BN 共键
 }
+
+-- 从配置文件加载模糊对
+local fuzzy_pairs = nil
+
+local function load_fuzzy_pairs(config)
+    fuzzy_pairs = {}
+    
+    -- 尝试从配置文件读取 precise_input/fuzzy_pairs
+    local pairs_list = config:get_list("precise_input/fuzzy_pairs")
+    
+    if pairs_list and pairs_list.size > 0 then
+        -- 配置格式：precise_input/fuzzy_pairs: ["we", "rt", "io", ...]
+        for i = 0, pairs_list.size - 1 do
+            local pair_str = pairs_list:get_value_at(i):get_string()
+            if pair_str and #pair_str >= 2 then
+                local char1 = pair_str:sub(1, 1):lower()
+                local char2 = pair_str:sub(2, 2):lower()
+                fuzzy_pairs[char1] = char2
+                fuzzy_pairs[char2] = char1
+            end
+        end
+    else
+        -- 没有配置，使用默认的18键布局
+        fuzzy_pairs = default_fuzzy_pairs
+    end
+end
 
 -- 将字符串按空格分割为音节列表
 local function split_syllables(preedit)
@@ -151,7 +181,7 @@ local function matches_input(cand_text, user_input, precise_positions, reversedb
     return true  -- 通过所有检查，保留候选
 end
 
--- 初始化函数：创建 ReverseLookup 对象
+-- 初始化函数：创建 ReverseLookup 对象并加载配置
 local reversedb = nil
 local function init(env)
     local config = env.engine.schema.config
@@ -161,11 +191,14 @@ local function init(env)
     end
     ---@diagnostic disable-next-line: undefined-global
     reversedb = ReverseLookup(schema_id)
+    
+    -- 加载模糊对配置
+    load_fuzzy_pairs(config)
 end
 
 -- 过滤函数
 local function filter(input, env)
-    -- 延迟初始化 reversedb
+    -- 延迟初始化 reversedb 和 fuzzy_pairs
     if not reversedb then
         init(env)
     end
