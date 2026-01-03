@@ -1,18 +1,22 @@
 -- precise_input_filter.lua
--- 精确输入过滤器 v3：使用 ReverseLookup 获取候选的真实拼音
+-- 精确输入过滤器 v4：修复混合输入问题
 --
 -- 使用场景：18键模糊输入时，滑动精确输入的字符应该排除模糊候选
--- 例如：用户滑动输入 E（精确），应该排除 w 的候选
+-- 
+-- 问题场景：
+--   用户在 WE 键上：点击(w) + 滑动(E) = 输入 "we"
+--   - 第1个字符是模糊输入，应匹配 w 或 e
+--   - 第2个字符是精确输入，应只匹配 e
+--   - 候选 "we" 中，第2字符是 e，匹配精确输入 ✓
+--   - 候选 "ww" 中，第2字符是 w，不匹配精确输入 ✗
 --
--- 工作原理：
--- 1. 从 context.property 读取 precise_input_map（精确输入的位置）
--- 2. 使用 ReverseLookup 对候选文字进行反查，获取真实拼音
--- 3. 逐字比较拼音与用户输入，过滤不匹配的候选
+-- 核心逻辑：
+--   对于每个精确输入位置，候选在该位置的字母必须与用户输入完全匹配
+--   对于模糊输入位置，候选可以是该位置的字母或其模糊对
 --
 -- 参考：lua/cold_word_drop/processor.lua 的 ReverseLookup 用法
 
 -- 18键共键映射：模糊对关系
--- 如果用户精确输入了 e，则候选中如果是 w 就应该被过滤
 local fuzzy_pairs = {
     w = "e", e = "w",  -- WE 共键
     r = "t", t = "r",  -- RT 共键
@@ -42,7 +46,7 @@ local function split_chars(str)
     return chars
 end
 
--- 解析精确输入位置记录
+-- 解析精确输入位置记录（字符级别）
 local function parse_precise_map(map_str)
     local positions = {}
     if map_str and #map_str > 0 then
@@ -53,58 +57,91 @@ local function parse_precise_map(map_str)
     return positions
 end
 
--- 检查候选是否匹配用户的精确输入
+-- 检查候选是否匹配用户的输入（考虑精确和模糊）
 -- 参数：
 --   cand_text: 候选文字（如 "你好"）
---   user_syllables: 用户输入的音节列表（如 {"ni", "hao"}）
---   precise_positions: 精确输入的位置集合（如 {1=true}）
+--   user_input: 用户输入的原始字符串（如 "niho"）
+--   precise_positions: 精确输入的字符位置集合（如 {2=true, 4=true}）
 --   reversedb: ReverseLookup 对象
 -- 返回：true 表示保留，false 表示过滤
-local function matches_precise_input(cand_text, user_syllables, precise_positions, reversedb)
+local function matches_input(cand_text, user_input, precise_positions, reversedb)
     -- 如果没有精确输入记录，所有候选都通过
     if not precise_positions or not next(precise_positions) then
         return true
     end
     
     -- 拆分候选文字为单个字符
-    local chars = split_chars(cand_text)
+    local cand_chars = split_chars(cand_text)
     
-    -- 对每个精确输入位置进行检查
-    for pos, _ in pairs(precise_positions) do
-        -- 获取用户在这个位置输入的音节
+    -- 对候选的每个字进行反查，获取其拼音
+    local cand_pinyins = {}
+    for i, char in ipairs(cand_chars) do
+        local pinyin = reversedb:lookup(char) or ""
+        -- 反查结果可能包含多个读音（空格分隔）
+        -- 例如 "ni hao" 或 "ni[jj hao[jw"（带辅助码）
+        -- 取第一个读音
+        local first_pinyin = pinyin:match("^([^%s%[]+)")
+        cand_pinyins[i] = first_pinyin and first_pinyin:lower() or ""
+    end
+    
+    -- 将用户输入拆分为双拼音节（每2个字符一个音节）
+    local user_syllables = {}
+    for i = 1, #user_input, 2 do
+        local syllable = user_input:sub(i, math.min(i + 1, #user_input)):lower()
+        table.insert(user_syllables, syllable)
+    end
+    
+    -- 检查每个候选字的拼音是否匹配
+    for pos, cand_pinyin in pairs(cand_pinyins) do
         local user_syllable = user_syllables[pos]
-        if not user_syllable then
+        if not user_syllable or #user_syllable < 2 then
+            goto continue
+        end
+        if not cand_pinyin or #cand_pinyin < 2 then
             goto continue
         end
         
-        -- 获取用户输入的首字母
-        local user_char = user_syllable:sub(1, 1)
+        -- 获取用户输入和候选拼音的双拼码
+        local user_char1 = user_syllable:sub(1, 1)
+        local user_char2 = user_syllable:sub(2, 2)
+        local cand_char1 = cand_pinyin:sub(1, 1)
+        local cand_char2 = cand_pinyin:sub(2, 2)
         
-        -- 获取对应位置的候选字
-        local cand_char = chars[pos]
-        if not cand_char then
-            goto continue
+        -- 计算字符在原始输入中的位置
+        local char_pos1 = (pos - 1) * 2 + 1
+        local char_pos2 = (pos - 1) * 2 + 2
+        
+        -- 检查第1个字符
+        if precise_positions[char_pos1] then
+            -- 精确输入位置：必须完全匹配
+            if user_char1 ~= cand_char1 then
+                return false  -- 精确输入不匹配，过滤
+            end
+        else
+            -- 模糊输入位置：可以匹配原字符或模糊对
+            if user_char1 ~= cand_char1 then
+                local fuzzy = fuzzy_pairs[user_char1]
+                if not fuzzy or fuzzy ~= cand_char1 then
+                    -- 既不是原字符也不是模糊对，但这种情况应该由 speller 处理
+                    -- 这里不过滤，让 speller 的结果通过
+                end
+            end
         end
         
-        -- 对候选字进行反查，获取其拼音
-        local cand_pinyin = reversedb:lookup(cand_char) or ""
-        
-        -- 反查结果可能包含多个读音（空格分隔），取第一个
-        local cand_first_pinyin = cand_pinyin:match("^([^ ]+)")
-        if not cand_first_pinyin then
-            goto continue
-        end
-        
-        -- 获取候选拼音的首字母
-        local cand_first_char = cand_first_pinyin:sub(1, 1):lower()
-        
-        -- 检查是否匹配
-        if user_char ~= cand_first_char then
-            -- 不直接匹配，检查是否是模糊对
-            local fuzzy_match = fuzzy_pairs[user_char]
-            if fuzzy_match and fuzzy_match == cand_first_char then
-                -- 用户精确输入了 e，但候选是 w 的读音，过滤掉
-                return false
+        -- 检查第2个字符
+        if precise_positions[char_pos2] then
+            -- 精确输入位置：必须完全匹配
+            if user_char2 ~= cand_char2 then
+                return false  -- 精确输入不匹配，过滤
+            end
+        else
+            -- 模糊输入位置：可以匹配原字符或模糊对
+            if user_char2 ~= cand_char2 then
+                local fuzzy = fuzzy_pairs[user_char2]
+                if not fuzzy or fuzzy ~= cand_char2 then
+                    -- 既不是原字符也不是模糊对，但这种情况应该由 speller 处理
+                    -- 这里不过滤，让 speller 的结果通过
+                end
             end
         end
         
@@ -149,21 +186,9 @@ local function filter(input, env)
         return
     end
     
-    -- 解析用户输入的音节（使用 preedit 或直接分割）
-    local preedit = context:get_script_text() or user_input
-    local user_syllables = split_syllables(preedit)
-    
-    -- 如果无法解析音节，使用字符级别解析
-    if #user_syllables == 0 then
-        for i = 1, #user_input, 2 do
-            local syllable = user_input:sub(i, i + 1)
-            table.insert(user_syllables, syllable:lower())
-        end
-    end
-    
     -- 过滤候选
     for cand in input:iter() do
-        if matches_precise_input(cand.text, user_syllables, precise_positions, reversedb) then
+        if matches_input(cand.text, user_input, precise_positions, reversedb) then
             ---@diagnostic disable-next-line: undefined-global
             yield(cand)
         end

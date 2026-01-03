@@ -43,9 +43,10 @@ patch:
     - table_translator@custom_phrase_3_code
     - table_translator@custom_phrase_kf
     - table_translator@custom_phrase_mqzg
-    - table_translator@custom_phrase_super_1jian
-    - table_translator@custom_phrase_super_2jian
-    - table_translator@custom_phrase_super_3jian
+    # 超级简拼会影响18键精确输入判断，禁用
+    # - table_translator@custom_phrase_super_1jian
+    # - table_translator@custom_phrase_super_2jian
+    # - table_translator@custom_phrase_super_3jian
     - table_translator@custom_phrase_super_3jian_no_conflict
     - table_translator@custom_phrase_super_4jian_no_conflict
     - table_translator@big_char_set
