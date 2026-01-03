@@ -1,11 +1,8 @@
 patch:
   "menu/page_size": 9
   
-  # ========== 精确输入处理（18键滑动精确输入） ==========
+  # ========== 精确输入处理器 ==========
   # 键盘滑动发送大写字母，Processor 拦截并记录位置，Filter 过滤模糊候选
-  # 参考：lua/sbxlm/upper_case.lua 的 API 使用方式
-  
-  # processor 需要放在最前面，拦截大写字母输入
   "engine/processors":
     - lua_processor@*precise_input_processor  # 精确输入处理器（必须在最前）
     - ascii_composer
@@ -16,52 +13,82 @@ patch:
     - selector
     - navigator
     - express_editor
-  
-  # filter 用于过滤模糊候选（放在其他 filter 之后）
-  "engine/filters/+":
-    - lua_filter@*precise_input_filter  # 精确输入过滤器
-  
-  "punctuator/punctuator/full_shape":
-    "\\": "、"
-  "punctuator/punctuator/half_shape":
-    "\\": "、"
-  "key_binder/bindings/+":
-    - {accept: "Control+Shift+F", toggle: simplification, when: always}
-    - {accept: "Shift+space", toggle: full_shape, when: always}
-    - {accept: "Control+period", toggle: ascii_punct, when: always}
-    - {accept: minus, send: Page_Up, when: has_menu}
-    - {accept: equal, send: Page_Down, when: has_menu}
-  
+
+  # ========== Segmentors ==========
+  # 禁用不需要的 segmentor，只保留 aw(英语) aj(日语)
+  "engine/segmentors":
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    # 只保留 aw(英语) aj(日语)
+    - affix_segmentor@easy_en_simp
+    - affix_segmentor@jp_sela
+    - fallback_segmentor
+
+  # ========== Translators ==========
+  # 禁用超级简拼（手机版不需要）
   "engine/translators":
+    # lua翻译器
     - lua_translator@*date_translator
     - lua_translator@*lunar
     - lua_translator@*unicode
     - lua_translator@*number_translator
     - lua_translator@*calculator
     - punct_translator
+    # 码表翻译器（禁用 custom_phrase 置顶，禁用所有超级简拼）
     # - table_translator@custom_phrase
     - table_translator@custom_phrase_3_code
     - table_translator@custom_phrase_kf
     - table_translator@custom_phrase_mqzg
-    # 超级简拼会影响18键精确输入判断，禁用
+    # 超级简拼全部禁用（手机版不需要）
     # - table_translator@custom_phrase_super_1jian
     # - table_translator@custom_phrase_super_2jian
     # - table_translator@custom_phrase_super_3jian
-    - table_translator@custom_phrase_super_3jian_no_conflict
-    - table_translator@custom_phrase_super_4jian_no_conflict
+    # - table_translator@custom_phrase_super_3jian_no_conflict
+    # - table_translator@custom_phrase_super_4jian_no_conflict
     - table_translator@big_char_set
-    # - table_translator@emojis           # 禁用 ae Emoji
-    - table_translator@easy_en_simp       # 保留 aw 英语
-    - table_translator@jp_sela            # 保留 aj 日语
-    # - reverse_lookup_translator         # 禁用反查
-    # - table_translator@reverse_moqima   # 禁用 amq 墨奇反查
-    # - table_translator@radical_flypy    # 禁用 az 部件组字
-    # - table_translator@reverse_stroke   # 禁用 ab 笔画反查
-    # - table_translator@reverse_zrlf     # 禁用 alf 自然两分
-    # - table_translator@reverse_cj       # 禁用 arj 仓颉
+    # - table_translator@emojis     # 禁用 ae Emoji
+    - table_translator@easy_en_simp  # 保留 aw 英语
+    - table_translator@jp_sela       # 保留 aj 日语
+    # 反查翻译器（禁用）
+    # - reverse_lookup_translator
+    # - table_translator@reverse_moqima
+    # - table_translator@radical_flypy
+    # - table_translator@reverse_stroke
+    # - table_translator@reverse_zrlf
+    # - table_translator@reverse_cj
+    # 脚本翻译器
     - script_translator
     - script_translator@user_dict_set
-    # - script_translator@add_user_dict   # 禁用 ac 自造词
+    # - script_translator@add_user_dict  # 禁用 ac 自造词
+
+  # ========== Filters ==========
+  # 禁用简码回显（stick.lua - 候选词上方的小字提示）
+  "engine/filters":
+    - lua_filter@*pro_comment_format
+    # - lua_filter@*stick              # 禁用简码回显
+    - lua_filter@*is_in_user_dict
+    - reverse_lookup_filter@reverse_lookup
+    - simplifier@emoji
+    - simplifier@chaifen
+    - simplifier@chaifen_all
+    - simplifier@chinese_english
+    - simplifier@big_char_set
+    - simplifier@traditionalize
+    - simplifier@mars
+    - uniquifier
+    - lua_filter@*precise_input_filter  # 精确输入过滤器（放在最后）
+
+  # ========== 快捷键（手机版简化） ==========
+  # 移除所有 Control/Tab/Shift 相关快捷键
+  "key_binder/bindings":
+    # 分号选2（手机上可用）
+    - { when: has_menu, accept: semicolon, send: 2 }
+    # 以下功能在手机上不需要，已移除：
+    # - Tab/./上屏超级简拼
+    # - Control+* 相关快捷键
+    # - Shift+A~Z 辅助码快捷键（与精确输入冲突）
 
   # ========== 18键模糊输入规则 ==========
   # 键盘布局：
@@ -69,16 +96,16 @@ patch:
   # 第二行：A(独立), SD, FG, H(独立), JK, L(独立)
   # 第三行：Z(独立), XC, V(独立), BN, M(独立)
   #
-  # 模糊规则：双向派生，点击或滑动任一字母都可匹配两个字母的词
-  # 注意：由于 Rime 架构限制，无法区分点击和滑动输入，精确输入会继续出现模糊候选
+  # 模糊规则：双向派生，点击任一共键字母都可匹配两个字母的词
+  # 滑动发送大写字母，由 Processor 处理为精确输入
   
   "speller/algebra/+":
     # === 第一行 ===
     # WE 共键：W 和 E 互相模糊
-    - derive/^w/e/      # 输入 e 可匹配 w 开头的词
-    - derive/w$/e/      # 输入 e 可匹配 w 结尾的词
-    - derive/^e/w/      # 输入 w 可匹配 e 开头的词
-    - derive/e$/w/      # 输入 w 可匹配 e 结尾的词
+    - derive/^w/e/
+    - derive/w$/e/
+    - derive/^e/w/
+    - derive/e$/w/
     
     # RT 共键：R 和 T 互相模糊
     - derive/^r/t/
@@ -125,7 +152,6 @@ patch:
     - derive/n$/b/
 
   # ========== 禁用除 aj(日语) aw(英语) 外的特殊前缀 ==========
-  # 只保留 aj 和 aw 的 recognizer patterns，移除其他
   "recognizer/patterns/reverse_moqima":  # 禁用 amq 墨奇反查
   "recognizer/patterns/radical_flypy":   # 禁用 az 部件组字
   "recognizer/patterns/reverse_stroke":  # 禁用 ab 笔画反查
@@ -133,14 +159,3 @@ patch:
   "recognizer/patterns/reverse_zrlf":    # 禁用 alf 自然两分
   "recognizer/patterns/add_user_dict":   # 禁用 ac 自造词
   "recognizer/patterns/emojis":          # 禁用 ae Emoji
-
-  # 移除相关的 segmentors
-  "engine/segmentors":
-    - ascii_segmentor
-    - matcher
-    - abc_segmentor
-    - punct_segmentor
-    # 保留 aj 和 aw 相关
-    - affix_segmentor@easy_en_simp
-    - affix_segmentor@jp_sela
-    - fallback_segmentor
