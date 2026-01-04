@@ -774,8 +774,8 @@ preset_keyboards:
       - {click: key_symbol_cn, width: 12}
       - {click: Keyboard_number, width: 12}
       - {click: key_switch_cn, long_click: F4, swipe_left: LANGUAGE_SWITCH, swipe_right: PROG_RED, width: 12}
-      - {click: key_space_cn, long_click: Keyboard_eng, swipe_left: Left, swipe_right: Right, width: 40}
-      - {click: key_punct_cn, long_click: "。", width: 12}
+      - {click: key_space_cn, long_click: Keyboard_eng, swipe_left: Left, swipe_right: Right, width: 40, swipe_up: Keyboard_eng}
+      - {click: key_punct_cn, long_click: "。", width: 12, swipe_up: "。"}
       - {click: key_return, width: 12}
 
   # ========== 英文26键 ==========
@@ -824,8 +824,8 @@ preset_keyboards:
       - {click: key_symbol_en, width: 12}
       - {click: Keyboard_number, width: 12}
       - {click: key_switch_en, long_click: F4, swipe_left: LANGUAGE_SWITCH, swipe_right: PROG_RED, width: 12}
-      - {click: key_space_en, long_click: Keyboard_ch, swipe_left: Left, swipe_right: Right, width: 40}
-      - {click: key_punct_en, long_click: ".", width: 12}
+      - {click: key_space_en, long_click: Keyboard_ch, swipe_left: Left, swipe_right: Right, width: 40, swipe_up: Keyboard_ch}
+      - {click: key_punct_en, long_click: ".", width: 12, swipe_up: "."}
       - {click: key_return_en, width: 12}
 
   # ========== 数字键盘（统一，使用 Keyboard_last_lock 返回） ==========
