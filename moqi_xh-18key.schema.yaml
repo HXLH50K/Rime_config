@@ -57,15 +57,18 @@ speller:
     - derive|^(.+)[[](\w)(\w)$|$1$2$3o|         # 整句单字 syffo
     - derive|^(.+)[[](\w)(\w)$|$1$2$3/|         # 整句单字 syff/
     
-    # ========== 飞键规则 ==========
-    - derive/^([y])j/$1f/
-    - derive/^qx/qw/
-    - derive/^xq/xo/
-    - derive/^qq/qo/
-    - derive/^ww/wi/
-    - derive/^j([a-twyz])/f$1/                  # j -> f互击
-    - derive/^([y])h/$1g/
-    - derive/^([rsgv])c/$1n/
+    # ========== 飞键规则（18键已禁用，由共键模糊替代）==========
+    # 原版飞键规则会与18键共键模糊冲突，例如：
+    # - derive/^ww/wi/ 会导致 wi 优先匹配 ww 而非 wo
+    # 以下规则已禁用：
+    # - derive/^([y])j/$1f/
+    # - derive/^qx/qw/
+    # - derive/^xq/xo/
+    # - derive/^qq/qo/
+    # - derive/^ww/wi/
+    # - derive/^j([a-twyz])/f$1/
+    # - derive/^([y])h/$1g/
+    # - derive/^([rsgv])c/$1n/
     
     # ========== 18键共键模糊（音码部分：声母位置） ==========
     # WE 共键
