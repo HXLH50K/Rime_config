@@ -771,12 +771,13 @@ preset_keyboards:
       - {click: key_M, long_click: "0", swipe_up: "0", width: 12.3}
       - {click: key_backspace, width: 14.6}
       # 第4行：功能键
-      - {click: key_symbol_cn, width: 12}
-      - {click: Keyboard_number, width: 12}
-      - {click: key_switch_cn, long_click: F4, swipe_left: LANGUAGE_SWITCH, swipe_right: PROG_RED, width: 12}
-      - {click: key_space_cn, long_click: Keyboard_eng, swipe_left: Left, swipe_right: Right, width: 40, swipe_up: Keyboard_eng}
-      - {click: key_punct_cn, long_click: "。", width: 12, swipe_up: "。"}
-      - {click: key_return, width: 12}
+      - {click: key_symbol_cn, width: 11}
+      - {click: Keyboard_number, width: 11}
+      - {click: key_comma_cn, long_click: ",", swipe_up: key_ascii_comma, width: 11}
+      - {click: key_space_cn, width: 34}
+      - {click: key_period_cn, long_click: ".", swipe_up: key_ascii_period, width: 11}
+      - {click: key_switch_cn, long_click: key_lang_switch, swipe_up: F4, swipe_right: PROG_RED, width: 11}
+      - {click: key_return, width: 11}
 
   # ========== 英文26键 ==========
   qwerty26:
@@ -821,12 +822,13 @@ preset_keyboards:
       - {click: m, label: m, long_click: ":", swipe_up: ":", swipe_down: M}
       - {click: key_backspace_en, width: 15}
       # 第4行：功能键
-      - {click: key_symbol_en, width: 12}
-      - {click: Keyboard_number, width: 12}
-      - {click: key_switch_en, long_click: F4, swipe_left: LANGUAGE_SWITCH, swipe_right: PROG_RED, width: 12}
-      - {click: key_space_en, long_click: Keyboard_ch, swipe_left: Left, swipe_right: Right, width: 40, swipe_up: Keyboard_ch}
-      - {click: key_punct_en, long_click: ".", width: 12, swipe_up: "."}
-      - {click: key_return_en, width: 12}
+      - {click: key_symbol_en, width: 11}
+      - {click: Keyboard_number, width: 11}
+      - {click: key_comma_en, width: 11}
+      - {click: key_space_en, width: 34}
+      - {click: key_period_en, width: 11}
+      - {click: key_switch_en, long_click: key_lang_switch, swipe_up: F4, swipe_right: PROG_RED, width: 11}
+      - {click: key_return_en, width: 11}
 
   # ========== 数字键盘（统一，使用 Keyboard_last_lock 返回） ==========
   number:
@@ -1012,33 +1014,51 @@ preset_keys:
     repeatable: true
 
   # ========== 第四行：功能键 ==========
-  # 中文标点：点击逗号 (long_click 在键盘布局中定义)
-  key_punct_cn:
-    label: "，"
-    send: ","
-  # 英文标点：点击逗号 (long_click 在键盘布局中定义)
-  key_punct_en:
+  # ASCII逗号和句号（使用commit直接提交，绕过Rime处理）
+  key_ascii_comma:
     label: ","
-    send: ","
+    commit: ","
+  key_ascii_period:
+    label: "."
+    commit: "."
+  # 中文逗号键（点击输出中文逗号，上滑输出英文逗号）
+  key_comma_cn:
+    label: "，"
+    commit: "，"
+  # 中文句号键（点击输出中文句号，上滑输出英文句号）
+  key_period_cn:
+    label: "。"
+    commit: "。"
+  # 英文逗号键
+  key_comma_en:
+    label: ","
+    commit: ","
+  # 英文句号键
+  key_period_en:
+    label: "."
+    commit: "."
+  # 切换系统输入法键（长按使用，无显示标签）
+  key_lang_switch:
+    label: " "
+    send: LANGUAGE_SWITCH
   # 切换输入法键（中文键盘用）
-  # 点击: 切换系统输入法 (long_click/swipe 在键盘布局中定义)
+  # 点击: 切换EN/中文, 上滑: F4, 长按: 切换系统输入法, 右滑: 皮肤
   key_switch_cn:
     label: "⌘"
-    send: LANGUAGE_SWITCH
+    select: qwerty26
+    send: Eisu_toggle
   # 切换输入法键（英文键盘用）
+  # 点击: 切换EN/中文, 上滑: F4, 长按: 切换系统输入法, 右滑: 皮肤
   key_switch_en:
     label: "⌘"
-    send: LANGUAGE_SWITCH
+    select: default
+    send: Eisu_toggle
   key_space_cn:
     label: "␣"
     send: space
-    swipe_left: Left
-    swipe_right: Right
   key_space_en:
     label: "␣"
     send: space
-    swipe_left: Left
-    swipe_right: Right
   key_space_num:
     label: "␣"
     send: space
