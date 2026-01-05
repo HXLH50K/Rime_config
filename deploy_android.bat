@@ -5,8 +5,10 @@ REM Lua 文件：精确输入处理器和过滤器（依赖 sbxlm.lib）
 
 REM 配置文件
 adb push trime.custom.yaml /sdcard/rime
-adb push moqi_xh-trime.custom.yaml /sdcard/rime
-adb push moqi_xh-trime.schema.yaml /sdcard/rime
+@REM adb push moqi_xh-trime.custom.yaml /sdcard/rime
+@REM adb push moqi_xh-trime.schema.yaml /sdcard/rime
+adb push moqi_xh-18key.custom.yaml /sdcard/rime
+adb push moqi_xh-18key.schema.yaml /sdcard/rime
 adb shell rm /sdcard/rime/build/shouxin_18key.trime.yaml
 adb push shouxin_18key.trime.yaml /sdcard/rime
 

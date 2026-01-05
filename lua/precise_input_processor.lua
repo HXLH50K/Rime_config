@@ -1,13 +1,15 @@
 -- precise_input_processor.lua
--- 精确输入处理器：拦截大写字母，记录精确输入序列，转换为小写发送给 speller
--- 
--- 使用场景：18键模糊输入时，滑动发送大写字母作为"精确输入标记"
--- 点击发送小写字母（触发模糊匹配），滑动发送大写字母（精确匹配）
+-- 精确输入处理器 v2：支持18键形码引导键方案
 --
--- 工作原理：
--- 1. 拦截大写字母输入（A-Z）
--- 2. 将大写字母位置记录到 precise_input_map（用于 filter 过滤）
--- 3. 转换为小写字母发送给引擎
+-- 功能：
+-- 1. 拦截大写字母输入（A-Z），记录为精确输入位置，转换为小写发送
+-- 2. 处理形码引导键 [ 的输入
+-- 3. 记录输入结构（音码/形码边界）
+--
+-- 使用场景：18键模糊输入时
+-- - 点击发送小写字母（触发模糊匹配）
+-- - 滑动发送大写字母（精确匹配）
+-- - 点击引导键发送 [（进入形码输入）
 --
 -- 配合 precise_input_filter.lua 使用
 -- 参考：lua/sbxlm/upper_case.lua
@@ -23,7 +25,7 @@ local function processor(key, env)
     local keycode = key.keycode
     local context = env.engine.context
     
-    -- 如果是 ASCII 模式（英文模式），不拦截任何按键，让 ascii_composer 处理
+    -- 如果是 ASCII 模式（英文模式），不拦截任何按键
     if context:get_option("ascii_mode") then
         return rime.process_results.kNoop
     end
@@ -54,32 +56,80 @@ local function processor(key, env)
         return rime.process_results.kAccepted
     end
     
+    -- 检查是否是形码引导键 [ (keycode = 91)
+    if keycode == 91 then
+        local input = context.input or ""
+        
+        -- 防止连续输入多个 [
+        if input:sub(-1) == "[" then
+            return rime.process_results.kAccepted
+        end
+        
+        -- 记录形码引导位置（用于解析输入结构）
+        local aux_positions = context:get_property("auxiliary_positions") or ""
+        local pos = #input + 1
+        if #aux_positions > 0 then
+            aux_positions = aux_positions .. "," .. tostring(pos)
+        else
+            aux_positions = tostring(pos)
+        end
+        context:set_property("auxiliary_positions", aux_positions)
+        
+        -- 发送 [ 到输入
+        context:push_input("[")
+        
+        return rime.process_results.kAccepted
+    end
+    
     -- 检查是否是退格键 (BackSpace = 0xff08 = 65288)
     if keycode == 65288 or keycode == 0xff08 then
-        -- 需要更新精确输入记录
-        local precise_map = context:get_property("precise_input_map") or ""
-        if #precise_map > 0 and #context.input > 0 then
-            -- 解析当前记录
-            local positions = {}
-            for p in string.gmatch(precise_map, "(%d+)") do
-                local pos_num = tonumber(p)
-                if pos_num < #context.input then
-                    -- 保留比当前输入长度小的位置
-                    table.insert(positions, pos_num)
+        local input = context.input or ""
+        local input_len = #input
+        
+        if input_len > 0 then
+            -- 更新精确输入记录
+            local precise_map = context:get_property("precise_input_map") or ""
+            if #precise_map > 0 then
+                local positions = {}
+                for p in string.gmatch(precise_map, "(%d+)") do
+                    local pos_num = tonumber(p)
+                    if pos_num < input_len then
+                        table.insert(positions, pos_num)
+                    end
                 end
+                context:set_property("precise_input_map", table.concat(positions, ","))
             end
-            -- 重建记录
-            context:set_property("precise_input_map", table.concat(positions, ","))
+            
+            -- 更新形码引导位置记录
+            local aux_positions = context:get_property("auxiliary_positions") or ""
+            if #aux_positions > 0 then
+                local positions = {}
+                for p in string.gmatch(aux_positions, "(%d+)") do
+                    local pos_num = tonumber(p)
+                    if pos_num < input_len then
+                        table.insert(positions, pos_num)
+                    end
+                end
+                context:set_property("auxiliary_positions", table.concat(positions, ","))
+            end
         end
+        
         -- 让其他 processor 处理退格
         return rime.process_results.kNoop
     end
     
     -- 检查是否是 Escape (0xff1b = 65307)
     if keycode == 65307 or keycode == 0xff1b then
-        -- 清空精确输入记录
+        -- 清空所有记录
         context:set_property("precise_input_map", "")
+        context:set_property("auxiliary_positions", "")
         return rime.process_results.kNoop
+    end
+    
+    -- 检查是否是空格或回车（提交时清空记录）
+    if keycode == 32 or keycode == 65293 or keycode == 0xff0d then
+        -- 提交后清空记录（由 filter 或其他机制处理）
+        -- 这里不清空，因为可能是选字而非提交
     end
     
     -- 其他按键不处理
