@@ -62,8 +62,8 @@ patch:
     - simplifier@big_char_set
     - simplifier@traditionalize
     - simplifier@mars
-    - uniquifier
-    - lua_filter@*precise_input_filter  # 精确输入过滤器（放在最后）
+    - lua_filter@*precise_input_filter  # 精确输入过滤器
+    - uniquifier                         # 去重（放在最后，确保所有候选都被去重）
 
   # ========== 快捷键（手机版简化） ==========
   "key_binder/bindings":

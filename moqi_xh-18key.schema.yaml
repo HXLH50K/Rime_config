@@ -97,30 +97,31 @@ speller:
     - derive/^n([a-z])/b$1/
     
     # ========== 18键共键模糊（音码部分：韵母位置） ==========
+    # 匹配第2位字母（韵母），后面可能是 $ 或 [辅助码
     # WE 共键
-    - derive/^([a-z])w$/$1e/
-    - derive/^([a-z])e$/$1w/
+    - derive/^([a-z])w([^a-z]|$)/$1e$2/
+    - derive/^([a-z])e([^a-z]|$)/$1w$2/
     # RT 共键
-    - derive/^([a-z])r$/$1t/
-    - derive/^([a-z])t$/$1r/
+    - derive/^([a-z])r([^a-z]|$)/$1t$2/
+    - derive/^([a-z])t([^a-z]|$)/$1r$2/
     # IO 共键
-    - derive/^([a-z])i$/$1o/
-    - derive/^([a-z])o$/$1i/
+    - derive/^([a-z])i([^a-z]|$)/$1o$2/
+    - derive/^([a-z])o([^a-z]|$)/$1i$2/
     # SD 共键
-    - derive/^([a-z])s$/$1d/
-    - derive/^([a-z])d$/$1s/
+    - derive/^([a-z])s([^a-z]|$)/$1d$2/
+    - derive/^([a-z])d([^a-z]|$)/$1s$2/
     # FG 共键
-    - derive/^([a-z])f$/$1g/
-    - derive/^([a-z])g$/$1f/
+    - derive/^([a-z])f([^a-z]|$)/$1g$2/
+    - derive/^([a-z])g([^a-z]|$)/$1f$2/
     # JK 共键
-    - derive/^([a-z])j$/$1k/
-    - derive/^([a-z])k$/$1j/
+    - derive/^([a-z])j([^a-z]|$)/$1k$2/
+    - derive/^([a-z])k([^a-z]|$)/$1j$2/
     # XC 共键
-    - derive/^([a-z])x$/$1c/
-    - derive/^([a-z])c$/$1x/
+    - derive/^([a-z])x([^a-z]|$)/$1c$2/
+    - derive/^([a-z])c([^a-z]|$)/$1x$2/
     # BN 共键
-    - derive/^([a-z])b$/$1n/
-    - derive/^([a-z])n$/$1b/
+    - derive/^([a-z])b([^a-z]|$)/$1n$2/
+    - derive/^([a-z])n([^a-z]|$)/$1b$2/
     
     # ========== 18键共键模糊（形码部分：第1位） ==========
     # 形码以 [ 引导，需要对 [后的字符应用模糊
