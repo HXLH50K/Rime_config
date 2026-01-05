@@ -23,6 +23,11 @@ local function processor(key, env)
     local keycode = key.keycode
     local context = env.engine.context
     
+    -- 如果是 ASCII 模式（英文模式），不拦截任何按键，让 ascii_composer 处理
+    if context:get_option("ascii_mode") then
+        return rime.process_results.kNoop
+    end
+    
     -- 检查是否是大写字母 (A=65, Z=90)
     if keycode >= 65 and keycode <= 90 then
         -- 转换为小写字母
