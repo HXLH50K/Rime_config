@@ -1059,12 +1059,14 @@ preset_keys:
     label: "."
     commit: "."
   # 中文逗号键（点击输出中文逗号，上滑输出英文逗号）
+  # 使用左侧填充半角空格来平衡中文标点的左偏显示
   key_comma_cn:
-    label: "，"
+    label: " ，"
     commit: "，"
   # 中文句号键（点击输出中文句号，上滑输出英文句号）
+  # 使用左侧填充半角空格来平衡中文标点的左偏显示
   key_period_cn:
-    label: "。"
+    label: " 。"
     commit: "。"
   # 英文逗号键
   key_comma_en:
