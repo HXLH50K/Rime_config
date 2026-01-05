@@ -4,7 +4,7 @@
 
 name: "手心18键"
 author: "Custom"
-config_version: 0.0.80
+config_version: 0.0.85
 
 # 颜色定义
 fallback_colors:
@@ -776,13 +776,13 @@ preset_keyboards:
       - {click: key_M, long_click: "0", swipe_up: "0", width: 12.3}
       - {click: key_backspace, width: 14.6}
       # 第4行：功能键
-      - {click: key_symbol_cn, width: 14.6}
-      - {click: Keyboard_number, width: 11}
-      - {click: key_comma_cn, long_click: ",", swipe_up: key_ascii_comma, width: 8}
-      - {click: key_space_cn, width: 32.8}
-      - {click: key_period_cn, long_click: ".", swipe_up: key_ascii_period, width: 8}
-      - {click: key_switch_cn, long_click: key_lang_switch, swipe_up: F4, swipe_right: PROG_RED, width: 11}
-      - {click: key_return, width: 14.6}
+      - {click: key_symbol_cn, width: 15}
+      - {click: Keyboard_number, width: 12}
+      - {click: key_comma_cn, long_click: ",", swipe_up: key_ascii_comma, width: 10}
+      - {click: key_space_cn, width: 26}
+      - {click: key_period_cn, long_click: ".", swipe_up: key_ascii_period, width: 10}
+      - {click: key_switch_cn, long_click: key_lang_switch, swipe_up: F4, swipe_right: PROG_RED, width: 12}
+      - {click: key_return, width: 15}
       # 底部留白（避免与系统导航栏冲突）
       - *bottom_padding
 
@@ -829,13 +829,13 @@ preset_keyboards:
       - {click: m, label: m, long_click: ":", swipe_up: ":", swipe_down: M}
       - {click: key_backspace_en, width: 15}
       # 第4行：功能键
-      - {click: key_symbol_en, width: 14.6}
-      - {click: Keyboard_number, width: 11}
-      - {click: key_comma_en, width: 8}
-      - {click: key_space_en, width: 32.8}
-      - {click: key_period_en, width: 8}
-      - {click: key_switch_en, long_click: key_lang_switch, swipe_up: F4, swipe_right: PROG_RED, width: 11}
-      - {click: key_return_en, width: 14.6}
+      - {click: key_symbol_en, width: 15}
+      - {click: Keyboard_number, width: 12}
+      - {click: key_comma_en, width: 10}
+      - {click: key_space_en, width: 26}
+      - {click: key_period_en, width: 10}
+      - {click: key_switch_en, long_click: key_lang_switch, swipe_up: F4, swipe_right: PROG_RED, width: 12}
+      - {click: key_return_en, width: 15}
       # 底部留白（避免与系统导航栏冲突）
       - *bottom_padding
 
