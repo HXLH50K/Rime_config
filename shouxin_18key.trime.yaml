@@ -763,7 +763,7 @@ preset_keyboards:
       - {width: 6.1}
       # 第3行：字母键+退格 (长按与上滑统一)
       # 滑动发送大写字母作为精确输入标记
-      - {click: key_auxiliary, composing: "[", swipe_up: "'", width: 14.6}
+      - {click: key_auxiliary, composing: key_auxiliary_composing, swipe_up: "'", width: 14.6}
       - {click: key_Z, long_click: "@", swipe_up: "@", width: 12.3}
       - {click: key_XC, long_click: "7", swipe_up: "7", swipe_left: X, swipe_right: C, width: 16.9}
       - {click: key_V, long_click: "8", swipe_up: "8", width: 12.3}
@@ -985,10 +985,14 @@ preset_keys:
   # - 上滑: 发送 ' (分词)
   # 非输入态无任何操作（functional: true + composing）
   key_auxiliary:
-    label: "形'"
+    label: "㇕'"
     functional: true
     composing: "["
     swipe_up: "'"
+  # 形码引导键（输入态专用）：显示㇕'但发送[
+  key_auxiliary_composing:
+    label: "㇕'"
+    send: "["
   # 保留原分词键定义（兼容）
   key_fenci:
     label: "词'"
