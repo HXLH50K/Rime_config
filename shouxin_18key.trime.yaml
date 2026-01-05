@@ -897,11 +897,11 @@ preset_keyboards:
       - {click: End}
       - {click: cut}
       - {click: key_space_num}
-      # Row 4: [空40%] | 结尾 | 全选 | 返回
+      # Row 4: [空40%] | 结尾 | 全选 | 回车
       - {width: 40}
       - {click: doc_end}
       - {click: select_all}
-      - {click: Keyboard_last_lock}
+      - {click: key_return}
       # 底部留白（避免与系统导航栏冲突）
       - *bottom_padding
 
@@ -1342,7 +1342,10 @@ tool_bar:
     - {action: Hide, foreground: {style: "ic@keyboard_close"}}
     - {action: liquid_keyboard_emoji, foreground: {style: "ic@emoticon"}}
     - {action: liquid_keyboard_clipboard, foreground: {style: "ic@clipboard"}}
+    # 编辑按钮：进入edit_keyboard
     - {action: Keyboard_edit, foreground: {style: "ic@cursor_text"}}
+    # 键盘按钮：返回上一个lock键盘
+    - {action: Keyboard_last_lock, foreground: {style: "ic@keyboard"}}
     - {action: F4, foreground: {style: "ic@settings"}}
   emoji_button:
     action: liquid_keyboard_emoji
