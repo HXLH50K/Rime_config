@@ -699,6 +699,7 @@ style:
   key_long_text_size: 20
   key_text_size: 20
   key_width: 10.0
+  keyboard_padding_bottom: 20
   keyboard_height: 248
   keyboard_height_land: 203
   keyboards:
@@ -724,11 +725,6 @@ style:
   vertical_gap: 6
 
 # ==================== 键盘基类定义（使用锚点） ====================
-# 底部留白（避免与系统导航栏/手势条冲突）
-_bottom_padding: &bottom_padding
-  width: 100
-  height: 5
-
 # 数字键盘基类
 _number_base: &number_base
   author: "Custom"
@@ -783,8 +779,6 @@ preset_keyboards:
       - {click: key_period_cn, long_click: ".", swipe_up: key_ascii_period, width: 10}
       - {click: key_switch_cn, long_click: key_lang_switch, swipe_up: F4, swipe_right: PROG_RED, width: 12}
       - {click: key_return, width: 15}
-      # 底部留白（避免与系统导航栏冲突）
-      - *bottom_padding
 
   # ========== 英文26键 ==========
   qwerty26:
@@ -836,8 +830,6 @@ preset_keyboards:
       - {click: key_period_en, width: 10}
       - {click: key_switch_en, long_click: key_lang_switch, swipe_up: F4, swipe_right: PROG_RED, width: 12}
       - {click: key_return_en, width: 15}
-      # 底部留白（避免与系统导航栏冲突）
-      - *bottom_padding
 
   # ========== 数字键盘（统一，使用 Keyboard_last_lock 返回） ==========
   number:
@@ -864,8 +856,6 @@ preset_keyboards:
       - {click: "0", label: "0"}
       - {click: key_space_num}
       - {click: key_return}
-      # 底部留白（避免与系统导航栏冲突）
-      - *bottom_padding
 
   # ========== 编辑键盘（光标控制） ==========
   edit_keyboard:
@@ -902,8 +892,6 @@ preset_keyboards:
       - {click: doc_end}
       - {click: select_all}
       - {click: key_return}
-      # 底部留白（避免与系统导航栏冲突）
-      - *bottom_padding
 
 # ==================== 预设按键基类 ====================
 # 返回键基类
