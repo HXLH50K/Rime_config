@@ -4,7 +4,7 @@
 
 name: "手心18键"
 author: "Custom"
-config_version: 0.0.85
+config_version: 0.0.86
 
 # 颜色定义
 fallback_colors:
@@ -779,7 +779,7 @@ preset_keyboards:
       - {click: key_symbol_cn, width: 15}
       - {click: Keyboard_number, width: 12}
       - {click: key_comma_cn, long_click: ",", swipe_up: key_ascii_comma, width: 10}
-      - {click: key_space_cn, width: 26}
+      - {click: key_space_cn, swipe_left: Left, swipe_right: Right, width: 26}
       - {click: key_period_cn, long_click: ".", swipe_up: key_ascii_period, width: 10}
       - {click: key_switch_cn, long_click: key_lang_switch, swipe_up: F4, swipe_right: PROG_RED, width: 12}
       - {click: key_return, width: 15}
@@ -832,7 +832,7 @@ preset_keyboards:
       - {click: key_symbol_en, width: 15}
       - {click: Keyboard_number, width: 12}
       - {click: key_comma_en, width: 10}
-      - {click: key_space_en, width: 26}
+      - {click: key_space_en, swipe_left: Left, swipe_right: Right, width: 26}
       - {click: key_period_en, width: 10}
       - {click: key_switch_en, long_click: key_lang_switch, swipe_up: F4, swipe_right: PROG_RED, width: 12}
       - {click: key_return_en, width: 15}
