@@ -715,7 +715,7 @@ style:
   preview_offset: "-32"
   preview_text_size: 40
   proximity_correction: false
-  reset_ascii_mode: false
+  reset_ascii_mode: true
   round_corner: 8
   shadow_radius: 0.0
   symbol_font: symbol.ttf
@@ -736,9 +736,11 @@ _number_base: &number_base
 preset_keyboards:
   # ========== 中文18键 ==========
   default:
-    ascii_mode: 0
-    author: "hxlh50k"
     name: "手心式18键"
+    author: "hxlh50k"
+    ascii_mode: 0
+    ascii_keyboard: qwerty26 # 使用26键作为ASCII输入法。Not Work in Trime 3.3.8
+    reset_ascii_mode: true
     width: 12.3
     height: 59
     lock: true
@@ -782,9 +784,9 @@ preset_keyboards:
 
   # ========== 英文26键 ==========
   qwerty26:
-    ascii_mode: 1
-    author: "Trime"
     name: "全键盘"
+    author: "hxlh50k"
+    ascii_mode: 1
     width: 10
     height: 59
     lock: true
