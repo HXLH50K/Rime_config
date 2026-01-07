@@ -27,14 +27,96 @@ schema:
     - jp_sela
     - moqi_big
 
+# ========== Switches ==========
+switches:
+  - name: ascii_mode
+    states: [ 中文, 西文 ]
+  - name: full_shape
+    states: [ 半角, 全角 ]
+  - name: traditionalization
+    states: [ 简, 繁 ]
+  - name: emoji
+    states: [ 💀, 😄 ]
+  - name: chaifen
+    states: [ 不拆, 扌斥 ]
+  - name: big_char_set
+    states: [ 大字集, 小字集 ]
+  - name: mars
+    reset: 0
+    states: [ 地, 煋 ]
+  - name: ascii_punct
+    states: [ 。，, ．， ]
+
+# ========== Menu ==========
+menu:
+  page_size: 9
+
+# ========== Engine (18键专用) ==========
+engine:
+  processors:
+    - lua_processor@*precise_input_processor  # 精确输入处理器（必须在最前）
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - affix_segmentor@easy_en_simp
+    - affix_segmentor@jp_sela
+    - fallback_segmentor
+  translators:
+    # lua翻译器
+    - lua_translator@*date_translator
+    - lua_translator@*lunar
+    - lua_translator@*unicode
+    - lua_translator@*number_translator
+    - lua_translator@*calculator
+    - punct_translator
+    # 码表翻译器
+    - table_translator@custom_phrase_3_code
+    - table_translator@custom_phrase_kf
+    - table_translator@custom_phrase_mqzg
+    - table_translator@big_char_set
+    - table_translator@easy_en_simp
+    - table_translator@jp_sela
+    # 脚本翻译器
+    - script_translator
+    - script_translator@user_dict_set
+  filters:
+    - lua_filter@*pro_comment_format
+    - lua_filter@*is_in_user_dict
+    - reverse_lookup_filter@reverse_lookup
+    - simplifier@chaifen
+    - simplifier@chaifen_all
+    - simplifier@chinese_english
+    - simplifier@big_char_set
+    - simplifier@traditionalize
+    - simplifier@mars
+    - lua_filter@*precise_input_filter  # 精确输入过滤器
+    - uniquifier                         # 去重（放在最后，确保所有候选都被去重）
+
 # 引入基础配置
-__include: moqi.yaml:/switches_engine
 __include: moqi.yaml:/phrase
 __include: moqi.yaml:/reverse
 __include: moqi.yaml:/opencc_config
-__include: moqi.yaml:/punctuator
 __include: moqi.yaml:/guide
 __include: moqi.yaml:/big_char_and_user_dict
+
+# ========== 标点配置（18键专用） ==========
+# 禁用 / 的候选，直接输出 /
+punctuator:
+  full_shape:
+    __include: default:/punctuator/full_shape
+  half_shape:
+    __include: default:/punctuator/half_shape
+    "/": "/"   # 直接输出 /，不显示候选
 
 # ========== 18键专用 Speller 配置 ==========
 speller:
@@ -182,26 +264,24 @@ translator:
     - "xform/(^|[ '])[^[]+[[]/$1/"   # 编码提示只显示辅助码部分
   enable_user_dict: true
 
-# ========== 快捷键配置 ==========
+# ========== 快捷键配置（手机版简化） ==========
 key_binder:
   import_preset: default
   bindings:
     # 分号选2
     - { when: has_menu, accept: semicolon, send: 2 }
-    # Ctrl快捷键
-    - { when: composing, accept: Control+m, send: Return }
-    - { when: composing, accept: Control+w, send: Control+BackSpace }
-    - { when: composing, accept: Control+i, send: Shift+Right }
-    - { when: composing, accept: Control+o, send: Shift+Left }
-    # 开关切换
-    - { when: has_menu, accept: "Control+u", toggle: big_char_set }
-    - { when: has_menu, accept: "Control+p", toggle: chaifen }
-    - { when: has_menu, accept: "Control+l", toggle: chaifen_all }
-    - { when: has_menu, accept: "Control+e", toggle: chinese_english }
-    # Tab/./上屏（保留，手机上可能通过其他方式触发）
-    - { match: "[a-z]{1,3}", accept: Tab, send_sequence: "/1" }
-    - { match: "[a-z]{1,3}", accept: "/", send_sequence: "/1" }
-    - { match: "[a-z]{1,3}", accept: ".", send_sequence: "/1" }
+
+# ========== Recognizer 配置（禁用不需要的模式） ==========
+recognizer:
+  patterns:
+    punct:            # 禁用 / 开头的符号输入
+    reverse_moqima:   # 禁用 amq 墨奇反查
+    radical_flypy:    # 禁用 az 部件组字
+    reverse_stroke:   # 禁用 ab 笔画反查
+    reverse_cj:       # 禁用 arj 仓颉反查
+    reverse_zrlf:     # 禁用 alf 自然两分
+    add_user_dict:    # 禁用 ac 自造词
+    emojis:           # 禁用 ae Emoji
 
 # 语言模型
 __include: moqi:/octagram/enable_for_sentence
