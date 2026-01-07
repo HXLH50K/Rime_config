@@ -774,7 +774,7 @@ preset_keyboards:
       - {click: key_M, long_click: "0", swipe_up: "0", width: 12.3}
       - {click: key_backspace, swipe_up: key_control_backspace, width: 14.6}
       # 第4行：功能键
-      - {click: key_symbol_cn, width: 15}
+      - {click: key_symbol, width: 15}
       - {click: Keyboard_number, width: 12}
       - {click: key_comma_cn, long_click: ",", swipe_up: key_ascii_comma, width: 10}
       - {click: key_space, width: 26}
@@ -825,7 +825,7 @@ preset_keyboards:
       - {click: m, label: m, long_click: ":", swipe_up: ":", swipe_down: M}
       - {click: key_backspace, swipe_up: key_control_backspace, width: 15}
       # 第4行：功能键
-      - {click: key_symbol_en, width: 15}
+      - {click: key_symbol, width: 15}
       - {click: Keyboard_number, width: 12}
       - {click: key_comma_en, width: 10}
       - {click: key_space, width: 26}
@@ -853,7 +853,7 @@ preset_keyboards:
       - {click: "8", label: "8"}
       - {click: "9", label: "9"}
       - {click: ":", label: ":"}
-      - {click: key_symbol_cn}
+      - {click: key_symbol}
       - {click: Keyboard_last_lock}
       - {click: "0", label: "0"}
       - {click: key_space_num}
@@ -948,19 +948,12 @@ preset_keys:
 
   # ========== 符号键（触发液态符号键盘） ==========
   # 中文键盘/数字键盘(中文)共用
-  key_symbol_cn:
+  key_symbol:
     label: "#+="
     functional: true
     send: function
     command: liquid_keyboard
-    option: "中文标点"
-  # 英文键盘/数字键盘(英文)共用
-  key_symbol_en:
-    label: "#+="
-    functional: true
-    send: function
-    command: liquid_keyboard
-    option: "英文标点"
+    option: "常用"
 
   # ========== 返回键（已改用 Keyboard_last_lock） ==========
   # 保留 key_back_base 锚点定义，但不再使用 key_back_to_cn/key_back_to_en
@@ -1238,7 +1231,10 @@ liquid_keyboard:
       - Return1
       - space1
       - liquid_keyboard_exit
-  keyboards: [剪贴, 表情, 中文标点, 英文标点, 数学符号, 序号, 特殊符号, 箭头, 货币单位, 日文假名]
+  keyboards: [常用, 剪贴, 表情, 中文标点, 英文标点, 数学符号, 序号, 特殊符号, 箭头, 货币单位, 日文假名]
+  常用:
+    name: 常用
+    type: HISTORY
   剪贴:
     name: 剪贴
     type: CLIPBOARD
