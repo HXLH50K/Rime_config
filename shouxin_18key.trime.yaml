@@ -815,7 +815,7 @@ preset_keyboards:
       - {click: l, label: l, long_click: "%", swipe_up: "%", swipe_down: L}
       - {width: 5}
       # 第3行：Shift + z-m + 退格
-      - {click: key_shift_en, width: 15}
+      - {click: key_shift, long_click: key_capslock, width: 15}
       - {click: z, label: z, long_click: "&", swipe_up: "&", swipe_down: Z}
       - {click: x, label: x, long_click: "*", swipe_up: "*", swipe_down: X}
       - {click: c, label: c, long_click: "(", swipe_up: "(", swipe_down: C}
@@ -1107,11 +1107,15 @@ preset_keys:
     send: Return
 
   # ========== 英文键盘专用功能键 ==========
-  key_shift_en:
+  key_shift:
     label: "⇧"
     functional: true
     send: Shift_L
-    shift_lock: ascii_long
+  key_capslock:
+    label: " "
+    functional: true
+    send: Shift_L
+    shift_lock: long
   key_return_en:
     label: "⏎"
     functional: true
