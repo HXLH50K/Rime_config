@@ -3,7 +3,7 @@
 # 使用 YAML 锚点实现键盘继承，减少重复代码
 
 name: "手心18键"
-author: "Custom"
+author: "hxlh50k"
 config_version: 0.0.87
 
 # 颜色定义
@@ -727,7 +727,7 @@ style:
 # ==================== 键盘基类定义（使用锚点） ====================
 # 数字键盘基类
 _number_base: &number_base
-  author: "Custom"
+  author: "hxlh50k"
   name: "数字"
   width: 20
   height: 59
@@ -737,7 +737,7 @@ preset_keyboards:
   # ========== 中文18键 ==========
   default:
     ascii_mode: 0
-    author: "Custom"
+    author: "hxlh50k"
     name: "手心式18键"
     width: 12.3
     height: 59
@@ -861,7 +861,7 @@ preset_keyboards:
   # ========== 编辑键盘（光标控制） ==========
   edit_keyboard:
     ascii_mode: 0
-    author: "Custom"
+    author: "hxlh50k"
     name: "编辑键盘"
     width: 20
     height: 59
@@ -1208,7 +1208,7 @@ preset_keys:
 
 # 液态键盘配置
 liquid_keyboard:
-  author: "Custom"
+  author: "hxlh50k"
   row: 7
   row_land: 5
   key_height: 40
