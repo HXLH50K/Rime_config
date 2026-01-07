@@ -774,12 +774,12 @@ preset_keyboards:
       - {click: key_M, long_click: "0", swipe_up: "0", width: 12.3}
       - {click: key_backspace, swipe_up: key_control_backspace, width: 14.6}
       # 第4行：功能键
-      - {click: key_symbol, width: 15}
-      - {click: Keyboard_number, width: 12}
+      - {click: to_symbol_liquid_keyboard, width: 15}
+      - {click: to_number_keyboard, width: 12}
       - {click: key_comma_cn, long_click: ",", swipe_up: key_ascii_comma, width: 10}
       - {click: key_space, width: 26}
       - {click: key_period_cn, long_click: ".", swipe_up: key_ascii_period, width: 10}
-      - {click: key_switch_cn, long_click: key_lang_switch, swipe_up: F4, swipe_right: PROG_RED, width: 12}
+      - {click: switch_cn_to_en, long_click: key_lang_switch, swipe_up: F4, swipe_right: PROG_RED, width: 12}
       - {click: key_return, width: 15}
 
   # ========== 英文26键 ==========
@@ -825,15 +825,15 @@ preset_keyboards:
       - {click: m, label: m, long_click: ":", swipe_up: ":", swipe_down: M}
       - {click: key_backspace, swipe_up: key_control_backspace, width: 15}
       # 第4行：功能键
-      - {click: key_symbol, width: 15}
-      - {click: Keyboard_number, width: 12}
+      - {click: to_symbol_liquid_keyboard, width: 15}
+      - {click: to_number_keyboard, width: 12}
       - {click: key_comma_en, width: 10}
       - {click: key_space, width: 26}
       - {click: key_period_en, width: 10}
-      - {click: key_switch_en, long_click: key_lang_switch, swipe_up: F4, swipe_right: PROG_RED, width: 12}
+      - {click: switch_en_to_cn, long_click: key_lang_switch, swipe_up: F4, swipe_right: PROG_RED, width: 12}
       - {click: key_return_en, width: 15}
 
-  # ========== 数字键盘（统一，使用 Keyboard_last_lock 返回） ==========
+  # ========== 数字键盘（统一，使用 to_lastlock_keyboard 返回） ==========
   number:
     <<: *number_base
     lock: false
@@ -853,8 +853,8 @@ preset_keyboards:
       - {click: "8", label: "8"}
       - {click: "9", label: "9"}
       - {click: ":", label: ":"}
-      - {click: key_symbol}
-      - {click: Keyboard_last_lock}
+      - {click: to_symbol_liquid_keyboard}
+      - {click: to_lastlock_keyboard}
       - {click: "0", label: "0"}
       - {click: key_space_num}
       - {click: key_return}
@@ -911,44 +911,26 @@ preset_keys:
   VoidSymbol:
     label: ""
 
-  # ========== 中英文切换键 ==========
-  Keyboard_eng:
-    label: "中"
-    select: qwerty26
-    send: Eisu_toggle
-  Keyboard_ch:
-    label: "EN"
-    select: default
-    send: Eisu_toggle
-
   # ========== 键盘切换键 ==========
-  Keyboard_default:
-    label: "18键"
-    send: Eisu_toggle
-    select: default
-  Keyboard_qwerty26:
-    label: "全键"
-    send: Eisu_toggle
-    select: qwerty26
-  Keyboard_number:
+  to_number_keyboard:
     label: "123"
     send: Eisu_toggle
     select: number
     functional: true
   # 智能返回键：返回上一个 lock=true 的键盘
-  Keyboard_last_lock:
+  to_lastlock_keyboard:
     label: "↩"
     send: Eisu_toggle
     select: .last_lock
   # 编辑键盘按钮
-  Keyboard_edit:
+  to_edit_keyboard:
     label: "编辑"
     send: Eisu_toggle
     select: edit_keyboard
 
   # ========== 符号键（触发液态符号键盘） ==========
   # 中文键盘/数字键盘(中文)共用
-  key_symbol:
+  to_symbol_liquid_keyboard:
     label: "#+="
     functional: true
     send: function
@@ -1074,14 +1056,14 @@ preset_keys:
     send: LANGUAGE_SWITCH
   # 切换输入法键（中文键盘用）
   # 点击: 切换EN/中文, 上滑: F4, 长按: 切换系统输入法, 右滑: 皮肤
-  key_switch_cn:
+  switch_cn_to_en:
     label: "⌘"
     functional: true
     select: qwerty26
     send: Eisu_toggle
   # 切换输入法键（英文键盘用）
   # 点击: 切换EN/中文, 上滑: F4, 长按: 切换系统输入法, 右滑: 皮肤
-  key_switch_en:
+  switch_en_to_cn:
     label: "⌘"
     functional: true
     select: default
@@ -1344,9 +1326,9 @@ tool_bar:
     - {action: liquid_keyboard_emoji, foreground: {style: "ic@emoticon"}}
     - {action: liquid_keyboard_clipboard, foreground: {style: "ic@clipboard"}}
     # 编辑按钮：进入edit_keyboard
-    - {action: Keyboard_edit, foreground: {style: "ic@cursor_text"}}
+    - {action: to_edit_keyboard, foreground: {style: "ic@cursor_text"}}
     # 键盘按钮：返回上一个lock键盘
-    - {action: Keyboard_last_lock, foreground: {style: "ic@keyboard"}}
+    - {action: to_lastlock_keyboard, foreground: {style: "ic@keyboard"}}
     - {action: F4, foreground: {style: "ic@settings"}}
   emoji_button:
     action: liquid_keyboard_emoji
