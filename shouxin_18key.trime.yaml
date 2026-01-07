@@ -4,7 +4,7 @@
 
 name: "手心18键"
 author: "hxlh50k"
-config_version: 0.0.88
+config_version: 0.0.89
 
 # 颜色定义
 fallback_colors:
@@ -772,7 +772,7 @@ preset_keyboards:
       - {click: key_V, long_click: "8", swipe_up: "8", width: 12.3}
       - {click: key_BN, long_click: "9", swipe_up: "9", swipe_left: B, swipe_right: N, width: 16.9}
       - {click: key_M, long_click: "0", swipe_up: "0", width: 12.3}
-      - {click: key_backspace, width: 14.6}
+      - {click: key_backspace, swipe_up: key_control_backspace, width: 14.6}
       # 第4行：功能键
       - {click: key_symbol_cn, width: 15}
       - {click: Keyboard_number, width: 12}
@@ -823,7 +823,7 @@ preset_keyboards:
       - {click: b, label: b, long_click: "'", swipe_up: "'", swipe_down: B}
       - {click: n, label: n, long_click: "=", swipe_up: "=", swipe_down: N}
       - {click: m, label: m, long_click: ":", swipe_up: ":", swipe_down: M}
-      - {click: key_backspace, width: 15}
+      - {click: key_backspace, swipe_up: key_control_backspace, width: 15}
       # 第4行：功能键
       - {click: key_symbol_en, width: 15}
       - {click: Keyboard_number, width: 12}
@@ -842,7 +842,7 @@ preset_keyboards:
       - {click: "1", label: "1"}
       - {click: "2", label: "2"}
       - {click: "3", label: "3"}
-      - {click: key_backspace}
+      - {click: key_backspace, swipe_up: key_control_backspace}
       - {click: "-", label: "-"}
       - {click: "4", label: "4"}
       - {click: "5", label: "5"}
@@ -874,7 +874,7 @@ preset_keyboards:
       - {width: 13.33}
       - {click: doc_start}
       - {click: paste}
-      - {click: key_backspace}
+      - {click: key_backspace, swipe_up: key_control_backspace}
       # Row 2: [←13.33][选择13.33][→13.33] | 句首 | 复制 | 剪贴板
       - {click: Left, width: 13.33}
       - {click: select_mode, width: 13.33}
@@ -1041,6 +1041,11 @@ preset_keys:
     label: "⌫"
     functional: true
     send: BackSpace
+    repeatable: true
+  key_control_backspace:
+    label: "⌫"
+    functional: true
+    send: "Control+BackSpace"
     repeatable: true
 
   # ========== 第四行：功能键 ==========
