@@ -821,7 +821,7 @@ preset_keyboards:
       - {click: b, label: b, long_click: "'", swipe_up: "'", swipe_down: B}
       - {click: n, label: n, long_click: "=", swipe_up: "=", swipe_down: N}
       - {click: m, label: m, long_click: ":", swipe_up: ":", swipe_down: M}
-      - {click: key_backspace_en, width: 15}
+      - {click: key_backspace, width: 15}
       # 第4行：功能键
       - {click: key_symbol_en, width: 15}
       - {click: Keyboard_number, width: 12}
@@ -1102,11 +1102,6 @@ preset_keys:
     functional: true
     send: Shift_L
     shift_lock: ascii_long
-  key_backspace_en:
-    label: "⌫"
-    functional: true
-    send: BackSpace
-    repeatable: true
   key_return_en:
     label: "⏎"
     functional: true
