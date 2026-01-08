@@ -18,7 +18,6 @@ schema:
     - 有引导符[：音码2+辅助码2(用户可主动分词)
     设计文档：plans/sharedkey-shuangpin-auxcode-design.md
   dependencies:
-    - emoji
     - easy_en
     - jp_sela
     - moqi_big
@@ -31,10 +30,6 @@ switches:
     states: [ 半角, 全角 ]
   - name: traditionalization
     states: [ 简, 繁 ]
-  - name: emoji
-    states: [ 💀, 😄 ]
-  - name: chaifen
-    states: [ 不拆, 扌斥 ]
   - name: big_char_set
     states: [ 大字集, 小字集 ]
   - name: mars
@@ -91,8 +86,6 @@ engine:
     - lua_filter@*pro_comment_format
     - lua_filter@*is_in_user_dict
     - reverse_lookup_filter@reverse_lookup
-    - simplifier@chaifen
-    - simplifier@chaifen_all
     - simplifier@chinese_english
     - simplifier@big_char_set
     - simplifier@traditionalize
@@ -103,7 +96,6 @@ engine:
 # 引入基础配置
 __include: moqi.yaml:/phrase
 __include: moqi.yaml:/opencc_config
-__include: moqi.yaml:/guide
 __include: moqi.yaml:/big_char_and_user_dict
 
 # ========== 标点配置（18键专用） ==========
