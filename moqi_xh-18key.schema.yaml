@@ -45,7 +45,7 @@ menu:
 # ========== Engine (18键共键双拼辅助码) ==========
 engine:
   processors:
-    - lua_processor@*sharedkey_shuangpin_auxcode_processor  # 共键双拼辅助码处理器
+    # - lua_processor@*sharedkey_shuangpin_auxcode_processor  # 共键双拼辅助码处理器
     - lua_processor@*precise_input_processor  # 精确输入处理器（处理大写字母精确输入）
     - ascii_composer
     - recognizer
@@ -84,7 +84,7 @@ engine:
     - script_translator
     - script_translator@user_dict_set
   filters:
-    - lua_filter@*sharedkey_shuangpin_auxcode_filter  # 共键双拼辅助码过滤器
+    # - lua_filter@*sharedkey_shuangpin_auxcode_filter  # 共键双拼辅助码过滤器
     - lua_filter@*pro_comment_format
     - lua_filter@*is_in_user_dict
     - reverse_lookup_filter@reverse_lookup
