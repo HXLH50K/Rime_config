@@ -797,37 +797,37 @@ preset_keyboards:
     lock: true
     keys:
       # 第1行：q-p，使用click发送按键，ascii_mode=1时由ascii_composer处理直接上屏
-      - {click: q, label: q, long_click: "1", swipe_up: "1", swipe_down: Q}
-      - {click: w, label: w, long_click: "2", swipe_up: "2", swipe_down: W}
-      - {click: e, label: e, long_click: "3", swipe_up: "3", swipe_down: E}
-      - {click: r, label: r, long_click: "4", swipe_up: "4", swipe_down: R}
-      - {click: t, label: t, long_click: "5", swipe_up: "5", swipe_down: T}
-      - {click: y, label: y, long_click: "6", swipe_up: "6", swipe_down: Y}
-      - {click: u, label: u, long_click: "7", swipe_up: "7", swipe_down: U}
-      - {click: i, label: i, long_click: "8", swipe_up: "8", swipe_down: I}
-      - {click: o, label: o, long_click: "9", swipe_up: "9", swipe_down: O}
-      - {click: p, label: p, long_click: "0", swipe_up: "0", swipe_down: P}
+      - {click: q, label: q, long_click: "1", popup: ["1", "q", "Q"], swipe_up: "1", swipe_down: Q}
+      - {click: w, label: w, long_click: "2", popup: ["2", "w", "W"], swipe_up: "2", swipe_down: W}
+      - {click: e, label: e, long_click: "3", popup: ["3", "e", "E"], swipe_up: "3", swipe_down: E}
+      - {click: r, label: r, long_click: "4", popup: ["4", "r", "R"], swipe_up: "4", swipe_down: R}
+      - {click: t, label: t, long_click: "5", popup: ["5", "t", "T"], swipe_up: "5", swipe_down: T}
+      - {click: y, label: y, long_click: "6", popup: ["6", "y", "Y"], swipe_up: "6", swipe_down: Y}
+      - {click: u, label: u, long_click: "7", popup: ["7", "u", "U"], swipe_up: "7", swipe_down: U}
+      - {click: i, label: i, long_click: "8", popup: ["8", "i", "I"], swipe_up: "8", swipe_down: I}
+      - {click: o, label: o, long_click: "9", popup: ["9", "o", "O"], swipe_up: "9", swipe_down: O}
+      - {click: p, label: p, long_click: "0", popup: ["0", "p", "P"], swipe_up: "0", swipe_down: P}
       # 第2行：a-l，使用click发送按键
       - {width: 5}
-      - {click: a, label: a, long_click: "~", swipe_up: "~", swipe_down: A}
-      - {click: s, label: s, long_click: "!", swipe_up: "!", swipe_down: S}
-      - {click: d, label: d, long_click: "@", swipe_up: "@", swipe_down: D}
-      - {click: f, label: f, long_click: "#", swipe_up: "#", swipe_down: F}
-      - {click: g, label: g, long_click: "%", swipe_up: "%", swipe_down: G}
-      - {click: h, label: h, long_click: "&", swipe_up: "&", swipe_down: H}
-      - {click: j, label: j, long_click: "*", swipe_up: "*", swipe_down: J}
-      - {click: k, label: k, long_click: "(", swipe_up: "(", swipe_down: K}
-      - {click: l, label: l, long_click: ")", swipe_up: ")", swipe_down: L}
+      - {click: a, label: a, long_click: "~", popup: ["~", "a", "A"], swipe_up: "~", swipe_down: A}
+      - {click: s, label: s, long_click: "!", popup: ["!", "s", "S"], swipe_up: "!", swipe_down: S}
+      - {click: d, label: d, long_click: "@", popup: ["@", "d", "D"], swipe_up: "@", swipe_down: D}
+      - {click: f, label: f, long_click: "#", popup: ["#", "f", "F"], swipe_up: "#", swipe_down: F}
+      - {click: g, label: g, long_click: "%", popup: ["%", "g", "G"], swipe_up: "%", swipe_down: G}
+      - {click: h, label: h, long_click: "&", popup: ["&", "h", "H"], swipe_up: "&", swipe_down: H}
+      - {click: j, label: j, long_click: "*", popup: ["*", "j", "J"], swipe_up: "*", swipe_down: J}
+      - {click: k, label: k, long_click: "(", popup: ["(", "k", "K"], swipe_up: "(", swipe_down: K}
+      - {click: l, label: l, long_click: ")", popup: [")", "l", "L"], swipe_up: ")", swipe_down: L}
       - {width: 5}
       # 第3行：Shift + z-m + 退格
       - {click: key_shift, long_click: key_capslock, width: 15}
-      - {click: z, label: z, long_click: "'", swipe_up: "'", swipe_down: Z}
-      - {click: x, label: x, long_click: "/", popup: ["X","/", "÷", "x"], swipe_up: "/", swipe_down: X}
-      - {click: c, label: c, long_click: "-", swipe_up: "-", swipe_down: C}
-      - {click: v, label: v, long_click: "_", swipe_up: "_", swipe_down: V}
-      - {click: b, label: b, long_click: ":", swipe_up: ":", swipe_down: B}
-      - {click: n, label: n, long_click: ";", swipe_up: ";", swipe_down: N}
-      - {click: m, label: m, long_click: "?", swipe_up: "?", swipe_down: M}
+      - {click: z, label: z, long_click: "'", popup: ["'", "z", "Z"], swipe_up: "'", swipe_down: Z}
+      - {click: x, label: x, long_click: "/", popup: ["/", "÷", "X", "x"], swipe_up: "/", swipe_down: X}
+      - {click: c, label: c, long_click: "-", popup: ["-", "c", "C"], swipe_up: "-", swipe_down: C}
+      - {click: v, label: v, long_click: "_", popup: ["_", "v", "V"], swipe_up: "_", swipe_down: V}
+      - {click: b, label: b, long_click: ":", popup: [":", "b", "B"], swipe_up: ":", swipe_down: B}
+      - {click: n, label: n, long_click: ";", popup: [";", "n", "N"], swipe_up: ";", swipe_down: N}
+      - {click: m, label: m, long_click: "?", popup: ["?", "m", "M"], swipe_up: "?", swipe_down: M}
       - {click: key_backspace, swipe_up: key_control_backspace, width: 15}
       # 第4行：功能键
       - {click: to_symbol_liquid_keyboard, width: 15}

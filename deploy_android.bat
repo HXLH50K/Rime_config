@@ -16,8 +16,8 @@ adb push lua/precise_input_processor.lua /sdcard/rime/lua
 adb push lua/precise_input_filter.lua /sdcard/rime/lua
 
 REM Lua 脚本: 形码处理
-adb push lua/shape_code_processor.lua /sdcard/rime/lua
-adb push lua/shape_code_filter.lua /sdcard/rime/lua
+adb push lua/sharedkey_shuangpin_auxcode_filter.lua /sdcard/rime/lua
+adb push lua/sharedkey_shuangpin_auxcode_processor.lua /sdcard/rime/lua
 
 REM Lua 依赖库：sbxlm（精确输入处理器依赖）
 adb shell mkdir -p /sdcard/rime/lua/sbxlm
