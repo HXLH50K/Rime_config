@@ -18,6 +18,11 @@ schema:
     - 有引导符[：音码2+辅助码2(用户可主动分词)
     设计文档：plans/sharedkey-shuangpin-auxcode-design.md
   dependencies:
+    - cangjie5
+    - reverse_moqima
+    - radical_flypy
+    - stroke
+    - zrlf
     - emoji
     - easy_en
     - jp_sela
@@ -102,6 +107,7 @@ engine:
 
 # 引入基础配置
 __include: moqi.yaml:/phrase
+__include: moqi.yaml:/reverse
 __include: moqi.yaml:/opencc_config
 __include: moqi.yaml:/guide
 __include: moqi.yaml:/big_char_and_user_dict
