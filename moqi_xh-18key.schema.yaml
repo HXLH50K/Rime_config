@@ -60,6 +60,7 @@ engine:
     - matcher
     - abc_segmentor
     - punct_segmentor
+    - affix_segmentor@emojis
     - affix_segmentor@easy_en_simp
     - affix_segmentor@jp_sela
     - fallback_segmentor
@@ -76,6 +77,7 @@ engine:
     - table_translator@custom_phrase_kf
     - table_translator@custom_phrase_mqzg
     - table_translator@big_char_set
+    - table_translator@emojis
     - table_translator@easy_en_simp
     - table_translator@jp_sela
     # 脚本翻译器
@@ -307,7 +309,7 @@ key_binder:
     # 分号选2
     - { when: has_menu, accept: semicolon, send: 2 }
 
-# ========== Recognizer 配置（禁用不需要的模式） ==========
+# ========== Recognizer 配置 ==========
 recognizer:
   patterns:
     punct:            # 禁用 / 开头的符号输入
@@ -317,7 +319,9 @@ recognizer:
     reverse_cj:       # 禁用 arj 仓颉反查
     reverse_zrlf:     # 禁用 alf 自然两分
     add_user_dict:    # 禁用 ac 自造词
-    emojis:           # 禁用 ae Emoji
+    emojis: "^ae[a-z]*'?$"      # 启用 ae Emoji
+    easy_en_simp: "^aw[a-z]*"   # 启用 aw 英文单词
+    jp_sela: "^aj[a-z]*"        # 启用 aj 日语
 
 # 语言模型
 __include: moqi:/octagram/enable_for_sentence
@@ -359,3 +363,36 @@ sharedkey_shuangpin_auxcode:
   
   # 辅助码最大长度
   max_auxcode_length: 2
+
+# ========== 引导前缀配置（aj、aw、ae） ==========
+# Emoji 输入
+emojis:
+  tag: emojis
+  dictionary: emoji
+  enable_completion: true
+  prefix: "ae"
+  tips: " Emoji"
+
+# 英文单词输入
+easy_en_simp:
+  tag: easy_en_simp
+  dictionary: easy_en
+  enable_completion: true
+  enable_sentence: false
+  prefix: "aw"
+  tips: "英文单词（可去元音）"
+  spelling_hints: 9
+  comment_format:
+    - xform/^.+$//
+
+# 日语输入
+jp_sela:
+  tag: jp_sela
+  dictionary: jp_sela
+  enable_completion: true
+  enable_sentence: false
+  prefix: "aj"
+  tips: "日语"
+  spelling_hints: 9
+  comment_format:
+    - xform/^.+$//
