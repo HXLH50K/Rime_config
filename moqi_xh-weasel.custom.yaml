@@ -1,0 +1,64 @@
+patch:
+  "menu/page_size": 9
+  # 禁用 Ctrl+` 快捷键，让其穿透到其他软件
+  "switcher/hotkeys":
+    - F4
+  
+  
+  # 中文状态下默认使用英文标点
+  "switches/@last/reset": 1
+  "switches/@last":
+    name: ascii_punct
+    reset: 1 
+    states: [ 。，, ．， ]
+  
+  # Shift 切换中英文时不改变标点状态 
+  "ascii_composer/good_old_caps_lock": true
+  "ascii_composer/switch_key":
+    Shift_L: inline_ascii
+    Shift_R: inline_ascii
+    Control_L: noop
+    Control_R: noop
+    Caps_Lock: clear
+    Eisu_toggle: clear
+  
+  "punctuator/punctuator/full_shape":
+    "\\": "、"
+  "punctuator/punctuator/half_shape":
+    "\\": "、"
+  "key_binder/bindings/+":
+    - {accept: "Control+Shift+F", toggle: simplification, when: always}
+    - {accept: "Shift+space", toggle: full_shape, when: always}
+    - {accept: "Control+period", toggle: ascii_punct, when: always}
+    - {accept: minus, send: Page_Up, when: has_menu}
+    - {accept: equal, send: Page_Down, when: has_menu}
+  
+  "engine/translators":
+    - lua_translator@*date_translator
+    - lua_translator@*lunar
+    - lua_translator@*unicode
+    - lua_translator@*number_translator
+    - lua_translator@*calculator
+    - punct_translator
+    # - table_translator@custom_phrase
+    - table_translator@custom_phrase_3_code
+    - table_translator@custom_phrase_kf
+    - table_translator@custom_phrase_mqzg
+    - table_translator@custom_phrase_super_1jian
+    - table_translator@custom_phrase_super_2jian
+    - table_translator@custom_phrase_super_3jian
+    - table_translator@custom_phrase_super_3jian_no_conflict
+    - table_translator@custom_phrase_super_4jian_no_conflict
+    - table_translator@big_char_set
+    - table_translator@emojis
+    - table_translator@easy_en_simp
+    - table_translator@jp_sela
+    - reverse_lookup_translator
+    - table_translator@reverse_moqima
+    - table_translator@radical_flypy
+    - table_translator@reverse_stroke
+    - table_translator@reverse_zrlf
+    - table_translator@reverse_cj
+    - script_translator
+    - script_translator@user_dict_set
+    - script_translator@add_user_dict

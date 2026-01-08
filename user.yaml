@@ -2,7 +2,7 @@ var:
   last_build_time: 1767196110
   option:
     ascii_punct: false
-  previously_selected_schema: moqi_xh
+  previously_selected_schema: moqi_xh-weasel
   schema_access_time:
     double_pinyin_flypy: 1767186995
-    moqi_xh: 1767187003
+    moqi_xh-weasel: 1767187003
