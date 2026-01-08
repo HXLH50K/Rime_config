@@ -723,6 +723,11 @@ style:
   text_font: latin.ttf
   vertical_correction: "-5"
   vertical_gap: 6
+  popup_width: 50
+  popup_height: 60
+  popup_bottom_margin: 55
+  popup_key_height: 45
+  popup_text_size: 22
 
 # ==================== 键盘基类定义（使用锚点） ====================
 # 数字键盘基类
@@ -804,25 +809,25 @@ preset_keyboards:
       - {click: p, label: p, long_click: "0", swipe_up: "0", swipe_down: P}
       # 第2行：a-l，使用click发送按键
       - {width: 5}
-      - {click: a, label: a, long_click: "-", swipe_up: "-", swipe_down: A}
-      - {click: s, label: s, long_click: "/", swipe_up: "/", swipe_down: S}
-      - {click: d, label: d, long_click: "?", swipe_up: "?", swipe_down: D}
-      - {click: f, label: f, long_click: "@", swipe_up: "@", swipe_down: F}
-      - {click: g, label: g, long_click: "#", swipe_up: "#", swipe_down: G}
-      - {click: h, label: h, long_click: "!", swipe_up: "!", swipe_down: H}
-      - {click: j, label: j, long_click: "~", swipe_up: "~", swipe_down: J}
-      - {click: k, label: k, long_click: "_", swipe_up: "_", swipe_down: K}
-      - {click: l, label: l, long_click: "%", swipe_up: "%", swipe_down: L}
+      - {click: a, label: a, long_click: "~", swipe_up: "~", swipe_down: A}
+      - {click: s, label: s, long_click: "!", swipe_up: "!", swipe_down: S}
+      - {click: d, label: d, long_click: "@", swipe_up: "@", swipe_down: D}
+      - {click: f, label: f, long_click: "#", swipe_up: "#", swipe_down: F}
+      - {click: g, label: g, long_click: "%", swipe_up: "%", swipe_down: G}
+      - {click: h, label: h, long_click: "&", swipe_up: "&", swipe_down: H}
+      - {click: j, label: j, long_click: "*", swipe_up: "*", swipe_down: J}
+      - {click: k, label: k, long_click: "(", swipe_up: "(", swipe_down: K}
+      - {click: l, label: l, long_click: ")", swipe_up: ")", swipe_down: L}
       - {width: 5}
       # 第3行：Shift + z-m + 退格
       - {click: key_shift, long_click: key_capslock, width: 15}
-      - {click: z, label: z, long_click: "&", swipe_up: "&", swipe_down: Z}
-      - {click: x, label: x, long_click: "*", swipe_up: "*", swipe_down: X}
-      - {click: c, label: c, long_click: "(", swipe_up: "(", swipe_down: C}
-      - {click: v, label: v, long_click: ")", swipe_up: ")", swipe_down: V}
-      - {click: b, label: b, long_click: "'", swipe_up: "'", swipe_down: B}
-      - {click: n, label: n, long_click: "=", swipe_up: "=", swipe_down: N}
-      - {click: m, label: m, long_click: ":", swipe_up: ":", swipe_down: M}
+      - {click: z, label: z, long_click: "'", swipe_up: "'", swipe_down: Z}
+      - {click: x, label: x, long_click: "/", popup: ["X","/", "÷", "x"], swipe_up: "/", swipe_down: X}
+      - {click: c, label: c, long_click: "-", swipe_up: "-", swipe_down: C}
+      - {click: v, label: v, long_click: "_", swipe_up: "_", swipe_down: V}
+      - {click: b, label: b, long_click: ":", swipe_up: ":", swipe_down: B}
+      - {click: n, label: n, long_click: ";", swipe_up: ";", swipe_down: N}
+      - {click: m, label: m, long_click: "?", swipe_up: "?", swipe_down: M}
       - {click: key_backspace, swipe_up: key_control_backspace, width: 15}
       # 第4行：功能键
       - {click: to_symbol_liquid_keyboard, width: 15}
