@@ -18,9 +18,10 @@ echo ========================================
 echo.
 
 REM ========================================
-REM 阶段0: 检查并创建目录，清理冲突文件
+REM 阶段0: 检查并准备目录结构（增量部署模式）
 REM ========================================
 echo [阶段0/6] 检查并准备目录结构...
+echo   注意：此脚本采用增量部署模式，不会删除现有内容
 
 REM 检查根目录是否为文件（而非目录），如果是则终止
 echo   - 检查目标路径 %RIME_DIR%...
@@ -40,19 +41,6 @@ if errorlevel 1 (
 REM 确保根目录存在
 echo   - 创建目标目录 %RIME_DIR%...
 adb shell "mkdir -p %RIME_DIR%"
-
-REM 删除可能存在的同名文件（非目录），避免mkdir冲突
-echo   - 清理子目录的冲突文件...
-adb shell "if [ -f %RIME_DIR%/cn_dicts_moqi ]; then rm %RIME_DIR%/cn_dicts_moqi; fi"
-adb shell "if [ -f %RIME_DIR%/cn_dicts_common ]; then rm %RIME_DIR%/cn_dicts_common; fi"
-adb shell "if [ -f %RIME_DIR%/lua ]; then rm %RIME_DIR%/lua; fi"
-adb shell "if [ -f %RIME_DIR%/opencc ]; then rm %RIME_DIR%/opencc; fi"
-adb shell "if [ -f %RIME_DIR%/custom_phrase ]; then rm %RIME_DIR%/custom_phrase; fi"
-adb shell "if [ -f %RIME_DIR%/build ]; then rm %RIME_DIR%/build; fi"
-
-REM 清除build目录（如果是目录）以避免缓存问题
-echo   - 清除build缓存目录...
-adb shell "if [ -d %RIME_DIR%/build ]; then rm -rf %RIME_DIR%/build; fi"
 
 echo [阶段0/6] 完成
 echo.
@@ -193,16 +181,21 @@ echo [阶段5/6] 完成
 echo.
 
 echo ========================================
-echo 初次部署完成！
+echo 部署完成！
 echo ========================================
 echo.
 echo 提示：
 echo 1. 目标目录: %RIME_DIR%
-echo 2. 字体文件 (*.ttf) 需要单独提供或使用系统默认字体
-echo 3. 请在 Trime 中检查部署结果
-echo 4. 首次部署可能需要较长时间，请耐心等待
-echo 5. 如遇问题，请查看 Trime 日志
+echo 2. 采用增量部署模式，不会删除现有内容
+echo 3. 字体文件 (*.ttf) 需要单独提供或使用系统默认字体
+echo 4. 请在 Trime 中点击"部署"按钮完成配置
+echo 5. 首次部署可能需要较长时间，请耐心等待
+echo 6. 如遇问题，请查看 Trime 日志
 echo.
 echo 要切换部署目标，请修改脚本开头的 RIME_DIR 变量
 echo 例如: set RIME_DIR=/sdcard/rime2
+echo.
+echo 注意：
+echo - 此脚本不会删除您现有的其他方案配置
+echo - 如需完全重新部署，请手动清空 %RIME_DIR% 目录
 echo.

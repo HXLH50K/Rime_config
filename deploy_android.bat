@@ -1,28 +1,71 @@
 @echo off
-REM 部署 Rime 配置到 Android 设备
-REM 主要文件：shouxin_18key.trime.yaml (主题+键盘), moqi_xh-trime.custom.yaml (模糊规则)
-REM Lua 文件：精确输入处理器和过滤器（依赖 sbxlm.lib）
+REM ========================================
+REM 快速部署 Rime 18键核心配置到 Android 设备
+REM 用途：开发者日常快速更新核心文件
+REM 对比 init_deploy_android.bat：仅部署核心文件，速度更快
+REM ========================================
 
-adb push default.yaml /sdcard/rime
-adb push default.custom.yaml /sdcard/rime
-REM 配置文件
-adb push trime.custom.yaml /sdcard/rime
-@REM adb push moqi_xh-trime.custom.yaml /sdcard/rime
-@REM adb push moqi_xh-trime.schema.yaml /sdcard/rime
-adb push moqi_xh-18key.schema.yaml /sdcard/rime
-adb shell rm /sdcard/rime/build/shouxin_18key.trime.yaml
-adb push shouxin_18key.trime.yaml /sdcard/rime
+REM ========================================
+REM 配置变量：目标目录
+REM 修改此变量可快速切换部署目标（rime, rime1, rime2, rime3...）
+REM ========================================
+set RIME_DIR=/sdcard/rime
 
-REM Lua 脚本：精确输入处理
-adb push lua/precise_input_processor.lua /sdcard/rime/lua
-adb push lua/precise_input_filter.lua /sdcard/rime/lua
+echo ========================================
+echo 快速部署 Rime 18键核心配置
+echo 目标目录: %RIME_DIR%
+echo ========================================
+echo.
 
-REM Lua 脚本: 形码处理
-@REM adb push lua/sharedkey_shuangpin_auxcode_filter.lua /sdcard/rime/lua
-@REM adb push lua/sharedkey_shuangpin_auxcode_processor.lua /sdcard/rime/lua
+REM ========================================
+REM 核心配置文件（必需）
+REM ========================================
+echo [1/4] 部署核心配置文件...
+adb push default.yaml %RIME_DIR%
+adb push default.custom.yaml %RIME_DIR%
+adb push moqi_xh-18key.schema.yaml %RIME_DIR%
+echo   完成
 
-REM Lua 依赖库：sbxlm（精确输入处理器依赖）
-adb shell mkdir -p /sdcard/rime/lua/sbxlm
-adb push lua/sbxlm/lib.lua /sdcard/rime/lua/sbxlm
+echo.
+REM ========================================
+REM Trime 主题配置（Android专用）
+REM ========================================
+echo [2/4] 部署 Trime 主题和键盘...
+REM 清除编译缓存的主题文件
+adb shell "rm -f %RIME_DIR%/build/shouxin_18key.trime.yaml"
+adb push shouxin_18key.trime.yaml %RIME_DIR%
+echo   完成
 
+echo.
+REM ========================================
+REM Lua 脚本（18键核心功能）
+REM ========================================
+echo [3/4] 部署 Lua 脚本...
+REM 确保lua目录存在
+adb shell "mkdir -p %RIME_DIR%/lua/sbxlm"
+
+REM 精确输入处理（18键共键专用）
+adb push lua/precise_input_processor.lua %RIME_DIR%/lua
+adb push lua/precise_input_filter.lua %RIME_DIR%/lua
+
+REM Lua依赖库
+adb push lua/sbxlm/lib.lua %RIME_DIR%/lua/sbxlm
+
+REM 形码处理（当前有BUG)
+REM adb push lua/sharedkey_shuangpin_auxcode_filter.lua %RIME_DIR%/lua
+REM adb push lua/sharedkey_shuangpin_auxcode_processor.lua %RIME_DIR%/lua
+echo   完成
+
+echo.
+REM ========================================
+REM 触发重新部署
+REM ========================================
+echo [4/4] 触发 Trime 重新部署...
 adb shell am broadcast -a com.osfans.trime.deploy
+echo   完成
+
+echo.
+echo ========================================
+echo 快速部署完成！
+echo ========================================
+echo.
