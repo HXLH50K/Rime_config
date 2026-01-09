@@ -28,3 +28,6 @@ program/generate_dict_code/jdh.dict.yaml
 
 # 压缩包
 *.zip
+
+# log
+trime_debug_log/*
