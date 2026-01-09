@@ -112,6 +112,14 @@ REM 阶段3: 输入方案
 REM ========================================
 echo [阶段3/6] 部署输入方案...
 adb push moqi_xh-18key.schema.yaml %RIME_DIR%
+
+REM 3.1 依赖方案 (dependencies)
+echo   - 部署依赖方案...
+adb push emoji.schema.yaml %RIME_DIR%
+adb push easy_en.schema.yaml %RIME_DIR%
+adb push jp_sela.schema.yaml %RIME_DIR%
+adb push moqi_big.schema.yaml %RIME_DIR%
+
 echo [阶段3/6] 完成
 echo.
 
