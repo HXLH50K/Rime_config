@@ -18,9 +18,9 @@ echo ========================================
 echo.
 
 REM ========================================
-REM 阶段0: 检查并准备目录结构（增量部署模式）
+REM 阶段1: 检查并准备目录结构（增量部署模式）
 REM ========================================
-echo [阶段0/6] 检查并准备目录结构...
+echo [阶段1/5] 检查并准备目录结构...
 echo   注意：此脚本采用增量部署模式，不会删除现有内容
 
 REM 检查根目录是否为文件（而非目录），如果是则终止
@@ -42,27 +42,22 @@ REM 确保根目录存在
 echo   - 创建目标目录 %RIME_DIR%...
 adb shell "mkdir -p %RIME_DIR%"
 
-echo [阶段0/6] 完成
+echo [阶段1/5] 完成
 echo.
 
 REM ========================================
-REM 阶段1: 基础配置文件
+REM 阶段2: 基础配置文件和词典文件
 REM ========================================
-echo [阶段1/6] 部署基础配置文件...
+echo [阶段2/5] 部署基础配置文件和词典...
+
+REM 2.1 基础配置文件
 adb push default.yaml %RIME_DIR%
 adb push default.custom.yaml %RIME_DIR%
 adb push moqi.yaml %RIME_DIR%
 adb push symbols_caps_v.yaml %RIME_DIR%
 adb push shouxin_18key.trime.yaml %RIME_DIR%
-echo [阶段1/6] 完成
-echo.
 
-REM ========================================
-REM 阶段2: 词典文件
-REM ========================================
-echo [阶段2/6] 部署词典文件...
-
-REM 2.1 词库子目录
+REM 2.2 词库子目录
 echo   - 部署墨奇词库 (cn_dicts_moqi/)...
 adb shell mkdir -p %RIME_DIR%/cn_dicts_moqi
 adb push cn_dicts_moqi/8105.dict.yaml %RIME_DIR%/cn_dicts_moqi
@@ -78,12 +73,12 @@ adb push cn_dicts_common/user.dict.yaml %RIME_DIR%/cn_dicts_common
 adb push cn_dicts_common/changcijian.dict.yaml %RIME_DIR%/cn_dicts_common
 adb push cn_dicts_common/changcijian3.dict.yaml %RIME_DIR%/cn_dicts_common
 
-REM 2.2 主词典文件
+REM 2.3 主词典文件
 echo   - 部署主词典文件...
 adb push moqi.extended.dict.yaml %RIME_DIR%
 adb push moqi_big.extended.dict.yaml %RIME_DIR%
 
-REM 2.3 依赖词典
+REM 2.4 依赖词典
 echo   - 部署依赖词典...
 adb push easy_en.dict.yaml %RIME_DIR%
 adb push jp_sela.dict.yaml %RIME_DIR%
@@ -92,13 +87,13 @@ adb push cangjie5.dict.yaml %RIME_DIR%
 adb push radical_flypy.dict.yaml %RIME_DIR%
 adb push reverse_moqima.dict.yaml %RIME_DIR%
 
-echo [阶段2/6] 完成
+echo [阶段2/5] 完成
 echo.
 
 REM ========================================
 REM 阶段3: 输入方案
 REM ========================================
-echo [阶段3/6] 部署输入方案...
+echo [阶段3/5] 部署输入方案...
 adb push moqi_xh-18key.schema.yaml %RIME_DIR%
 
 REM 3.1 依赖方案 (dependencies)
@@ -108,13 +103,13 @@ adb push easy_en.schema.yaml %RIME_DIR%
 adb push jp_sela.schema.yaml %RIME_DIR%
 adb push moqi_big.schema.yaml %RIME_DIR%
 
-echo [阶段3/6] 完成
+echo [阶段3/5] 完成
 echo.
 
 REM ========================================
 REM 阶段4: 扩展功能
 REM ========================================
-echo [阶段4/6] 部署扩展功能...
+echo [阶段4/5] 部署扩展功能...
 
 REM 4.1 Lua脚本 - 核心18键脚本
 echo   - 部署Lua脚本 (18键核心)...
@@ -169,33 +164,24 @@ adb push custom_phrase/custom_phrase_super_3jian.txt %RIME_DIR%/custom_phrase
 adb push custom_phrase/custom_phrase_super_3jian_no_conflict.txt %RIME_DIR%/custom_phrase
 adb push custom_phrase/custom_phrase_super_4jian_no_conflict.txt %RIME_DIR%/custom_phrase
 
-echo [阶段4/6] 完成
+echo [阶段4/5] 完成
 echo.
 
 REM ========================================
-REM 阶段5: 触发重新部署
+REM 阶段5: 触发 Trime 重新部署
 REM ========================================
-echo [阶段5/6] 触发 Trime 重新部署...
-adb shell am broadcast -a com.osfans.trime.deploy
-echo [阶段5/6] 完成
+echo [阶段5/5] 触发 Trime 重新部署...
+REM 使用新的 action (Trime v3.2.15+)
+adb shell am broadcast -a com.osfans.trime.action.DEPLOY
+echo.
+echo 注意：
+echo - 广播已发送（result=0 是正常现象，Android 广播不返回结果）
+echo - 部署过程需要约 20 秒，请耐心等待
+echo - 如需确认部署结果，请查看 Trime 应用或日志
+REM 旧版本使用: adb shell am broadcast -a com.osfans.trime.deploy (已废弃)
+echo [阶段5/5] 完成
 echo.
 
 echo ========================================
 echo 部署完成！
 echo ========================================
-echo.
-echo 提示：
-echo 1. 目标目录: %RIME_DIR%
-echo 2. 采用增量部署模式，不会删除现有内容
-echo 3. 字体文件 (*.ttf) 需要单独提供或使用系统默认字体
-echo 4. 请在 Trime 中点击"部署"按钮完成配置
-echo 5. 首次部署可能需要较长时间，请耐心等待
-echo 6. 如遇问题，请查看 Trime 日志
-echo.
-echo 要切换部署目标，请修改脚本开头的 RIME_DIR 变量
-echo 例如: set RIME_DIR=/sdcard/rime2
-echo.
-echo 注意：
-echo - 此脚本不会删除您现有的其他方案配置
-echo - 如需完全重新部署，请手动清空 %RIME_DIR% 目录
-echo.

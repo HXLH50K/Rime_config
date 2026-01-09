@@ -58,11 +58,12 @@ echo   完成
 
 echo.
 REM ========================================
-REM 触发重新部署
+REM 触发 Trime 重新部署
 REM ========================================
 echo [4/4] 触发 Trime 重新部署...
-adb shell am broadcast -a com.osfans.trime.deploy
-echo   完成
+REM 使用新的 action (Trime v3.2.15+)
+adb shell am broadcast -a com.osfans.trime.action.DEPLOY
+echo.
 
 echo.
 echo ========================================
