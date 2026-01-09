@@ -7,7 +7,7 @@
 schema:
   schema_id: moqi_xh-18key
   name: MQ+XH 18键
-  version: "2026-01-08"
+  version: "0.1.0"
   author:
     - gaboolic (原墨奇码)
     - hxlh50k (18键适配)
@@ -16,7 +16,6 @@ schema:
     共键双拼辅助码方案：
     - 无引导符：纯音码(2位) 或 三码(音码2+辅助码1)
     - 有引导符[：音码2+辅助码2(用户可主动分词)
-    设计文档：plans/sharedkey-shuangpin-auxcode-design.md
   dependencies:
     - emoji
     - easy_en
@@ -48,7 +47,7 @@ menu:
 # ========== Engine (18键共键双拼辅助码) ==========
 engine:
   processors:
-    # - lua_processor@*sharedkey_shuangpin_auxcode_processor  # 共键双拼辅助码处理器
+    # - lua_processor@*sharedkey_shuangpin_auxcode_processor  # 共键双拼辅助码处理器, 有BUG
     - lua_processor@*sharedkey_shuangpin_precise_input_processor  # 精确输入处理器（处理大写字母精确输入）
     - ascii_composer
     - recognizer
@@ -153,9 +152,10 @@ speller:
     - derive|^(.+)[[](\w)(\w)$|$1[$2|           # 双拼+[+1位辅助码（支持手动分词）
     - derive|^(.+)[[](\w)(\w)$|$1[$2$3|         # 双拼+[+2位辅助码（完整四码）
     
-    # ========== 飞键规则（18键已禁用，由共键模糊替代）==========
+    # ========== 飞键规则（18键已禁用，与共键模糊冲突）==========
     # 原版飞键规则会与18键共键模糊冲突，例如：
     # - derive/^ww/wi/ 会导致 wi 优先匹配 ww 而非 wo
+    # 可以开启, 但是输入体验更糟
     # 以下规则已禁用：
     # - derive/^([y])j/$1f/
     # - derive/^qx/qw/

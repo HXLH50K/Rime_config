@@ -1,10 +1,9 @@
 # 手心式18键输入法主题配置
 # 基于tongwenfeng主题格式，专为18键模糊输入设计
-# 使用 YAML 锚点实现键盘继承，减少重复代码
 
 name: "手心18键"
 author: "hxlh50k"
-config_version: 0.0.89
+config_version: 0.1.0
 
 # 颜色定义
 fallback_colors:
