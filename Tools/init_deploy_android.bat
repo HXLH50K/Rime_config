@@ -51,8 +51,7 @@ REM ========================================
 echo [阶段2/5] 部署基础配置文件和词典...
 
 REM 2.1 基础配置文件
-adb push default.yaml %RIME_DIR%
-adb push default.custom.yaml %RIME_DIR%
+REM default.yaml 和 default.custom.yaml 由 Trime/Weasel 自动生成，无需手动部署
 adb push moqi.yaml %RIME_DIR%
 adb push symbols_caps_v.yaml %RIME_DIR%
 adb push shouxin_18key.trime.yaml %RIME_DIR%
