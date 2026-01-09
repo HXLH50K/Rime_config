@@ -756,7 +756,7 @@ preset_keyboards:
       - {click: key_WE, long_click: "1", popup: ["1", "E", "W", "w", "e"], swipe_up: "1", swipe_left: W, swipe_right: E, width: 16.9}
       - {click: key_RT, long_click: "2", popup: ["2", "r", "T", "t", "R"], swipe_up: "2", swipe_left: R, swipe_right: T, width: 16.9}
       - {click: key_Y, long_click: "3", popup: ["3", "y", "Y"], swipe_up: "3", width: 12.3}
-      - {click: key_U, long_click: "/", popup: ["/", "u", "U"], swipe_up: "/", width: 12.3}
+      - {click: key_U, long_click: "/", popup: ["/", "÷", "U", "u"], swipe_up: "/", width: 12.3}
       - {click: key_IO, long_click: "-", popup: ["-", "o", "i", "I", "O"], swipe_up: "-", swipe_left: I, swipe_right: O, width: 16.9}
       - {click: key_P, long_click: "_", popup: ["_", "p", "P"], swipe_up: "_", width: 12.3}
       # 第2行：字母键 (长按与上滑统一) - 左右各留空6.1%
