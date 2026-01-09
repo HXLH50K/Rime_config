@@ -45,8 +45,8 @@ REM 确保lua目录存在
 adb shell "mkdir -p %RIME_DIR%/lua/sbxlm"
 
 REM 精确输入处理（18键共键专用）
-adb push lua/precise_input_processor.lua %RIME_DIR%/lua
-adb push lua/precise_input_filter.lua %RIME_DIR%/lua
+adb push lua/sharedkey_shuangpin_precise_input_processor.lua %RIME_DIR%/lua
+adb push lua/sharedkey_shuangpin_precise_input_filter.lua %RIME_DIR%/lua
 
 REM Lua依赖库
 adb push lua/sbxlm/lib.lua %RIME_DIR%/lua/sbxlm

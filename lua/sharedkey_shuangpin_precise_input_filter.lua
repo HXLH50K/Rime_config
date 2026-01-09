@@ -1,16 +1,16 @@
--- precise_input_filter.lua
--- 精确输入过滤器 v7：支持18键形码引导键方案
+-- sharedkey_shuangpin_precise_input_filter.lua
+-- 共键双拼精确输入过滤器 v7：支持18键形码引导键方案
 --
 -- 功能：
--- 1. 根据精确输入位置过滤不匹配的候选
+-- 1. 根据精确输入位置过滤不匹配的候选（消除共键模糊）
 -- 2. 解析 音码[形码 结构，正确匹配候选
 -- 3. 支持音码和形码分别的共键模糊
 --
 -- 输入格式：
 --   音码1[形码1 音码2[形码2 ...
---   其中：音码=2字母（双拼），形码=1-2字母（墨奇辅助码）
+--   其中：音码=2字母（共键双拼），形码=1-2字母（墨奇辅助码）
 --
--- 配合 precise_input_processor.lua 使用
+-- 配合 sharedkey_shuangpin_precise_input_processor.lua 使用
 
 -- 默认的18键共键映射
 local default_fuzzy_pairs = {

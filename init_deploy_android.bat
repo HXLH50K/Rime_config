@@ -119,8 +119,8 @@ echo [阶段4/6] 部署扩展功能...
 REM 4.1 Lua脚本 - 核心18键脚本
 echo   - 部署Lua脚本 (18键核心)...
 adb shell mkdir -p %RIME_DIR%/lua
-adb push lua/precise_input_processor.lua %RIME_DIR%/lua
-adb push lua/precise_input_filter.lua %RIME_DIR%/lua
+adb push lua/sharedkey_shuangpin_precise_input_processor.lua %RIME_DIR%/lua
+adb push lua/sharedkey_shuangpin_precise_input_filter.lua %RIME_DIR%/lua
 adb push lua/sharedkey_shuangpin_auxcode_processor.lua %RIME_DIR%/lua
 adb push lua/sharedkey_shuangpin_auxcode_filter.lua %RIME_DIR%/lua
 

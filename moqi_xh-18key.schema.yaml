@@ -49,7 +49,7 @@ menu:
 engine:
   processors:
     # - lua_processor@*sharedkey_shuangpin_auxcode_processor  # 共键双拼辅助码处理器
-    - lua_processor@*precise_input_processor  # 精确输入处理器（处理大写字母精确输入）
+    - lua_processor@*sharedkey_shuangpin_precise_input_processor  # 精确输入处理器（处理大写字母精确输入）
     - ascii_composer
     - recognizer
     - key_binder
@@ -96,7 +96,7 @@ engine:
     - simplifier@big_char_set
     - simplifier@traditionalize
     - simplifier@mars
-    - lua_filter@*precise_input_filter        # 精确输入过滤器（18键共键）
+    - lua_filter@*sharedkey_shuangpin_precise_input_filter        # 精确输入过滤器（18键共键）
     - uniquifier                              # 去重（放在最后）
 
 # 引入基础配置

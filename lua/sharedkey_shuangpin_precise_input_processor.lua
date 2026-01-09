@@ -1,17 +1,17 @@
--- precise_input_processor.lua
--- 精确输入处理器 v2：支持18键形码引导键方案
+-- sharedkey_shuangpin_precise_input_processor.lua
+-- 共键双拼精确输入处理器 v2：支持18键形码引导键方案
 --
 -- 功能：
 -- 1. 拦截大写字母输入（A-Z），记录为精确输入位置，转换为小写发送
 -- 2. 处理形码引导键 [ 的输入
 -- 3. 记录输入结构（音码/形码边界）
 --
--- 使用场景：18键模糊输入时
+-- 使用场景：18键共键双拼模糊输入时
 -- - 点击发送小写字母（触发模糊匹配）
--- - 滑动发送大写字母（精确匹配）
+-- - 滑动发送大写字母（精确匹配，消除共键模糊）
 -- - 点击引导键发送 [（进入形码输入）
 --
--- 配合 precise_input_filter.lua 使用
+-- 配合 sharedkey_shuangpin_precise_input_filter.lua 使用
 -- 参考：lua/sbxlm/upper_case.lua
 
 local rime = require "sbxlm.lib"
