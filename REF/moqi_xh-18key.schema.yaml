@@ -7,7 +7,7 @@
 schema:
   schema_id: moqi_xh-18key
   name: MQ+XH 18键
-  version: "0.1.0"
+  version: "2026-01-08"
   author:
     - gaboolic (原墨奇码)
     - hxlh50k (18键适配)
@@ -16,8 +16,8 @@ schema:
     共键双拼辅助码方案：
     - 无引导符：纯音码(2位) 或 三码(音码2+辅助码1)
     - 有引导符[：音码2+辅助码2(用户可主动分词)
+    设计文档：plans/sharedkey-shuangpin-auxcode-design.md
   dependencies:
-    - emoji
     - easy_en
     - jp_sela
     - moqi_big
@@ -30,8 +30,6 @@ switches:
     states: [ 半角, 全角 ]
   - name: traditionalization
     states: [ 简, 繁 ]
-  - name: emoji
-    states: [ 💀, 😄 ]
   - name: big_char_set
     states: [ 大字集, 小字集 ]
   - name: mars
@@ -47,8 +45,8 @@ menu:
 # ========== Engine (18键共键双拼辅助码) ==========
 engine:
   processors:
-    # - lua_processor@*sharedkey_shuangpin_auxcode_processor  # 共键双拼辅助码处理器, 有BUG
-    - lua_processor@*sharedkey_shuangpin_precise_input_processor  # 精确输入处理器（处理大写字母精确输入）
+    - lua_processor@*sharedkey_shuangpin_auxcode_processor  # 共键双拼辅助码处理器
+    - lua_processor@*precise_input_processor  # 精确输入处理器（处理大写字母精确输入）
     - ascii_composer
     - recognizer
     - key_binder
@@ -86,27 +84,21 @@ engine:
     - script_translator
     - script_translator@user_dict_set
   filters:
-    # - lua_filter@*sharedkey_shuangpin_auxcode_filter  # 共键双拼辅助码过滤器
+    - lua_filter@*sharedkey_shuangpin_auxcode_filter  # 共键双拼辅助码过滤器
     - lua_filter@*pro_comment_format
     - lua_filter@*is_in_user_dict
     - reverse_lookup_filter@reverse_lookup
-    - simplifier@emoji                        # Emoji过滤器
     - simplifier@chinese_english
     - simplifier@big_char_set
     - simplifier@traditionalize
     - simplifier@mars
-    - lua_filter@*sharedkey_shuangpin_precise_input_filter        # 精确输入过滤器（18键共键）
+    - lua_filter@*precise_input_filter        # 精确输入过滤器（18键共键）
     - uniquifier                              # 去重（放在最后）
 
 # 引入基础配置
 __include: moqi.yaml:/phrase
 __include: moqi.yaml:/opencc_config
 __include: moqi.yaml:/big_char_and_user_dict
-
-# ========== Emoji 配置 ==========
-# 从 moqi.yaml 引入 emoji simplifier 配置
-emoji:
-  __include: moqi.yaml:/opencc_config/emoji
 
 # ========== 标点配置（18键专用） ==========
 # 禁用 / 的候选，直接输出 /
@@ -145,17 +137,16 @@ speller:
     - derive|^(.+)[[](\w)(\w)$|$1|              # 纯双拼
     
     # === 三码无引导符（音码2+辅助码1） ===
-    - derive|^(.+)[[](.)(\w)$|$1$2|             # 音码+第1位辅助码（无引导符）
+    - derive|^(.+)[[](\w)(\w)$|$1$2|            # 音码+第1位辅助码（无引导符）
     
     # === 有引导符时支持1-2位辅助码 ===
     # 用户可主动输入分词符：sy[z'xi (1位辅助码+分词符)
     - derive|^(.+)[[](\w)(\w)$|$1[$2|           # 双拼+[+1位辅助码（支持手动分词）
     - derive|^(.+)[[](\w)(\w)$|$1[$2$3|         # 双拼+[+2位辅助码（完整四码）
     
-    # ========== 飞键规则（18键已禁用，与共键模糊冲突）==========
+    # ========== 飞键规则（18键已禁用，由共键模糊替代）==========
     # 原版飞键规则会与18键共键模糊冲突，例如：
     # - derive/^ww/wi/ 会导致 wi 优先匹配 ww 而非 wo
-    # 可以开启, 但是输入体验更糟
     # 以下规则已禁用：
     # - derive/^([y])j/$1f/
     # - derive/^qx/qw/

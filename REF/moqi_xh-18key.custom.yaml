@@ -1,0 +1,80 @@
+# moqi_xh-18key.custom.yaml
+# 墨奇辅助码 18键专用 自定义配置
+# 对 moqi_xh-18key.schema.yaml 的补充配置
+
+patch:
+  "menu/page_size": 9
+  
+  # ========== 精确输入处理器 ==========
+  # 键盘滑动发送大写字母，Processor 拦截并记录位置，Filter 过滤模糊候选
+  "engine/processors":
+    - lua_processor@*precise_input_processor  # 精确输入处理器（必须在最前）
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+
+  # ========== Segmentors ==========
+  # 禁用不需要的 segmentor，只保留 aw(英语) aj(日语)
+  "engine/segmentors":
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - affix_segmentor@easy_en_simp
+    - affix_segmentor@jp_sela
+    - fallback_segmentor
+
+  # ========== Translators ==========
+  # 禁用超级简拼（手机版不需要）
+  "engine/translators":
+    # lua翻译器
+    - lua_translator@*date_translator
+    - lua_translator@*lunar
+    - lua_translator@*unicode
+    - lua_translator@*number_translator
+    - lua_translator@*calculator
+    - punct_translator
+    # 码表翻译器
+    - table_translator@custom_phrase_3_code
+    - table_translator@custom_phrase_kf
+    - table_translator@custom_phrase_mqzg
+    - table_translator@big_char_set
+    - table_translator@easy_en_simp
+    - table_translator@jp_sela
+    # 脚本翻译器
+    - script_translator
+    - script_translator@user_dict_set
+
+  # ========== Filters ==========
+  # 18键专用过滤器配置
+  "engine/filters":
+    - lua_filter@*pro_comment_format
+    - lua_filter@*is_in_user_dict
+    - reverse_lookup_filter@reverse_lookup
+    - simplifier@chaifen
+    - simplifier@chaifen_all
+    - simplifier@chinese_english
+    - simplifier@big_char_set
+    - simplifier@traditionalize
+    - simplifier@mars
+    - lua_filter@*precise_input_filter  # 精确输入过滤器
+    - uniquifier                         # 去重（放在最后，确保所有候选都被去重）
+
+  # ========== 快捷键（手机版简化） ==========
+  "key_binder/bindings":
+    # 分号选2
+    - { when: has_menu, accept: semicolon, send: 2 }
+
+  # ========== 禁用不需要的 recognizer 模式 ==========
+  "recognizer/patterns/reverse_moqima":  # 禁用 amq 墨奇反查
+  "recognizer/patterns/radical_flypy":   # 禁用 az 部件组字
+  "recognizer/patterns/reverse_stroke":  # 禁用 ab 笔画反查
+  "recognizer/patterns/reverse_cj":      # 禁用 arj 仓颉反查
+  "recognizer/patterns/reverse_zrlf":    # 禁用 alf 自然两分
+  "recognizer/patterns/add_user_dict":   # 禁用 ac 自造词
+  "recognizer/patterns/emojis":          # 禁用 ae Emoji
