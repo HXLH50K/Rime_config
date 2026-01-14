@@ -4,7 +4,7 @@
 config_version: '0.40'
 
 schema_list:
-  - schema: moqi_xh-18key # 墨奇辅助码 鹤拼版 大词库版本 非自动上屏，支持4万字
+  - schema: moqi_xh-weasel # 墨奇辅助码 鹤拼版 大词库版本 非自动上屏，支持4万字
 
 switcher:
   caption: 〔方案選單〕
@@ -22,7 +22,7 @@ switcher:
     - mars
     - ascii_punct
   fold_options: true
-  abbreviate_options: true
+  abbreviate_options: true 
   option_list_separator: '／'
 
 menu:
