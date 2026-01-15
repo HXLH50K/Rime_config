@@ -781,7 +781,7 @@ preset_keyboards:
       - {click: to_symbol_liquid_keyboard, width: 15}
       - {click: to_number_keyboard, width: 12}
       - {click: key_comma_cn, long_click: ",", swipe_up: key_ascii_comma, width: 10}
-      - {click: key_space, width: 26}
+      - {click: key_space, long_click: VoiceAssist,width: 26}
       - {click: key_period_cn, long_click: ".", swipe_up: key_ascii_period, width: 10}
       - {click: switch_cn_to_en, long_click: key_lang_switch, swipe_up: F4, swipe_right: PROG_RED, width: 12}
       - {click: key_return, width: 15}
@@ -832,7 +832,7 @@ preset_keyboards:
       - {click: to_symbol_liquid_keyboard, width: 15}
       - {click: to_number_keyboard, width: 12}
       - {click: key_comma_en, width: 10}
-      - {click: key_space, width: 26}
+      - {click: key_space, long_click: VoiceAssist, width: 26}
       - {click: key_period_en, width: 10}
       - {click: switch_en_to_cn, long_click: key_lang_switch, swipe_up: F4, swipe_right: PROG_RED, width: 12}
       - {click: key_return_en, width: 15}
@@ -885,7 +885,7 @@ preset_keyboards:
       - {click: Right, width: 13.33}
       - {click: Home}
       - {click: copy}
-      - {click: liquid_keyboard_clipboard}
+      - {click: liquid_keyboard_clipboard_from_edit}
       # Row 3: [空13.33][↓13.33][空13.33] | 句尾 | 剪切 | 空格
       - {width: 13.33}
       - {click: Down, width: 13.33}
@@ -914,6 +914,10 @@ preset_keys:
 
   VoidSymbol:
     label: ""
+
+  VoiceAssist:
+    label: "⚲"
+    send: VOICE_ASSIST
 
   # ========== 键盘切换键 ==========
   to_number_keyboard:
@@ -1108,6 +1112,11 @@ preset_keys:
     option: "表情"
   liquid_keyboard_clipboard:
     label: "📋"
+    send: function
+    command: liquid_keyboard
+    option: "剪贴"
+  liquid_keyboard_clipboard_from_edit:
+    label: "⎘"
     send: function
     command: liquid_keyboard
     option: "剪贴"
