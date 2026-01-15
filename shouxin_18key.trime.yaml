@@ -872,8 +872,8 @@ preset_keyboards:
     height: 59
     lock: false
     keys:
-      # Row 1: [空13.33][↑13.33][空13.33] | 开头 | 粘贴 | 退格
-      - {width: 13.33}
+      # Row 1: [返回13.33][↑13.33][空13.33] | 开头 | 粘贴 | 退格
+      - {click: to_lastlock_keyboard, width: 13.33}
       - {click: Up, width: 13.33}
       - {width: 13.33}
       - {click: doc_start}
@@ -899,12 +899,6 @@ preset_keyboards:
       - {click: select_all}
       - {click: key_return}
 
-# ==================== 预设按键基类 ====================
-# 返回键基类
-_key_back_base: &key_back_base
-  label: "↩"
-  send: Eisu_toggle
-
 # ==================== 预设按键 ====================
 preset_keys:
   # ========== 系统功能键 ==========
@@ -927,7 +921,7 @@ preset_keys:
     functional: true
   # 智能返回键：返回上一个 lock=true 的键盘
   to_lastlock_keyboard:
-    label: "↩"
+    label: "◁"
     send: Eisu_toggle
     select: .last_lock
   # 编辑键盘按钮
@@ -1121,7 +1115,7 @@ preset_keys:
     command: liquid_keyboard
     option: "剪贴"
   liquid_keyboard_exit:
-    label: " ↩ "
+    label: " ◁ "
     send: function
     command: liquid_keyboard
     option: "-1"
