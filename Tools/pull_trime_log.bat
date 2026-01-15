@@ -1,4 +1,5 @@
 @echo off
+chcp 65001 >nul
 REM 拉取 Trime 最新日志文件到本地 trime_debug_log 目录
 REM 日志文件格式: com.osfans.trime-YYYY-MM-DDTHH_MM_SSZ.txt
 
