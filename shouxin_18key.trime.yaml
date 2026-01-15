@@ -1381,16 +1381,6 @@ tool_bar:
     - {action: to_edit_keyboard, foreground: {style: "ic@cursor_text"}}
     # 键盘按钮：返回上一个lock键盘
     - {action: to_lastlock_keyboard, foreground: {style: "ic@keyboard"}}
-    - {action: F4, foreground: {style: "ic@settings"}}
-  emoji_button:
-    action: liquid_keyboard_emoji
-    foreground: {style: "ic@emoticon"}
-  clipboard_button:
-    action: liquid_keyboard_clipboard
-    foreground: {style: "ic@clipboard"}
-  hide_button:
-    action: Hide
-    foreground: {style: "ic@keyboard_close"}
 
 # 候选窗口配置
 window:
