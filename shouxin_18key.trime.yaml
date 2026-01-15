@@ -1079,7 +1079,7 @@ preset_keys:
     label: "␣"
     send: space
   key_return:
-    label: "⏎"
+    label: "⤶"
     functional: true
     send: Return
 
@@ -1094,7 +1094,7 @@ preset_keys:
     send: Shift_L
     shift_lock: long
   key_return_en:
-    label: "⏎"
+    label: "⤶"
     functional: true
     send: Return
 
@@ -1119,24 +1119,20 @@ preset_keys:
     send: function
     command: liquid_keyboard
     option: "-1"
-    width: 25
   # 液态键盘固定栏专用按键（与edit_keyboard对齐，使用半角空格填充）
   space1:
     functional: false
     label: " ␣ "
     repeatable: false
     send: space
-    width: 25
   Return1:
-    label: " ⏎ "
+    label: " \u200A⤶\u200A "
     send: Return
-    width: 25
   BackSpace1:
     functional: false
     label: " ⌫ "
     send: BackSpace
     repeatable: true
-    width: 25
 
   # ========== 编辑键盘按键 ==========
   Left:
