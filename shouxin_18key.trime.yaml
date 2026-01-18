@@ -779,9 +779,9 @@ preset_keyboards:
       - {click: key_backspace, swipe_up: key_control_backspace, width: 14.6}
       # 第4行：功能键
       - {click: to_symbol_liquid_keyboard, width: 15}
-      - {click: to_number_keyboard, width: 12}
+      - {click: to_number_keyboard, long_click: VoiceAssist, width: 12}
       - {click: key_comma_cn, long_click: ",", swipe_up: key_ascii_comma, width: 10}
-      - {click: key_space, long_click: VoiceAssist,width: 26}
+      - {click: key_space, width: 26}
       - {click: key_period_cn, long_click: ".", swipe_up: key_ascii_period, width: 10}
       - {click: switch_cn_to_en, long_click: key_lang_switch, swipe_up: F4, swipe_right: PROG_RED, width: 12}
       - {click: key_return, width: 15}
@@ -830,9 +830,9 @@ preset_keyboards:
       - {click: key_backspace, swipe_up: key_control_backspace, width: 15}
       # 第4行：功能键
       - {click: to_symbol_liquid_keyboard, width: 15}
-      - {click: to_number_keyboard, width: 12}
+      - {click: to_number_keyboard, long_click: VoiceAssist, width: 12}
       - {click: key_comma_en, width: 10}
-      - {click: key_space, long_click: VoiceAssist, width: 26}
+      - {click: key_space, width: 26}
       - {click: key_period_en, width: 10}
       - {click: switch_en_to_cn, long_click: key_lang_switch, swipe_up: F4, swipe_right: PROG_RED, width: 12}
       - {click: key_return_en, width: 15}
