@@ -23,6 +23,11 @@ copy /Y default.windows.custom.yaml "%RIME_DIR%\default.custom.yaml"
 @REM REM 复制符号配置
 @REM copy /Y symbols_caps_v.yaml "%RIME_DIR%\"
 
+REM 复制 lua 文件
+echo 正在复制 lua 文件...
+if not exist "%RIME_DIR%\lua" mkdir "%RIME_DIR%\lua"
+copy /Y lua\kp_num_processor.lua "%RIME_DIR%\lua\"
+
 echo 文件复制完成！
 
 echo 正在触发小狼毫重新部署...
