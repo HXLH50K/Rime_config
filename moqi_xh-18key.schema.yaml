@@ -74,12 +74,6 @@ engine:
     - affix_segmentor@jp_sela
     - fallback_segmentor
   translators:
-    # lua翻译器
-    - lua_translator@*date_translator
-    - lua_translator@*lunar
-    - lua_translator@*unicode
-    - lua_translator@*number_translator
-    - lua_translator@*calculator
     - punct_translator
     # 码表翻译器
     - table_translator@custom_phrase_3_code
