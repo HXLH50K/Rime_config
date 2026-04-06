@@ -241,9 +241,12 @@ function C.init(env)
     
 end 
 function C.func(input, env)
-    -- 调用全局初始共享环境
-    C.init(env)
-    CR.init(env)
+    -- 仅在首次调用时初始化（避免每次按键重复初始化）
+    if not env.settings_loaded then
+        C.init(env)
+        CR.init(env)
+        env.settings_loaded = true
+    end
 
     local processed_candidates = {}  -- 用于存储处理后的候选词
     local deal_count = 1
