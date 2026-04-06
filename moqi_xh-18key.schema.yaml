@@ -104,7 +104,7 @@ punctuator:
 speller:
   max_code_length: 6
   auto_select: false
-  auto_select_pattern: ^[a-z]+/|^[a-df-zA-DF-Z]\w{3}|^e\w{4}|;[a-z]
+  auto_select_pattern: ^[a-z]+/|;[a-z]
   # alphabet 包含大写字母用于精确输入，包含 [ 用于形码引导
   alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA[/|'
   initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA
