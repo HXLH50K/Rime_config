@@ -25,6 +25,7 @@ sync/
 # 用户词库(自动调频, 生成的文件)
 # 用户自定义配置
 program/generate_dict_code/jdh.dict.yaml
+luna_pinyin.userdb/
 
 # 压缩包
 *.zip
