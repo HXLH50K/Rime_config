@@ -22,10 +22,12 @@ patch:
     Caps_Lock: clear
     Eisu_toggle: clear
   
-  "punctuator/punctuator/full_shape":
+  "punctuator/full_shape":
     "\\": "、"
-  "punctuator/punctuator/half_shape":
+    "|": "|"
+  "punctuator/half_shape":
     "\\": "、"
+    "|": "|"
   "key_binder/bindings/+":
     - {accept: "Control+Shift+F", toggle: simplification, when: always}
     - {accept: "Shift+space", toggle: full_shape, when: always}
