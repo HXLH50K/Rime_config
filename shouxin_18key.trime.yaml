@@ -692,7 +692,7 @@ style:
   enter_label_mode: 0
   hanb_font: hanb.ttf
   horizontal: true
-  horizontal_gap: 12
+  horizontal_gap: 4
   key_font: latin.ttf
   key_height: 59
   key_long_text_size: 20
@@ -721,7 +721,7 @@ style:
   symbol_text_size: 10
   text_font: latin.ttf
   vertical_correction: "-5"
-  vertical_gap: 6
+  vertical_gap: 3
   popup_width: 50
   popup_height: 60
   popup_bottom_margin: 55
