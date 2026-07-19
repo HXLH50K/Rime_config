@@ -248,16 +248,39 @@ preset_keyboards:
 
 ### 问题描述
 
-切换键盘时保持当前的中英文状态。
+切换键盘时需要保持当前的中英文状态。曾出现偶发问题：中文与英文主键盘已经切换，但 Rime 的 `ascii_mode` 没有同步，导致英文布局输出中文候选，或中文布局直接上屏英文。
+
+主题中的主键盘已经分别声明目标状态：
+
+```yaml
+preset_keyboards:
+  default:
+    ascii_mode: 0
+  qwerty26:
+    ascii_mode: 1
+```
+
+如果同时启用 `reset_ascii_mode: true`，Trime 在显示或切换键盘时还会自动重置该状态，可能与目标键盘的 `ascii_mode` 发生时序冲突。
 
 ### 解决方案
 
-在 `style` 中设置：
+关闭全局和中文主键盘的自动重置，让目标键盘的 `ascii_mode` 成为状态依据：
 
 ```yaml
 style:
-  reset_ascii_mode: false  # 不重置 ASCII 模式
+  reset_ascii_mode: false
+
+preset_keyboards:
+  default:
+    reset_ascii_mode: false
 ```
+
+### 验证记录
+
+- 修复日期：2026-07-19
+- 当前验证：中文、英文、数字和编辑键盘之间往返正常
+- 由于原问题为偶发问题，尚不能通过单次测试确认彻底修复，需要长期观察
+- 如果再次出现不同步，下一步应移除键盘切换动作中多余的 `Eisu_toggle`，只保留 `select` 和目标键盘的 `ascii_mode`
 
 ---
 
