@@ -1,5 +1,5 @@
 -- sharedkey_shuangpin_precise_input_filter.lua
--- 共键双拼精确输入过滤器 v9：支持18键形码引导键方案
+-- 共键双拼精确输入过滤器 v10：支持18键形码引导键方案
 --
 -- 功能：
 -- 1. 根据精确输入位置过滤不匹配的候选（消除共键模糊）
@@ -24,8 +24,6 @@ local default_fuzzy_pairs = {
     b = "n", n = "b",  -- BN 共键
 }
 
--- 配置
-local MAX_CANDIDATES = 50  -- 只处理前N个候选
 local fuzzy_pairs = default_fuzzy_pairs
 local reversedb = nil
 local memory = nil
@@ -86,6 +84,18 @@ local function parse_precise_map(map_str)
         positions[tonumber(pos)] = true
     end
     return next(positions) and positions or nil
+end
+
+local function span_has_precise_position(precise_positions, input_start, input_end)
+    if not precise_positions then
+        return false
+    end
+    for pos in pairs(precise_positions) do
+        if pos > input_start and pos <= input_end then
+            return true
+        end
+    end
+    return false
 end
 
 -- 解析用户输入为结构化数据
@@ -381,23 +391,20 @@ local function filter(input, env)
     -- 清空缓存（每次新输入时）
     lookup_cache = {}
     
-    local count = 0
     for cand in input:iter() do
-        count = count + 1
         local input_start = cand.start or 0
         local input_end = cand._end or #user_input
         local candidate_input = user_input:sub(input_start + 1, input_end)
         local parsed = parse_input(candidate_input)
-        local matched = matches_input(cand.text, parsed, precise_positions, input_start)
-        
-        -- 超过限制，直接通过
-        if count > MAX_CANDIDATES then
+        local needs_filter = candidate_input:find("%[")
+            or span_has_precise_position(precise_positions, input_start, input_end)
+        local matched = not needs_filter
+            or matches_input(cand.text, parsed, precise_positions, input_start)
+
+        if matched then
             ---@diagnostic disable-next-line: undefined-global
             yield(cand)
-        elseif matched then
-            ---@diagnostic disable-next-line: undefined-global
-            yield(cand)
-        elseif input_start == 0 and input_end == #user_input then
+        elseif needs_filter and input_start == 0 and input_end == #user_input then
             local rebuilt = rebuild_precise_sentence(cand, parsed, precise_positions, input_start)
             if rebuilt then
                 for _, rebuilt_cand in ipairs(rebuilt) do
