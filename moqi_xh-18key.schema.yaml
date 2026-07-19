@@ -9,7 +9,7 @@
 schema:
   schema_id: moqi_xh-18key
   name: MQ+XH 18键
-  version: "0.2.0"
+  version: "0.3.0"
   author:
     - gaboolic (原墨奇码)
     - hxlh50k (18键适配)

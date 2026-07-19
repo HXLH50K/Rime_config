@@ -1,7 +1,7 @@
 # moqi-xh-18key 输入方案设计文档
 
-**版本**: v3.1
-**更新日期**: 2026-01-05
+**版本**: v3.2
+**更新日期**: 2026-07-19
 **采用方案**: 形码引导键方案
 **实施状态**: ✅ 已完成
 
@@ -455,13 +455,13 @@ key_auxiliary:
 ### 第一阶段：基础框架 ✅
 
 - [x] 1.1 创建 `moqi_xh-18key.schema.yaml` - 继承moqi.yaml的基础schema
-- [x] 1.2 创建 `moqi_xh-18key.custom.yaml` - 18键专用patch
+- [x] 1.2 在 `moqi_xh-18key.schema.yaml` 中配置18键专用引擎与过滤器
 - [x] 1.3 配置新的speller模糊规则（音码+形码）
 
 ### 第二阶段：Lua处理器 ✅
 
-- [x] 2.1 更新 `precise_input_processor.lua` - 处理精确输入标记和形码引导键
-- [x] 2.2 更新 `precise_input_filter.lua` - 实现结构化解析和过滤
+- [x] 2.1 更新 `sharedkey_shuangpin_precise_input_processor.lua` - 处理精确输入标记和形码引导键
+- [x] 2.2 更新 `sharedkey_shuangpin_precise_input_filter.lua` - 实现结构化解析和过滤
 - [x] 2.3 添加输入解析逻辑（识别音码/形码边界）
 
 ### 第三阶段：键盘适配 ✅
@@ -536,6 +536,7 @@ key_auxiliary:
 | v2.0 | 2026-01-05 | 新增三码四码智能识别设计 |
 | v3.0 | 2026-01-05 | **采用形码引导键方案**，完整设计文档 |
 | v3.1 | 2026-01-05 | **实施完成**，待测试验证 |
+| v3.2 | 2026-07-19 | 修复精确状态残留、多音节过滤、整句重组、多音字反查和中英文状态同步；加强 Android 部署缓存清理 |
 
 ---
 
@@ -544,9 +545,8 @@ key_auxiliary:
 | 文件 | 类型 | 说明 |
 |------|------|------|
 | [`moqi_xh-18key.schema.yaml`](../moqi_xh-18key.schema.yaml) | 新建 | 18键专用基础schema，含音码+形码模糊规则 |
-| [`moqi_xh-18key.custom.yaml`](../moqi_xh-18key.custom.yaml) | 新建 | 18键专用自定义配置，引擎/过滤器配置 |
-| [`lua/precise_input_processor.lua`](../lua/precise_input_processor.lua) | 更新 | 精确输入处理器 v2，支持形码引导键 |
-| [`lua/precise_input_filter.lua`](../lua/precise_input_filter.lua) | 更新 | 精确输入过滤器 v7，支持结构化解析 |
+| [`lua/sharedkey_shuangpin_precise_input_processor.lua`](../lua/sharedkey_shuangpin_precise_input_processor.lua) | 更新 | 精确输入处理器 v3，提交后清理输入状态 |
+| [`lua/sharedkey_shuangpin_precise_input_filter.lua`](../lua/sharedkey_shuangpin_precise_input_filter.lua) | 更新 | 精确输入过滤器 v10，支持多音节、整句重组、多音字和完整候选流过滤 |
 | [`shouxin_18key.trime.yaml`](../shouxin_18key.trime.yaml) | 更新 | 键盘布局，新增形码引导键 |
 
 ---
@@ -557,12 +557,11 @@ key_auxiliary:
 
 1. 将以下文件复制到 Trime 配置目录：
    - `moqi_xh-18key.schema.yaml`
-   - `moqi_xh-18key.custom.yaml`
    - `shouxin_18key.trime.yaml`
-   - `lua/precise_input_processor.lua`
-   - `lua/precise_input_filter.lua`
+    - `lua/sharedkey_shuangpin_precise_input_processor.lua`
+    - `lua/sharedkey_shuangpin_precise_input_filter.lua`
 
-2. 在 Trime 中重新部署
+2. 日常更新可运行 `Tools/deploy_android.bat`，脚本会清理18键构建缓存、上传核心文件并触发重新部署
 
 3. 选择 "MQ+XH 18键" 输入方案
 
