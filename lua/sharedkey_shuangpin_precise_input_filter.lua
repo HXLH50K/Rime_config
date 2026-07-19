@@ -1,5 +1,5 @@
 -- sharedkey_shuangpin_precise_input_filter.lua
--- 共键双拼精确输入过滤器 v8：支持18键形码引导键方案
+-- 共键双拼精确输入过滤器 v9：支持18键形码引导键方案
 --
 -- 功能：
 -- 1. 根据精确输入位置过滤不匹配的候选（消除共键模糊）
@@ -54,20 +54,26 @@ local function cached_lookup(char)
         return cached
     end
     
+    local codes = {}
     if not reversedb then
-        lookup_cache[char] = { pinyin = "", auxiliary = "" }
-        return lookup_cache[char]
+        lookup_cache[char] = codes
+        return codes
     end
     
     local result = reversedb:lookup(char) or ""
-    -- 解析格式：pinyin[auxiliary 或 pinyin
-    local pinyin, auxiliary = result:match("^([^%[%s]+)%[?(%w*)")
+    -- ReverseLookup 可能返回空格分隔的多组编码。
+    for code in result:gmatch("%S+") do
+        local pinyin, auxiliary = code:match("^([^%[]+)%[?(%w*)$")
+        if pinyin then
+            table.insert(codes, {
+                pinyin = pinyin:lower(),
+                auxiliary = (auxiliary or ""):lower()
+            })
+        end
+    end
     
-    lookup_cache[char] = {
-        pinyin = (pinyin or ""):lower(),
-        auxiliary = (auxiliary or ""):lower()
-    }
-    return lookup_cache[char]
+    lookup_cache[char] = codes
+    return codes
 end
 
 -- 解析精确输入位置
@@ -218,8 +224,7 @@ local function auxiliary_matches(user_aux, cand_aux, precise_positions, aux_star
 end
 
 -- 检查候选是否匹配
-local function segment_matches_char(char, seg, precise_positions, pos)
-    local lookup = cached_lookup(char)
+local function segment_matches_code(seg, lookup, precise_positions, pos)
     local cand_pinyin = lookup.pinyin
     local cand_aux = lookup.auxiliary
     
@@ -239,6 +244,19 @@ local function segment_matches_char(char, seg, precise_positions, pos)
     
     local aux_start = pos + #seg.pinyin + 1
     return auxiliary_matches(seg.auxiliary, cand_aux, precise_positions, aux_start)
+end
+
+local function segment_matches_char(char, seg, precise_positions, pos)
+    local lookups = cached_lookup(char)
+    if #lookups == 0 then
+        return #seg.auxiliary == 0
+    end
+    for _, lookup in ipairs(lookups) do
+        if segment_matches_code(seg, lookup, precise_positions, pos) then
+            return true
+        end
+    end
+    return false
 end
 
 local function segment_positions(segments, input_start)
