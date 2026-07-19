@@ -57,6 +57,12 @@ ReverseLookup 对多音字返回空格分隔的多组编码。只检查第一组
 
 快速部署只删除当前18键方案的 schema、prism 和主题构建产物，避免旧缓存继续运行；不清理用户词库和其他方案数据。上传后先验证核心文件非空，再广播部署。
 
+## 主键盘强制采用声明的中英文状态
+
+Trime 切换键盘时，`reset_ascii_mode: false` 会恢复键盘保存的 `lastAsciiMode`，可能造成英文布局仍处于中文状态或中文布局仍处于英文状态。
+
+中文和英文主键盘均设置 `reset_ascii_mode: true`，分别强制采用 `ascii_mode: 0` 和 `ascii_mode: 1`。切键按键保留 `send: Eisu_toggle`，因为 Trime 使用该键码调用 `switchKeyboard(select)`。
+
 ## 不在配置层修改 Trime 窗口状态机
 
 展开候选窗口在部分选词后随退格重新打开，是 Trime 3.3.11 的窗口状态机行为。修改 Rime `paging_mode` 或主题候选游标无效；Lua 接管退格会改变标准 segment 回退语义。当前决定是不做高风险 workaround，等待上游修复。

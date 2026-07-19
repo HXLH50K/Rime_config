@@ -87,11 +87,11 @@ Filter v10 包含以下规则：
 
 - 中文主键盘 `default`：`ascii_mode: 0`。
 - 英文主键盘 `qwerty26`：`ascii_mode: 1`。
+- 两个主键盘均设置 `reset_ascii_mode: true`，切入时强制采用各自声明的 `ascii_mode`。
 - 两个主键盘均为 `lock: true`。
 - 数字和编辑键盘通过 `.last_lock` 返回最近的主键盘。
-- `reset_ascii_mode: false`，避免切换布局时额外重置中英文状态。
 
-中英文不同步曾偶发出现。当前修复需要长期观察；若再次复现，下一步是移除切键动作中多余的 `Eisu_toggle`，只保留 `select` 和目标键盘的 `ascii_mode`。
+Trime 在 `reset_ascii_mode: false` 时使用键盘保存的 `lastAsciiMode`，布局与中英文状态可能脱钩；设为 `true` 才会使用该键盘配置的固定 `ascii_mode`。切键动作中的 `Eisu_toggle` 用于触发 Trime 的 `switchKeyboard(select)`，不能删除。
 
 ## 部署
 

@@ -10,9 +10,11 @@
 preset_keyboards:
   default:
     ascii_mode: 0
+    reset_ascii_mode: true
     lock: true
   qwerty26:
     ascii_mode: 1
+    reset_ascii_mode: true
     lock: true
 ```
 
@@ -48,16 +50,21 @@ preset_keys:
 
 ## 中英文状态
 
-目标键盘的 `ascii_mode` 决定中英文状态。避免在显示键盘时额外重置：
+要让布局与中英文状态严格对应，每个主键盘必须在切入时采用自身声明的 `ascii_mode`：
 
 ```yaml
-style:
-  reset_ascii_mode: false
-
 preset_keyboards:
   default:
-    reset_ascii_mode: false
+    ascii_mode: 0
+    reset_ascii_mode: true
+  qwerty26:
+    ascii_mode: 1
+    reset_ascii_mode: true
 ```
+
+`reset_ascii_mode: false` 表示恢复该键盘保存的 `lastAsciiMode`，并不表示采用当前键盘声明的 `ascii_mode`。这会使布局与输入状态偶发脱钩。
+
+切键动作仍需 `send: Eisu_toggle`：Trime 通过 `KEYCODE_EISU` 识别键盘切换并执行 `switchKeyboard(select)`，它不是这里可以删除的冗余 Rime 动作。
 
 ## 共键与滑动精确输入
 
