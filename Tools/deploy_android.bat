@@ -22,23 +22,37 @@ call :check_device || goto :fail
 
 set "FAILED=0"
 
-echo [1/4] Pushing core schema files...
+echo [1/5] Clearing generated 18-key artifacts...
+adb shell "rm -f %RIME_DIR%/build/moqi_xh-18key.schema.yaml %RIME_DIR%/build/moqi_xh-18key.prism.bin %RIME_DIR%/build/shouxin_18key.trime.yaml"
+if errorlevel 1 (
+    echo [WARN] Failed to clear one or more generated artifacts.
+    set /a FAILED+=1
+)
+
+echo.
+echo [2/5] Pushing core schema files...
 call :push_file "moqi_xh-18key.schema.yaml" "%RIME_DIR%"
 
 echo.
-echo [2/4] Pushing Trime theme...
-adb shell "rm -f %RIME_DIR%/build/shouxin_18key.trime.yaml" >nul
+echo [3/5] Pushing Trime theme...
 call :push_file "shouxin_18key.trime.yaml" "%RIME_DIR%"
 
 echo.
-echo [3/4] Pushing Lua scripts...
+echo [4/5] Pushing Lua scripts...
 call :adb_mkdir "%RIME_DIR%/lua/sbxlm"
 call :push_file "lua/sharedkey_shuangpin_precise_input_processor.lua" "%RIME_DIR%/lua"
 call :push_file "lua/sharedkey_shuangpin_precise_input_filter.lua"    "%RIME_DIR%/lua"
 call :push_file "lua/sbxlm/lib.lua"                                   "%RIME_DIR%/lua/sbxlm"
 
 echo.
-echo [4/4] Broadcasting Trime deploy intent...
+echo Verifying uploaded core files...
+call :verify_remote_file "%RIME_DIR%/moqi_xh-18key.schema.yaml"
+call :verify_remote_file "%RIME_DIR%/shouxin_18key.trime.yaml"
+call :verify_remote_file "%RIME_DIR%/lua/sharedkey_shuangpin_precise_input_processor.lua"
+call :verify_remote_file "%RIME_DIR%/lua/sharedkey_shuangpin_precise_input_filter.lua"
+
+echo.
+echo [5/5] Broadcasting Trime deploy intent...
 adb shell am broadcast -a com.osfans.trime.action.DEPLOY
 if errorlevel 1 (
     echo [WARN] Broadcast command failed.
@@ -82,6 +96,16 @@ adb shell "mkdir -p %~1" >nul
 if errorlevel 1 (
     echo [WARN] mkdir failed: %~1
     set /a FAILED+=1
+)
+exit /b 0
+
+:verify_remote_file
+adb shell "test -s %~1"
+if errorlevel 1 (
+    echo [ERROR] Remote file missing or empty: %~1
+    set /a FAILED+=1
+) else (
+    echo   OK: %~1
 )
 exit /b 0
 
