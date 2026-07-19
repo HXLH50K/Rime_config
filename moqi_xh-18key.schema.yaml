@@ -102,7 +102,6 @@ punctuator:
 
 # ========== 18键专用 Speller 配置 ==========
 speller:
-  max_code_length: 6
   auto_select: false
   auto_select_pattern: ^[a-z]+/|;[a-z]
   # alphabet 包含大写字母用于精确输入，包含 [ 用于形码引导

@@ -1,5 +1,5 @@
 -- sharedkey_shuangpin_precise_input_filter.lua
--- 共键双拼精确输入过滤器 v7：支持18键形码引导键方案
+-- 共键双拼精确输入过滤器 v8：支持18键形码引导键方案
 --
 -- 功能：
 -- 1. 根据精确输入位置过滤不匹配的候选（消除共键模糊）
@@ -28,6 +28,7 @@ local default_fuzzy_pairs = {
 local MAX_CANDIDATES = 50  -- 只处理前N个候选
 local fuzzy_pairs = default_fuzzy_pairs
 local reversedb = nil
+local memory = nil
 local lookup_cache = {}  -- 反查缓存
 
 -- 从配置文件加载模糊对
@@ -143,15 +144,11 @@ local function parse_input(input)
         table.insert(result.segments, current)
     end
     
-    -- 处理剩余的pinyin_buffer
+    -- 处理剩余的纯双拼音节
     if #pinyin_buffer > 0 then
-        local last_seg = result.segments[#result.segments]
-        if last_seg and #last_seg.auxiliary > 0 then
-            -- 上一个segment有形码，创建新segment
-            for i = 1, #pinyin_buffer, 2 do
-                local seg = { pinyin = pinyin_buffer:sub(i, i+1), auxiliary = "" }
-                table.insert(result.segments, seg)
-            end
+        for i = 1, #pinyin_buffer, 2 do
+            local seg = { pinyin = pinyin_buffer:sub(i, i+1), auxiliary = "" }
+            table.insert(result.segments, seg)
         end
     end
     
@@ -221,59 +218,114 @@ local function auxiliary_matches(user_aux, cand_aux, precise_positions, aux_star
 end
 
 -- 检查候选是否匹配
-local function matches_input(cand_text, parsed_input, precise_positions)
+local function segment_matches_char(char, seg, precise_positions, pos)
+    local lookup = cached_lookup(char)
+    local cand_pinyin = lookup.pinyin
+    local cand_aux = lookup.auxiliary
+    
+    if #seg.pinyin >= 1 and #cand_pinyin >= 1 then
+        local is_precise_1 = precise_positions and precise_positions[pos]
+        if not char_matches(seg.pinyin:sub(1, 1), cand_pinyin:sub(1, 1), is_precise_1) then
+            return false
+        end
+    end
+    
+    if #seg.pinyin >= 2 and #cand_pinyin >= 2 then
+        local is_precise_2 = precise_positions and precise_positions[pos + 1]
+        if not char_matches(seg.pinyin:sub(2, 2), cand_pinyin:sub(2, 2), is_precise_2) then
+            return false
+        end
+    end
+    
+    local aux_start = pos + #seg.pinyin + 1
+    return auxiliary_matches(seg.auxiliary, cand_aux, precise_positions, aux_start)
+end
+
+local function segment_positions(segments, input_start)
+    local positions = {}
+    local pos = input_start + 1
+    for index, seg in ipairs(segments) do
+        positions[index] = pos
+        pos = pos + #seg.pinyin
+        if #seg.auxiliary > 0 then
+            pos = pos + 1 + #seg.auxiliary
+        end
+    end
+    return positions
+end
+
+local function matches_input(cand_text, parsed_input, precise_positions, input_start)
     local chars = each_char(cand_text)
     local segments = parsed_input.segments
-    
-    -- 候选字数与segment数量的对应
-    -- 单字：匹配第一个segment
-    -- 多字：每个字匹配一个segment
+    local positions = segment_positions(segments, input_start)
     
     if #chars == 0 then
         return true
     end
     
-    -- 计算每个segment在原始输入中的起始位置
-    local pos = 1
     for seg_idx, seg in ipairs(segments) do
         local char = chars[seg_idx]
         if not char then
-            break  -- 候选字数少于segment数，通过
+            break
         end
-        
-        local lookup = cached_lookup(char)
-        local cand_pinyin = lookup.pinyin
-        local cand_aux = lookup.auxiliary
-        
-        -- 检查拼音匹配（声母和韵母）
-        if #seg.pinyin >= 1 and #cand_pinyin >= 1 then
-            local is_precise_1 = precise_positions and precise_positions[pos]
-            if not char_matches(seg.pinyin:sub(1, 1), cand_pinyin:sub(1, 1), is_precise_1) then
-                return false
-            end
-        end
-        
-        if #seg.pinyin >= 2 and #cand_pinyin >= 2 then
-            local is_precise_2 = precise_positions and precise_positions[pos + 1]
-            if not char_matches(seg.pinyin:sub(2, 2), cand_pinyin:sub(2, 2), is_precise_2) then
-                return false
-            end
-        end
-        
-        -- 检查形码匹配
-        local aux_start = pos + #seg.pinyin + 1  -- +1 for [
-        if not auxiliary_matches(seg.auxiliary, cand_aux, precise_positions, aux_start) then
+        if not segment_matches_char(char, seg, precise_positions, positions[seg_idx]) then
             return false
-        end
-        
-        -- 更新位置
-        pos = pos + #seg.pinyin
-        if #seg.auxiliary > 0 then
-            pos = pos + 1 + #seg.auxiliary  -- +1 for [
         end
     end
     
     return true
+end
+
+local function rebuild_precise_sentence(cand, parsed_input, precise_positions, input_start)
+    local chars = each_char(cand.text)
+    local segments = parsed_input.segments
+    if not memory or #chars ~= #segments or #segments < 2 then
+        return nil
+    end
+    
+    local positions = segment_positions(segments, input_start)
+    local mismatch_index = nil
+    for index, seg in ipairs(segments) do
+        if not segment_matches_char(chars[index], seg, precise_positions, positions[index]) then
+            if mismatch_index then
+                return nil
+            end
+            mismatch_index = index
+        end
+    end
+    if not mismatch_index then
+        return nil
+    end
+    
+    local seg = segments[mismatch_index]
+    if #seg.pinyin ~= 2 or #seg.auxiliary > 0 then
+        return nil
+    end
+    
+    local rebuilt = {}
+    local seen = {}
+    memory:dict_lookup(seg.pinyin, false, 0)
+    for entry in memory:iter_dict() do
+        local replacement_chars = each_char(entry.text)
+        local replacement = replacement_chars[1]
+        if #replacement_chars == 1
+            and not seen[replacement]
+            and segment_matches_char(replacement, seg, precise_positions, positions[mismatch_index]) then
+            local new_chars = {}
+            for index, char in ipairs(chars) do
+                new_chars[index] = index == mismatch_index and replacement or char
+            end
+            local text = table.concat(new_chars)
+            if text ~= cand.text then
+                seen[replacement] = true
+                table.insert(rebuilt, cand:to_shadow_candidate(cand.type, text, cand.comment))
+                if #rebuilt >= 6 then
+                    break
+                end
+            end
+        end
+    end
+    return rebuilt
 end
 
 -- 初始化
@@ -282,6 +334,8 @@ local function init(env)
     local dict = config:get_string("translator/dictionary") or env.engine.schema.schema_id
     ---@diagnostic disable-next-line: undefined-global
     reversedb = ReverseLookup(dict)
+    ---@diagnostic disable-next-line: undefined-global
+    memory = Memory(env.engine, env.engine.schema)
     load_fuzzy_pairs(config)
 end
 
@@ -296,9 +350,6 @@ local function filter(input, env)
     local user_input = context.input or ""
     local precise_map = context:get_property("precise_input_map") or ""
     local precise_positions = parse_precise_map(precise_map)
-    
-    -- 解析用户输入结构
-    local parsed = parse_input(user_input)
     
     -- 如果没有形码引导，且没有精确输入，直接返回所有候选
     if not user_input:find("%[") and not precise_positions then
@@ -315,14 +366,27 @@ local function filter(input, env)
     local count = 0
     for cand in input:iter() do
         count = count + 1
+        local input_start = cand.start or 0
+        local input_end = cand._end or #user_input
+        local candidate_input = user_input:sub(input_start + 1, input_end)
+        local parsed = parse_input(candidate_input)
+        local matched = matches_input(cand.text, parsed, precise_positions, input_start)
         
         -- 超过限制，直接通过
         if count > MAX_CANDIDATES then
             ---@diagnostic disable-next-line: undefined-global
             yield(cand)
-        elseif matches_input(cand.text, parsed, precise_positions) then
+        elseif matched then
             ---@diagnostic disable-next-line: undefined-global
             yield(cand)
+        elseif input_start == 0 and input_end == #user_input then
+            local rebuilt = rebuild_precise_sentence(cand, parsed, precise_positions, input_start)
+            if rebuilt then
+                for _, rebuilt_cand in ipairs(rebuilt) do
+                    ---@diagnostic disable-next-line: undefined-global
+                    yield(rebuilt_cand)
+                end
+            end
         end
         -- 不匹配的候选不 yield
     end
