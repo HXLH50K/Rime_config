@@ -58,5 +58,6 @@
 
 ### 文档
 
-- `Docs/` — 设计文档与开发参考
-- `Docs/archive/` — 已完成/过时的分析文档归档
+- [`Docs/Android-18key.md`](Docs/Android-18key.md) — Android 18键当前设计、输入规则、测试与已知问题
+- [`Docs/Trime-reference.md`](Docs/Trime-reference.md) — Trime 键盘配置与部署参考
+- [`Docs/design-decisions.md`](Docs/design-decisions.md) — 已采用和放弃方案的决策摘要
