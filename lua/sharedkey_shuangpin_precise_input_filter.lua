@@ -51,13 +51,13 @@ local function cached_lookup(char)
     if cached ~= nil then
         return cached
     end
-    
+
     local codes = {}
     if not reversedb then
         lookup_cache[char] = codes
         return codes
     end
-    
+
     local result = reversedb:lookup(char) or ""
     -- ReverseLookup 可能返回空格分隔的多组编码。
     for code in result:gmatch("%S+") do
@@ -69,7 +69,7 @@ local function cached_lookup(char)
             })
         end
     end
-    
+
     lookup_cache[char] = codes
     return codes
 end
@@ -105,10 +105,10 @@ local function parse_input(input)
     local current = { pinyin = "", auxiliary = "" }
     local in_auxiliary = false
     local pinyin_buffer = ""
-    
+
     for i = 1, #input do
         local c = input:sub(i, i)
-        
+
         if c == "[" then
             -- 遇到引导键，之前的拼音部分完成
             if #pinyin_buffer >= 2 then
@@ -154,12 +154,12 @@ local function parse_input(input)
             end
         end
     end
-    
+
     -- 处理最后的segment
     if #current.pinyin > 0 or #current.auxiliary > 0 then
         table.insert(result.segments, current)
     end
-    
+
     -- 处理剩余的纯双拼音节
     if #pinyin_buffer > 0 then
         for i = 1, #pinyin_buffer, 2 do
@@ -167,7 +167,7 @@ local function parse_input(input)
             table.insert(result.segments, seg)
         end
     end
-    
+
     return result
 end
 
@@ -188,16 +188,16 @@ end
 local function char_matches(user_char, cand_char, is_precise)
     user_char = user_char:lower()
     cand_char = cand_char:lower()
-    
+
     if user_char == cand_char then
         return true
     end
-    
+
     -- 如果是精确输入，不允许模糊
     if is_precise then
         return false
     end
-    
+
     -- 检查共键模糊
     local fuzzy = fuzzy_pairs[user_char]
     return fuzzy and fuzzy == cand_char
@@ -208,28 +208,28 @@ local function auxiliary_matches(user_aux, cand_aux, precise_positions, aux_star
     if #user_aux == 0 then
         return true  -- 没有输入形码，不过滤
     end
-    
+
     if #cand_aux == 0 then
         return false  -- 候选没有形码，但用户输入了
     end
-    
+
     -- 检查每一位形码
     for i = 1, #user_aux do
         local user_c = user_aux:sub(i, i)
         local cand_c = cand_aux:sub(i, i)
-        
+
         if #cand_c == 0 then
             return false  -- 候选形码位数不够
         end
-        
+
         local pos = aux_start_pos + i  -- 计算在原始输入中的位置
         local is_precise = precise_positions and precise_positions[pos]
-        
+
         if not char_matches(user_c, cand_c, is_precise) then
             return false
         end
     end
-    
+
     return true
 end
 
@@ -237,21 +237,21 @@ end
 local function segment_matches_code(seg, lookup, precise_positions, pos)
     local cand_pinyin = lookup.pinyin
     local cand_aux = lookup.auxiliary
-    
+
     if #seg.pinyin >= 1 and #cand_pinyin >= 1 then
         local is_precise_1 = precise_positions and precise_positions[pos]
         if not char_matches(seg.pinyin:sub(1, 1), cand_pinyin:sub(1, 1), is_precise_1) then
             return false
         end
     end
-    
+
     if #seg.pinyin >= 2 and #cand_pinyin >= 2 then
         local is_precise_2 = precise_positions and precise_positions[pos + 1]
         if not char_matches(seg.pinyin:sub(2, 2), cand_pinyin:sub(2, 2), is_precise_2) then
             return false
         end
     end
-    
+
     local aux_start = pos + #seg.pinyin + 1
     return auxiliary_matches(seg.auxiliary, cand_aux, precise_positions, aux_start)
 end
@@ -286,11 +286,11 @@ local function matches_input(cand_text, parsed_input, precise_positions, input_s
     local chars = each_char(cand_text)
     local segments = parsed_input.segments
     local positions = segment_positions(segments, input_start)
-    
+
     if #chars == 0 then
         return true
     end
-    
+
     for seg_idx, seg in ipairs(segments) do
         local char = chars[seg_idx]
         if not char then
@@ -300,7 +300,7 @@ local function matches_input(cand_text, parsed_input, precise_positions, input_s
             return false
         end
     end
-    
+
     return true
 end
 
@@ -310,7 +310,7 @@ local function rebuild_precise_sentence(cand, parsed_input, precise_positions, i
     if not memory or #chars ~= #segments or #segments < 2 then
         return nil
     end
-    
+
     local positions = segment_positions(segments, input_start)
     local mismatch_index = nil
     for index, seg in ipairs(segments) do
@@ -324,12 +324,12 @@ local function rebuild_precise_sentence(cand, parsed_input, precise_positions, i
     if not mismatch_index then
         return nil
     end
-    
+
     local seg = segments[mismatch_index]
     if #seg.pinyin ~= 2 or #seg.auxiliary > 0 then
         return nil
     end
-    
+
     local rebuilt = {}
     local seen = {}
     memory:dict_lookup(seg.pinyin, false, 0)
@@ -373,12 +373,12 @@ local function filter(input, env)
     if not reversedb then
         init(env)
     end
-    
+
     local context = env.engine.context
     local user_input = context.input or ""
     local precise_map = context:get_property("precise_input_map") or ""
     local precise_positions = parse_precise_map(precise_map)
-    
+
     -- 如果没有形码引导，且没有精确输入，直接返回所有候选
     if not user_input:find("%[") and not precise_positions then
         for cand in input:iter() do
@@ -387,10 +387,10 @@ local function filter(input, env)
         end
         return
     end
-    
+
     -- 清空缓存（每次新输入时）
     lookup_cache = {}
-    
+
     for cand in input:iter() do
         local input_start = cand.start or 0
         local input_end = cand._end or #user_input
