@@ -33,22 +33,31 @@ if not exist "%DST%" (
     goto :fail
 )
 
-echo [1/5] moqi_xh-18key.schema.yaml
+echo [1/8] moqi_xh-18key.schema.yaml
 call :copy_file "%SRC%\moqi_xh-18key.schema.yaml" "%DST%\moqi_xh-18key.schema.yaml"
 
-echo [2/5] shouxin_18key.trime.yaml
+echo [2/8] shouxin_18key.trime.yaml
 call :copy_file "%SRC%\shouxin_18key.trime.yaml" "%DST%\shouxin_18key.trime.yaml"
 
 if not exist "%DST%\lua" mkdir "%DST%\lua"
-echo [3/5] lua\sharedkey_shuangpin_precise_input_filter.lua
+echo [3/8] lua\sharedkey_shuangpin_precise_input_filter.lua
 call :copy_file "%SRC%\lua\sharedkey_shuangpin_precise_input_filter.lua" "%DST%\lua\sharedkey_shuangpin_precise_input_filter.lua"
 
-echo [4/5] lua\sharedkey_shuangpin_precise_input_processor.lua
+echo [4/8] lua\sharedkey_shuangpin_precise_input_processor.lua
 call :copy_file "%SRC%\lua\sharedkey_shuangpin_precise_input_processor.lua" "%DST%\lua\sharedkey_shuangpin_precise_input_processor.lua"
 
+echo [5/8] lua\sharedkey_shuangpin_auxcode_processor.lua
+call :copy_file "%SRC%\lua\sharedkey_shuangpin_auxcode_processor.lua" "%DST%\lua\sharedkey_shuangpin_auxcode_processor.lua"
+
+echo [6/8] lua\sharedkey_shuangpin_auxcode_filter.lua
+call :copy_file "%SRC%\lua\sharedkey_shuangpin_auxcode_filter.lua" "%DST%\lua\sharedkey_shuangpin_auxcode_filter.lua"
+
 if not exist "%DST%\tools" mkdir "%DST%\tools"
-echo [5/5] tools\init_deploy_android.bat
+echo [7/8] tools\init_deploy_android.bat
 call :copy_file "%SRC%\tools\init_deploy_android.bat" "%DST%\tools\init_deploy_android.bat"
+
+echo [8/8] tools\init_installation.ps1
+call :copy_file "%SRC%\tools\init_installation.ps1" "%DST%\tools\init_installation.ps1"
 
 echo.
 echo ========================================
