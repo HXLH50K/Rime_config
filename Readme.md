@@ -14,10 +14,21 @@
 通过 `Tools/` 下的 bat 脚本部署：
 
 - `deploy_windows.bat` — Windows 增量部署
+- `init_deploy_windows.bat` — Windows 完整初始化部署到 `%APPDATA%\Rime`，覆盖同名配置，保留用户数据库；需已安装小狼毫（提供 `stroke` 依赖）
 - `deploy_android.bat` — Android 增量部署
 - `init_deploy_android.bat` — Android 完整初始化部署
 - `sync_to_release.bat` — 同步到发布 repo
 - `pull_trime_log.bat` — 拉取 Trime 调试日志
+
+两个初始化脚本都会调用 `Tools/init_installation.ps1`，自动创建或补齐目标目录的 `installation.yaml`，包含 `distribution_code_name`、`distribution_name`、`distribution_version`、`install_time`、`rime_version`、`name`、`installation_id` 和 `sync_dir`：
+
+- Windows：使用目标计算机名填写 `name` 和 `installation_id`；发行版名称为“小狼毫”，代号为 `Weasel`。
+- Android：依次读取 `secure/system/global` 的 `bluetooth_name`，再尝试 `system/device_name` 和 `persist.sys.device_name`，填写 `name` 和 `installation_id`；发行版名称为 `Trime`，代号为 `trime`。候选值若与 `ro.product.model` 或 `ro.product.*marketname` 的产品名称相同则跳过；不使用 `global/device_name` 作为名称来源。输出选中字段的来源，读取不到区别于型号的自定义名称时停止部署，避免将默认产品名写入同步标识。
+- 同步目录在各自 BAT 顶部的 `SYNC_DIR` 变量中修改：Windows 默认 `%APPDATA%\RimeSync`，Android 默认 `/sdcard/com.hxlh/Rime`。必须填写目标平台的绝对路径。初始化时该值会覆盖已有 `sync_dir`；不会迁移旧同步目录或其中的数据。
+- 保留已有非空的发行版信息、版本、安装时间及其他字段；缺失的安装时间使用当前时间。缺失版本的默认值为 Windows `0.17.4` / librime `1.13.1`、Android `v3.3.8-0-gf3f5c923` / librime `1.15.0`，不是自动探测结果，可通过辅助脚本的 `-DistributionVersion` 和 `-RimeVersion` 参数修改补缺值。
+- 单独调用辅助脚本且未传 `-SyncDir` 时，保留已有非空的同步路径；缺失时使用上述平台默认值。设备改名会更新 `name` 和 `installation_id`，但不会自动迁移旧设备同步子目录。
+
+可用 `powershell.exe -NoProfile -File Tools/init_installation.ps1 -Platform Android -SyncDir "/sdcard/com.hxlh/Rime" -WhatIf` 只读检查名称和写入目标；Windows 使用 `-Platform Windows` 及本机同步路径。隔离测试：`powershell.exe -NoProfile -File Tools/tests/init_installation.tests.ps1`。
 
 ## 目录结构
 
