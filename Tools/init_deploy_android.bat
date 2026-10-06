@@ -96,6 +96,7 @@ call :push_file "lua/lunar.lua"             "%RIME_DIR%/lua"
 call :push_file "lua/unicode.lua"           "%RIME_DIR%/lua"
 call :push_file "lua/number_translator.lua" "%RIME_DIR%/lua"
 call :push_file "lua/calculator.lua"        "%RIME_DIR%/lua"
+call :push_file "lua/recent_frequency.lua"  "%RIME_DIR%/lua"
 
 echo   - common filters
 call :push_file "lua/pro_comment_format.lua" "%RIME_DIR%/lua"

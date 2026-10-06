@@ -106,6 +106,12 @@ switches_engine:
       - uniquifier
 
       
+recent_frequency:
+  recent_frequency:
+    enabled: true
+    window_hours: 72
+    half_life_hours: 12
+
 octagram:
   disable:
     __patch:

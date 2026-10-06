@@ -45,6 +45,34 @@ Weasel 0.17.4 已区分 `KP_0`～`KP_9` 和 `KP_Enter`（[上游键码转换](ht
 
 回归测试：安装 Python、PyYAML 和小狼毫后，运行 `python .\Tools\tests\keypad.tests.py`。默认加载 `C:\Program Files\Rime\weasel-0.17.4\rime.dll`，其他安装位置可通过 PowerShell 的 `$env:WEASEL_DIR` 指定。测试使用临时用户目录、实际 Windows 处理器和按键绑定，以及九候选小词典，验证缓冲内容、实际提交文本、主键盘选词、回车、编辑与模式恢复，不修改日常输入法配置或用户词库；不覆盖完整词库或物理键盘事件采集。
 
+## 两端共用的短期调频
+
+Windows 与 Android 的主中文翻译器使用 [recent_frequency.lua](lua/recent_frequency.lua)，保留原生词典查询、造句和用户造词，额外按真实时间重排候选：
+
+- **最长 72 小时滑动窗口、12 小时半衰期**。每次实际使用的加权在 12 小时后减半；达到 72 小时即归零，不需要继续输入其他词来推进衰减，也不是每天清零。
+- 短时间反复输入“池泛”可以提升它；停用后逐渐恢复“吃饭”等系统常用候选。单次使用通常比三天更早回落，具体取决于系统排序及其他词的近期使用。
+- 过期的是近期加权，不是词条。历史用户词和新造词均保留；旧用户词没有真实使用日期，启用时不把累计次数转换为近期使用。
+- 相同覆盖区间内，基础分为 `1 / 系统候选名次`，仅用户词的基础分为 `0`；近期分为窗口内各次使用的 `2^(-经过小时数 / 半衰期)` 之和。系统候选来自关闭用户词典的并行原生查询，避免原生用户词优先规则覆盖时间衰减。
+- 保留候选覆盖区间、原生候选对象、Android 精确输入/辅助码过滤，以及专用翻译器和固定短语的优先级。不只是把带 `*` 的候选移到后面，也不会截断候选列表。
+
+在 [moqi.yaml](moqi.yaml) 中统一调整两端：
+
+```yaml
+recent_frequency:
+  recent_frequency:
+    enabled: true
+    window_hours: 72
+    half_life_hours: 12
+```
+
+如需更快恢复，可改成 `window_hours: 24`、`half_life_hours: 4`。支持 `0 < half_life_hours <= window_hours <= 72`，单位为小时；`enabled: false` 恢复原生调频且不再记录新统计。Windows 也可在自定义补丁中单独覆盖 `recent_frequency/window_hours` 等路径。
+
+统计保存在各设备 Rime 用户目录的四个 `recent_frequency.0.tsv`～`recent_frequency.3.tsv` 轮转文件中，记录词条与时间，不与原生用户词典混写。候选浏览、原样回车和验证码不计入词频。文件按 UTC 日期复用，最多保留四个日期槽；长期停用时旧文件仍可能存在，但窗口外记录不参与排序。读取损坏或读写失败会在 Rime 日志中明确报错，不静默重置历史。
+
+**近期统计目前按设备独立计算，不参与 Rime 用户词典同步**；两端共享的是调频规则。无需清空、转换或重新导入已有用户词库。运行对应的 [Windows](Tools/deploy_windows.bat) / [Android](Tools/deploy_android.bat) 增量部署即可更新，完整初始化及发布同步脚本也已包含相关文件。
+
+验证命令：安装 Python、PyYAML、lupa 和小狼毫后运行 `python .\Tools\tests\recent_frequency.tests.py`。测试使用可控时钟，覆盖严格窗口边界、半衰回落、新词保留、重启、24 小时窗口、两端完整配置编译、Android 精确输入、损坏/不可写历史和大候选列表。Windows 小键盘测试仍为 `python .\Tools\tests\keypad.tests.py`。均通过小狼毫的 librime 在隔离目录执行；Android 配置兼容性测试不等于手机端实测，也不替代完整词库和语言模型的效果评估。
+
 ## 目录结构
 
 ### 共用基建

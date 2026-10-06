@@ -28,12 +28,14 @@ if not exist "%RIME_DIR%" (
 echo [1/3] Copying schema and custom files...
 call :copy_file "moqi_xh-weasel.schema.yaml"    "%RIME_DIR%\moqi_xh-weasel.schema.yaml"
 call :copy_file "moqi_xh-weasel.custom.yaml"    "%RIME_DIR%\moqi_xh-weasel.custom.yaml"
+call :copy_file "moqi.yaml"                     "%RIME_DIR%\moqi.yaml"
 call :copy_file "default.windows.custom.yaml"   "%RIME_DIR%\default.custom.yaml"
 echo.
 
 echo [2/3] Copying lua scripts...
 if not exist "%RIME_DIR%\lua" mkdir "%RIME_DIR%\lua"
 call :copy_file "lua\kp_num_processor.lua" "%RIME_DIR%\lua\kp_num_processor.lua"
+call :copy_file "lua\recent_frequency.lua" "%RIME_DIR%\lua\recent_frequency.lua"
 echo.
 
 echo [3/3] Triggering Weasel redeploy...

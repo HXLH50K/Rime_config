@@ -32,6 +32,7 @@ if errorlevel 1 (
 echo.
 echo [2/5] Pushing core schema files...
 call :push_file "moqi_xh-18key.schema.yaml" "%RIME_DIR%"
+call :push_file "moqi.yaml" "%RIME_DIR%"
 
 echo.
 echo [3/5] Pushing Trime theme...
@@ -42,11 +43,14 @@ echo [4/5] Pushing Lua scripts...
 call :adb_mkdir "%RIME_DIR%/lua/sbxlm"
 call :push_file "lua/sharedkey_shuangpin_precise_input_processor.lua" "%RIME_DIR%/lua"
 call :push_file "lua/sharedkey_shuangpin_precise_input_filter.lua"    "%RIME_DIR%/lua"
+call :push_file "lua/recent_frequency.lua"                           "%RIME_DIR%/lua"
 call :push_file "lua/sbxlm/lib.lua"                                   "%RIME_DIR%/lua/sbxlm"
 
 echo.
 echo Verifying uploaded core files...
 call :verify_remote_file "%RIME_DIR%/moqi_xh-18key.schema.yaml"
+call :verify_remote_file "%RIME_DIR%/moqi.yaml"
+call :verify_remote_file "%RIME_DIR%/lua/recent_frequency.lua"
 call :verify_remote_file "%RIME_DIR%/shouxin_18key.trime.yaml"
 call :verify_remote_file "%RIME_DIR%/lua/sharedkey_shuangpin_precise_input_processor.lua"
 call :verify_remote_file "%RIME_DIR%/lua/sharedkey_shuangpin_precise_input_filter.lua"

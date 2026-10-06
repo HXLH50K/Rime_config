@@ -43,11 +43,13 @@ Q | WE | RT | Y | U | IO | P
 1. 点击共键发送小写字母，由 `speller/algebra` 生成共键模糊拼写。
 2. 滑动共键发送大写字母。
 3. Processor 把大写转成小写，并在 `precise_input_map` 记录字符位置。
-4. Rime 生成模糊候选。
+4. Rime 生成模糊候选，共用时间窗口翻译器按近期使用重排。
 5. Filter 通过 `ReverseLookup` 检查候选的真实音码和辅助码。
 6. 精确位置必须完全匹配；点击位置允许共键模糊。
 
 Processor 在最终提交后清空精确位置。部分选词不会提前清空，后续未提交音节仍保持精确约束。
+
+主中文候选采用最长 72 小时窗口、12 小时半衰期；冷门词近期加权到期后回落，但用户造词保留。设置在 `moqi.yaml`，与 Windows 共用规则，统计按设备独立保存。具体算法、关闭方式及隔离测试见 [短期调频说明](../Readme.md#两端共用的短期调频)。
 
 ## 辅助码
 
@@ -113,7 +115,7 @@ Trime 在 `reset_ascii_mode: false` 时使用键盘保存的 `lastAsciiMode`，�
 - `build/moqi_xh-18key.prism.bin`
 - `build/shouxin_18key.trime.yaml`
 
-随后上传核心 schema、主题和 Lua，验证远端文件非空，再触发 Trime 异步部署。脚本不会删除用户词库或其他方案缓存。
+随后上传核心 schema、共用 `moqi.yaml`、主题和 Lua（含时间窗口翻译器），验证远端文件非空，再触发 Trime 异步部署。脚本不会删除用户词库、近期使用统计或其他方案缓存。
 
 拉取手机导出的最新日志：
 

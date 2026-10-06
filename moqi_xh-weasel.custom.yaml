@@ -73,6 +73,6 @@ patch:
     - table_translator@reverse_stroke
     - table_translator@reverse_zrlf
     - table_translator@reverse_cj
-    - script_translator
+    - lua_translator@*recent_frequency
     - script_translator@user_dict_set
     - script_translator@add_user_dict

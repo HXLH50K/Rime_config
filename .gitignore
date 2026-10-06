@@ -21,6 +21,7 @@ build/
 sync/
 # 生成的用户设置(中英文状态, 简繁体状态, emoji开关状态等)
 /installation.yaml
+/recent_frequency.*.tsv
 
 # 用户词库(自动调频, 生成的文件)
 # 用户自定义配置

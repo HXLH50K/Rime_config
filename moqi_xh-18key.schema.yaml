@@ -68,7 +68,7 @@ engine:
     - table_translator@big_char_set
     - table_translator@emojis
     # 脚本翻译器
-    - script_translator
+    - lua_translator@*recent_frequency
     - script_translator@user_dict_set
   filters:
     # - lua_filter@*sharedkey_shuangpin_auxcode_filter  # 共键双拼辅助码过滤器
@@ -84,6 +84,7 @@ engine:
 __include: moqi.yaml:/phrase
 __include: moqi.yaml:/opencc_config
 __include: moqi.yaml:/big_char_and_user_dict
+__include: moqi.yaml:/recent_frequency
 
 # ========== Emoji 配置 ==========
 # 从 moqi.yaml 引入 emoji simplifier 配置

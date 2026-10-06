@@ -29,6 +29,7 @@ __include: moqi.yaml:/reverse #反查配置
 __include: moqi.yaml:/opencc_config # 拆分 英汉互译 火星文
 __include: moqi.yaml:/punctuator # 标点
 __include: moqi.yaml:/guide # 引导前缀配置
+__include: moqi.yaml:/recent_frequency
 
 speller:
   max_code_length: 5
