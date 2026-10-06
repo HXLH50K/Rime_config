@@ -30,6 +30,21 @@
 
 可用 `powershell.exe -NoProfile -File Tools/init_installation.ps1 -Platform Android -SyncDir "/sdcard/com.hxlh/Rime" -WhatIf` 只读检查名称和写入目标；Windows 使用 `-Platform Windows` 及本机同步路径。隔离测试：`powershell.exe -NoProfile -File Tools/tests/init_installation.tests.ps1`。
 
+## Windows 小键盘输入
+
+仅作用于 `moqi_xh-weasel` 方案，不改变 Android 18键方案：
+
+- 主键盘数字仍用于选词。
+- Num Lock 开启时，已有组合输入后按小键盘数字，进入本次组合的临时原样输入。例如 `c` + 小键盘 `8` 显示 `c8`，不选汉字、不立即上屏；后续字母及两组数字键均继续输入验证码。
+- 主键盘 Enter 和小键盘 Enter 均将组合内容原样上屏；上屏、Esc 取消或退格清空后恢复中文。支持在组合区移动光标、插入数字和退格编辑。
+- 没有组合输入时，小键盘数字直接输入，小键盘 Enter 交给应用处理。已处于英文模式时不强制切回中文；修饰键组合及 Num Lock 关闭后的导航键维持原有处理。
+
+Weasel 0.17.4 已区分 `KP_0`～`KP_9` 和 `KP_Enter`（[上游键码转换](https://github.com/rime/weasel/blob/0.17.4/WeaselTSF/KeyEvent.cpp)），因此无需修改小狼毫本体。默认配置把小键盘数字映射成主键盘数字；[Lua 处理器](lua/kp_num_processor.lua) 在该映射之前拦截，并借用 Rime 的临时 ASCII 组合机制避免中文候选。[Windows 补丁](moqi_xh-weasel.custom.yaml) 将 `KP_Enter` 绑定为 `Return`，复用原有回车行为。
+
+运行 [Windows 增量部署脚本](Tools/deploy_windows.bat) 即可复制上述两项修改并请求重新部署；无需完整初始化或清理用户词库。
+
+回归测试：安装 Python、PyYAML 和小狼毫后，运行 `python .\Tools\tests\keypad.tests.py`。默认加载 `C:\Program Files\Rime\weasel-0.17.4\rime.dll`，其他安装位置可通过 PowerShell 的 `$env:WEASEL_DIR` 指定。测试使用临时用户目录、实际 Windows 处理器和按键绑定，以及九候选小词典，验证缓冲内容、实际提交文本、主键盘选词、回车、编辑与模式恢复，不修改日常输入法配置或用户词库；不覆盖完整词库或物理键盘事件采集。
+
 ## 目录结构
 
 ### 共用基建

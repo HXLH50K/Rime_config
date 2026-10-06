@@ -1,36 +1,43 @@
--- kp_num_processor.lua
-local function processor(key_event, env)
-    local key_code = key_event:repr() -- 获取按键名称
-    -- 定义数字键盘数字键的映射
-    local numpad_keys = {
-        ["KP_0"] = "0",
-        ["KP_1"] = "1",
-        ["KP_2"] = "2",
-        ["KP_3"] = "3",
-        ["KP_4"] = "4",
-        ["KP_5"] = "5",
-        ["KP_6"] = "6",
-        ["KP_7"] = "7",
-        ["KP_8"] = "8",
-        ["KP_9"] = "9"
-    }
- 
-    -- 检查是否是数字键盘数字键
-    if numpad_keys[key_code] then
-        local context = env.engine.context -- 获取输入上下文
-        local input_text = context.input -- 获取当前输入的原始码
-        if input_text and input_text ~= "" then
-            -- 如果有输入的原始码，拼接原始码和数字并提交
-            env.engine:commit_text(input_text .. numpad_keys[key_code])
-            context:clear() -- 清空输入缓冲区
-        else
-            -- 如果没有原始码，只提交数字
-            env.engine:commit_text(numpad_keys[key_code])
-        end
-        return 1 -- 表示按键已处理
+local processor = {}
+
+function processor.fini(env)
+    if env.connection then
+        env.connection:disconnect()
+        env.connection = nil
     end
- 
-    return 2 -- 未处理，交给其他处理器
 end
- 
+
+function processor.func(key_event, env)
+    if key_event:release() or key_event:shift() or key_event:ctrl()
+        or key_event:alt() or key_event:super() then
+        return 2
+    end
+
+    -- 使用独立键码，不受 Caps Lock 等状态对 repr() 的影响。
+    local digit = key_event.keycode - 0xffb0 -- XK_KP_0
+    if digit < 0 or digit > 9 then
+        return 2
+    end
+
+    local context = env.engine.context
+    if not context:is_composing() then
+        env.engine:commit_text(tostring(digit))
+        return 1
+    end
+
+    if not context:get_option("ascii_mode") then
+        processor.fini(env)
+        -- 与 inline_ascii 相同：本次组合结束后恢复中文，不永久切换输入模式。
+        env.connection = context.update_notifier:connect(function(ctx)
+            if not ctx:is_composing() then
+                processor.fini(env)
+                ctx:set_option("ascii_mode", false)
+            end
+        end)
+        context:set_option("ascii_mode", true)
+    end
+    context:push_input(tostring(digit))
+    return 1
+end
+
 return processor

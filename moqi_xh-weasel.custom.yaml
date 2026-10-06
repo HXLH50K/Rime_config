@@ -30,10 +30,11 @@ patch:
     - {accept: "Control+Shift+F", toggle: simplification, when: always}
     - {accept: "Shift+space", toggle: full_shape, when: always}
     - {accept: "Control+period", toggle: ascii_punct, when: always}
+    - {accept: KP_Enter, send: Return, when: composing}
     - {accept: minus, send: Page_Up, when: has_menu}
     - {accept: equal, send: Page_Down, when: has_menu}
   
-  # 小键盘处理器，必须放在第一位以拦截小键盘数字
+  # 小键盘数字进入临时原样输入，必须在默认数字选词映射之前拦截
   "engine/processors":
     - lua_processor@*kp_num_processor
     - ascii_composer
